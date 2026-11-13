@@ -18,7 +18,7 @@ panel.innerHTML=`<div class="headerline"><div><h2>Series Bible <span class="num"
 <label>Open mysteries / continuity threads<textarea id="bThreads" rows="3"></textarea></label>
 <div class="headerline"><h3>Approved character reference</h3><span class="hint">Saved only in this browser</span></div>
 <input id="bRef" type="file" accept="image/png,image/jpeg,image/webp">
-<div class="scene-preview"><img id="bRefPreview" alt="Approved character reference" class="asset hidden" style="max-width:170px;max-height:220px"><div><small id="bRefStatus">No reference image selected.</small><div class="actions"><button type="button" id="bRemoveRef">Remove image</button></div></div></div>
+<div class="scene-preview"><img id="bRefPreview" alt="Approved character reference" class="asset hidden" style="max-width:170px;max-height:220px"><div><small id="bRefStatus">No reference image selected.</small><div class="actions"><button type="button" id="bDownloadRef">Download reference</button><button type="button" id="bRemoveRef">Remove image</button></div></div></div>
 <div class="headerline"><h3>Episode ledger</h3><small id="bEpisodeCount"></small></div>
 <p class="muted">Record what happened after finishing each episode, so future scripts do not contradict earlier events.</p>
 <label>Episode title<input id="bEpisodeTitle" maxlength="120" placeholder="Episode 1: The Warning"></label>
@@ -80,6 +80,7 @@ $("bRef").onchange=async e=>{
  if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>6*1024*1024){$("bRefStatus").textContent="Use a PNG/JPG/WebP reference below 6 MB.";return}
  try{await asset("put",file);preview(file)}catch{$("bRefStatus").textContent="Unable to save reference locally. Keep original in Files."}finally{e.target.value=""}
 };
+$("bDownloadRef").onclick=async()=>{try{const img=await asset("get");if(!img){$("bRefStatus").textContent="Upload Evan's approved image first.";return}const url=URL.createObjectURL(img),a=document.createElement("a");a.href=url;a.download="evan-approved-reference."+(img.type==="image/png"?"png":img.type==="image/webp"?"webp":"jpg");a.click();setTimeout(()=>URL.revokeObjectURL(url),5000)}catch{$("bRefStatus").textContent="Reference download unavailable. Keep your original saved in Files."}};
 $("bRemoveRef").onclick=async()=>{if(!confirm("Delete locally stored character reference?"))return;try{await asset("delete");preview(null)}catch{$("bRefStatus").textContent="Cannot remove image from storage."}};
 asset("get").then(blob=>preview(blob||null)).catch(()=>$("bRefStatus").textContent="Image storage unavailable in this browser.");
 renderEpisodes();
