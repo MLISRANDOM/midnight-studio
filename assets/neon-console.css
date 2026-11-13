@@ -42,3 +42,9 @@ input,select,textarea{background:#091225;border:1px solid #344767;color:#f2f6ff;
 .tabs button{font-size:12px;padding:10px 4px;min-width:0;white-space:nowrap}
 .headerline{gap:8px}
 }
+
+/* Series Bible navigation: keep five tools comfortable on narrow iPhones */
+.tabs{overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+@media(max-width:560px){.tabs{display:flex;grid-template-columns:none;gap:4px;scroll-snap-type:x proximity}.tabs button{flex:0 0 auto;min-width:71px;padding:10px 12px;scroll-snap-align:start}.tabs button[data-tab="bible"]{min-width:112px}}
+#biblePanel .scene-preview{align-items:flex-start}#biblePanel .scene-preview .actions{margin-top:8px}
+#biblePanel .asset{object-fit:contain;max-height:220px}
