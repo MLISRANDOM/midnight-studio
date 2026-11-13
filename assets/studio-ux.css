@@ -71,3 +71,18 @@ body.studio-v6{background:#070b15}
 }
 @media(min-width:850px){.studio-v6 .wrap{grid-template-columns:1fr 1fr}.studio-v6 #artPanel,.studio-v6 #scenesPanel,.studio-v6 #biblePanel,.studio-v6 #exportPanel{grid-column:1/-1}.studio-v6 .studio-welcome{grid-column:1/-1}.studio-v6 .studio-dock{max-width:720px;left:50%;right:auto;width:calc(100% - 32px);transform:translateX(-50%);bottom:10px;border:1px solid #425475;border-radius:22px;padding:8px}}
 @media(prefers-reduced-motion:reduce){.studio-v6 .studio-details summary:before{transition:none}}
+
+/* Compact scene cards */
+.studio-v6 .ux-shot-quick{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:7px}
+.studio-v6 .ux-shot-info{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#dce9fd;font-weight:650;font-size:13px}
+.studio-v6 .ux-shot-quick button{min-height:35px;padding:8px 9px;font-size:12px}
+.studio-v6 .ux-shot-art{color:#061423;background:linear-gradient(120deg,#73e6ff,#a7a1ff);border-color:#8de9ff}
+.studio-v6 .ux-shot-details{border-top:1px solid #31415d;margin-top:2px;padding-top:8px;display:grid;gap:10px}
+.studio-v6 .ux-shot-details summary{font-size:12px;color:#94aac8;cursor:pointer;padding:5px 0}
+.studio-v6 .ux-shot-details:not([open])>*:not(summary){display:none}
+.studio-v6 .ux-shot-details[open]{display:grid;gap:11px}
+.studio-v6 .ux-shot-details .actions{display:flex}
+@media(max-width:420px){
+.studio-v6 .ux-shot-quick{grid-template-columns:1fr auto}
+.studio-v6 .ux-shot-info{grid-column:1/-1}
+}
