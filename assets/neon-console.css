@@ -1,0 +1,24 @@
+/* Midnight Studio // Neon Console v0.3. Progressive visual skin; no dependency on external libraries. */
+:root{color-scheme:dark;--bg:#050711;--panel:rgba(14,20,38,.86);--panel2:rgba(17,25,46,.94);--line:#273956;--ink:#f3f5ff;--muted:#a0b1cc;--red:#fa4c97;--gold:#65e9ff}
+html{background:#050711}body{min-height:100vh;background:radial-gradient(ellipse 80% 44% at 85% -10%,rgba(112,52,255,.24),transparent 70%),radial-gradient(ellipse 70% 42% at 0% 22%,rgba(0,207,255,.10),transparent 73%),#050711;color:#f3f5ff}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.23;background-image:linear-gradient(rgba(93,138,228,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(93,138,228,.15) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(180deg,#000,transparent 86%)}
+.top{padding:15px max(15px,env(safe-area-inset-left));background:rgba(6,10,23,.88);border-bottom:1px solid #324361;backdrop-filter:blur(18px);box-shadow:0 10px 50px #0008}
+.brand{font-size:clamp(15px,3.4vw,20px);letter-spacing:.18em;text-shadow:0 0 30px #7280ff55}.brand span{color:#8cefff;text-shadow:0 0 16px #00cfff88}
+.badge{background:#122c36;border:1px solid #286779;color:#aaf4ff;box-shadow:inset 0 0 14px #00cfff18}
+.wrap{padding:clamp(12px,2vw,22px);gap:17px}
+.panel{position:relative;background:var(--panel);border:1px solid #344663;border-radius:20px;box-shadow:0 15px 40px #0006,inset 0 1px 0 #ffffff12;backdrop-filter:blur(15px)}
+.panel:before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(135deg,#b48bff0c,transparent 40%,#3cdfff08)}
+h1{font-size:clamp(20px,4vw,29px);letter-spacing:-.035em}h2{font-size:17px;letter-spacing:.02em}h3{color:#d6e9ff}
+button{background:linear-gradient(180deg,#243650,#1b2840);color:#eaf2ff;border:1px solid #445675;border-radius:12px;transition:transform .15s,border-color .2s,box-shadow .2s;touch-action:manipulation}
+button:active{transform:scale(.985)}button:hover:not(:disabled){border-color:#74d8fc;box-shadow:0 0 18px #33ceff20}
+button.primary{color:#05111e;border:1px solid #8cf0ff;background:linear-gradient(115deg,#66efff,#a69bff);box-shadow:0 0 22px #49bfff30;font-weight:850}
+button.ghost{background:#131c30a3}
+.tabs{background:#080e1f80;border:1px solid #2d3a53;border-radius:13px;padding:5px}.tabs button{border-color:transparent;background:transparent}.tabs button.active{background:linear-gradient(135deg,#293760,#373058);color:#c5f6ff;border-color:#6272aa;box-shadow:0 0 14px #626cff27}
+input,select,textarea{background:#091225;border:1px solid #344767;color:#f2f6ff;border-radius:11px}input:focus,select:focus,textarea:focus{border-color:#5cd9fc}
+.scene{background:linear-gradient(140deg,#151f37,#101729);border:1px solid #394a69;border-radius:15px}.scene.sel{border-color:#69e5ff;box-shadow:inset 0 0 0 1px #4fe9ff44,0 0 20px #38d1ff15}
+.num{font-weight:850;letter-spacing:.16em;color:#81eaff}.previewWrap{border-color:#354965;box-shadow:0 0 24px #1ec8ff13}
+.bar{background:linear-gradient(90deg,#9b7dff,#49eaff);box-shadow:0 0 12px #30d9ff99}
+.notice{background:#171d32;border:1px solid #4d537c;color:#d3dafb}.storyline{background:#0a1328;border-color:#2b4b68}
+.footer{opacity:.9}
+@media(min-width:850px){.viewer{top:90px}}
+@media(prefers-reduced-motion:reduce){button,.bar{transition:none}body:before{display:none}}
