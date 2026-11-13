@@ -134,6 +134,38 @@
   else{backupBody.append(el)}
  }
  finish.append(backup);
+ // Compact scene cards: show the title, duration and quick actions by default.
+ const sceneList=$("sceneList");
+ if(sceneList){
+  let observer;
+  const decorate=()=>{
+   observer.disconnect();
+   for(const card of sceneList.querySelectorAll("article.scene[data-idx]")){
+    if(card.querySelector(".ux-shot-details"))continue;
+    const head=card.querySelector(".scene-head");
+    if(!head)continue;
+    const i=Number(card.dataset.idx),scene=typeof scenes!=="undefined"?scenes[i]:null;
+    const quick=document.createElement("div");quick.className="ux-shot-quick";
+    const info=document.createElement("span");info.className="ux-shot-info";
+    info.textContent=(scene?.title||"Scene "+(i+1))+" · "+(scene?.seconds||7)+"s";
+    const edit=document.createElement("button");edit.type="button";edit.textContent="Edit shot";edit.className="ux-shot-edit";
+    const artBtn=document.createElement("button");artBtn.type="button";artBtn.textContent="Make art";artBtn.className="ux-shot-art";
+    quick.append(info,edit,artBtn);head.after(quick);
+    const detail=document.createElement("details");detail.className="ux-shot-details";detail.innerHTML="<summary>Shot details</summary>";
+    const rest=Array.from(card.children).filter(el=>el!==head&&el!==quick);
+    rest.forEach(el=>detail.append(el));card.append(detail);
+    detail.open=card.classList.contains("sel");
+    edit.onclick=()=>{detail.open=!detail.open;edit.textContent=detail.open?"Close details":"Edit shot"};
+    artBtn.onclick=()=>{const target=detail.querySelector('[data-act="make-art"]');target?.click()};
+    detail.addEventListener("toggle",()=>{edit.textContent=detail.open?"Close details":"Edit shot"});
+    edit.textContent=detail.open?"Close details":"Edit shot";
+   }
+   observer.observe(sceneList,{childList:true});
+  };
+  observer=new MutationObserver(decorate);
+  observer.observe(sceneList,{childList:true});
+  decorate();
+ }
  // The always-on preview is useful on Story and Shots, clutter elsewhere.
  const originalShow=window.showTab;
  function syncSection(key){
