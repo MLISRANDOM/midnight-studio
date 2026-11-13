@@ -125,6 +125,11 @@ function buildEpisode(c){
  if($("geminiFormat"))$("geminiFormat").value=$("ratio").value;
  // Let the existing local generator assemble the editable scene outline.
  $("build").click();
+ // Long-form episodes need more breathing room than short-form shots.
+ if(format==="long"&&typeof scenes!=="undefined"){
+  for(const shot of scenes)shot.seconds=25;
+  if(typeof update==="function")update();
+ }
  const btn=bar.querySelector('[data-tab="scenes"]');if(btn)btn.click();
  // Existing builder creates a template. User can edit all shots, narration and timing.
 }
