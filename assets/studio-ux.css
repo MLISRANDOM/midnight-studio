@@ -1,0 +1,73 @@
+/* Midnight Studio v0.6 -- calm mobile-first creator experience */
+body.studio-v6{background:#070b15}
+.studio-v6 .top{position:relative;padding:13px 16px}
+.studio-v6 .wrap{padding:12px 14px calc(104px + env(safe-area-inset-bottom));gap:14px;max-width:920px}
+.studio-v6 .panel{border:1px solid #283750;background:rgba(13,19,36,.93);box-shadow:0 7px 22px #0003;border-radius:19px;gap:14px}
+.studio-v6 .panel:before{pointer-events:none;opacity:.42}
+.studio-v6 .studio-welcome{border-color:#45527d;background:linear-gradient(125deg,#161c35,#111a30)}
+.studio-v6 .studio-welcome h1{font-size:25px;line-height:1.18}
+.studio-v6 .studio-welcome p{max-width:34ch;line-height:1.5}
+.studio-v6 .studio-welcome-compact{padding:12px 16px}
+.studio-v6 .studio-welcome-compact .headerline>div>p{display:none}
+.studio-v6 .studio-welcome-compact h1{font-size:17px}
+.studio-v6 .studio-launch{display:grid;gap:14px;border-top:1px solid #30425e;padding-top:14px}
+.studio-v6 .studio-current{display:grid;gap:3px}
+.studio-v6 .studio-current strong{font-size:18px;letter-spacing:-.01em}
+.studio-v6 .studio-current small{font-size:12px}
+.studio-v6 .studio-eyebrow{font-size:10px;letter-spacing:.14em;font-weight:800;color:#75dfff}
+.studio-v6 .studio-launch-buttons{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.studio-v6 .studio-launch-buttons button{min-width:0;min-height:47px}
+.studio-v6 .studio-dock{position:fixed;left:0;right:0;bottom:0;z-index:100;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;padding:8px max(8px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-right));border-radius:0;border:0;border-top:1px solid #425475;background:rgba(9,15,30,.96);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 -9px 38px #000b;overflow:visible}
+.studio-v6 .studio-dock button,.studio-v6 .studio-dock button[data-tab="bible"]{min-width:0!important;margin:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;border:0!important;background:transparent!important;color:#95a9c5;border-radius:13px;box-shadow:none!important;min-height:53px;line-height:1.1;padding:6px 0;font-size:11px;letter-spacing:.01em;flex:auto}
+.studio-v6 .studio-dock button:before{font-size:18px;line-height:1;opacity:.75}
+.studio-v6 .studio-dock button[data-tab="story"]:before{content:"✎"}
+.studio-v6 .studio-dock button[data-tab="scenes"]:before{content:"▤"}
+.studio-v6 .studio-dock button[data-tab="art"]:before{content:"✦"}
+.studio-v6 .studio-dock button[data-tab="bible"]:before{content:"▣"}
+.studio-v6 .studio-dock button[data-tab="export"]:before{content:"↥"}
+.studio-v6 .studio-dock button.active{color:#a2f2ff!important;background:#162e49!important}
+.studio-v6 .studio-dock button.active:before{opacity:1}
+.studio-v6 h2{font-size:18px;font-weight:800}
+.studio-v6 label{font-size:13px;font-weight:600;gap:7px;color:#d5e0f5}
+.studio-v6 input,.studio-v6 textarea,.studio-v6 select{font-size:16px;line-height:1.4;min-height:46px;border-radius:12px}
+.studio-v6 textarea{min-height:112px}
+.studio-v6 button{min-height:44px}
+.studio-v6 .actions{gap:8px}
+.studio-v6 .scene{padding:13px;border-color:#33445e}
+.studio-v6 .studio-primary-workflow{order:0;gap:13px;background:#101d35;border-color:#5272a2;box-shadow:inset 0 1px 0 #d8edff15}
+.studio-v6 .studio-primary-workflow>h3{font-size:18px}
+.studio-v6 .studio-primary-workflow>.muted{font-size:13px}
+.studio-v6 .studio-scene-pickers{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.studio-v6 .studio-pro-steps{padding:11px;background:#0d1529;border-color:#273c60}
+.studio-v6 .studio-pro-steps .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.studio-v6 .studio-pro-steps .actions button{line-height:1.25;padding:12px 8px}
+.studio-v6 .studio-pro-steps #geminiCopy,.studio-v6 .studio-pro-steps #geminiPick{border-color:#64d1fa}
+.studio-v6 .studio-details{display:block;border-radius:13px;border:1px solid #2d3e5b;background:rgba(10,17,32,.65);padding:0;min-width:0}
+.studio-v6 .studio-details summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:14px;font-weight:700;min-height:48px;padding:12px 13px;color:#dce6fa}
+.studio-v6 .studio-details summary::-webkit-details-marker{display:none}
+.studio-v6 .studio-details summary:before{content:"›";font-size:22px;color:#68dfff;margin-right:3px;transition:transform .2s}
+.studio-v6 .studio-details[open]>summary:before{transform:rotate(90deg)}
+.studio-v6 .studio-details summary span{font-size:11px;font-weight:500;color:#8ba0be;margin-left:auto;text-align:right}
+.studio-v6 .studio-detail-body{padding:0 12px 14px;display:grid;gap:12px}
+.studio-v6 .studio-quiet .notice{margin:0 12px 12px;font-size:12px}
+.studio-v6 .studio-reference-details .scene{margin:0 12px 12px}
+.studio-v6 .studio-reference-details .scene>img{margin:auto}
+.studio-v6 .studio-reference-details .headerline{gap:5px}
+.studio-v6 .studio-offline>.studio-detail-body>.grid2{display:grid;gap:10px}
+.studio-v6 .studio-offline .actions{gap:8px}
+.studio-v6 .studio-step-tip{font-size:12px;color:#a9bbd5;background:#101d32;padding:10px 12px;border-radius:10px;border:1px solid #28415f}
+.studio-v6 #storyPanel .studio-minor{font-size:12px;padding:8px 10px;min-height:35px}
+.studio-v6 #scenesPanel .sceneList{display:grid;gap:10px}
+.studio-v6 #scenesPanel .scene{box-shadow:none}
+.studio-v6 #viewer{position:static}
+.studio-v6 .footer{font-size:11px;padding-bottom:5px}
+@media(max-width:420px){
+.studio-v6 .top .badge{font-size:9px}
+.studio-v6 .wrap{padding-inline:11px}
+.studio-v6 .panel{padding:14px}
+.studio-v6 .studio-scene-pickers{grid-template-columns:1fr}
+.studio-v6 .studio-pro-steps .actions{grid-template-columns:1fr}
+.studio-v6 .studio-launch-buttons{grid-template-columns:1fr 1fr}
+}
+@media(min-width:850px){.studio-v6 .wrap{grid-template-columns:1fr 1fr}.studio-v6 #artPanel,.studio-v6 #scenesPanel,.studio-v6 #biblePanel,.studio-v6 #exportPanel{grid-column:1/-1}.studio-v6 .studio-welcome{grid-column:1/-1}.studio-v6 .studio-dock{max-width:720px;left:50%;right:auto;width:calc(100% - 32px);transform:translateX(-50%);bottom:10px;border:1px solid #425475;border-radius:22px;padding:8px}}
+@media(prefers-reduced-motion:reduce){.studio-v6 .studio-details summary:before{transition:none}}
