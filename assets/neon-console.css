@@ -48,3 +48,11 @@ input,select,textarea{background:#091225;border:1px solid #344767;color:#f2f6ff;
 @media(max-width:560px){.tabs{display:flex;grid-template-columns:none;gap:4px;scroll-snap-type:x proximity}.tabs button{flex:0 0 auto;min-width:71px;padding:10px 12px;scroll-snap-align:start}.tabs button[data-tab="bible"]{min-width:112px}}
 #biblePanel .scene-preview{align-items:flex-start}#biblePanel .scene-preview .actions{margin-top:8px}
 #biblePanel .asset{object-fit:contain;max-height:220px}
+
+/* v0.4.1: all five tools visible at once on mobile */
+.tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));overflow:visible;gap:4px}
+.tabs button{min-width:0;white-space:normal;overflow-wrap:normal;line-height:1.15;padding:10px 5px;font-size:clamp(10px,2.8vw,13px);flex:auto}
+@media(max-width:560px){
+.tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));overflow:visible;scroll-snap-type:none;gap:3px}
+.tabs button,.tabs button[data-tab="bible"]{flex:auto;min-width:0;scroll-snap-align:none;padding:10px 3px;white-space:normal;font-size:clamp(10px,2.6vw,12px);letter-spacing:-.02em}
+}
