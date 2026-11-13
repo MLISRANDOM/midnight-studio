@@ -1,0 +1,23 @@
+/* Reference Lab v0.7: guided, touch-friendly idea generation */
+.studio-v6 .studio-dock{grid-template-columns:repeat(6,minmax(0,1fr))}
+.studio-v6 .studio-dock button[data-tab="reference"]:before{content:"◈"}
+.studio-v6 #referencePanel{gap:15px}
+.studio-v6 .rl-stage{display:flex;align-items:center;gap:12px;padding-top:7px;border-top:1px solid #2a3b55}
+.studio-v6 .rl-stage:first-of-type{border-top:0}
+.studio-v6 .rl-stage-num{width:37px;height:37px;flex:none;display:grid;place-items:center;color:#081627;border-radius:12px;background:linear-gradient(135deg,#8ae5ff,#ac9bff);font-weight:900;font-size:13px}
+.studio-v6 .rl-stage strong{font-size:15px}
+.studio-v6 .rl-stage p{font-size:12px}
+.studio-v6 .rl-ideas{display:grid;gap:13px;scroll-margin-top:16px}
+.studio-v6 .rl-idea{gap:11px;background:linear-gradient(145deg,#14233d,#0d172a);border-color:#365478}
+.studio-v6 .rl-idea h3{font-size:19px;line-height:1.25;color:#f1f6ff}
+.studio-v6 .rl-hook{font-size:14px;color:#a8eaff;font-weight:600}
+.studio-v6 .rl-twist{font-size:13px;background:#0a1427;border:1px solid #2b4364;border-radius:10px;padding:10px;color:#e5e8fa}
+.studio-v6 #rlStatus{font-size:12px}
+.studio-v6 #referencePanel .actions{display:grid;grid-template-columns:1fr 1fr}
+.studio-v6 #referencePanel .actions button{padding:11px 10px;line-height:1.3}
+@media(max-width:420px){
+.studio-v6 .studio-dock button{font-size:10px!important}
+.studio-v6 .studio-dock button:before{font-size:17px}
+.studio-v6 .studio-dock{padding-inline:5px}
+.studio-v6 #referencePanel .actions{grid-template-columns:1fr}
+}
