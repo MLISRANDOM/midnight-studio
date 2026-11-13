@@ -91,6 +91,7 @@
   apiDetails.innerHTML="<summary>Other generation options <span>API setup</span></summary><div class=\"studio-detail-body\"></div>";
   const body=apiDetails.querySelector(".studio-detail-body");
   if(modeLabel)body.append(modeLabel);
+  const modelLabel=$("geminiModel")?.closest("label");if(modelLabel)body.append(modelLabel);
   if(auto)body.append(auto);
   modes.append(apiDetails);
   const modeSelect=$("geminiMode");
