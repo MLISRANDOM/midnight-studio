@@ -78,16 +78,47 @@ function preview(blob){if(currentUrl)URL.revokeObjectURL(currentUrl);currentUrl=
 $("bRef").onchange=async e=>{
  const file=e.target.files?.[0];if(!file)return;
  if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>6*1024*1024){$("bRefStatus").textContent="Use a PNG/JPG/WebP reference below 6 MB.";return}
- try{await asset("put",file);preview(file)}catch{$("bRefStatus").textContent="Unable to save reference locally. Keep original in Files."}finally{e.target.value=""}
+ try{await asset("put",file);preview(file);updateArtReference()}catch{$("bRefStatus").textContent="Unable to save reference locally. Keep original in Files."}finally{e.target.value=""}
 };
 $("bDownloadRef").onclick=async()=>{try{const img=await asset("get");if(!img){$("bRefStatus").textContent="Upload Evan's approved image first.";return}const url=URL.createObjectURL(img),a=document.createElement("a");a.href=url;a.download="evan-approved-reference."+(img.type==="image/png"?"png":img.type==="image/webp"?"webp":"jpg");a.click();setTimeout(()=>URL.revokeObjectURL(url),5000)}catch{$("bRefStatus").textContent="Reference download unavailable. Keep your original saved in Files."}};
 $("bRemoveRef").onclick=async()=>{if(!confirm("Delete locally stored character reference?"))return;try{await asset("delete");preview(null)}catch{$("bRefStatus").textContent="Cannot remove image from storage."}};
 asset("get").then(blob=>preview(blob||null)).catch(()=>$("bRefStatus").textContent="Image storage unavailable in this browser.");
+/* Art Lab approved-character reference viewer. This is a reference, not generated scene art. */
+const artPanel=document.getElementById("artPanel");
+const referenceCard=document.createElement("div");
+referenceCard.className="scene";
+referenceCard.id="artReferenceCard";
+referenceCard.innerHTML='<div class="headerline"><h3>Approved Evan reference</h3><span class="badge" id="artRefBadge">CHECKING</span></div><p class="muted" id="artRefNote">Checking your Series Bible for the approved image.</p><img id="artReferenceImage" class="hidden" alt="Approved character design from Series Bible" style="display:block;max-height:300px;max-width:100%;object-fit:contain;border-radius:12px;border:1px solid #354965"><div class="actions"><button type="button" id="artReferenceDownload">Download approved reference</button><button type="button" id="artOpenBible">Open Series Bible</button></div><p class="hint">The built-in cartoon frame below is a procedural placeholder. It will not automatically look like Evan. True image consistency requires Gemini generation using this reference image.</p>';
+const artDescription=artPanel.querySelector("p");
+artDescription.insertAdjacentElement("afterend",referenceCard);
+let artRefUrl=null;
+async function updateArtReference(){
+ try{
+  const blob=await asset("get");
+  if(artRefUrl){URL.revokeObjectURL(artRefUrl);artRefUrl=null}
+  const img=document.getElementById("artReferenceImage");
+  img.classList.toggle("hidden",!blob);
+  if(blob){
+   artRefUrl=URL.createObjectURL(blob);img.src=artRefUrl;
+   document.getElementById("artRefBadge").textContent="REFERENCE SAVED";
+   document.getElementById("artRefNote").textContent="This is Evan's approved design from your Series Bible. Use the same image for every Gemini image-generation request.";
+  }else{
+   img.removeAttribute("src");
+   document.getElementById("artRefBadge").textContent="NO REFERENCE";
+   document.getElementById("artRefNote").textContent="Upload Evan's approved character sheet in Series Bible first.";
+  }
+ }catch{
+  document.getElementById("artRefBadge").textContent="UNAVAILABLE";
+  document.getElementById("artRefNote").textContent="Could not access local reference storage in this browser.";
+ }
+}
+document.getElementById("artOpenBible").onclick=()=>window.showTab("bible");
+document.getElementById("artReferenceDownload").onclick=()=>document.getElementById("bDownloadRef").click();
 renderEpisodes();
 const prior=window.showTab;
 window.showTab=function(name){
  if(name==="bible"){for(const b of document.querySelectorAll("[data-tab]"))b.classList.toggle("active",b.dataset.tab==="bible");for(const id of ["storyPanel","scenesPanel","artPanel","exportPanel"])$(id).classList.add("hidden");$("biblePanel").classList.remove("hidden");return}
- $("biblePanel").classList.add("hidden");prior(name)
+ $("biblePanel").classList.add("hidden");prior(name);if(name==="art")updateArtReference()
 };
 tab.addEventListener("click",()=>window.showTab("bible"));
 })();
