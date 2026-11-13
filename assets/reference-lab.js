@@ -144,5 +144,9 @@ window.showTab=function(key){
  panel.classList.add("hidden");
  prev(key);
 };
+// The original navigation controls use their own handlers; hide this screen when any of them is tapped.
+for(const b of bar.querySelectorAll('button[data-tab]')){
+ if(b!==tab)b.addEventListener("click",()=>panel.classList.add("hidden"));
+}
 tab.onclick=()=>window.showTab("reference");
 })();
