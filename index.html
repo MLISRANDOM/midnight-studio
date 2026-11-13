@@ -36,4 +36,4 @@ $('artPrompt').onclick=async()=>{let p=consistentPrompt();try{await navigator.cl
 $('artDemo').onclick=()=>window.open('https://huggingface.co/spaces?search=FLUX','_blank','noopener');
 
 try{const saved=JSON.parse(localStorage.getItem(STORE)||'null');if(saved&&Array.isArray(saved.scenes))updateFields(saved);else generate()}catch(e){generate()}showTab('story');
-</script></body></html>
+</script><script src="assets/series-bible.js" defer></script></body></html>
