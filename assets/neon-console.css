@@ -22,3 +22,23 @@ input,select,textarea{background:#091225;border:1px solid #344767;color:#f2f6ff;
 .footer{opacity:.9}
 @media(min-width:850px){.viewer{top:90px}}
 @media(prefers-reduced-motion:reduce){button,.bar{transition:none}body:before{display:none}}
+
+/* Mobile cockpit refinements */
+.top>div:first-child{min-width:0}.top .badge{white-space:nowrap;flex-shrink:0}
+.wrap>.panel:first-child{background:linear-gradient(125deg,rgba(26,29,62,.93),rgba(9,23,46,.93))}
+.wrap>.panel:first-child h1{background:linear-gradient(90deg,#fff,#a8eafe);background-clip:text;-webkit-background-clip:text;color:transparent}
+.wrap>.panel:first-child .headerline{align-items:flex-start}
+.wrap>.panel:first-child #saved{font-size:12px;color:#7de9cf;letter-spacing:.04em}
+@media(max-width:560px){
+.top{padding:13px 14px;gap:9px;align-items:flex-start}
+.brand{font-size:15px;letter-spacing:.11em;white-space:nowrap}
+.top small{font-size:10px}.top .badge{font-size:10px;padding:5px 7px;margin-top:2px}
+.wrap{padding:12px;gap:13px}
+.panel{padding:16px;border-radius:18px}
+.wrap>.panel:first-child{gap:11px}
+.wrap>.panel:first-child .headerline{display:grid;gap:10px}
+.wrap>.panel:first-child h1{font-size:24px;line-height:1.12}
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;padding:4px}
+.tabs button{font-size:12px;padding:10px 4px;min-width:0;white-space:nowrap}
+.headerline{gap:8px}
+}
