@@ -4,7 +4,7 @@
 
 ## Canon and output
 - Approved source storyboard: occupancy/episode01/storyboard.csv (80 shots, 600 seconds).
-- Planning format: vertical 9:16, 720x1280. The final image/video framing must preserve this.
+- Planning format: landscape 16:9, 1280x720. The final image/video framing must preserve this.
 - Mara: high-bun braids, silver hoops, navy maintenance jacket with crossed-tools patch, gray cargo pants and olive pack.
 - Jonah: older man, full gray beard, brown cap, olive work jacket and blue jeans.
 - Leah: dark-skinned woman, low ponytail braids, navy paramedic jacket with medical insignia and medical bag.
