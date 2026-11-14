@@ -122,7 +122,7 @@ function prepareStoryboard(){
  $("premise").value=idea;
  formatSettings();
  generate();
- if($("epFormat").value==="long"){for(const sc of scenes)sc.seconds=25;update()}
+ if($("epFormat").value==="long"){for(const sc of scenes)sc.seconds=14;update()}
  return true;
 }
 async function run(batchNew){
@@ -179,6 +179,6 @@ async function run(batchNew){
 $("epStart").onclick=()=>run(true);
 $("epResume").onclick=()=>run(false);
 $("epStop").onclick=()=>{stopRequested=true;$("epWorkStatus").textContent="Stopping after the current image finishes…"};
-$("epWatch").onclick=()=>{window.showTab("story");$("viewer").classList.remove("hidden");$("viewer").scrollIntoView({behavior:"smooth"});if(typeof stop==="function")stop();$("play").click()};
+$("epWatch").onclick=()=>{document.body.classList.add("episode-preview-open");window.showTab("story");$("viewer").classList.remove("hidden");$("viewer").scrollIntoView({behavior:"smooth"});if(typeof stop==="function")stop();$("play").click()};
 $("epExport").onclick=()=>window.showTab("export");
 })();
