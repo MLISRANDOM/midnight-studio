@@ -1,0 +1,28 @@
+{
+  "title": "The Safe Room Rules | Renderer Test",
+  "scenes": [
+    {
+      "title": "The Door",
+      "caption": "Evan wakes to a heavy knock from the other side of the safe room.",
+      "seconds": 5
+    },
+    {
+      "title": "The New Rule",
+      "caption": "A sheet of metal appears where the old warning used to be.",
+      "text": "RULE 3\nNEVER OPEN THE DOOR AFTER MIDNIGHT.",
+      "seconds": 7
+    },
+    {
+      "title": "The Countdown",
+      "caption": "The clock shows 11:59. The knocking stops.",
+      "text": "11:59 PM",
+      "seconds": 5
+    },
+    {
+      "title": "The Last Knock",
+      "caption": "Then a voice whispers from inside the room: I am already here.",
+      "text": "SOMEONE IS INSIDE.",
+      "seconds": 6
+    }
+  ]
+}
