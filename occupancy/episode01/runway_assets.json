@@ -176,8 +176,8 @@
     {
       "shot": 53,
       "task_id": "745af4de-b7ab-4ea0-9c82-d04bba8b6b6a",
-      "asset_id": null,
-      "status": "submitted_pending",
+      "asset_id": "ef675869-2aa5-423a-b703-4581bfe3d580",
+      "status": "generated_unreviewed",
       "description": "OCCUPANCY storyboard still for shot 053",
       "credit_cost": 4
     },
@@ -240,16 +240,16 @@
     {
       "shot": 69,
       "task_id": "96baa9ae-3015-4b09-a986-8fc8aa520345",
-      "asset_id": null,
-      "status": "submitted_pending",
+      "asset_id": "19723fae-9d0a-4fac-8b7d-8ae8d292c93e",
+      "status": "generated_unreviewed",
       "description": "OCCUPANCY storyboard still for shot 069",
       "credit_cost": 4
     },
     {
       "shot": 71,
       "task_id": "86c99417-e11e-47bb-a00c-c32c8a9761b3",
-      "asset_id": null,
-      "status": "submitted_pending",
+      "asset_id": "758b0187-e8a5-4188-94f8-288a94a652fb",
+      "status": "generated_unreviewed",
       "description": "OCCUPANCY storyboard still for shot 071",
       "credit_cost": 4
     },
