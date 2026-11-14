@@ -54,6 +54,22 @@
       "credit_cost": 4
     },
     {
+      "shot": 19,
+      "task_id": "a0172b7d-ff03-4b38-b0d8-e90621fd6ab6",
+      "asset_id": "9f7a26b7-f6dd-4930-bda6-5cfce2d6721b",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 019",
+      "credit_cost": 4
+    },
+    {
+      "shot": 21,
+      "task_id": "86e4618b-b45f-4ef6-8076-942988990aca",
+      "asset_id": "354b0122-ca42-409a-97ea-2cfcf8ee249b",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 021",
+      "credit_cost": 4
+    },
+    {
       "shot": 22,
       "asset_id": "f685d11a-7211-4ea2-8d48-161f393b29e1",
       "task_id": "1bab5048-0f65-4e98-985e-211cf7652735",
@@ -70,11 +86,211 @@
       "credit_cost": 4
     },
     {
+      "shot": 30,
+      "task_id": "78346bcd-32b7-49df-8cb6-6cdbde0f32da",
+      "asset_id": "37a2f4d3-2e55-403b-aa2d-882c44168de9",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 030",
+      "credit_cost": 4
+    },
+    {
+      "shot": 31,
+      "task_id": "574dbd19-4319-4bb8-a646-d9fcc70d7128",
+      "asset_id": "76ffa6cc-66da-4df1-962d-2122e499ff9d",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 031",
+      "credit_cost": 4
+    },
+    {
+      "shot": 32,
+      "task_id": "ddc207ba-913c-4f3e-9feb-4a51435232d4",
+      "asset_id": "45de2251-3bba-4ace-a32e-8b61247819f0",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 032",
+      "credit_cost": 4
+    },
+    {
       "shot": 33,
       "asset_id": "9bff31db-3b47-4002-b119-925c06b8c7ec",
       "task_id": "d1c390a8-af68-4a27-8c32-447240c53c34",
       "description": "Vacant apartment 702 experimental camera",
       "status": "generated_unreviewed",
+      "credit_cost": 4
+    },
+    {
+      "shot": 34,
+      "task_id": "d42a97e2-4a1a-4bc4-8d3e-36497de52beb",
+      "asset_id": "a7b3e570-85e8-46a9-8a99-f31504bd417a",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 034",
+      "credit_cost": 4
+    },
+    {
+      "shot": 35,
+      "task_id": "73972a79-e61f-461c-b01a-5eb90268e078",
+      "asset_id": "890aee29-b425-4857-ac5a-6f0229ebc292",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 035",
+      "credit_cost": 4
+    },
+    {
+      "shot": 37,
+      "task_id": "1bbbab9d-4537-4490-8bc6-150dbdcbe3af",
+      "asset_id": "f41cb415-df21-4bec-b7da-ca4ee50e195e",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 037",
+      "credit_cost": 4
+    },
+    {
+      "shot": 38,
+      "task_id": "6b2f2e75-8819-40e0-8182-252876fee032",
+      "asset_id": "f230e052-7321-4107-9075-8eae6c11f9ac",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 038",
+      "credit_cost": 4
+    },
+    {
+      "shot": 42,
+      "task_id": "91d39e37-de2d-479a-aa15-ccffd1767f55",
+      "asset_id": "e36da7dd-17ae-4321-9cfe-558ee5cb0ec2",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 042",
+      "credit_cost": 4
+    },
+    {
+      "shot": 43,
+      "task_id": "5264b481-deab-40e6-9d92-7971c5613506",
+      "asset_id": null,
+      "status": "submitted_pending",
+      "description": "OCCUPANCY storyboard still for shot 043",
+      "credit_cost": 4
+    },
+    {
+      "shot": 52,
+      "task_id": "b991a1d8-64f1-4784-90d1-0833e41ee58f",
+      "asset_id": "796c7219-cc88-4c52-ab26-0158ec208b0c",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 052",
+      "credit_cost": 4
+    },
+    {
+      "shot": 53,
+      "task_id": "745af4de-b7ab-4ea0-9c82-d04bba8b6b6a",
+      "asset_id": null,
+      "status": "submitted_pending",
+      "description": "OCCUPANCY storyboard still for shot 053",
+      "credit_cost": 4
+    },
+    {
+      "shot": 54,
+      "task_id": "a98f8b23-bdf4-4bcc-ad65-ad2db4c2e844",
+      "asset_id": null,
+      "status": "submitted_pending",
+      "description": "OCCUPANCY storyboard still for shot 054",
+      "credit_cost": 4
+    },
+    {
+      "shot": 55,
+      "task_id": "8e3b59c4-f48f-483e-a2f1-b2e68a5829cc",
+      "asset_id": "07b63cb5-72a7-4785-b592-43aae693760d",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 055",
+      "credit_cost": 4
+    },
+    {
+      "shot": 57,
+      "task_id": "80e4084a-c05e-4a40-a9f1-092a5a8b8a6f",
+      "asset_id": null,
+      "status": "submitted_pending",
+      "description": "OCCUPANCY storyboard still for shot 057",
+      "credit_cost": 4
+    },
+    {
+      "shot": 59,
+      "task_id": "c80a11ff-976d-4b60-96e2-50822b09760a",
+      "asset_id": "11676dbb-a81b-4f16-854e-11cc9b642595",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 059",
+      "credit_cost": 4
+    },
+    {
+      "shot": 60,
+      "task_id": "f11290c1-e318-4bcf-9b53-e3cffc127106",
+      "asset_id": "b34f449b-1c68-4f1c-b4e6-2cf5ba6a3f80",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 060",
+      "credit_cost": 4
+    },
+    {
+      "shot": 62,
+      "task_id": "ff0b248a-ea0b-49b5-a381-4a08e1ea05c3",
+      "asset_id": "6f63d8bd-6560-4737-906b-d396438cfa97",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 062",
+      "credit_cost": 4
+    },
+    {
+      "shot": 63,
+      "task_id": "ba52507a-7b46-4859-8572-57dc74d57267",
+      "asset_id": null,
+      "status": "submitted_pending",
+      "description": "OCCUPANCY storyboard still for shot 063",
+      "credit_cost": 4
+    },
+    {
+      "shot": 69,
+      "task_id": "96baa9ae-3015-4b09-a986-8fc8aa520345",
+      "asset_id": null,
+      "status": "submitted_pending",
+      "description": "OCCUPANCY storyboard still for shot 069",
+      "credit_cost": 4
+    },
+    {
+      "shot": 71,
+      "task_id": "86c99417-e11e-47bb-a00c-c32c8a9761b3",
+      "asset_id": null,
+      "status": "submitted_pending",
+      "description": "OCCUPANCY storyboard still for shot 071",
+      "credit_cost": 4
+    },
+    {
+      "shot": 72,
+      "task_id": "2af8cb82-8442-4fc8-b5e2-29936673664b",
+      "asset_id": null,
+      "status": "submitted_pending",
+      "description": "OCCUPANCY storyboard still for shot 072",
+      "credit_cost": 4
+    },
+    {
+      "shot": 73,
+      "task_id": "5b5f9526-343b-4fec-ab74-87c80914a789",
+      "asset_id": "66662a12-4d36-4693-8c1a-c7ffc50fc036",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 073",
+      "credit_cost": 4
+    },
+    {
+      "shot": 75,
+      "task_id": "f4c1da04-a885-4c09-908f-4165da6eb26d",
+      "asset_id": "dd200bde-b516-41d9-924a-3becbbda8a3d",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 075",
+      "credit_cost": 4
+    },
+    {
+      "shot": 76,
+      "task_id": "86271dbc-0050-477b-b0ec-ea9e9a79dc5d",
+      "asset_id": "e5866f42-751d-4f96-89d3-c27547b33705",
+      "status": "generated_unreviewed",
+      "description": "OCCUPANCY storyboard still for shot 076",
+      "credit_cost": 4
+    },
+    {
+      "shot": 78,
+      "task_id": "9747bc49-587f-46b5-828c-ab8cfc9942b3",
+      "asset_id": null,
+      "status": "submitted_pending",
+      "description": "OCCUPANCY storyboard still for shot 078",
       "credit_cost": 4
     }
   ],
@@ -86,7 +302,11 @@
     "Do not substitute Evan or reinterpret character designs.",
     "4 new 16:9 stills added; asset IDs confirmed in Runway library; not yet visually approved.",
     "Shot count currently 9 generated Runway stills; approved character references still need upload before character shots.",
-    "Runway image links require GitHub secret updates; only first test link has been entered into the secret so far."
+    "Runway image links require GitHub secret updates; only first test link has been entered into the secret so far.",
+    "Remaining 108 Runway credits were applied to 27 new 16:9 cartoon environment/prop images in the latest production session.",
+    "All 36 Runway shots are tracked by shot number and task ID; some latest tasks may be pending until their asset IDs resolve.",
+    "Shots have not been visually approved against approved flat 2D style yet.",
+    "Runway-GitHub collector SECRET currently holds only the first test shot; assembly of all scenes requires a refreshed secret containing current signed URLs."
   ],
-  "last_known_credits": 108
+  "last_known_credits": 0
 }
