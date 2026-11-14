@@ -127,8 +127,8 @@ function prepareStoryboard(){
 }
 async function run(batchNew){
  if(active)return;
- if(batchNew&&!prepareStoryboard())return;
  if(!connection()){err("Connect your Cloudflare generator first using Setup.");$("epWork").classList.remove("hidden");return}
+ if(batchNew){try{if(!prepareStoryboard())return}catch(e){err(String(e.message||e));$("epWork").classList.remove("hidden");return}}
  let ref;
  try{ref=await api.getReference()}catch(e){err(e.message);$("epWork").classList.remove("hidden");return}
  if(!ref){err("Upload Evan's approved picture in Series Bible first.");$("epWork").classList.remove("hidden");return}
