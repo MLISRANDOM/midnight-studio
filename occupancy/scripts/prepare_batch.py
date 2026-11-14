@@ -33,8 +33,8 @@ def parse_args():
     p.add_argument("--storyboard", type=Path, default=DEFAULT_CSV)
     p.add_argument("--out", type=Path, default=ROOT / "output")
     p.add_argument("--limit", type=int, default=8, help="First N shots. Use 80 for entire episode.")
-    p.add_argument("--width", type=int, default=720)
-    p.add_argument("--height", type=int, default=1280)
+    p.add_argument("--width", type=int, default=1280)
+    p.add_argument("--height", type=int, default=720)
     return p.parse_args()
 
 def character_names(row):
