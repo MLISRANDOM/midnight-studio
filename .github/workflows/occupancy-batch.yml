@@ -1,0 +1,47 @@
+name: OCCUPANCY storyboard batch dry run
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "occupancy/episode01/storyboard.csv"
+      - "occupancy/scripts/prepare_batch.py"
+      - ".github/workflows/occupancy-batch.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate all 80 storyboard shots (NO generation)
+        run: python occupancy/scripts/prepare_batch.py --limit 80 --out occupancy/out/full
+      - name: Prepare first 8 for review (NO generation)
+        run: python occupancy/scripts/prepare_batch.py --limit 8 --out occupancy/out/first8
+      - name: Check first-8 safety and job count
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('occupancy/out/first8/shot_plan.json').read_text())
+          assert data['dry_run'] is True
+          assert data['prepared_count'] == 8
+          assert data['generation_count'] == 5, data['generation_count']
+          assert data['jobs'][0]['mode'] == 'existing_pair'
+          assert data['jobs'][3]['mode'] == 'reuse_after_frame'
+          assert data['jobs'][7]['mode'] == 'edit_black_frame'
+          print('PASS: exactly 5 new images needed for first 8 shots; no paid calls.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: occupancy-e01-comfyui-batches
+          path: occupancy/out/
+          retention-days: 14
+          if-no-files-found: error
