@@ -143,8 +143,17 @@ async function getBlob(id){
 async function hydrate(){
  for(const s of scenes){
   if(s.imageData!=="gemini-local")continue;
-  try{const blob=await getBlob(s.id);if(!blob)continue;const url=URL.createObjectURL(blob),img=new Image();img.onload=()=>{uploaded[s.id]=img;drawAt(elapsed);URL.revokeObjectURL(url)};img.src=url}catch{}
+  try{
+   const blob=await getBlob(s.id);if(!blob)continue;
+   await new Promise((resolve,reject)=>{
+    const url=URL.createObjectURL(blob),img=new Image();
+    img.onload=()=>{uploaded[s.id]=img;URL.revokeObjectURL(url);resolve()};
+    img.onerror=()=>{URL.revokeObjectURL(url);reject(Error("Image could not be restored"))};
+    img.src=url;
+   });
+  }catch(e){console.warn("Could not restore scene image",s.id)}
  }
+ drawAt(elapsed);
 }
 $("geminiApprove").onclick=async()=>{
  const s=currentScene();
