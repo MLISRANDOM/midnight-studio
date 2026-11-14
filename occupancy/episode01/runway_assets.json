@@ -1,0 +1,24 @@
+{
+  "series": "OCCUPANCY",
+  "episode": "S01E01",
+  "frame_format": "16:9",
+  "status": "in_production",
+  "source": "Runway connected workspace",
+  "assets": [
+    {
+      "shot": 3,
+      "asset_id": "c966caac-15e1-4201-8a4b-9829ba7fa561",
+      "task_id": "1ada51c0-8619-402d-9518-a6e33da456d6",
+      "status": "generated_unreviewed",
+      "description": "Tape measure across missing sixth-floor corridor",
+      "credit_cost": 4
+    }
+  ],
+  "notes": [
+    "Asset IDs can be resolved via Runway list_recent/get_task; access confirmed.",
+    "Do not publish signed asset URLs in public repository.",
+    "Automatic binary collection into renderer remains unverified.",
+    "Do not generate character shots until approved reference sheets are hosted in Runway and usable as references.",
+    "Do not substitute Evan or reinterpret character designs."
+  ]
+}
