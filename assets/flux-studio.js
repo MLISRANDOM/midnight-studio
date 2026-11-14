@@ -7,11 +7,11 @@ if(!host||!api)return;
 const wrap=document.createElement("section");
 wrap.id="fluxStudio";
 wrap.className="scene flux-workflow";
-wrap.innerHTML=`<div class="headerline"><h3>Free AI image generator</h3><span class="badge">FLUX · CLOUDFARE</span></div>
+wrap.innerHTML=`<div class="headerline"><h3>Free AI image generator</h3><span class="badge">FLUX · CLOUDFLARE</span></div>
 <p class="muted">Generate real artwork for the selected scene using Cloudflare's free Workers AI allowance. FLUX.2 Klein can use Evan's approved reference image.</p>
 <div class="grid2"><label>Image quality<select id="fluxModel"><option value="klein">Character consistent · FLUX.2 Klein</option><option value="draft">Fast draft · FLUX.1 Schnell</option></select></label>
 <label>Format<select id="fluxFormat"><option value="9:16">TikTok / Shorts (9:16)</option><option value="16:9">YouTube (16:9)</option></select></label></div>
-<div class="actions"><button id="fluxGenerate" class="primary" type="button">Generate scene image</button></div>
+<label>Approved reference crop<select id="fluxReferenceMode"><option value="portrait">Evan face focus (recommended)</option><option value="full">Full character sheet</option></select></label><p class="hint">Face focus crops the main portrait out of the character sheet so FLUX can see facial details more clearly.</p><div class="actions"><button id="fluxGenerate" class="primary" type="button">Generate scene image</button></div>
 <p id="fluxStatus" class="hint" role="status" aria-live="polite">Connect your Cloudflare Worker once to enable generation.</p>
 <details class="studio-details" id="fluxSetup"><summary>Connect free image generator <span>One-time setup</span></summary>
 <div class="studio-detail-body">
@@ -28,15 +28,18 @@ $("fluxFormat").value=$("geminiFormat").value||"9:16";
 $("fluxFormat").onchange=()=>{$("geminiFormat").value=$("fluxFormat").value;const ratio=$("ratio");if(ratio)ratio.value=$("fluxFormat").value};
 function message(s){$("fluxStatus").textContent=s}
 const b64=blob=>new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(String(r.result).split(",")[1]);r.onerror=()=>reject(Error("Could not read reference image"));r.readAsDataURL(blob)});
-async function shrink(blob){
+async function shrink(blob,mode){
  const bitmap=await createImageBitmap(blob);
  try{
-  const longest=Math.max(bitmap.width,bitmap.height);
+  const crop=mode==="portrait"&&bitmap.width/bitmap.height>1.45;
+  const sx=crop?Math.round(bitmap.width*.115):0,sy=crop?Math.round(bitmap.height*.025):0;
+  const sw=crop?Math.round(bitmap.width*.315):bitmap.width,sh=crop?Math.round(bitmap.height*.545):bitmap.height;
+  const longest=Math.max(sw,sh);
   const factor=Math.min(1,480/longest);
   const c=document.createElement("canvas");
-  c.width=Math.max(1,Math.round(bitmap.width*factor));
-  c.height=Math.max(1,Math.round(bitmap.height*factor));
-  c.getContext("2d").drawImage(bitmap,0,0,c.width,c.height);
+  c.width=Math.max(1,Math.round(sw*factor));
+  c.height=Math.max(1,Math.round(sh*factor));
+  c.getContext("2d").drawImage(bitmap,sx,sy,sw,sh,0,0,c.width,c.height);
   const output=await new Promise(resolve=>c.toBlob(resolve,"image/jpeg",.8));
   if(!output)throw Error("Could not prepare Evan's reference");
   return output;
@@ -55,7 +58,7 @@ $("fluxGenerate").onclick=async()=>{
   if(model==="klein"){
    const ref=await api.getReference();
    if(!ref)throw Error("Upload Evan's approved reference to Series Bible first.");
-   const prepared=await shrink(ref);
+   const prepared=await shrink(ref,$("fluxReferenceMode").value);
    referenceImage={mimeType:prepared.type,data:await b64(prepared)};
   }
   const prompt=api.prompt();
@@ -66,8 +69,8 @@ $("fluxGenerate").onclick=async()=>{
   if(!resp.ok||!result.ok||!result.data)throw Error(result.error||"Cloudflare image generation failed");
   const decoded=atob(result.data),bytes=new Uint8Array(decoded.length);
   for(let i=0;i<bytes.length;i++)bytes[i]=decoded.charCodeAt(i);
-  api.showImage(new Blob([bytes],{type:result.mimeType||"image/png"}));
-  message("Image ready. Review it below, then tap Use image in selected scene.");
+  api.showImage(new Blob([bytes],{type:result.mimeType||"image/png"}),model==="klein"?"FLUX.2 Klein":"FLUX.1 Schnell");
+  message("Image ready. Check Evan’s face, hair, beard and backpack straps before using it in the scene.");
   $("geminiOutput")?.scrollIntoView({behavior:"smooth",block:"start"});
  }catch(err){message("Could not generate: "+String(err?.message||err))}
  finally{busy=false;$("fluxGenerate").disabled=false;$("fluxGenerate").textContent="Generate scene image"}
