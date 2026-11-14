@@ -1,0 +1,50 @@
+name: OCCUPANCY collect Runway stills and assemble YouTube episode
+
+on:
+  workflow_dispatch:
+    inputs:
+      complete_episode:
+        description: 'Require all 80 shots before rendering'
+        type: boolean
+        default: false
+      shot_seconds:
+        description: 'Duration for each shot'
+        default: '7.5'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      RUNWAY_ASSETS_JSON: ${{ secrets.RUNWAY_ASSETS_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m pip install 'Pillow>=10,<13'
+      - name: Collect images from Runway
+        run: python occupancy/scripts/collect_runway.py
+      - name: Render YouTube MP4
+        run: |
+          if [ "${{ inputs.complete_episode }}" = "true" ]; then
+            python occupancy/scripts/assemble_episode.py --strict --seconds "${{ inputs.shot_seconds }}"
+          else
+            python occupancy/scripts/assemble_episode.py --seconds "${{ inputs.shot_seconds }}" --output occupancy/rendered/OCCUPANCY_PREVIEW.mp4
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OCCUPANCY-assembled-video-and-scene-images
+          path: |
+            occupancy/collected/*.png
+            occupancy/rendered/*.mp4
+          retention-days: 14
+          if-no-files-found: error
