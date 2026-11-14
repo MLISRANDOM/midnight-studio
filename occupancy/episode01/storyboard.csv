@@ -1,0 +1,81 @@
+index,start_seconds,end_seconds,framing,visual,motion,continuity
+1,0.0,7.5,Extreme close,"Cold exterior of sixth-floor door 604, then a hard cut to impossible smooth plaster",Door vanishes on a metallic sub-bass pulse,door 604 exists in first frame only; compositor adds numbers
+2,7.5,15.0,Medium / low angle,Mara in navy work jacket freezes with tape measure in hall,Tight push on stunned face,Lock protagonist design
+3,15.0,22.5,Insert,Measurement tape spans newly shortened hallway,Quick rack-focus simulation,Overlay 11 FEET MISSING
+4,22.5,30.0,Wide hallway,Long wall where doorway should be; fluorescent light pools,3-second stillness then slow push,No door or seams
+5,30.0,37.5,Detail,Mara holds old maintenance key with brass tag,Glide toward key,Tag numbers added in edit
+6,37.5,45.0,Medium,Elevator opens onto vacant car behind Mara,Abrupt cut timed to bell,Maintain sixth-floor geography
+7,45.0,52.5,Insert,Elevator indicator glows with empty panel,Add 03:17 typography in editor,No AI-generated digits
+8,52.5,60.0,Black-frame transition,Hallway flickers into total darkness,Lights snap off with electrical buzz,End first minute with sound drop
+9,60.0,67.5,Wide daylight,"Mara, Jonah and Leah at sixth-floor missing wall",Slow side pan,Jonah gray beard/green cardigan; Leah braids/blue medical jacket
+10,67.5,75.0,Two-shot,Jonah insists the room never existed; Mara holds binder,Push toward binder,Blank binder pages
+11,75.0,82.5,Insert,Maintenance binder on page with blocked red line,Paper slide transition,Add 604 as typography
+12,82.5,90.0,Wide,Stark daylight reveals plaster and missing segment,Static 8 sec unease,Exact same wall
+13,90.0,97.5,Close,Jonah puts ear against plaster,"Tiny jitter, no movement from wall",Build suspense
+14,97.5,105.0,Insert,Leah shows phone photo of intact fire escape,Phone screen replaced as graphic,Readable before/after composition
+15,105.0,112.5,Exterior profile,Fire escape terminates in midair,Slow pullback to show impossible cut,No person dangling
+16,112.5,120.0,Close,"Leah asks about tenant, Mara answers",Cut between serious faces,Mister Bell absent
+17,120.0,127.5,Wide exterior,Graywell tower with evacuation buses departing in flashback,Layered parallax,"86 units context, original building shape"
+18,127.5,135.0,Architectural cutaway,Twelve-story building cross-section with sparse residents marked,Overlay 23 glowing occupancy dots,Diagram system debut
+19,135.0,142.5,Insert,"Water bottles, canned food, generator switches",Three fast 2.5 sec cuts within 7.5 sec,Resource graphics
+20,142.5,150.0,Medium,Mara examines changed basement floor plans,Slow overhead push,Blank paper for overlays
+21,150.0,157.5,Top-down,Original and altered sixth-floor blueprints side by side,Split-screen graphic,Overlay missing 604
+22,157.5,165.0,Wide,Old occupancy panel by fire controls,Zoom to amber alert,Panel fixed basement location
+23,165.0,172.5,HUD card,"Aged maintenance ledger aesthetic, neutral cream surface",Overlay 85 rooms / 23 residents,All typography produced in edit
+24,172.5,180.0,Extreme close,"Mara fingertip touches warm glass, amber light blinks",Single-frame light flare,End with uncanny response
+25,180.0,187.5,Two-shot,Leah points to 605 and missing 604,Slow zoom across doorway boundary,605 occupied
+26,187.5,195.0,Flashback insert,"Leah asleep in 605, blue radio light beside bed",Subtle vignette,Only scene with Leah sleeping
+27,195.0,202.5,Diagram,Occupied and empty units on a floor map,Overlay measured known vs unknown,Do not claim all empty rooms vanish
+28,202.5,210.0,Medium,Mara interviews small cluster of residents,Alternate two angles,"Distinct silhouettes, fixed total 23"
+29,210.0,217.5,Close,"Jonah near stairwell door, frustrated",Small dolly left,Door partially jams
+30,217.5,225.0,Detail,Stairwell floor lines misalign with corridor,Push along crooked edge,Spatial disorientation
+31,225.0,232.5,Insert,Mara uses phone to photograph wall and floor plans,Quick shutter flash,Screen stays blank
+32,232.5,240.0,Close,Dusty metal inspection label on occupancy board,Reveal NIGHTLY INSPECTION 03:17 graphic,Stamped digits edit-only
+33,240.0,247.5,Medium,Mara sets small battery camera inside vacant 702,Slow push into empty doorway,Never display generated numbers
+34,247.5,255.0,Insert,Small fern and goldfish in a bowl on bare floor,"Static detail, odd calm",Animal not presented as harmed on-screen
+35,255.0,262.5,Close,Windup clock ticking beside fish bowl,Tiny zoom,Analog hands art only
+36,262.5,270.0,Wide,Leah challenges experiment across threshold,Over-shoulder cut,Emotion: moral discomfort
+37,270.0,277.5,Insert,Orange tape seals 702 threshold,Tape fills bottom of frame,Continuity object for 7:00
+38,277.5,285.0,Monitor frame,"Camera feed of 702 unchanged, with slight grain",Add REC timestamp overlay,Screen replacement layer
+39,285.0,292.5,Close,Mara holding wristwatch checks time,Quick push to wrist,No AI clock lettering
+40,292.5,300.0,Split graphic,Video clock jumps one second while wristwatch remains,Motion graphics precision,Tension beat
+41,300.0,307.5,Two-shot,Jonah suggests sending a person inside experimental unit,Tight reaction cuts,Mara visibly refuses
+42,307.5,315.0,Cutaway,Water pump in level-two mechanical room,Low-angle pan,Infrastructure A
+43,315.0,322.5,Cutaway,Battery cabinets in basement room,Slow lateral drift,Infrastructure B
+44,322.5,330.0,Architectural cutaway,"Vertical stairwell, intersecting corridors and fire doors",Highlight connections with lines,Do not mirror reference video geometry
+45,330.0,337.5,Wide,23 survivors crowded in hallway meeting,Parallax depth,Easily countable clusters not necessarily all faces
+46,337.5,345.0,HUD card,Resource priority diagram with three columns,Add PEOPLE/WATER/POWER labels,Type in editor
+47,345.0,352.5,Close,Leah writes priority list on grocery receipt,Gentle push in,"Leave paper blank, overlaid text"
+48,352.5,360.0,Medium,"Mara looks over crowd, asks what can be lost",End on group silence,Moral turning point
+49,360.0,367.5,Medium,Leah takes chair and flashlight into pump room,Match cut on flashlight,Same room from 5:00
+50,367.5,375.0,Wide,Jonah beside battery bank with lantern,Slow push,Same basement location
+51,375.0,382.5,Wide / high angle,Mara waits on stair landing holding radio and notebook,Slow descent push,"Consistent jacket, tool pouch"
+52,382.5,390.0,Insert,Occupied doors each with masking-tape label,Glide past door frames,Names added in edit if used
+53,390.0,397.5,Close,Chalk outline where apartment 604 used to be,Hold for dread,Wall same as prior sequence
+54,397.5,405.0,Insert,"Clock shows near midnight, hand continues",Analog ticking motif,Clock digits post
+55,405.0,412.5,Ceiling shot,Intercom grate activates unexpectedly,Quick snap zoom,Mechanical speaker voice
+56,412.5,420.0,Close,"Mara radio static, display full of interference",Subtle flicker,The sound is her breathing
+57,420.0,427.5,Wide,Hall lights shift to amber at 3:16,Lighting wipe,No green before final reveal
+58,427.5,435.0,Insert,"Mara watch moving, wall clock frozen",Dual frame composition,Keep watch behavior consistent
+59,435.0,442.5,Vertical shot,Three doors up stairwell slam in sequence,Quick cut 3 beats,Audio-driven
+60,442.5,450.0,Insert,Ceiling intercom over empty stair landing,Shallow slow push,Count down audio
+61,450.0,457.5,Close,Mara's eyes staring at watch,Very slow push,Silence before inspection
+62,457.5,465.0,Monitor view,Camera feed of 702 glitches to black,Abrupt signal cut,No gore
+63,465.0,472.5,Wide hallway,Door 702 replaced by seamless plaster,Match previous shot of vacant unit,Orange tape split at wall
+64,472.5,480.0,HUD card,Occupancy board changes room count from 85 to 84,Sharp numerical animation,Overlay exact values
+65,480.0,487.5,Medium,Mara looks shaken despite apparent successful test,Static framed in doorway,Uncertain conclusion
+66,487.5,495.0,Close,Leah speaks urgently into radio inside intact pump room,Fast push,Voice cut across scenes
+67,495.0,502.5,Wide,Mara races down level-two corridor,Three fast still compositions,Motion comic staccato
+68,502.5,510.0,Medium,Leah beside fully intact pump and dry spigot,Slow reveal of faucet,The pump survived
+69,510.0,517.5,Cutaway,Pipe from pump room runs into blank wall,Hold on impossible sealed end,Adjacent closet erased
+70,517.5,525.0,Architectural diagram,Pump surviving but adjoining pipe path gone,Overlay connection lines blinking out,Mechanical logic payoff
+71,525.0,532.5,Wide,Battery room intact but neighboring corridor shortened,Slow lateral pan,Second connected loss
+72,532.5,540.0,Close,Occupancy board emits soft cheerful green chime,Shift amber to green,Set up final resident count
+73,540.0,547.5,Insert,Board display goes from 23 residents to 24,Precise type animation,No AI typography
+74,547.5,555.0,Medium,Three leads compare headcount list in shock,Quick close-up cuts,All original characters consistent
+75,555.0,562.5,Wide exterior,"Front chained entry doors, no visitors",Static cold moonlight,No alternate entrance revealed
+76,562.5,570.0,HUD blueprint,Sixth-floor empty space gains unexpected green occupied square,Animated floor-plan overlay,Room still physically absent
+77,570.0,577.5,Low angle,Mara climbs stairs toward missing 604 wall,Slow upward tracking illusion,Acoustic tension
+78,577.5,585.0,Wide,"Smooth sixth-floor wall unchanged, others far behind",Long unbroken hold,No visible door
+79,585.0,592.5,Close,Mara touches warm plaster; indistinct chair scrape,Slow push to hand,Nothing visible behind wall
+80,592.5,600.0,Extreme close / blackout,Mara recoils at an unseen voice; cut to black on three knocks,Overlay NOT ALL OCCUPANTS ARE REGISTERED before black,"Final sting, no creature reveal"
