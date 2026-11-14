@@ -30,6 +30,14 @@
       "credit_cost": 4
     },
     {
+      "shot": 12,
+      "asset_id": "e922868f-17a3-4381-874b-ad8c51e082a7",
+      "task_id": "376f25c8-af37-46ef-b6c1-580fd5c98435",
+      "description": "Daylight corridor seamless missing wall",
+      "status": "generated_unreviewed",
+      "credit_cost": 4
+    },
+    {
       "shot": 15,
       "asset_id": "60630bdc-17fd-4a05-ab48-a393adb626e1",
       "task_id": "36895250-2a8b-4209-8553-424e857280fd",
@@ -44,6 +52,30 @@
       "description": "Graywell tower evacuation buses dusk",
       "status": "generated_unreviewed",
       "credit_cost": 4
+    },
+    {
+      "shot": 22,
+      "asset_id": "f685d11a-7211-4ea2-8d48-161f393b29e1",
+      "task_id": "1bab5048-0f65-4e98-985e-211cf7652735",
+      "description": "Blank occupancy control panel, amber light",
+      "status": "generated_unreviewed",
+      "credit_cost": 4
+    },
+    {
+      "shot": 29,
+      "asset_id": "a8dccf0a-7db0-4e67-b127-e2310b5c12c3",
+      "task_id": "9cf88abb-120e-4bbc-a0cc-16a505b11933",
+      "description": "Jammed Graywell stairwell door",
+      "status": "generated_unreviewed",
+      "credit_cost": 4
+    },
+    {
+      "shot": 33,
+      "asset_id": "9bff31db-3b47-4002-b119-925c06b8c7ec",
+      "task_id": "d1c390a8-af68-4a27-8c32-447240c53c34",
+      "description": "Vacant apartment 702 experimental camera",
+      "status": "generated_unreviewed",
+      "credit_cost": 4
     }
   ],
   "notes": [
@@ -52,7 +84,9 @@
     "Automatic binary collection into renderer remains unverified.",
     "Do not generate character shots until approved reference sheets are hosted in Runway and usable as references.",
     "Do not substitute Evan or reinterpret character designs.",
-    "4 new 16:9 stills added; asset IDs confirmed in Runway library; not yet visually approved."
+    "4 new 16:9 stills added; asset IDs confirmed in Runway library; not yet visually approved.",
+    "Shot count currently 9 generated Runway stills; approved character references still need upload before character shots.",
+    "Runway image links require GitHub secret updates; only first test link has been entered into the secret so far."
   ],
-  "last_known_credits": 124
+  "last_known_credits": 108
 }
