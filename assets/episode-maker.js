@@ -113,6 +113,7 @@ function updateProgress(done,totalCount,detail){
  $("epWorkStatus").textContent=detail;
 }
 function prepareStoryboard(){
+ if(window.midnightStoryLength)return window.midnightStoryLength.prepare();
  const idea=$("epIdea").value.trim();
  if(idea.length<15)throw Error("Describe your episode in at least a sentence.");
  const count=$("epFormat").value==="short"?6:12;
@@ -158,10 +159,11 @@ async function run(batchNew){
    await loadArtwork(sc,blob);
    sc.imageData="gemini-local";
    save();
+   window.midnightStoryLength?.snapshot();
    renderList();drawAt(0);
    updateProgress(complete(),totalCount,"Finished "+(i+1)+"/"+totalCount+": "+sc.title);
   }
-  if(!stop&&complete()===totalCount){
+  if(!stopRequested&&complete()===totalCount){
    $("epFinished").classList.remove("hidden");
    updateProgress(totalCount,totalCount,"Episode artwork created. Preview the motion comic or review/export your project.");
   }else if(stopRequested){
