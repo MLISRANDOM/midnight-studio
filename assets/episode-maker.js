@@ -53,7 +53,7 @@ const formatSettings=()=>{
  $("fluxFormat").value=$("ratio").value;
 };
 $("epFormat").addEventListener("change",formatSettings);
-let active=false,stop=false;
+let active=false,stopRequested=false;
 const encode=blob=>new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(String(r.result).split(",")[1]);r.onerror=()=>reject(Error("Could not read Evan's portrait"));r.readAsDataURL(blob)});
 async function portrait(blob){
  const image=await createImageBitmap(blob);
@@ -116,7 +116,7 @@ function prepareStoryboard(){
  const idea=$("epIdea").value.trim();
  if(idea.length<15)throw Error("Describe your episode in at least a sentence.");
  const count=$("epFormat").value==="short"?6:12;
- if(scenes.some(s=>s.imageData||uploaded[s.id])||$("premise").value.trim()!==idea){
+ if(scenes.length){
   if(!confirm("Build a NEW "+count+"-scene episode? This will replace the current storyboard. Save a project backup first if needed."))return false;
  }
  $("premise").value=idea;
@@ -135,7 +135,7 @@ async function run(batchNew){
  const {url,token}=existingSettings();
  let character;
  try{character=await portrait(ref)}catch(e){err("Could not prepare Evan reference: "+e.message);$("epWork").classList.remove("hidden");return}
- active=true;stop=false;
+ active=true;stopRequested=false;
  $("epStart").disabled=true;$("epResume").classList.add("hidden");$("epFinished").classList.add("hidden");
  $("epWork").classList.remove("hidden");$("epWorkStatus").removeAttribute("data-error");
  const totalCount=scenes.length;
@@ -143,7 +143,7 @@ async function run(batchNew){
  updateProgress(complete(),totalCount,"Starting scene artwork…");
  try{
   for(let i=0;i<scenes.length;i++){
-   if(stop)break;
+   if(stopRequested)break;
    const sc=scenes[i];
    if(sc.imageData==="gemini-local"&&uploaded[sc.id])continue;
    updateProgress(complete(),totalCount,"Generating "+(i+1)+"/"+totalCount+": "+sc.title);
@@ -164,7 +164,7 @@ async function run(batchNew){
   if(!stop&&complete()===totalCount){
    $("epFinished").classList.remove("hidden");
    updateProgress(totalCount,totalCount,"Episode artwork created. Preview the motion comic or review/export your project.");
-  }else if(stop){
+  }else if(stopRequested){
    updateProgress(complete(),totalCount,"Stopped. Your completed scenes were saved. Resume when ready.");
    $("epResume").classList.remove("hidden");
   }
@@ -178,7 +178,7 @@ async function run(batchNew){
 }
 $("epStart").onclick=()=>run(true);
 $("epResume").onclick=()=>run(false);
-$("epStop").onclick=()=>{stop=true;$("epWorkStatus").textContent="Stopping after the current image finishes…"};
-$("epWatch").onclick=()=>{window.showTab("story");$("viewer").classList.remove("hidden");$("viewer").scrollIntoView({behavior:"smooth"});stop();$("play").click()};
+$("epStop").onclick=()=>{stopRequested=true;$("epWorkStatus").textContent="Stopping after the current image finishes…"};
+$("epWatch").onclick=()=>{window.showTab("story");$("viewer").classList.remove("hidden");$("viewer").scrollIntoView({behavior:"smooth"});if(typeof stop==="function")stop();$("play").click()};
 $("epExport").onclick=()=>window.showTab("export");
 })();
