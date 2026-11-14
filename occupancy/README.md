@@ -42,3 +42,13 @@ Quality gate: Mara and Leah MUST have different hair and work clothes; no Evan, 
 Scripts: python occupancy/scripts/prepare_batch.py --limit 8 --out occupancy/out/first8
 
 No paid generation has been submitted.
+
+## Runway-to-MP4 cloud bridge (added)
+- Workflow: [OCCUPANCY collect Runway stills and assemble YouTube episode](../../.github/workflows/occupancy-runway-assemble.yml)
+- File collector: `scripts/collect_runway.py`
+- 1080p widescreen assembler: `scripts/assemble_episode.py`
+- The user does **not** need to download individual images. GitHub-hosted runners download generated Runway images by URL and assemble MP4.
+- **Required secure setup:** A GitHub Actions repository secret named `RUNWAY_ASSETS_JSON` containing a JSON object with `assets`: entries having `shot` and the corresponding short-lived Runway signed media `url`. Only set secrets using GitHub's private Settings > Secrets and variables > Actions; NEVER commit temporary signed links to this public repo.
+- The ChatGPT/GitHub connector here can write scripts but cannot create repository secrets or dispatch workflow runs. Accordingly collection has not been live-validated. An external authorized setup step is still required. Signed URLs expire, so collection should run soon after a new batch.
+- The renderer has been locally tested using the existing apartment 604 before/after images. This verifies assembly only, not Runway image retrieval.
+- Web-app Runway credits and Runway Developer API credits are separate. An API key is not assumed to give access to ChatGPT-connected workspace image tasks.
