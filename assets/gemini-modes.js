@@ -158,7 +158,7 @@ $("geminiApprove").onclick=async()=>{
  }catch(e){status("Failed to save scene art: "+e.message)}
 };
 // Safe integration hooks for additional image providers.
-window.midnightStudioArt={getReference,prompt,showImage};
+window.midnightStudioArt={getReference,prompt,showImage,hydrate};
 $("geminiEndpoint").value=sessionStorage.getItem("midnight-worker-endpoint")||"";
 $("geminiEndpoint").addEventListener("change",()=>sessionStorage.setItem("midnight-worker-endpoint",$("geminiEndpoint").value));
 $("geminiToken").value=sessionStorage.getItem("midnight-studio-token")||"";
