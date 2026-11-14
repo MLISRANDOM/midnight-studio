@@ -23,3 +23,6 @@
 .studio-v6 #storyPanel>.ep-advanced>.studio-detail-body{display:grid;gap:12px}
 .studio-v6 #storyPanel>.ep-advanced .panel{margin:0}
 @media(min-width:850px){.studio-v6 #storyPanel{grid-column:1/-1;max-width:740px;width:100%;margin-inline:auto}.studio-v6 #viewer{grid-column:1/-1;max-width:740px;width:100%;margin-inline:auto}}
+
+/* Keep the first screen focused; show preview only when user asks. */
+.studio-v6:not(.episode-preview-open) #viewer{display:none!important}
