@@ -11,6 +11,8 @@ const DURATIONS=new Set([30,60,180,300,600,900,1800,3600]);
 let plan;
 try{const v=JSON.parse(localStorage.getItem(KEY)||"null");if(v&&Array.isArray(v.parts))plan=v}catch{}
 const label=n=>n>=60?Math.round(n/60)+" min":n+" sec";
+const finishTitle=$("epFinished")?.querySelector("strong");if(finishTitle)finishTitle.textContent="Part artwork ready";
+const finishDetail=$("epFinished")?.querySelector("p");if(finishDetail)finishDetail.textContent="The current part is ready as a motion comic. For a longer story, use Next part to continue until every part is finished. Export parts separately for now.";
 const durations=n=>{const out=[];while(n>0){const v=Math.min(180,n);out.push(v);n-=v}return out};
 const store=()=>{if(!plan)return;try{localStorage.setItem(KEY,JSON.stringify(plan))}catch(e){$("epLengthHint").textContent="Local storage full. Export the project to preserve your work."}};
 function describe(){
@@ -19,7 +21,7 @@ function describe(){
  "Target: "+label(secs)+", with a complete scene-art storyboard.":
  "Target: "+label(secs)+" split into "+parts.length+" parts (up to 3 minutes each). Generate one part at a time, then continue the story. Long productions use many free AI requests.";
  $("epLengthHint").textContent=message+" This produces a motion comic, not fully animated footage.";
- $("epStart").textContent=$("epMode").value==="standalone"?"Create my full story":"Create my episode";
+ $("epStart").textContent=parts.length>1?($("epMode").value==="standalone"?"Start my full story · Part 1":"Start episode · Part 1"):($("epMode").value==="standalone"?"Create my full story":"Create my episode");
 }
 function picker(){
  const wrap=$("epParts"),select=$("epPartPicker");select.replaceChildren();
