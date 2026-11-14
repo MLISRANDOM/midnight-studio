@@ -12,6 +12,38 @@
       "status": "generated_unreviewed",
       "description": "Tape measure across missing sixth-floor corridor",
       "credit_cost": 4
+    },
+    {
+      "shot": 7,
+      "asset_id": "6f766042-522a-472e-a1a5-0d253540c5c5",
+      "task_id": "7f0502ae-b8bc-4cdc-be07-921d5b9326a6",
+      "description": "Elevator indicator blank for 03:17 typography",
+      "status": "generated_unreviewed",
+      "credit_cost": 4
+    },
+    {
+      "shot": 11,
+      "asset_id": "490ecbb3-8b8a-4c1e-b0b7-7fd3275d4ddb",
+      "task_id": "af52a767-935a-441d-8ca8-8db41798976e",
+      "description": "Maintenance binder with red blocked line",
+      "status": "generated_unreviewed",
+      "credit_cost": 4
+    },
+    {
+      "shot": 15,
+      "asset_id": "60630bdc-17fd-4a05-ab48-a393adb626e1",
+      "task_id": "36895250-2a8b-4209-8553-424e857280fd",
+      "description": "Fire escape ends impossibly in midair",
+      "status": "generated_unreviewed",
+      "credit_cost": 4
+    },
+    {
+      "shot": 17,
+      "asset_id": "b7d01d3a-e1bc-4294-a146-e9f08e21f59c",
+      "task_id": "54b475e0-f0dc-4a96-9e99-b243b92650dd",
+      "description": "Graywell tower evacuation buses dusk",
+      "status": "generated_unreviewed",
+      "credit_cost": 4
     }
   ],
   "notes": [
@@ -19,6 +51,8 @@
     "Do not publish signed asset URLs in public repository.",
     "Automatic binary collection into renderer remains unverified.",
     "Do not generate character shots until approved reference sheets are hosted in Runway and usable as references.",
-    "Do not substitute Evan or reinterpret character designs."
-  ]
+    "Do not substitute Evan or reinterpret character designs.",
+    "4 new 16:9 stills added; asset IDs confirmed in Runway library; not yet visually approved."
+  ],
+  "last_known_credits": 124
 }
