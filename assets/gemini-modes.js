@@ -26,7 +26,7 @@ ui.innerHTML=`<div class="headerline"><h3>Gemini image studio</h3><span class="b
 <div class="actions"><button id="geminiGenerate" type="button" class="primary">Generate with Gemini</button><button id="geminiRegenerate" type="button">Regenerate scene</button></div>
 <p class="hint">The token is only kept in this tab session. Do not paste your Google API key here. This lightweight access-token approach is intended for one private creator; production use needs stronger authentication and server-side quotas.</p>
 </div>
-<div id="geminiOutput" class="hidden"><h3>Gemini image result</h3><img id="geminiResult" alt="Latest generated or imported scene artwork" style="display:block;width:100%;max-height:460px;object-fit:contain;border:1px solid #354965;border-radius:12px"><div class="actions"><button id="geminiApprove" type="button" class="primary">Use image in selected scene</button><button id="geminiSave" type="button">Download image PNG/JPG</button></div></div>
+<div id="geminiOutput" class="hidden"><h3 id="artResultHeading">Latest scene artwork</h3><img id="geminiResult" alt="Latest generated or imported scene artwork" style="display:block;width:100%;max-height:460px;object-fit:contain;border:1px solid #354965;border-radius:12px"><div class="actions"><button id="geminiApprove" type="button" class="primary">Use image in selected scene</button><button id="geminiSave" type="button">Download image PNG/JPG</button></div></div>
 <div id="geminiStatus" class="notice" role="status" aria-live="polite">Ready. Choose Gemini Pro to use your subscription without additional API integration.</div>`;
 const refCard=$("artReferenceCard");
 if(refCard)refCard.insertAdjacentElement("afterend",ui);else art.querySelector("p")?.insertAdjacentElement("afterend",ui);
@@ -41,7 +41,7 @@ function prompt(){
  const episodes=Array.isArray(b.episodes)?b.episodes.map((x,i)=>(i+1)+". "+x.title+": "+x.summary).join("\n"):"None recorded";
  return [
  "Create exactly one original finished 2D animated horror scene frame, "+$("geminiFormat").value+" aspect ratio. Clean frame without text, titles, captions, logos, borders or watermarks.",
- "CHARACTER DESIGN LOCK: "+(b.character||"Evan")+". "+(b.appearance||"Short fade haircut, full beard, charcoal hoodie")+". Match the attached approved character reference with exceptional fidelity. Preserve the face, beard, hair, clothing and proportions; do not redesign.",
+ "IMPORTANT CHARACTER REFERENCE: Input image 0 is the APPROVED Evan design sheet or cropped portrait. Treat it as the character identity reference, not as a storyboard or multiple different characters. Recreate THIS SAME illustrated adult Black male protagonist: medium-dark brown skin; short rounded curly fade; strong thick connected black beard and mustache; bold expressive eyebrows; broad stylized face; charcoal gray hooded sweatshirt with drawstrings, olive green backpack straps over both shoulders, and olive cargo pants when visible. The picture must look like THIS specific illustrated Evan, not a generic bald man or unrelated cartoon character. Keep his exact facial silhouette and outfit identifiers. Avoid a shaved scalp, overly realistic face, missing beard, white hoodie, or missing backpack in full-body shots. Preserve all established character identity details. Additional approved canon: "+(b.appearance||"Evan wears a charcoal hoodie, beard and short fade")+".",
  "SERIES VISUAL STYLE: "+(b.style||"Bold thick black outlines, flat muted colors and dramatic horror lighting"),
  "SERIES CANON: "+(b.rules||"Not specified"),
  "RECURRING PLACES: "+(b.locations||"Not specified"),
@@ -68,16 +68,17 @@ $("geminiCopy").onclick=async()=>{try{const p=prompt();await navigator.clipboard
 $("geminiDownloadRef").onclick=()=>$("bDownloadRef").click();
 $("geminiOpen").onclick=()=>window.open("https://gemini.google.com/app","_blank","noopener,noreferrer");
 $("geminiPick").onclick=()=>$("geminiImageFile").click();
-function showImage(blob){
+function showImage(blob,source="Imported image"){
  if(state.url)URL.revokeObjectURL(state.url);
  state.blob=blob;
  state.url=URL.createObjectURL(blob);
  $("geminiResult").src=state.url;
+ $("artResultHeading").textContent=source+" result";
  $("geminiOutput").classList.remove("hidden");
  status("Artwork loaded. Review it, then tap Use image in selected scene.");
 }
 $("geminiImageFile").onchange=e=>{
- const file=e.target.files?.[0];if(file){if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>16*1024*1024)status("Use PNG, JPG or WebP smaller than 16 MB.");else showImage(file)}
+ const file=e.target.files?.[0];if(file){if(!["image/png","image/jpeg","image/webp"].includes(file.type)||file.size>16*1024*1024)status("Use PNG, JPG or WebP smaller than 16 MB.");else showImage(file,"Imported image")}
  e.target.value="";
 };
 async function getReference(){
@@ -116,7 +117,7 @@ async function generate(){
   if(!response.ok||!json.ok||!json.data)throw Error(json.error||"Generation failed");
   const bin=atob(json.data),bytes=new Uint8Array(bin.length);
   for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
-  showImage(new Blob([bytes],{type:json.mimeType||"image/png"}));
+  showImage(new Blob([bytes],{type:json.mimeType||"image/png"}),"Gemini API");
  }catch(e){status("Gemini: "+String(e.message||e))}
  finally{state.busy=false;button.disabled=false;regenerate.disabled=false;button.textContent="Generate with Gemini"}
 }
