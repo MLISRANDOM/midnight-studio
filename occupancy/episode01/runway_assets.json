@@ -160,8 +160,8 @@
     {
       "shot": 43,
       "task_id": "5264b481-deab-40e6-9d92-7971c5613506",
-      "asset_id": null,
-      "status": "submitted_pending",
+      "asset_id": "e99ba23f-7e2e-4ef2-a9f7-8b013a592567",
+      "status": "generated_unreviewed",
       "description": "OCCUPANCY storyboard still for shot 043",
       "credit_cost": 4
     },
@@ -184,8 +184,8 @@
     {
       "shot": 54,
       "task_id": "a98f8b23-bdf4-4bcc-ad65-ad2db4c2e844",
-      "asset_id": null,
-      "status": "submitted_pending",
+      "asset_id": "a10400cf-a68d-422c-80ba-00397a32c648",
+      "status": "generated_unreviewed",
       "description": "OCCUPANCY storyboard still for shot 054",
       "credit_cost": 4
     },
@@ -200,8 +200,8 @@
     {
       "shot": 57,
       "task_id": "80e4084a-c05e-4a40-a9f1-092a5a8b8a6f",
-      "asset_id": null,
-      "status": "submitted_pending",
+      "asset_id": "644f94e9-128c-45b7-897f-9c48c8940918",
+      "status": "generated_unreviewed",
       "description": "OCCUPANCY storyboard still for shot 057",
       "credit_cost": 4
     },
@@ -232,8 +232,8 @@
     {
       "shot": 63,
       "task_id": "ba52507a-7b46-4859-8572-57dc74d57267",
-      "asset_id": null,
-      "status": "submitted_pending",
+      "asset_id": "5740a78b-b397-4d7c-b963-e4b5224169ad",
+      "status": "generated_unreviewed",
       "description": "OCCUPANCY storyboard still for shot 063",
       "credit_cost": 4
     },
@@ -256,8 +256,8 @@
     {
       "shot": 72,
       "task_id": "2af8cb82-8442-4fc8-b5e2-29936673664b",
-      "asset_id": null,
-      "status": "submitted_pending",
+      "asset_id": "a711a8c7-d450-4346-8a42-4fb2b2b140c7",
+      "status": "generated_unreviewed",
       "description": "OCCUPANCY storyboard still for shot 072",
       "credit_cost": 4
     },
@@ -288,8 +288,8 @@
     {
       "shot": 78,
       "task_id": "9747bc49-587f-46b5-828c-ab8cfc9942b3",
-      "asset_id": null,
-      "status": "submitted_pending",
+      "asset_id": "049b630a-89ce-48f2-9736-7c2b2d28dade",
+      "status": "generated_unreviewed",
       "description": "OCCUPANCY storyboard still for shot 078",
       "credit_cost": 4
     }
