@@ -1,0 +1,599 @@
+{
+  "episode": "OCCUPANCY Episode 1",
+  "drive_folder": "https://drive.google.com/drive/folders/1yP_OLseiqYAt7U28nMkMv6dzUdRQmmsf",
+  "imported_at": "2026-11-15",
+  "status": "staging_unreviewed",
+  "note": "Google Drive source originals are held separately from verified shot files. Filenames are random UUIDs and cannot be reliably mapped to storyboard without visual review.",
+  "files": [
+    {
+      "index": 1,
+      "filename": "272D6F0D-3E02-4EF4-9394-DF6ADB6887E5.png",
+      "drive_file_id": "1MeNTleV9hf-ilHO64zYjRQv_p-1QfNsS",
+      "drive_url": "https://drive.google.com/file/d/1MeNTleV9hf-ilHO64zYjRQv_p-1QfNsS/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 3288365,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 2,
+      "filename": "6FF18BB8-276E-4E29-A5AD-29C149A7B29B.png",
+      "drive_file_id": "1QqNkTU6vALVfM50D_ROC0SI6K4g8ff9q",
+      "drive_url": "https://drive.google.com/file/d/1QqNkTU6vALVfM50D_ROC0SI6K4g8ff9q/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 3179663,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 3,
+      "filename": "4E452872-AAEF-4A1A-BBC7-E2EB070600F1.png",
+      "drive_file_id": "1AEWtQ2ckGCBXwKd2LjagW2i_uEjwyJ-D",
+      "drive_url": "https://drive.google.com/file/d/1AEWtQ2ckGCBXwKd2LjagW2i_uEjwyJ-D/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 3148935,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 4,
+      "filename": "89478792-3867-4507-AC8B-678DBB5F61F5.png",
+      "drive_file_id": "1zvUK4q514cbT3uPThZybT88z7ypRCgPy",
+      "drive_url": "https://drive.google.com/file/d/1zvUK4q514cbT3uPThZybT88z7ypRCgPy/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 3134698,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 5,
+      "filename": "034CDC08-CF03-446E-9608-A856B307F389.png",
+      "drive_file_id": "1qZ5xi-r2J-szjMfOypx06CIGw6GZSVfx",
+      "drive_url": "https://drive.google.com/file/d/1qZ5xi-r2J-szjMfOypx06CIGw6GZSVfx/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 3081128,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 6,
+      "filename": "76E4F1DA-263C-47AF-A80E-6AC843A79C74.png",
+      "drive_file_id": "1mJ4OBvwAHP0HTqI82vW590odK_arbYQS",
+      "drive_url": "https://drive.google.com/file/d/1mJ4OBvwAHP0HTqI82vW590odK_arbYQS/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 3062352,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 7,
+      "filename": "BCFE19F3-5229-4417-B706-80A9D50AFF77.png",
+      "drive_file_id": "1HJw54TCRnG3musBYyydoQRIVT--soaTh",
+      "drive_url": "https://drive.google.com/file/d/1HJw54TCRnG3musBYyydoQRIVT--soaTh/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 3060549,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 8,
+      "filename": "135FB78F-00D6-434E-AD31-CF29FAA3F460.png",
+      "drive_file_id": "1xXdgo_gKFHLQpPXthokGk22fSLaj7zQf",
+      "drive_url": "https://drive.google.com/file/d/1xXdgo_gKFHLQpPXthokGk22fSLaj7zQf/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 3044737,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 9,
+      "filename": "3E620C69-F7B7-4E52-91B5-7D30A8BFDDE2.png",
+      "drive_file_id": "15FQ9BumE_yrPM-RK9wxwt2Hfd4ztP668",
+      "drive_url": "https://drive.google.com/file/d/15FQ9BumE_yrPM-RK9wxwt2Hfd4ztP668/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 3020610,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 10,
+      "filename": "5A0D1AE3-79E6-439F-AD26-7BD1EE20EDB7.png",
+      "drive_file_id": "1JMyIfdV616UPtWX8w2OJauderx--2bqb",
+      "drive_url": "https://drive.google.com/file/d/1JMyIfdV616UPtWX8w2OJauderx--2bqb/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2944434,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 11,
+      "filename": "7A463769-E974-4CA5-92CC-867BC4D35F24.png",
+      "drive_file_id": "1ptxCiYaHZGiQIU3vOxpccNdOV4YQaARh",
+      "drive_url": "https://drive.google.com/file/d/1ptxCiYaHZGiQIU3vOxpccNdOV4YQaARh/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2935776,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 12,
+      "filename": "E7E48B66-7047-4544-AFA7-105381036468.png",
+      "drive_file_id": "1UxXUOqmg7gBvYGANaQVe837f-bII7gsS",
+      "drive_url": "https://drive.google.com/file/d/1UxXUOqmg7gBvYGANaQVe837f-bII7gsS/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2918037,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 13,
+      "filename": "953650EA-1A21-4950-9996-90957135ACFD.png",
+      "drive_file_id": "1DCMlbDRhqTdc5LlJHzIjTjNyNNwBBWGZ",
+      "drive_url": "https://drive.google.com/file/d/1DCMlbDRhqTdc5LlJHzIjTjNyNNwBBWGZ/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2886014,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 14,
+      "filename": "71D7C5E8-73DE-4B4D-82B0-9D79FC8297D3.png",
+      "drive_file_id": "1l_cTQHXFtUqRW4Tux27MfHd3iBMHUn5e",
+      "drive_url": "https://drive.google.com/file/d/1l_cTQHXFtUqRW4Tux27MfHd3iBMHUn5e/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2868118,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 15,
+      "filename": "281A098A-4831-4CAA-B085-F74B3C2D69AE.png",
+      "drive_file_id": "1bQjRbjrQgp0zx_AyFbk9W7paJGg7MG7w",
+      "drive_url": "https://drive.google.com/file/d/1bQjRbjrQgp0zx_AyFbk9W7paJGg7MG7w/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2803395,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 16,
+      "filename": "C7A02150-B2EF-492E-A936-41FDA5E96364.png",
+      "drive_file_id": "15V1CrKaQRgTfNhgsyX2DxA_SFOnclaPj",
+      "drive_url": "https://drive.google.com/file/d/15V1CrKaQRgTfNhgsyX2DxA_SFOnclaPj/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2738932,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 17,
+      "filename": "B90A8F10-A30B-4840-B2A3-6850F46585D1.png",
+      "drive_file_id": "11gpCj-EEVUOZCvz5crcGVEVeOq12JnhB",
+      "drive_url": "https://drive.google.com/file/d/11gpCj-EEVUOZCvz5crcGVEVeOq12JnhB/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2710046,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 18,
+      "filename": "DDC1CA4E-9A22-4F4A-909A-0994EABA12C6.png",
+      "drive_file_id": "1DELLmzuh4EnNpGY2BfYiNpU2V3J1XLDA",
+      "drive_url": "https://drive.google.com/file/d/1DELLmzuh4EnNpGY2BfYiNpU2V3J1XLDA/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2700438,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 19,
+      "filename": "E0C3645E-B93A-4D48-BCB5-5EB7A70466B7.png",
+      "drive_file_id": "1Tw4J2p2C9yn7K-jLj1QT3lzIshlrh70R",
+      "drive_url": "https://drive.google.com/file/d/1Tw4J2p2C9yn7K-jLj1QT3lzIshlrh70R/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2699377,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 20,
+      "filename": "DB8DD642-81BA-40E2-9B2B-EFF7E99B81C1.png",
+      "drive_file_id": "17_hOm-3bMyaNmS6pgoayJ6xcpZvWo8Hc",
+      "drive_url": "https://drive.google.com/file/d/17_hOm-3bMyaNmS6pgoayJ6xcpZvWo8Hc/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2684162,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 21,
+      "filename": "53ED6D48-A653-4FA0-83AF-92FF308B6014.png",
+      "drive_file_id": "1EwgOLugqmYSb3lcBOZauExNkY7uZ-uBS",
+      "drive_url": "https://drive.google.com/file/d/1EwgOLugqmYSb3lcBOZauExNkY7uZ-uBS/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2682038,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 22,
+      "filename": "E92E5D52-22E7-4C3C-B84D-5013F50479B4.png",
+      "drive_file_id": "1rWAPdPkjXIPJfKC1cBf9DSUaFNBW9OAm",
+      "drive_url": "https://drive.google.com/file/d/1rWAPdPkjXIPJfKC1cBf9DSUaFNBW9OAm/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2656882,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 23,
+      "filename": "07CBB1CC-2DBA-4AE8-A638-B03E8C47CB28.png",
+      "drive_file_id": "1KcWnlcV_d-HiglYzj0GoMMuDgH-E1wyp",
+      "drive_url": "https://drive.google.com/file/d/1KcWnlcV_d-HiglYzj0GoMMuDgH-E1wyp/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2630934,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 24,
+      "filename": "29CEBED5-434E-4716-BB0E-C22994139F23.png",
+      "drive_file_id": "13zW56lCCChbNpmMKrwlnF52OnbX9ETQT",
+      "drive_url": "https://drive.google.com/file/d/13zW56lCCChbNpmMKrwlnF52OnbX9ETQT/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2614231,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 25,
+      "filename": "50710B3A-7B83-4718-9A3A-F50FD33FD7F5.png",
+      "drive_file_id": "1J8yTHw2T7UZcvpq5bibhGBXFJ1JxkCgv",
+      "drive_url": "https://drive.google.com/file/d/1J8yTHw2T7UZcvpq5bibhGBXFJ1JxkCgv/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2606100,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 26,
+      "filename": "6D5AECF9-67AF-45E2-937E-9E7949485C00.png",
+      "drive_file_id": "1kKtaCikfHUJ_HZp_fT4fWzt6MPuNjdxE",
+      "drive_url": "https://drive.google.com/file/d/1kKtaCikfHUJ_HZp_fT4fWzt6MPuNjdxE/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2590667,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 27,
+      "filename": "6B61BFFE-9707-461C-9048-F686201D5373.png",
+      "drive_file_id": "1wWU4rt61V_IubhAC0jZXaKIGECAyy0Vh",
+      "drive_url": "https://drive.google.com/file/d/1wWU4rt61V_IubhAC0jZXaKIGECAyy0Vh/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2585680,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 28,
+      "filename": "BE255F24-DDB0-486A-B9E6-144BD769158D.png",
+      "drive_file_id": "1iG677FijMs1C5oOXYnRmBegVtffGlWe3",
+      "drive_url": "https://drive.google.com/file/d/1iG677FijMs1C5oOXYnRmBegVtffGlWe3/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2583064,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 29,
+      "filename": "094B03A6-046B-4158-B1B9-A49F6B4272E5.png",
+      "drive_file_id": "1-RRRFt6PmebOy8-VMBQbFHK4yZhwWiOZ",
+      "drive_url": "https://drive.google.com/file/d/1-RRRFt6PmebOy8-VMBQbFHK4yZhwWiOZ/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2578289,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 30,
+      "filename": "B60E80B7-F4B6-4A62-B88E-7A6717743583.png",
+      "drive_file_id": "1pWzxW5dh6hFrwZ4ovxxAyvjmAXdcI_n9",
+      "drive_url": "https://drive.google.com/file/d/1pWzxW5dh6hFrwZ4ovxxAyvjmAXdcI_n9/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2565089,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 31,
+      "filename": "B58DA8C8-5333-4386-90F5-95AD0AF8358D.png",
+      "drive_file_id": "1OSFQBIPm2SF_I1CbKPjF20Y0RUummVBD",
+      "drive_url": "https://drive.google.com/file/d/1OSFQBIPm2SF_I1CbKPjF20Y0RUummVBD/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2556094,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 32,
+      "filename": "7B34D3C5-878A-42F9-9CB7-5535DAA15256.png",
+      "drive_file_id": "1NwjL7YzEs09KjrubNkAF5DrzFbafzQXU",
+      "drive_url": "https://drive.google.com/file/d/1NwjL7YzEs09KjrubNkAF5DrzFbafzQXU/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2551137,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 33,
+      "filename": "2A1E4970-1013-4693-9EBD-E2661AC23C17.png",
+      "drive_file_id": "1tU8SaAngkQUAUVCOU-2qPlTpNHu3FcV2",
+      "drive_url": "https://drive.google.com/file/d/1tU8SaAngkQUAUVCOU-2qPlTpNHu3FcV2/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2541964,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 34,
+      "filename": "F3B6CB2A-EA7D-4C5A-86C1-1CA2DF703052.png",
+      "drive_file_id": "14MKMJBRzMuHJaM1WtxcIO2IUgKOc7-hz",
+      "drive_url": "https://drive.google.com/file/d/14MKMJBRzMuHJaM1WtxcIO2IUgKOc7-hz/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2538166,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 35,
+      "filename": "BBB81D3D-68D1-4806-8172-8A710AF313D5.png",
+      "drive_file_id": "15DN8UhSkxBt0BkETGSEJCW6rEyyzvGeQ",
+      "drive_url": "https://drive.google.com/file/d/15DN8UhSkxBt0BkETGSEJCW6rEyyzvGeQ/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2491769,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 36,
+      "filename": "3BE29970-3A02-4878-B607-62BE19DF9748.png",
+      "drive_file_id": "1Zi41CSG52OR8Fgw6RRYaW0DpiwOu6Gx1",
+      "drive_url": "https://drive.google.com/file/d/1Zi41CSG52OR8Fgw6RRYaW0DpiwOu6Gx1/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2480178,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 37,
+      "filename": "AB428120-58A2-48A8-99B1-90F0CF4AC888.png",
+      "drive_file_id": "1BDRl8_8k6a5lFLZQeirgJ4WEieC48WHb",
+      "drive_url": "https://drive.google.com/file/d/1BDRl8_8k6a5lFLZQeirgJ4WEieC48WHb/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2436507,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 38,
+      "filename": "AFB9DA97-9DB9-49B8-BBDF-31844B332C66.png",
+      "drive_file_id": "1u15mgC6cU5ejv7TExKaYN0LqmFfwXmP8",
+      "drive_url": "https://drive.google.com/file/d/1u15mgC6cU5ejv7TExKaYN0LqmFfwXmP8/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2428828,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 39,
+      "filename": "AA80F56F-B996-4D47-8899-3D8FB7DBC497.png",
+      "drive_file_id": "1lMRMmeOfd1l-eptNuw1r3uaf_SOkb9ZQ",
+      "drive_url": "https://drive.google.com/file/d/1lMRMmeOfd1l-eptNuw1r3uaf_SOkb9ZQ/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2418981,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 40,
+      "filename": "105AE6B9-623F-411F-B641-8BB2F62452CB.png",
+      "drive_file_id": "13CAuMven0b8yH4TOjaMS3mWp843IfMSg",
+      "drive_url": "https://drive.google.com/file/d/13CAuMven0b8yH4TOjaMS3mWp843IfMSg/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2413448,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 41,
+      "filename": "21656E78-A012-4AB2-8F00-679F7B5DD0D6.png",
+      "drive_file_id": "1k5FQGsOP-nFtkKLoOeatAr1JthmpL-1S",
+      "drive_url": "https://drive.google.com/file/d/1k5FQGsOP-nFtkKLoOeatAr1JthmpL-1S/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2398233,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 42,
+      "filename": "7DC0BC7C-6DA8-4A37-9BDF-B51F676E63D5.png",
+      "drive_file_id": "1nOWUCAbTHsyo8D-NbEyXBFAQBW0AVnTh",
+      "drive_url": "https://drive.google.com/file/d/1nOWUCAbTHsyo8D-NbEyXBFAQBW0AVnTh/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2313772,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 43,
+      "filename": "7D8BC0F5-0176-4AB0-A092-4BBD00FC3643.png",
+      "drive_file_id": "1EODia0q_8vbqoeJ-39WAnoybHvmSK1Kz",
+      "drive_url": "https://drive.google.com/file/d/1EODia0q_8vbqoeJ-39WAnoybHvmSK1Kz/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2279831,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 44,
+      "filename": "0953F88D-2340-4F1B-923C-106810A25089.png",
+      "drive_file_id": "1LMsQYt_vWDaDaYmzt7oXD0RXCQAXqh1n",
+      "drive_url": "https://drive.google.com/file/d/1LMsQYt_vWDaDaYmzt7oXD0RXCQAXqh1n/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2240183,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 45,
+      "filename": "7DF1D26F-41D6-42C8-9DD2-0A01562F2D48.png",
+      "drive_file_id": "1OoWr7d2zj09VedqTTpbdxVScFnPQwEeC",
+      "drive_url": "https://drive.google.com/file/d/1OoWr7d2zj09VedqTTpbdxVScFnPQwEeC/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2211440,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 46,
+      "filename": "7C7C869B-E238-4856-91CB-D9DFD4CB17C5.png",
+      "drive_file_id": "1O7OFoQ22jnYL72VTQRnVHvZ33lxjkT97",
+      "drive_url": "https://drive.google.com/file/d/1O7OFoQ22jnYL72VTQRnVHvZ33lxjkT97/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2179841,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 47,
+      "filename": "6AF94E8A-1DE4-4795-B90C-38DD2B8D3492.png",
+      "drive_file_id": "1w-EWr55Uaw3XSD-CR37hO9M0GSynr8Hp",
+      "drive_url": "https://drive.google.com/file/d/1w-EWr55Uaw3XSD-CR37hO9M0GSynr8Hp/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2179001,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 48,
+      "filename": "03FFADBB-5D02-4F41-9A0C-C3BFC382E882.png",
+      "drive_file_id": "17yw0aoqv8PR5X9dPTpXufEZSabSZrN1w",
+      "drive_url": "https://drive.google.com/file/d/17yw0aoqv8PR5X9dPTpXufEZSabSZrN1w/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2104191,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 49,
+      "filename": "207FB608-795C-4240-A25A-383F28F76A91.png",
+      "drive_file_id": "1xnlcr5ug_oJDWZ6oPPJK7iSycZxJoIDa",
+      "drive_url": "https://drive.google.com/file/d/1xnlcr5ug_oJDWZ6oPPJK7iSycZxJoIDa/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2101092,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 50,
+      "filename": "25C8FB00-BAA2-4B73-8C83-6C29168B6BB4.png",
+      "drive_file_id": "17Yt7p-Pe5pxltEiMJYhAJrKYthAT5RDk",
+      "drive_url": "https://drive.google.com/file/d/17Yt7p-Pe5pxltEiMJYhAJrKYthAT5RDk/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2090162,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 51,
+      "filename": "B9EF6A6D-FC59-4C30-BDFF-FEB6EACA7D00.png",
+      "drive_file_id": "1gya64Y_dVxXybpxyZpDSCp4cKhHC8vM4",
+      "drive_url": "https://drive.google.com/file/d/1gya64Y_dVxXybpxyZpDSCp4cKhHC8vM4/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2083386,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 52,
+      "filename": "37C46A21-98E2-4D05-B0B7-2DF08454E4B6.png",
+      "drive_file_id": "1jGUXgcOSZIroMdjt4hBDwXZKF44hVJ3V",
+      "drive_url": "https://drive.google.com/file/d/1jGUXgcOSZIroMdjt4hBDwXZKF44hVJ3V/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2060779,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 53,
+      "filename": "D2F8406C-C5E9-4C02-80E2-451E756A591C.png",
+      "drive_file_id": "1tyCzFYsd-rWk7MkUMr6gexAsAwqLKLLT",
+      "drive_url": "https://drive.google.com/file/d/1tyCzFYsd-rWk7MkUMr6gexAsAwqLKLLT/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 2051366,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 54,
+      "filename": "BC88F15A-3D00-4922-A5FB-CB03EA53A9C1.png",
+      "drive_file_id": "1c6CHc6oD8s5TPJJEBAbdV9y9l9vKZ4Uz",
+      "drive_url": "https://drive.google.com/file/d/1c6CHc6oD8s5TPJJEBAbdV9y9l9vKZ4Uz/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 1985088,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 55,
+      "filename": "C994ED36-282B-43D6-A536-34206538CE86.png",
+      "drive_file_id": "1HVaRlRxnMK6ThLVk2ljB_53keROU6nGa",
+      "drive_url": "https://drive.google.com/file/d/1HVaRlRxnMK6ThLVk2ljB_53keROU6nGa/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 1974243,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 56,
+      "filename": "F59B4E76-BFB9-48E2-A05E-B65733EC2FBC.png",
+      "drive_file_id": "1YLhVPic0k76SWK7MD_KCkWD42ZJt_P55",
+      "drive_url": "https://drive.google.com/file/d/1YLhVPic0k76SWK7MD_KCkWD42ZJt_P55/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 1944212,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 57,
+      "filename": "10CECED4-FE88-433C-9CF4-D36CD7ABEC76.png",
+      "drive_file_id": "1sq3QITKunWooWRVW9a8dwSOwrgwQRTuw",
+      "drive_url": "https://drive.google.com/file/d/1sq3QITKunWooWRVW9a8dwSOwrgwQRTuw/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 1819414,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 58,
+      "filename": "BC2459E1-F297-4825-BA65-B17E7D220945.png",
+      "drive_file_id": "14OUPSgm9NNtu5dUCK-YNFkPxmJvd6ttF",
+      "drive_url": "https://drive.google.com/file/d/14OUPSgm9NNtu5dUCK-YNFkPxmJvd6ttF/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 1680445,
+      "candidate_shot": null,
+      "review": "pending"
+    },
+    {
+      "index": 59,
+      "filename": "EA23C4BB-7DE6-44B0-8E92-09BF5355E712.png",
+      "drive_file_id": "1VNAt1xRXFb3qZoCNhLblDxT8X5rqK-Ny",
+      "drive_url": "https://drive.google.com/file/d/1VNAt1xRXFb3qZoCNhLblDxT8X5rqK-Ny/view?usp=drivesdk",
+      "mime": "image/png",
+      "bytes": 1541535,
+      "candidate_shot": null,
+      "review": "pending"
+    }
+  ]
+}
