@@ -1,0 +1,14 @@
+{
+  "episode": "OCCUPANCY Episode 1",
+  "format": "1920x1080 16:9 PNG",
+  "assets": [
+    {
+      "shot": 2,
+      "filename": "SHOT_002_MARA_REACTION.png",
+      "status": "generated_local_pending_github_binary_transfer",
+      "quality": "review_pending",
+      "notes": "Mara measuring wall in sixth-floor hallway; image staged in conversation download bundle, not yet stored in GitHub."
+    }
+  ],
+  "remaining_not_yet_generated": 43
+}
