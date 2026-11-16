@@ -1,0 +1,29 @@
+name: OCCUPANCY export existing Runway artwork
+on:
+  push:
+    paths:
+      - ".github/workflows/occupancy-export-runway.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify and bundle tracked Runway images
+        run: |
+          set -euo pipefail
+          mkdir -p exported
+          cp occupancy/episode01/source/runway/SHOT_*.jpg exported/
+          count=$(find exported -name 'SHOT_*.jpg' | wc -l)
+          echo "Found $count Runway image files"
+          test "$count" -eq 36
+      - name: Upload one downloadable ZIP of the Runway frames
+        uses: actions/upload-artifact@v4
+        with:
+          name: occupancy-runway-36-originals
+          path: exported/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
