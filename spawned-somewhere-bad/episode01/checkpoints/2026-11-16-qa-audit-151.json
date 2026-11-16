@@ -1,0 +1,1036 @@
+{
+  "episode": "Spawned Somewhere Bad E01: 30 Days at Freddy’s",
+  "audit_date": "2026-11-16",
+  "total_shots": 228,
+  "approved_drive_verified": 151,
+  "qa": [
+    {
+      "shot": "S120",
+      "decision": "approved_uploaded_verified",
+      "file_id": "1G9g8RJ3flYWr1qsNZ4nsfHDORXpwU3KC",
+      "reason": "Hero appearance and intact dusty wardrobe match reference; standing on chair lifting ceiling tile; individual landscape frame."
+    },
+    {
+      "shot": "S121",
+      "decision": "rejected",
+      "reason": "Wide full-body framing instead of close-up; both hands off the ceiling tile rather than fingers rigid on tile edge."
+    },
+    {
+      "shot": "S123",
+      "decision": "rejected",
+      "reason": "Adds torn elbows/knees absent from this shot continuity; tile is not clearly being lowered while stepping down."
+    },
+    {
+      "shot": "S138",
+      "decision": "rejected",
+      "reason": "Duck covered by draped hoodie rather than the specified folded spare shirt."
+    },
+    {
+      "shot": "S140",
+      "decision": "rejected",
+      "reason": "Clock key falls in front of the shelf, not behind it."
+    }
+  ],
+  "approved_files": [
+    {
+      "shot": "S120",
+      "file_id": "1G9g8RJ3flYWr1qsNZ4nsfHDORXpwU3KC",
+      "bytes": 464600
+    },
+    {
+      "shot": "S153",
+      "file_id": "151pGAz_T1_iir_XjjsxJG-wsybH-v0HZ",
+      "bytes": 1592348
+    },
+    {
+      "shot": "S152",
+      "file_id": "1rYSUGQyQ31Mq3kgeSxqrQ884S81XrIvm",
+      "bytes": 1689389
+    },
+    {
+      "shot": "S147",
+      "file_id": "184D5gb9JHtbY7vP7iKHJomRMKFmdxWHJ",
+      "bytes": 1669972
+    },
+    {
+      "shot": "S151",
+      "file_id": "1GLcArbLe47JEySQ1T_6ryzPZLnPxBHPm",
+      "bytes": 1564451
+    },
+    {
+      "shot": "S148",
+      "file_id": "1Fc4NMpT2PosKiKMEVFTbHYOn9atTJIxv",
+      "bytes": 1647344
+    },
+    {
+      "shot": "S150",
+      "file_id": "10dcKL0Sl9nJ-rGcgyrMcT4tMzJaRhpst",
+      "bytes": 1748304
+    },
+    {
+      "shot": "S149",
+      "file_id": "1oczzcKlGBIT_16lYVGVM40uh2-y6N1uK",
+      "bytes": 1694959
+    },
+    {
+      "shot": "S146",
+      "file_id": "1VHL2aSTso6sxCdD3Cl7Sglihm31Cc8Ic",
+      "bytes": 1676022
+    },
+    {
+      "shot": "S145",
+      "file_id": "12qOSWybGIW_zZUQww99Ei3eMulaWijth",
+      "bytes": 1613030
+    },
+    {
+      "shot": "S144",
+      "file_id": "1vk1RHyLxb41V2VITIVeR2qznq8pDlJdC",
+      "bytes": 1719336
+    },
+    {
+      "shot": "S142",
+      "file_id": "1OnDVzuGHuM6aAJaeNicRkzlDBs39IGN5",
+      "bytes": 1778885
+    },
+    {
+      "shot": "S141",
+      "file_id": "1EH1kcjWSo0fk6qyWa4_CWcGz5-GC3d_O",
+      "bytes": 1725978
+    },
+    {
+      "shot": "S143",
+      "file_id": "1ajS-90AHdr15h-EwrYZok_Gc3zIZWJFw",
+      "bytes": 1633151
+    },
+    {
+      "shot": "S139",
+      "file_id": "1Emcet0Ak16ZCqtHZpTyP2NaDNLSh-PD8",
+      "bytes": 1670830
+    },
+    {
+      "shot": "S137",
+      "file_id": "1xYQOXMis0mFW2WUCx_sffZra__w_SpYO",
+      "bytes": 1727167
+    },
+    {
+      "shot": "S136",
+      "file_id": "1qsV5jDzNnwiGj8IDBexSlChrQvIKncff",
+      "bytes": 1774139
+    },
+    {
+      "shot": "S135",
+      "file_id": "1xBZYMGzngSt8gav_j4YZ2vsz8X2_tph9",
+      "bytes": 1708252
+    },
+    {
+      "shot": "S134",
+      "file_id": "10vHGXiIl4_4hUkqFPv1Y4TZdjPpEhVfp",
+      "bytes": 1666223
+    },
+    {
+      "shot": "S112",
+      "file_id": "1koTBnFaXB-ncZmwOQlinee5lbbc60Mm1",
+      "bytes": 1781059
+    },
+    {
+      "shot": "S115",
+      "file_id": "1YbmHGd-zVyIF4SVlqw_bSNt0mXodtVWH",
+      "bytes": 1703894
+    },
+    {
+      "shot": "S105",
+      "file_id": "1ohfdLbusGDKHQqCvqqfLzNHbN4BJEx2h",
+      "bytes": 1612860
+    },
+    {
+      "shot": "S122",
+      "file_id": "1CFTdSqLAgAo9o3FMvYcGj5Mkdf59V9uo",
+      "bytes": 1735373
+    },
+    {
+      "shot": "S097",
+      "file_id": "1tk8duyAJuVwfCfV0kC33UxWj7Zbpbb0W",
+      "bytes": 1707625
+    },
+    {
+      "shot": "S103",
+      "file_id": "1BHJPjZWEabagNqJPXwaGpobEyvwY_FqV",
+      "bytes": 1661623
+    },
+    {
+      "shot": "S093",
+      "file_id": "1iAm2TmniTYNkATjMUIQSf7VmP1V515ff",
+      "bytes": 1742273
+    },
+    {
+      "shot": "S102",
+      "file_id": "1VLgMJF86u5VRRrPY__BQIn6d1XQuwrZJ",
+      "bytes": 1570690
+    },
+    {
+      "shot": "S099",
+      "file_id": "1seqiJ6uy-Hg2dukTU_gGCydnhTfbnQCS",
+      "bytes": 1716558
+    },
+    {
+      "shot": "S091",
+      "file_id": "1KPrPLokFIPLX21rnaBafdwUeaHGsDlU2",
+      "bytes": 1437883
+    },
+    {
+      "shot": "S222",
+      "file_id": "12oRuxZtuWPoqIw7Sw8QiXaYYMXFKc90z",
+      "bytes": 1678180
+    },
+    {
+      "shot": "S167",
+      "file_id": "1rzAP6U5My1up_f1gt0kGAOgHm9H-7fsm",
+      "bytes": 1876552
+    },
+    {
+      "shot": "S133",
+      "file_id": "10qj8tv-6UARfM0Le9okWA64hE7w7bYfJ",
+      "bytes": 1668399
+    },
+    {
+      "shot": "S132",
+      "file_id": "135H0BDbkKVlVLLPPLGTfwepkgyVDcbrn",
+      "bytes": 1652477
+    },
+    {
+      "shot": "S131",
+      "file_id": "1yEwAA5bVj5YKGeJvtdpnekAQ9y32xCWe",
+      "bytes": 1760187
+    },
+    {
+      "shot": "S130",
+      "file_id": "1RNpZkmpnnsdXys39xd428MUZHaoX3KfA",
+      "bytes": 1729233
+    },
+    {
+      "shot": "S129",
+      "file_id": "1DDCKilYg1HVEumZVzuKUzlxdGmDHOTxw",
+      "bytes": 1590910
+    },
+    {
+      "shot": "S128",
+      "file_id": "14Nl_PmSCzO-7k2_aulgJ72vLh266ltjB",
+      "bytes": 1673780
+    },
+    {
+      "shot": "S127",
+      "file_id": "1vV5dKw_ZZdEOvmOS6mY3iSvW5SlkddsF",
+      "bytes": 1612862
+    },
+    {
+      "shot": "S126",
+      "file_id": "1haipV1zMjjvgB7-tjK-MtF9Dt0V4nN-X",
+      "bytes": 1703668
+    },
+    {
+      "shot": "S125",
+      "file_id": "1tH1UX8X8XsLY_hTaYPe8wbiLA6Gzqk9m",
+      "bytes": 1727411
+    },
+    {
+      "shot": "S119",
+      "file_id": "15DfniSYBh0rFys2UCFb13WdXEiQ8Bp6-",
+      "bytes": 1793447
+    },
+    {
+      "shot": "S124",
+      "file_id": "19ZeglFXpzCnX2D6eRfMMEQFEwPpd1_H1",
+      "bytes": 1719150
+    },
+    {
+      "shot": "S118",
+      "file_id": "1uRTjltWW02Bqc2E9yIZ9j8YBTY6vjgRP",
+      "bytes": 1917490
+    },
+    {
+      "shot": "S117",
+      "file_id": "1g2FwTaY5uySc_Ij0gmEumgwDcaX0Q-k6",
+      "bytes": 1801866
+    },
+    {
+      "shot": "S116",
+      "file_id": "13Kph-YAdSqByzSYlJNGHYi3DOnb9-eRA",
+      "bytes": 1892973
+    },
+    {
+      "shot": "S114",
+      "file_id": "1R2OzPIJRirHnt6a2ai697jIqtYoi95uR",
+      "bytes": 1776016
+    },
+    {
+      "shot": "S110",
+      "file_id": "1hWT9KzxFv9IzXO9ncvKOja1oQzq3s8MN",
+      "bytes": 1677703
+    },
+    {
+      "shot": "S113",
+      "file_id": "1UiqewBvT7d3L226srAVzwujsXahR2hvg",
+      "bytes": 1745282
+    },
+    {
+      "shot": "S109",
+      "file_id": "1AF-oPnG0XUax-BYdLeTNZXxCmyJdnNNG",
+      "bytes": 1742001
+    },
+    {
+      "shot": "S108",
+      "file_id": "1lIXLW7YXY8V3R69dhCQ9BatxoMB7aqCX",
+      "bytes": 1729487
+    },
+    {
+      "shot": "S107",
+      "file_id": "19Sh3I-ONvR29dVUg92c9uB-Baq41orS0",
+      "bytes": 1619320
+    },
+    {
+      "shot": "S106",
+      "file_id": "1LGYVY-ZyjVSfRm4uacUlBAqHJEyniwMv",
+      "bytes": 1657565
+    },
+    {
+      "shot": "S104",
+      "file_id": "1JONdfQG6aF9EDNCiORS2zbo_kLEvyb4G",
+      "bytes": 1677010
+    },
+    {
+      "shot": "S101",
+      "file_id": "1Nmmqy-0o2ggQVKZurdDGAkHXJjtGZ0Zz",
+      "bytes": 1841586
+    },
+    {
+      "shot": "S100",
+      "file_id": "1YjhF9AwlghhdFnpIqny0BCyZSeqBpxEG",
+      "bytes": 1767743
+    },
+    {
+      "shot": "S098",
+      "file_id": "16At3SkGUbFwuWXQXYiljCQ5BdXu2_AIw",
+      "bytes": 1727139
+    },
+    {
+      "shot": "S096",
+      "file_id": "1_kFuxaSYtI1kCqfk6jsNTv8xddsfTisA",
+      "bytes": 1767459
+    },
+    {
+      "shot": "S087",
+      "file_id": "1Lx7093s0eCwiNvKiboYNq3uIeI6KJFJw",
+      "bytes": 1696474
+    },
+    {
+      "shot": "S081",
+      "file_id": "1tpwcRH3VFAcLaCjOBObo9kaHXU5sz9Fu",
+      "bytes": 1669173
+    },
+    {
+      "shot": "S079",
+      "file_id": "1NfljAybLFXC--uMPCTeiylrAos1ZJMKX",
+      "bytes": 1798922
+    },
+    {
+      "shot": "S068",
+      "file_id": "1_S12cj1LVJCFRLIAAE1b3XWzJ6etvENj",
+      "bytes": 1592698
+    },
+    {
+      "shot": "S076",
+      "file_id": "1jSfv-VMEzP0tOM6zfRrE7zlc3aKOKhlW",
+      "bytes": 1746812
+    },
+    {
+      "shot": "S073",
+      "file_id": "1UZD044-X9SIMOkvgdThXACIRsAAKPYqB",
+      "bytes": 1455861
+    },
+    {
+      "shot": "S075",
+      "file_id": "1xziEWDot_rWIV4Et28s2ZTNjzQ3d2scq",
+      "bytes": 1733204
+    },
+    {
+      "shot": "S072",
+      "file_id": "1QzNzSeSCMRw_vg7ngJMG3zF2GJj7vA_t",
+      "bytes": 1645917
+    },
+    {
+      "shot": "S046",
+      "file_id": "1tGFSWdS0TvtzrTe4sQdv7Wyt_MJIX5me",
+      "bytes": 1768572
+    },
+    {
+      "shot": "S095",
+      "file_id": "1XHK-s0FrT0S23Bw70SCLTafCdsh1QwSk",
+      "bytes": 1648170
+    },
+    {
+      "shot": "S094",
+      "file_id": "17RRDaHxeSxOBH4FXZ8mfkiexEldqozc1",
+      "bytes": 1647436
+    },
+    {
+      "shot": "S092",
+      "file_id": "1GTTaIr6W7mfDPH3_cJrzkUY2NU8qr2fR",
+      "bytes": 1879617
+    },
+    {
+      "shot": "S090",
+      "file_id": "1OiVeWum9i_AFzyuieQ9KdLVNNh5lCC1z",
+      "bytes": 1787467
+    },
+    {
+      "shot": "S089",
+      "file_id": "1eo7J18K1-o5Gi5tVd-Jio-Spjo8TJbWj",
+      "bytes": 1782143
+    },
+    {
+      "shot": "S088",
+      "file_id": "1kBkEiip3UXM4HNc99TMSFQUewIDrKNaa",
+      "bytes": 1924167
+    },
+    {
+      "shot": "S086",
+      "file_id": "1BTXAGSd5CTC3DI6cloTLvtqNYTpeC_mu",
+      "bytes": 1848104
+    },
+    {
+      "shot": "S085",
+      "file_id": "1WnNgb5RRbN2M8pi9LVLf_OGWWMvhxjbu",
+      "bytes": 2065794
+    },
+    {
+      "shot": "S084",
+      "file_id": "1878RUcCH4XN8y2qhLdMU3rXX3TSi5WFb",
+      "bytes": 2119502
+    },
+    {
+      "shot": "S083",
+      "file_id": "1uj31V5UJOxaUy4ZiABssJdJ6HzdLiFkd",
+      "bytes": 1962439
+    },
+    {
+      "shot": "S080",
+      "file_id": "194IF4gzpt_vr2aujbRuqHuxZPzO8I0D-",
+      "bytes": 1726352
+    },
+    {
+      "shot": "S082",
+      "file_id": "1tEm4XwWD2kQcs6cu8ZQTDF9WzmHUKWFe",
+      "bytes": 1619984
+    },
+    {
+      "shot": "S078",
+      "file_id": "1StkacuoTemMFyafzTarT1G0jFKu3G7Xt",
+      "bytes": 1757987
+    },
+    {
+      "shot": "S077",
+      "file_id": "1GC0wMRMsAyJgeUEW4dJuQBfwzcxp3Zsa",
+      "bytes": 1763801
+    },
+    {
+      "shot": "S074",
+      "file_id": "1aB8yLV7lwkessvNCZa9Ms7f-otpVPSwO",
+      "bytes": 1724316
+    },
+    {
+      "shot": "S071",
+      "file_id": "15-N5Re9YDgCZBqIMmMriQyPlJtiq7NnD",
+      "bytes": 1920258
+    },
+    {
+      "shot": "S070",
+      "file_id": "12Itokb37AcwlZWghzYG8AvNB0ACwXOzN",
+      "bytes": 1774192
+    },
+    {
+      "shot": "S069",
+      "file_id": "19-dLLUuASWlA5D0k66CIigwJh0-zfsOZ",
+      "bytes": 1632654
+    },
+    {
+      "shot": "S067",
+      "file_id": "1go7Ad2_MPk-sUOizJkagM_YgcG7GwbQD",
+      "bytes": 1634172
+    },
+    {
+      "shot": "S066",
+      "file_id": "1UZtlBimf-U-JtltdqBAK11gjTKbCVC5O",
+      "bytes": 1610949
+    },
+    {
+      "shot": "S065",
+      "file_id": "151kvuoVsxcs-u-hfvOE8joutj9dss_F1",
+      "bytes": 1619422
+    },
+    {
+      "shot": "S064",
+      "file_id": "1pwFg-WDQbDzlJBx9pGi1WjYy-O_61pWP",
+      "bytes": 1618868
+    },
+    {
+      "shot": "S062",
+      "file_id": "13gtqq_Tv1w4mFgMv8dQAWKmRu-Rn2oEt",
+      "bytes": 1540027
+    },
+    {
+      "shot": "S061",
+      "file_id": "1wpt-2ZAyRzrqClC8jWOLMQiY3Jbonk5p",
+      "bytes": 1711572
+    },
+    {
+      "shot": "S060",
+      "file_id": "1_oa7smsbG707svcFCugQq1RBmIW00L_P",
+      "bytes": 1836052
+    },
+    {
+      "shot": "S059",
+      "file_id": "1Lib2z1Pyf7R9chPEo0q3zKDSW5xX_XX5",
+      "bytes": 1674550
+    },
+    {
+      "shot": "S058",
+      "file_id": "1GNNQyUEBYZKrbzqX02vBthkQ1-JsS1hL",
+      "bytes": 1774198
+    },
+    {
+      "shot": "S056",
+      "file_id": "1QBiC1WZMUVW0-LvOuQmI0DLHt8lQ4dCC",
+      "bytes": 1805538
+    },
+    {
+      "shot": "S055",
+      "file_id": "1NyTQAEVD2RrQVurY6I5gQias8kutC2H8",
+      "bytes": 1702446
+    },
+    {
+      "shot": "S054",
+      "file_id": "1qoAlGlHly9ApbNdVeHIgVGd3qy1m29xy",
+      "bytes": 1773987
+    },
+    {
+      "shot": "S053",
+      "file_id": "1R3TjbSSaxlodDjatjQbFaq_E2EX65gmc",
+      "bytes": 1764855
+    },
+    {
+      "shot": "S052",
+      "file_id": "1tCEGAtwZntqrV3edHUT75jJKLrrdm0GV",
+      "bytes": 2036588
+    },
+    {
+      "shot": "S051",
+      "file_id": "1qHmm5JsPXhhA_PdryFcLOb7KosqrhTF9",
+      "bytes": 1750894
+    },
+    {
+      "shot": "S050",
+      "file_id": "1Tc5Axi3WtHGAjPQjWa6oTPA619e3oUDG",
+      "bytes": 1807178
+    },
+    {
+      "shot": "S049",
+      "file_id": "1YkGM-hzpS9hOBhO4hRv5oHM3ZMSqt8la",
+      "bytes": 1788861
+    },
+    {
+      "shot": "S048",
+      "file_id": "1sV5Y3HHNx4j-KWRZrceR8lpU6i2lbU0g",
+      "bytes": 1848538
+    },
+    {
+      "shot": "S045",
+      "file_id": "1wMIbPCzcojCsZV0sdle5SN4AZVTbDc68",
+      "bytes": 1812246
+    },
+    {
+      "shot": "S047",
+      "file_id": "1h7MBe3se8nQpTxRpAW0WJ7aliGhdI3ud",
+      "bytes": 1828807
+    },
+    {
+      "shot": "S043",
+      "file_id": "15K06ZFerWl1N5I4TYnGNEeOrO-TlOvWf",
+      "bytes": 1693683
+    },
+    {
+      "shot": "S041",
+      "file_id": "1ZnyMNvqfE4CYZkJT7HM70PreSqYyzre9",
+      "bytes": 1827103
+    },
+    {
+      "shot": "S042",
+      "file_id": "1cX4MgXvGnvjjlL1DllkFWdl2p9iZ8ux7",
+      "bytes": 1816077
+    },
+    {
+      "shot": "S040",
+      "file_id": "1Nink-BQF4S25gSo6UgyzhlGt6GnszmhP",
+      "bytes": 1604947
+    },
+    {
+      "shot": "S039",
+      "file_id": "1M0ey_VOWOlVxUEdhBaYI7s5WS0hi-Wwh",
+      "bytes": 1637541
+    },
+    {
+      "shot": "S038",
+      "file_id": "1KJhPTlet1GoRStxD-junr7eykMegKMUF",
+      "bytes": 1762035
+    },
+    {
+      "shot": "S037",
+      "file_id": "1KsxGHossF1Rs-NIq6-JM2Jj_DGrX3pXr",
+      "bytes": 1931899
+    },
+    {
+      "shot": "S036",
+      "file_id": "1Ktzr2P0PiDx1L4duZmONoPbo31t8hdM_",
+      "bytes": 1910065
+    },
+    {
+      "shot": "S035",
+      "file_id": "1ElG9tlwffnzQA1X4XkfEcX-ZmtJixFed",
+      "bytes": 1915914
+    },
+    {
+      "shot": "S024",
+      "file_id": "1H8h0rUnN1UoTCqyPot219cghZdbFMe24",
+      "bytes": 1884964
+    },
+    {
+      "shot": "S034",
+      "file_id": "1-ZanZUF8w5nn-jxP0fjrqFTSz_quwkpe",
+      "bytes": 1839285
+    },
+    {
+      "shot": "S032",
+      "file_id": "1EHSUD5V9US7CQsd-G2z-BZd01yq5ZcFJ",
+      "bytes": 1767914
+    },
+    {
+      "shot": "S029",
+      "file_id": "1-hujpwqdvNprxSv7sEdtkZhW66vmda6i",
+      "bytes": 1606738
+    },
+    {
+      "shot": "S031",
+      "file_id": "1WGM7SXYdoYxdiIEf-FiDQTfPl6181Gq5",
+      "bytes": 1678403
+    },
+    {
+      "shot": "S027",
+      "file_id": "1VqSfXIsPJnhCR0OffH2ZKHATlPuXLz0i",
+      "bytes": 1904724
+    },
+    {
+      "shot": "S028",
+      "file_id": "1XxEjYsbgcF-4BWuD9Nmo3mf9PtliqrwW",
+      "bytes": 1623074
+    },
+    {
+      "shot": "S111",
+      "file_id": "1DF77-CmgQxhWm7C14mQ6kP9ke8boz-fb",
+      "bytes": 1795740
+    },
+    {
+      "shot": "S063",
+      "file_id": "1fz58kxdyiPWW1TBenK-Vg1MOg55F2CFC",
+      "bytes": 1534030
+    },
+    {
+      "shot": "S057",
+      "file_id": "1TWx4xxUdxs3gkryVX-n1fEJLkhaoht6T",
+      "bytes": 1709193
+    },
+    {
+      "shot": "S044",
+      "file_id": "1cJMRqPBb6qS9olj2OyX_kUUVXxfJ5Rn4",
+      "bytes": 1821162
+    },
+    {
+      "shot": "S033",
+      "file_id": "1l56x0UdN7QQdto1YAp44Zgnb6PnI5226",
+      "bytes": 1843114
+    },
+    {
+      "shot": "S030",
+      "file_id": "1iOcy9Lf_AoEhVBBhp16FMd1Jrc9_heQR",
+      "bytes": 1710607
+    },
+    {
+      "shot": "S026",
+      "file_id": "18ZbYEHB0kG1ErQHJAcnEKIH6rqxWP4o_",
+      "bytes": 1767856
+    },
+    {
+      "shot": "S025",
+      "file_id": "1gvdEwsO3L7Ihcj7meNpPyH4sapasaDHG",
+      "bytes": 1955873
+    },
+    {
+      "shot": "S023",
+      "file_id": "1bBrGnbbWFbz5ZERtdCA5B5l-HoJiTKnb",
+      "bytes": 1971013
+    },
+    {
+      "shot": "S019",
+      "file_id": "1QEidVWON1axDto--zoD-0fMY793Hg9Je",
+      "bytes": 1859114
+    },
+    {
+      "shot": "S022",
+      "file_id": "1k26cfwoFcoGWHFmFb9u3chdPj92w2mXE",
+      "bytes": 1960553
+    },
+    {
+      "shot": "S020",
+      "file_id": "1SsXFHPxBpNoxWg4OHHfNOZdFPCTjBMMM",
+      "bytes": 1887702
+    },
+    {
+      "shot": "S021",
+      "file_id": "1ysvC_mDc7MN7ecOEjp8oz0Iji4Syz4Cf",
+      "bytes": 1842514
+    },
+    {
+      "shot": "S017",
+      "file_id": "11a8BJEieXSgmkb6oocUQgupla7qA1nu8",
+      "bytes": 1737614
+    },
+    {
+      "shot": "S018",
+      "file_id": "1ePC3pgPJ-6famCngjv13btN-yrfx0sw4",
+      "bytes": 1984975
+    },
+    {
+      "shot": "S016",
+      "file_id": "1ejhvMh3S9hgo9mNvJc5ioEdwPzvVQHSe",
+      "bytes": 2018575
+    },
+    {
+      "shot": "S014",
+      "file_id": "18qHrK52oyIrrxq19yAHBh8LwBvfDSrLx",
+      "bytes": 1584562
+    },
+    {
+      "shot": "S013",
+      "file_id": "1qJBLsJjGUvSY1L7Uq7Ylj2tHMcTEiaIw",
+      "bytes": 1622652
+    },
+    {
+      "shot": "S012",
+      "file_id": "1K0Nx0DBqGI_9NHzd9bbvcTzwCm0i5WkW",
+      "bytes": 1550330
+    },
+    {
+      "shot": "S011",
+      "file_id": "1K736qC8gWtQ-M_HtvWg-KLhliViRnRvz",
+      "bytes": 1557031
+    },
+    {
+      "shot": "S009",
+      "file_id": "1J3NG44foKOm--gOfJJFdpRMEkFeQ_tSO",
+      "bytes": 1619520
+    },
+    {
+      "shot": "S015",
+      "file_id": "1H1-jpnVfh6YtK4B-qZ--srmKuS-8rnMu",
+      "bytes": 1755579
+    },
+    {
+      "shot": "S010",
+      "file_id": "1WES2QXdRMml84dLCQRhMfKGUKRs6o5-Z",
+      "bytes": 1573234
+    },
+    {
+      "shot": "S008",
+      "file_id": "16HgvWvqyXfnMMVkvdCC2WiJJDwkxYn3s",
+      "bytes": 1631567
+    },
+    {
+      "shot": "S007",
+      "file_id": "1AavFuz1PjhooqxXuLtxokqGqCbxbemrc",
+      "bytes": 1587688
+    },
+    {
+      "shot": "S006",
+      "file_id": "1fjtg25qjkoHq4j08Ff2pXdhUa_53Yt_X",
+      "bytes": 1697170
+    },
+    {
+      "shot": "S005",
+      "file_id": "1ayobMROKv1PXV6MC3DPhciEwThlsAq6u",
+      "bytes": 1671590
+    },
+    {
+      "shot": "S004",
+      "file_id": "1tuVGDzqk-k49io1yiLi63njXAKlFcI8P",
+      "bytes": 1735363
+    },
+    {
+      "shot": "S003",
+      "file_id": "1EsSy_YimgdjgpXaUANhAd-CNX7x71b-N",
+      "bytes": 1509058
+    },
+    {
+      "shot": "S002",
+      "file_id": "1zFoINWBqN1Twz1klXTzdhSnk6WvW7j7c",
+      "bytes": 1704425
+    },
+    {
+      "shot": "S001",
+      "file_id": "1cEkeTAMG4YCgnXfWV03tnZn9MeRBZxhK",
+      "bytes": 1442405
+    }
+  ],
+  "completed_candidates_pending_export": [
+    {
+      "shot": "S154",
+      "runway_task_id": "98907c12-76c8-4767-a9c6-7696b06ede76",
+      "visual": "Hero hugging the bottle against his chest, breathing hard on the closet floor.",
+      "narration": "one bottle against your chest You wind the clock until your",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S155",
+      "runway_task_id": "9fb3f58c-f089-4755-a463-b6f0d7096fa0",
+      "visual": "Close insert of fingers winding the clock firmly, knuckles tense; shift into the next supply attempt.",
+      "narration": "fingers hurt Day twenty The storeroom is no",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S156",
+      "runway_task_id": "6ca3eff0-9abc-4dfa-9ac4-268cc3a8bc74",
+      "visual": "Hero moving the sturdy chair beneath the service opening once more.",
+      "narration": "longer optional You move the chair lift the tile",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S157",
+      "runway_task_id": "d84edcee-629f-436d-bb50-4466eee9fd38",
+      "visual": "Hero climbing into the narrow service space with backpack dragging behind him.",
+      "narration": "and climb into the service space Your backpack catches",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S158",
+      "runway_task_id": "e7675a87-52f0-43a7-8af0-c83dea5933ea",
+      "visual": "Backpack snagged on the tile rim, compressed duck visible against the zipper.",
+      "narration": "behind you You pull Squeak Below",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S159",
+      "runway_task_id": "226cadcf-44f3-4010-a20d-218a8a77033d",
+      "visual": "Metal animatronic foot scraping the kitchen floor directly below the opening.",
+      "narration": "the tile a metal foot scrapes across the kitchen",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S160",
+      "runway_task_id": "2bd7633b-cd69-4514-b623-ca57d2627d77",
+      "visual": "Hero flattened in the crawlspace, mouth closed and eyes wide, one hand steadying the backpack.",
+      "narration": "You stop breathing The duck is pressed against the bag’s",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S161",
+      "runway_task_id": "2ce8c041-3693-4547-b8d3-51a393ae9376",
+      "visual": "Hands easing the duck from the zipper and wrapping it in the spare shirt.",
+      "narration": "zipper You ease it free wrap it in your shirt and",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S162",
+      "runway_task_id": "324c9166-2fcf-4c5b-bc3f-331325b80c5e",
+      "visual": "Hero securing the wrapped duck and pushing the bag forward quietly.",
+      "narration": "continue No distraction plan No heroic",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S163",
+      "runway_task_id": "f1cb25c3-0bc6-46b5-b6c2-8aaf2b639a52",
+      "visual": "Wide narrow crawlspace view of the hero laboriously crawling through dusty ducts.",
+      "narration": "improvisation Just you crawling through dust",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S164",
+      "runway_task_id": "5b43b072-0220-45e8-908b-4d45f90e357c",
+      "visual": "Close-up of the hero's dusty frustrated face, stomach pressed against the service ledge.",
+      "narration": "because you failed to pack a sandwich The opening above the",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S165",
+      "runway_task_id": "571cef97-2a56-417c-b97a-98fb47ad7565",
+      "visual": "View down through the small storeroom opening as the backpack is lowered first.",
+      "narration": "storeroom is narrow You lower the backpack first",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S166",
+      "runway_task_id": "19d31589-bc61-42ef-83d4-01019c559d6f",
+      "visual": "Hero squeezing shoulders through the opening and lowering himself onto a stable box stack.",
+      "narration": "then squeeze through after it Sealed drinks",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S168",
+      "runway_task_id": "476e7443-ab9e-43ff-8e40-9322e621c7d6",
+      "visual": "Close insert of the broken inside handle on the still-closed storeroom door.",
+      "narration": "the inside door handle It’s broken You look up at the",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S169",
+      "runway_task_id": "f6df6ce2-1a3d-45f3-8504-7edd41029065",
+      "visual": "Hero looking back up at the narrow ceiling opening, relief replaced by resignation.",
+      "narration": "ceiling You’re going back the way you came Day twenty",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S170",
+      "runway_task_id": "afc16e5d-d024-4516-845c-a9a415521866",
+      "visual": "Hero gathering a small manageable load of sealed supplies for the first return trip.",
+      "narration": "three Moving the supplies takes several trips You",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S171",
+      "runway_task_id": "0f3ba336-4303-4ca2-9949-f20c967eaed6",
+      "visual": "Hero lifting a modest supply bundle through the ceiling opening, no implausibly heavy load.",
+      "narration": "carry only what you can lift through the opening Between runs",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S172",
+      "runway_task_id": "63f88661-7e5d-4e78-a305-bdb2c575f19d",
+      "visual": "Hero resting on the floor beside the chair between trips, listening toward the corridor.",
+      "narration": "you rest beside the chair and listen The candles help",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S173",
+      "runway_task_id": "affa36ac-fbcf-4804-bbd1-9c763e537708",
+      "visual": "Unlit birthday candle placed beneath the edge of a checked cardboard box as a marker.",
+      "narration": "mark your progress One beneath each box you’ve already",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S174",
+      "runway_task_id": "a0a85751-8cb7-43d2-9850-bc00b5e9f07e",
+      "visual": "Hero giving the absurd candle marker a skeptical glance while checking another box.",
+      "narration": "checked At first you feel ridiculous Then you",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S175",
+      "runway_task_id": "4cbe5cd5-4482-43cf-9b56-8bca026d2069",
+      "visual": "Hero reopening an already-searched box and discovering its candle marker beneath the edge.",
+      "narration": "open a box you’ve already searched and find the candle beneath it",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    },
+    {
+      "shot": "S176",
+      "runway_task_id": "2c5dcba4-0a8e-4cd6-ad98-d42e2a61bf5b",
+      "visual": "Hero shutting the duplicate box with a conceding little nod.",
+      "narration": "You close the box Fine The candles can stay",
+      "status": "submitted_pending_visual_qa",
+      "drive_uploaded": false
+    }
+  ],
+  "no_existing_candidate": [
+    "S177",
+    "S178",
+    "S179",
+    "S180",
+    "S181",
+    "S182",
+    "S183",
+    "S184",
+    "S185",
+    "S186",
+    "S187",
+    "S188",
+    "S189",
+    "S190",
+    "S191",
+    "S192",
+    "S193",
+    "S194",
+    "S195",
+    "S196",
+    "S197",
+    "S198",
+    "S199",
+    "S200",
+    "S201",
+    "S202",
+    "S203",
+    "S204",
+    "S205",
+    "S206",
+    "S207",
+    "S208",
+    "S209",
+    "S210",
+    "S211",
+    "S212",
+    "S213",
+    "S214",
+    "S215",
+    "S216",
+    "S217",
+    "S218",
+    "S219",
+    "S220",
+    "S221",
+    "S223",
+    "S224",
+    "S225",
+    "S226",
+    "S227",
+    "S228"
+  ],
+  "rejected_folder_id": "1yQqVvzLCJGYplp1G6wIera4VE2Ohvhxl",
+  "source_storyboard_runtime_seconds": 669.54449,
+  "source_storyboard_timing_caveat": "First 4:47 based on provisional ASR requires listening review. Later timings provider word timestamps. Audio runtime not independently measured this session.",
+  "blockers": [
+    "No usable execution environment available for downloading, rendering, or local spreadsheet editing.",
+    "Available GitHub tools cannot set private export secret or dispatch workflow. Existing workflow reads SPAWNED_RUNWAY_ASSETS_JSON; cannot export remaining 22 using available actions."
+  ],
+  "tracker_policy": "Historical trackers and reconciled XLSX preserved unchanged. This checkpoint supplements them after verified Drive changes. Do not count Runway completion as approval.",
+  "next_steps": [
+    "Export 22 completed candidates without regeneration.",
+    "Visually review those 22 against storyboard and character sheet before any upload to Approved Images.",
+    "Correct 4 rejected shots, generate 51 genuinely missing shots in batches of 3-5; review and verify Drive writes per batch.",
+    "Update reconciled XLSX after verified assets. Listen-check early timestamps and assemble stationary frames with original narration and cinematic SFX, no captions or zooms."
+  ]
+}
