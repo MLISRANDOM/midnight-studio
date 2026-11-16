@@ -1,0 +1,27 @@
+[
+  {
+    "path": "batch_02/V5_001C.jpg",
+    "sha256": "e8ab616b3cd362189ff297afc4e152c73bb6403b49333d15d93747ff0f12ce86",
+    "bytes": 343645
+  },
+  {
+    "path": "batch_02/V5_003B.jpg",
+    "sha256": "014c54af826366f68ec4897de0192f400257c3f2cce3b99e744abac9d43a8d19",
+    "bytes": 318764
+  },
+  {
+    "path": "batch_02/V5_005B.jpg",
+    "sha256": "4593a3e6f6b95058875c36a39c86908b9bd80ca8f1e8f028adfed20ef48f92e6",
+    "bytes": 335344
+  },
+  {
+    "path": "recovered_batch_01/V5_001B.jpg",
+    "sha256": "39e987650cf87d6f9428dd392965536bc6ec18fbfc74387d8f917a05713bb9e7",
+    "bytes": 453278
+  },
+  {
+    "path": "recovered_batch_01/V5_002B.jpg",
+    "sha256": "49adba91f79fa75f0e9d6da157fd208ad1165e051ae41b28f09484a7074a0fa9",
+    "bytes": 402135
+  }
+]
