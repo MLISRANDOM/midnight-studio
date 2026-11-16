@@ -1,0 +1,31 @@
+name: Spawned Somewhere Bad export Runway candidates
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      SPAWNED_RUNWAY_ASSETS_JSON: ${{ secrets.SPAWNED_RUNWAY_ASSETS_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image validator
+        run: python -m pip install 'Pillow>=10,<13'
+      - name: Securely retrieve and validate candidate images
+        run: python spawned-somewhere-bad/scripts/collect_runway_candidates.py
+      - name: Downloadable image batch for quality review
+        uses: actions/upload-artifact@v4
+        with:
+          name: spawned-somewhere-bad-runway-candidates
+          path: spawned-somewhere-bad/episode01/runway_candidates/
+          retention-days: 14
+          if-no-files-found: error
+          compression-level: 0
