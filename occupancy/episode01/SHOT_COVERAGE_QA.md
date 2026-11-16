@@ -107,3 +107,17 @@ Generated from the GitHub story tracker and Drive import manifest. **Candidate c
 - The two full-image alternatives for Shot 014 differ: blank phone needs postproduction compositing; a visible fire escape image is likely closer to the storyboard. Visual QA required.
 - Shot 001 is a before/after transition, not a single static image; opening assets should remain paired.
 - Shot 053 allows a chalk rectangle, but unbroken wall geometry and shot timing must remain faithful to the storyboard.
+
+## Missing-shot production strategy (after source QA)
+
+- **Four illustrative scenes:** 004 (seamless missing-wall corridor), 006 (vacant elevator behind Mara), 049 (Leah enters pump room with chair and torch), 065 (Mara shaken after test). Keep these queued; do **not** generate while existing files are still being reviewed.
+- **Six editor/compositor graphics:** 018 (12-story cross-section and 23 occupancy dots), 023 (maintenance ledger/count HUD), 027 (occupied/empty unit map), 040 (clock jump compared with wristwatch), 046 (PEOPLE/WATER/POWER resource diagram), 070 (disappearing pump connection lines). Create exact lettering and movement in editor, not image-generation artwork.
+
+## Specific contact-sheet risks awaiting full-resolution acceptance
+
+- Shot 013 has six distinct variants of Jonah listening or pressing his hand against the wall. Prefer an ear-to-plaster composition, not a hand-to-wall substitution.
+- Shot 014 phone image: the blank white-screen take requires compositor artwork; the take actually showing the fire escape is a stronger candidate. Check Leah's paramedic styling.
+- Shots 045 crowd images are alternates and may need a count/face consistency check; do not count the additional crowd as a new scene.
+- Some shot 053 candidate art shows visible outlines. The story requires seamless plaster before any **intentional chalk** marking is added.
+- Source artwork showing a real door marked 604 is only suitable **before** the room vanishes. Do not use it for any later missing-wall scenes.
+- The 1672×941 Drive originals are widescreen and will require a minor 1920×1080 export conversion at final assembly. Do not falsely report them as native 1920×1080 files.
