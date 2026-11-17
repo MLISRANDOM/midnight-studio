@@ -30,6 +30,14 @@ class FreeProviderTest(unittest.TestCase):
                          provider_lock="ovh")
             horde.assert_not_called()
 
+    def test_horde_model_lock_is_forwarded(self):
+        with patch("episode_factory.generate_ovh") as ovh, \
+             patch("episode_factory.generate_horde", return_value={"status":"draft_needs_qa"}) as horde:
+            generate({"id": "S003"}, None, 2, 576, 320, 5,
+                     provider_lock="horde", model_lock="stable-diffusion-model")
+            self.assertEqual(horde.call_args.kwargs["model_lock"], "stable-diffusion-model")
+            ovh.assert_not_called()
+
     def test_both_fail_loudly(self):
         with patch("episode_factory.generate_ovh", side_effect=RuntimeError("OVH unavailable")), \
              patch("episode_factory.generate_horde", side_effect=RuntimeError("Horde unavailable")):
