@@ -60,6 +60,9 @@ jobs:
           FACTORY_MIN_REQUEST_INTERVAL_SEC: '35'
         run: |
           python factory/series_runner.py --series factory/series_plan.json --output factory-output/autonomous-series
+      - name: Create labeled visual review contact sheets
+        if: always()
+        run: python factory/visual_contact_sheet.py --root factory-output/autonomous-series
       - name: Summarize episode results in Actions
         if: always()
         run: |
