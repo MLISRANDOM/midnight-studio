@@ -121,7 +121,20 @@ def video(shots, images, output, width, height):
         audio = clips / ("%03d.wav" % i)
         text = shot.get("narration", "").strip()
         if text:
-            run(["espeak-ng", "-v", "en-us", "-s", "145", "-w", str(audio), text[:2500]])
+            # Optional local neural TTS; no paid API. Fall back to eSpeak on failure.
+            piper_model = os.getenv("PIPER_MODEL", "").strip()
+            made_audio = False
+            if piper_model and pathlib.Path(piper_model).is_file():
+                try:
+                    subprocess.run(
+                        ["piper", "--model", piper_model, "--output_file", str(audio)],
+                        input=text[:2500], text=True, check=True,
+                        timeout=90, capture_output=True)
+                    made_audio = audio.exists() and audio.stat().st_size > 1024
+                except (OSError, subprocess.SubprocessError) as error:
+                    print("Piper failed, using offline fallback:", error, flush=True)
+            if not made_audio:
+                run(["espeak-ng", "-v", "en-us", "-s", "145", "-w", str(audio), text[:2500]])
         else:
             run(["ffmpeg", "-nostdin", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono",
                  "-t", str(duration), str(audio)])
