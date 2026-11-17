@@ -241,7 +241,17 @@ def quality_report(video_file, shots, images, output):
             video_streams[0].get("width") == int(shots[0].get("_render_width", 0)) and
             video_streams[0].get("height") == int(shots[0].get("_render_height", 0))),
     }
+    providers = set()
+    for image in images:
+        if "ovh" in str(image.get("provider", "")).lower():
+            providers.add("ovh")
+        elif image.get("job_id") or "horde" in str(image.get("provider", "")).lower():
+            providers.add("horde")
     report = {
+        "image_providers": sorted(providers),
+        "mixed_image_providers": len(providers) > 1,
+        "visual_character_consistency_checked": False,
+        "narrative_continuity_checked": False,
         "status": "technical_checks_passed" if all(checks.values()) else "technical_checks_failed",
         "not_a_visual_or_narrative_approval": True,
         "checks": checks,
