@@ -1,0 +1,64 @@
+name: Capture Higgsfield image for QA
+
+on:
+  workflow_dispatch:
+    inputs:
+      shot:
+        description: "Storyboard shot label (e.g. S121)"
+        required: true
+        type: string
+      image_url:
+        description: "Completed Higgsfield CloudFront image URL (keep private)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image validator
+        run: python -m pip install 'Pillow>=10,<13'
+      - name: Download and verify input image
+        env:
+          SOURCE_URL: ${{ inputs.image_url }}
+          SHOT: ${{ inputs.shot }}
+        run: |
+          python - <<'PY'
+          import io, json, os, pathlib, re, urllib.parse, urllib.request
+          from PIL import Image
+          shot = os.environ["SHOT"].strip().upper()
+          assert re.fullmatch(r"S(?:00[1-9]|0[1-9][0-9]|1[0-9][0-9]|2[01][0-9]|22[0-8])", shot), "Invalid shot (S001-S228)"
+          url = os.environ["SOURCE_URL"].strip()
+          u = urllib.parse.urlsplit(url)
+          assert u.scheme == "https" and u.hostname in {"d8j0ntlcm91z4.cloudfront.net", "d2ol7oe51mr4n9.cloudfront.net"}, "Unsupported image host"
+          assert not u.username and not u.password and not u.port, "Invalid image URL"
+          req = urllib.request.Request(url, headers={"User-Agent": "SpawnedSomewhereBad-CandidateCollector/1.0"})
+          with urllib.request.urlopen(req, timeout=45) as response:
+              data = response.read(25 * 1024 * 1024 + 1)
+          assert 0 < len(data) <= 25 * 1024 * 1024, "Invalid image size"
+          dest = pathlib.Path("candidates")
+          dest.mkdir(exist_ok=True)
+          with Image.open(io.BytesIO(data)) as im:
+              im.load()
+              w, h = im.size
+              assert w >= 900 and h >= 500 and abs(w / h - 16 / 9) <= 0.12, "Unexpected dimensions"
+              im.convert("RGB").save(dest / (shot + ".png"), format="PNG")
+          (dest / "MANIFEST.json").write_text(json.dumps({"shot": shot, "state": "candidate_unreviewed", "width": w, "height": h, "bytes": len(data), "origin": "Higgsfield"}, indent=2))
+          print("Downloaded and validated candidate", shot, w, h, "pixels")
+          PY
+      - name: Save original image for ChatGPT retrieval
+        uses: actions/upload-artifact@v4
+        with:
+          name: higgsfield-candidate-${{ inputs.shot }}
+          path: candidates/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
