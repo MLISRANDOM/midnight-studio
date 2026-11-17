@@ -78,13 +78,15 @@ def image_download(url, dest):
         im.convert("RGB").save(dest, "PNG")
 
 
-def generate_horde(shot, outdir, index, width, height, timeout):
+def generate_horde(shot, outdir, index, width, height, timeout, model_lock=None):
     prompt = shot["prompt"].strip()
     negative = shot.get("negative", "text, caption, watermark, logo")
     if negative:
         prompt += " ### " + negative
     spec = {"prompt": prompt, "params": {"n": 1, "width": width, "height": height, "steps": 20},
             "nsfw": False, "censor_nsfw": True, "shared": False, "r2": True, "allow_downgrade": True}
+    if model_lock:
+        spec["models"] = [model_lock]
     print("Submitting", shot["id"], flush=True)
     job = request("POST", "/generate/async", spec)
     job_id = job.get("id")
@@ -133,7 +135,7 @@ def generate_ovh(shot, outdir, index, width, height, timeout):
             "provider": "OVHcloud free SDXL", "model": info.get("model")}
 
 
-def generate(shot, outdir, index, width, height, timeout, provider_lock=None):
+def generate(shot, outdir, index, width, height, timeout, provider_lock=None, model_lock=None):
     """Try verified free providers without payment credentials or silent fake images."""
     preferred = os.getenv("FACTORY_IMAGE_PROVIDER", "ovh").lower()
     if provider_lock is not None and provider_lock not in {"ovh", "horde"}:
@@ -150,7 +152,11 @@ def generate(shot, outdir, index, width, height, timeout, provider_lock=None):
     for name, provider in providers:
         try:
             print("Trying free image provider:", name, "shot:", shot["id"], flush=True)
-            result = provider(shot, outdir, index, width, height, timeout)
+            if name == "horde":
+                result = provider(shot, outdir, index, width, height, timeout,
+                                  model_lock=model_lock)
+            else:
+                result = provider(shot, outdir, index, width, height, timeout)
             print("Free image received:", shot["id"], "provider:", name, flush=True)
             return result
         except Exception as exc:
@@ -311,6 +317,7 @@ def main():
 
     results = []
     locked_provider = None
+    locked_model = None
     max_new = int(os.getenv("FACTORY_NEW_SHOTS_PER_RUN", "2"))
     if not (1 <= max_new <= MAX_NEW_PER_RUN):
         raise ValueError("FACTORY_NEW_SHOTS_PER_RUN must be 1-%d" % MAX_NEW_PER_RUN)
@@ -327,6 +334,8 @@ def main():
                 recovered_provider = infer_provider(recovered)
                 if recovered_provider and not locked_provider:
                     locked_provider = recovered_provider
+                if recovered_provider == "horde" and not locked_model:
+                    locked_model = recovered.get("model")
                 print("Resumed", shot["id"], "from verified cached image", flush=True)
                 continue
             except Exception:
@@ -337,10 +346,12 @@ def main():
         new_count += 1
         try:
             result = generate(shot, assets, index, width, height, args.generation_timeout,
-                              provider_lock=locked_provider)
+                              provider_lock=locked_provider, model_lock=locked_model)
             results.append(result)
             if not locked_provider:
                 locked_provider = infer_provider(result)
+            if locked_provider == "horde" and not locked_model:
+                locked_model = result.get("model")
         except Exception as e:
             results.append({"shot": shot["id"], "status": "retry_next_run", "error": str(e)})
             print("Generation attempt failed:", shot["id"], e, file=sys.stderr, flush=True)
@@ -354,6 +365,7 @@ def main():
                 "results": results,
                 "approved": False,
                 "provider_lock": locked_provider,
+                "model_lock": locked_model,
                 "used_providers": sorted(set(filter(None, map(infer_provider, results)))),
                 "note": "Draft only; never overwrites approved production assets"
             }, indent=2))
