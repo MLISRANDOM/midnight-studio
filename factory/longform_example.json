@@ -1,0 +1,17 @@
+{
+  "name": "Midnight Studio Longform Original Horror",
+  "art_style": "Thick black outlined 2D cartoon animation stills, moody midnight blue palette, warm rust highlights, steady characters and believable architecture, no visible text",
+  "episodes": [
+    {
+      "id": "original-longform-01",
+      "title": "The Doors That Remember",
+      "shot_count": 80,
+      "duration_seconds": 600,
+      "setting": "a vacant roadside hotel with hallways that rearrange after midnight",
+      "threat": "an unseen figure moving between identical locked rooms",
+      "lead": "a weary night clerk with short dark hair, full beard, charcoal jacket, dark trousers",
+      "hook": "security footage shows a door opening from the inside even though no one entered",
+      "twist": "every exit returns the clerk to the first room, and the hotel is using his memories to remake the halls"
+    }
+  ]
+}
