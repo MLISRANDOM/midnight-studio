@@ -5,8 +5,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "factory/series_plan.json"
-      - "factory/series_runner.py"
+      - "factory/**"
       - ".github/workflows/autonomous-series.yml"
   workflow_dispatch:
 permissions:
