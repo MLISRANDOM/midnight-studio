@@ -362,5 +362,60 @@
   },
   "last_verified_drive_count": 228,
   "last_verification_note": "2026-11-17: Verified 228 unique S001.png through S228.png in Approved Images. S199 and S200 matched user-provided corrected images visually, including downward descent and broken door handle. No further still shots outstanding. Video assembly remains outstanding.",
-  "image_production_status": "all_228_numbered_images_present_verified"
+  "image_production_status": "all_228_numbered_images_present_verified",
+  "previous_checkpoint_summary": {
+    "verified_approved_count": 228,
+    "remaining": []
+  },
+  "final_verification": {
+    "unique_numbered_files": 228,
+    "all_images_decode": true,
+    "narration_duration_seconds": 669.54449,
+    "render_status": "1080p narration cut rendering; sound design and listening QA pending",
+    "timing_limit": "First 4:47 storyboard timestamps marked provisional ASR; not independently listen-verified",
+    "new_corrections": [
+      {
+        "shot": "S199",
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1i-BR-3aPT1XnG5PdJkZ-zvWdIdoV8Itw",
+        "title": "S199.png",
+        "file_name": "S199.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1i-BR-3aPT1XnG5PdJkZ-zvWdIdoV8Itw/view?usp=drivesdk",
+        "parent_id": "1UwKyJyprsgdThoY4PhS4pK6tjrDylSJy",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1i-BR-3aPT1XnG5PdJkZ-zvWdIdoV8Itw",
+          "title": "S199.png",
+          "file_name": "S199.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1i-BR-3aPT1XnG5PdJkZ-zvWdIdoV8Itw/view?usp=drivesdk",
+          "parent_id": "1UwKyJyprsgdThoY4PhS4pK6tjrDylSJy"
+        }
+      },
+      {
+        "shot": "S200",
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1qMdk45rOS2_DTtD7QlJS1aqylkt0_ath",
+        "title": "S200.png",
+        "file_name": "S200.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1qMdk45rOS2_DTtD7QlJS1aqylkt0_ath/view?usp=drivesdk",
+        "parent_id": "1UwKyJyprsgdThoY4PhS4pK6tjrDylSJy",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1qMdk45rOS2_DTtD7QlJS1aqylkt0_ath",
+          "title": "S200.png",
+          "file_name": "S200.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1qMdk45rOS2_DTtD7QlJS1aqylkt0_ath/view?usp=drivesdk",
+          "parent_id": "1UwKyJyprsgdThoY4PhS4pK6tjrDylSJy"
+        }
+      }
+    ]
+  }
 }
