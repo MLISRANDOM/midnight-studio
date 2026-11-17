@@ -49,7 +49,7 @@ def free_narration(series, episode, timeout=100):
         "markdown or dialogue. Maintain plot continuity. These four story beats are: "
         f"1 introduction in {setting} involving {lead} and {hook}; "
         f"2 discovery of {threat}; 3 attempted escape; 4 revelation that {twist}. "
-        "Write only four voiceover lines:\\n"
+        "Write only four voiceover lines:\n"
     )
     key = os.getenv("AI_HORDE_API_KEY") or "0000000000"
     headers = {"apikey": key, "Client-Agent": "MidnightStudioEpisodeFactory:0.2:github.com/MLISRANDOM/midnight-studio",
@@ -76,7 +76,7 @@ def free_narration(series, episode, timeout=100):
             generations = result.get("generations") or []
             if generations:
                 text_result = str(generations[0].get("text", "")).strip()
-                lines = [re.sub(r"^\\s*(?:[1-4][.): -]+|[-*]\\s+)", "", x).strip()
+                lines = [re.sub(r"^\s*(?:[1-4][.): -]+|[-*]\s+)", "", x).strip()
                          for x in text_result.splitlines() if x.strip()]
                 lines = [x for x in lines if 20 <= len(x) <= 300]
                 if len(lines) >= 4:
