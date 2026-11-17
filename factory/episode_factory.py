@@ -35,8 +35,18 @@ def request(method, path, payload=None):
         data = json.dumps(payload).encode("utf-8")
         headers["Content-Type"] = "application/json"
     req = urllib.request.Request(API + path, data=data, headers=headers, method=method)
-    with urllib.request.urlopen(req, timeout=35) as response:
-        body = response.read(MAX_RESPONSE_BYTES + 1)
+    try:
+        with urllib.request.urlopen(req, timeout=35) as response:
+            body = response.read(MAX_RESPONSE_BYTES + 1)
+    except urllib.error.HTTPError as error:
+        # Decode the provider's documented error rc, without printing credentials.
+        raw = error.read(2048).decode("utf-8", errors="replace")
+        try:
+            detail = json.loads(raw)
+            reason = str(detail.get("rc") or detail.get("message") or "no API reason")[:250]
+        except (ValueError, AttributeError):
+            reason = "non-JSON response: " + raw[:120].replace("\\n", " ")
+        raise RuntimeError(f"AI Horde HTTP {error.code}, reason: {reason}") from error
     if len(body) > MAX_RESPONSE_BYTES:
         raise ValueError("API JSON exceeded maximum response size")
     return json.loads(body)
