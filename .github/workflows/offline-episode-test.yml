@@ -1,0 +1,38 @@
+name: Offline Complete Episode Smoke Test
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "factory/offline_endtoend.py"
+      - ".github/workflows/offline-episode-test.yml"
+permissions:
+  contents: read
+jobs:
+  complete-offline-test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install free tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg espeak-ng
+          python -m pip install "Pillow>=10,<13"
+      - name: Produce and technically verify complete MP4 without AI network
+        run: |
+          python -m py_compile factory/offline_endtoend.py
+          python factory/offline_endtoend.py --output factory-output/offline-smoke
+          test -s factory-output/offline-smoke/episode-draft.mp4
+          cat factory-output/offline-smoke/render-report.json >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload test video, source images and QA
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: offline-complete-episode-smoke-test
+          path: factory-output/offline-smoke/
+          if-no-files-found: error
+          retention-days: 30
