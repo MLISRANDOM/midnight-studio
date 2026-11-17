@@ -61,7 +61,8 @@ def image_download(url, dest):
     host = parsed.hostname.lower()
     if not (host == "aihorde.net" or host.endswith(".aihorde.net")
             or host == "stablehorde.net" or host.endswith(".stablehorde.net")
-            or host.endswith(".r2.dev")):
+            or host.endswith(".r2.dev")
+            or re.fullmatch(r"[0-9a-f]{32}\.r2\.cloudflarestorage\.com", host)):
         raise ValueError("Image host not on approved allowlist: " + host)
     req = urllib.request.Request(url, headers={"User-Agent": AGENT})
     with urllib.request.urlopen(req, timeout=60) as response:
