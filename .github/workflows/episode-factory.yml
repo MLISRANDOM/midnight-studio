@@ -2,6 +2,10 @@ name: Episode Factory (resumable free drafts)
 on:
   schedule:
     - cron: '17 9 * * *'
+  pull_request:
+    paths:
+      - "factory/**"
+      - ".github/workflows/episode-factory.yml"
   push:
     branches: [main]
     paths:
@@ -29,6 +33,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Resume last cached draft for this manifest
+        if: github.event_name != 'pull_request'
         uses: actions/cache@v4
         with:
           path: factory-output
@@ -45,6 +50,7 @@ jobs:
           python -m py_compile factory/episode_factory.py factory/selftest.py
           python factory/selftest.py
       - name: Build draft episode from manifest
+        if: github.event_name != 'pull_request'
         env:
           AI_HORDE_API_KEY: ${{ secrets.AI_HORDE_API_KEY }}
           MANIFEST: ${{ inputs.manifest || 'factory/demo_episode.json' }}
@@ -56,7 +62,7 @@ jobs:
           esac
           python factory/episode_factory.py --manifest "$MANIFEST" --output factory-output
       - name: Upload draft images, report, and video even on failure
-        if: always()
+        if: always() && github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: episode-factory-draft

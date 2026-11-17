@@ -71,7 +71,7 @@ def generate(shot, outdir, index, width, height, timeout):
     if negative:
         prompt += " ### " + negative
     spec = {"prompt": prompt, "params": {"n": 1, "width": width, "height": height, "steps": 20},
-            "nsfw": False, "censor_nsfw": True, "shared": False}
+            "nsfw": False, "censor_nsfw": True, "shared": False, "r2": True, "allow_downgrade": True}
     print("Submitting", shot["id"], flush=True)
     job = request("POST", "/generate/async", spec)
     job_id = job.get("id")
