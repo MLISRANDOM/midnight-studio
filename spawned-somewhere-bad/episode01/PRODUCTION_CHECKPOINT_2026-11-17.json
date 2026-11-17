@@ -1,9 +1,9 @@
 {
   "project": "Spawned Somewhere Bad Episode 01: 30 Days at Freddy's",
   "checkpoint": "2026-11-17",
-  "verified_approved_count": 167,
+  "verified_approved_count": 168,
   "total_storyboard_shots": 228,
-  "remaining_unapproved_count": 61,
+  "remaining_unapproved_count": 60,
   "approved_shots": [
     "S001",
     "S002",
@@ -161,6 +161,7 @@
     "S158",
     "S159",
     "S160",
+    "S161",
     "S162",
     "S163",
     "S165",
@@ -178,7 +179,6 @@
     "S123",
     "S138",
     "S140",
-    "S161",
     "S164",
     "S173",
     "S174",
@@ -244,6 +244,7 @@
     "S158",
     "S159",
     "S160",
+    "S161",
     "S162",
     "S163",
     "S165",
@@ -255,7 +256,6 @@
     "S172"
   ],
   "runway_remaining_QA": [
-    "S161",
     "S164",
     "S173",
     "S176"
@@ -270,11 +270,13 @@
   ],
   "higgsfield_candidates_waiting_QA": [
     "S121",
-    "S140"
+    "S140",
+    "S179"
   ],
   "current_generated_issues": {
     "S121": "Ceiling-tile grip acceptable but background poster/setting continuity problem",
-    "S140": "Single clock and falling key correct but faint extra protagonist in background"
+    "S140": "Single clock and falling key correct but faint extra protagonist in background",
+    "S179": "Excessive tally marks conflict with Day 25 timing; candidate only."
   },
   "other_missing_including_historical_candidates": [
     "S177",
@@ -333,5 +335,8 @@
   "transfer_queue": "spawned-somewhere-bad/episode01/transfer-queue.json",
   "approved_drive_folder": "https://drive.google.com/drive/folders/1UwKyJyprsgdThoY4PhS4pK6tjrDylSJy",
   "qa_drive_folder": "https://drive.google.com/drive/folders/1E1f0PbJCKro4xHCvxklmS9Iot7R_k6kp",
-  "note": "Verified 167 files by actual Google Drive listing. Supplemental checkpoint; do not overwrite original tracker. Some historical generated candidates have not been verified in Drive."
+  "note": "Verified 167 files by actual Google Drive listing. Supplemental checkpoint; do not overwrite original tracker. Some historical generated candidates have not been verified in Drive.",
+  "generation_rate_limit": "Two S177/S178 requests rejected 429; do not claim generated.",
+  "original_storyboard": "Storyboard_228_Shots.json",
+  "next_generation_queue_drive": "Spawned_E01_61_Shot_Generation_Queue.json"
 }
