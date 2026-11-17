@@ -26,7 +26,7 @@ MAX_RESPONSE_BYTES = 8 * 1024 * 1024
 
 def request(method, path, payload=None):
     headers = {
-        "apikey": os.getenv("AI_HORDE_API_KEY", "0000000000"),
+        "apikey": (os.getenv("AI_HORDE_API_KEY") or "0000000000"),
         "Client-Agent": AGENT,
         "Accept": "application/json",
     }
