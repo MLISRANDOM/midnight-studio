@@ -53,10 +53,11 @@ def free_narration(series, episode, timeout=100):
     )
     key = os.getenv("AI_HORDE_API_KEY") or "0000000000"
     headers = {"apikey": key, "Client-Agent": "MidnightStudioEpisodeFactory:0.2:github.com/MLISRANDOM/midnight-studio",
-               "Content-Type": "application/json", "Accept": "application/json"}
+               "Content-Type": "application/json", "Accept": "application/json",
+               "User-Agent": "MidnightStudioEpisodeFactory/0.3 (+https://github.com/MLISRANDOM/midnight-studio)"}
     def send(method, path, payload=None):
         req = urllib.request.Request(
-            "https://aihorde.net/api/v2" + path,
+            os.getenv("AI_HORDE_BASE_URL", "https://stablehorde.net/api/v2") + path,
             data=json.dumps(payload).encode("utf-8") if payload is not None else None,
             headers=headers, method=method)
         with urllib.request.urlopen(req, timeout=22) as resp:
