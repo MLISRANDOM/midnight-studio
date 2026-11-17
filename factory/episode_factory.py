@@ -133,14 +133,19 @@ def generate_ovh(shot, outdir, index, width, height, timeout):
             "provider": "OVHcloud free SDXL", "model": info.get("model")}
 
 
-def generate(shot, outdir, index, width, height, timeout):
+def generate(shot, outdir, index, width, height, timeout, provider_lock=None):
     """Try verified free providers without payment credentials or silent fake images."""
     preferred = os.getenv("FACTORY_IMAGE_PROVIDER", "ovh").lower()
+    if provider_lock is not None and provider_lock not in {"ovh", "horde"}:
+        raise ValueError("Invalid episode image-provider lock")
     if preferred not in {"ovh", "horde", "auto"}:
         raise ValueError("FACTORY_IMAGE_PROVIDER must be ovh, horde, or auto")
     providers = [("ovh", generate_ovh), ("horde", generate_horde)]
     if preferred == "horde":
         providers.reverse()
+    if provider_lock is not None:
+        # Avoid mixed styles within the same episode. Retry next run on failure.
+        providers = [pair for pair in providers if pair[0] == provider_lock]
     errors = []
     for name, provider in providers:
         try:
@@ -152,7 +157,7 @@ def generate(shot, outdir, index, width, height, timeout):
             reason = str(exc)[:350]
             errors.append(name + ": " + reason)
             print("Provider unavailable:", name, reason, flush=True)
-    raise RuntimeError("Both free image providers failed. " + " | ".join(errors))
+    raise RuntimeError("No allowed free image provider succeeded. " + " | ".join(errors))
 
 
 def run(command):
@@ -286,7 +291,16 @@ def main():
                             if item.get("status") == "draft_needs_qa"}
         except (ValueError, KeyError, TypeError):
             pass
+    def infer_provider(result):
+        source = str(result.get("provider", "")).lower()
+        if "ovh" in source:
+            return "ovh"
+        if "horde" in source or result.get("job_id"):
+            return "horde"
+        return None
+
     results = []
+    locked_provider = None
     max_new = int(os.getenv("FACTORY_NEW_SHOTS_PER_RUN", "2"))
     if not (1 <= max_new <= MAX_NEW_PER_RUN):
         raise ValueError("FACTORY_NEW_SHOTS_PER_RUN must be 1-%d" % MAX_NEW_PER_RUN)
@@ -298,7 +312,11 @@ def main():
             try:
                 with Image.open(image_path) as im:
                     im.verify()
-                results.append({**cached, "image": str(image_path)})
+                recovered = {**cached, "image": str(image_path)}
+                results.append(recovered)
+                recovered_provider = infer_provider(recovered)
+                if recovered_provider and not locked_provider:
+                    locked_provider = recovered_provider
                 print("Resumed", shot["id"], "from verified cached image", flush=True)
                 continue
             except Exception:
@@ -308,7 +326,11 @@ def main():
             continue
         new_count += 1
         try:
-            results.append(generate(shot, assets, index, width, height, args.generation_timeout))
+            result = generate(shot, assets, index, width, height, args.generation_timeout,
+                              provider_lock=locked_provider)
+            results.append(result)
+            if not locked_provider:
+                locked_provider = infer_provider(result)
         except Exception as e:
             results.append({"shot": shot["id"], "status": "retry_next_run", "error": str(e)})
             print("Generation attempt failed:", shot["id"], e, file=sys.stderr, flush=True)
@@ -321,6 +343,8 @@ def main():
                 "manifest_fingerprint": manifest_path.read_text(),
                 "results": results,
                 "approved": False,
+                "provider_lock": locked_provider,
+                "used_providers": sorted(set(filter(None, map(infer_provider, results)))),
                 "note": "Draft only; never overwrites approved production assets"
             }, indent=2))
     complete = len(results) == len(shots) and all(
