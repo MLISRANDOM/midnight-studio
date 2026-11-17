@@ -33,6 +33,7 @@ jobs:
           key: autonomous-series-${{ hashFiles('factory/series_plan.json') }}-${{ github.run_id }}
           restore-keys: |
             autonomous-series-${{ hashFiles('factory/series_plan.json') }}-
+            autonomous-series-
       - name: Install free video tools
         run: |
           sudo apt-get update
