@@ -51,7 +51,7 @@ def generate(prompt, dest):
     raw = base64.b64decode(encoded, validate=True)
     with Image.open(io.BytesIO(raw)) as image:
         image.load()
-        result = ImageOps.pad(image.convert("RGB"), (576, 320), color=(10, 14, 22))
+        result = ImageOps.fit(image.convert("RGB"), (576, 320), method=Image.Resampling.LANCZOS)
         pathlib.Path(dest).parent.mkdir(parents=True, exist_ok=True)
         result.save(dest, format="PNG")
     return {"provider": "OVHcloud anonymous SDXL", "model": MODEL,

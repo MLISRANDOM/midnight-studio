@@ -50,6 +50,7 @@ jobs:
       - name: Validate factory syntax and offline video rendering
         run: |
           python -m py_compile factory/episode_factory.py factory/selftest.py
+          python factory/provider_selftest.py
           python factory/selftest.py
       - name: Build draft episode from manifest
         if: github.event_name != 'pull_request'

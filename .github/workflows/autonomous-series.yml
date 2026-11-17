@@ -48,6 +48,7 @@ jobs:
       - name: Check syntax and offline render
         run: |
           python -m py_compile factory/episode_factory.py factory/series_runner.py factory/selftest.py factory/series_selftest.py
+          python factory/provider_selftest.py
           python factory/selftest.py
           python factory/series_selftest.py
       - name: Advance one unfinished draft episode
