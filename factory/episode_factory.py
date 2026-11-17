@@ -111,6 +111,15 @@ def run(command):
     subprocess.run(command, check=True)
 
 
+def audio_duration(file_path):
+    """Read actual speech length so narration is never silently truncated."""
+    result = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=noprint_wrappers=1:nokey=1", str(file_path)],
+        check=True, text=True, capture_output=True)
+    return float(result.stdout.strip())
+
+
 def video(shots, images, output, width, height):
     clips = output / "clips"
     clips.mkdir(exist_ok=True)
@@ -138,6 +147,9 @@ def video(shots, images, output, width, height):
         else:
             run(["ffmpeg", "-nostdin", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono",
                  "-t", str(duration), str(audio)])
+        # Respect full narration instead of cutting off the final words.
+        speech_seconds = audio_duration(audio)
+        duration = min(90.0, max(float(duration), speech_seconds + 0.35))
         mp4 = clips / ("%03d.mp4" % i)
         run(["ffmpeg", "-nostdin", "-y", "-loop", "1", "-framerate", "24", "-i", str(image_path),
              "-i", str(audio), "-t", str(duration),
@@ -151,6 +163,43 @@ def video(shots, images, output, width, height):
     run(["ffmpeg", "-nostdin", "-y", "-f", "concat", "-safe", "0", "-i", str(listfile),
          "-c", "copy", str(final)])
     return final
+
+
+def quality_report(video_file, shots, images, output):
+    """Technical-only checks; cannot certify artwork/story quality."""
+    result = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries",
+         "format=duration,size:stream=codec_type,codec_name,width,height",
+         "-of", "json", str(video_file)],
+        check=True, text=True, capture_output=True)
+    probe = json.loads(result.stdout)
+    streams = probe.get("streams", [])
+    video_streams = [s for s in streams if s.get("codec_type") == "video"]
+    audio_streams = [s for s in streams if s.get("codec_type") == "audio"]
+    actual = float(probe["format"].get("duration", 0))
+    expected_min = sum(max(2, min(30, int(s.get("seconds", 6)))) for s in shots)
+    checks = {
+        "has_video": bool(video_streams),
+        "has_audio": bool(audio_streams),
+        "duration_at_least_storyboard": actual + 0.1 >= expected_min,
+        "valid_mp4_size": video_file.stat().st_size >= 5000,
+        "all_draft_images_present": all(pathlib.Path(x["image"]).is_file() for x in images),
+        "correct_dimensions": bool(video_streams and
+            video_streams[0].get("width") == int(shots[0].get("_render_width", 0)) and
+            video_streams[0].get("height") == int(shots[0].get("_render_height", 0))),
+    }
+    report = {
+        "status": "technical_checks_passed" if all(checks.values()) else "technical_checks_failed",
+        "not_a_visual_or_narrative_approval": True,
+        "checks": checks,
+        "duration_seconds": actual,
+        "file_size_bytes": video_file.stat().st_size,
+        "streams": streams,
+    }
+    (output / "technical-qa.json").write_text(json.dumps(report, indent=2))
+    if not all(checks.values()):
+        raise RuntimeError("Technical MP4 checks failed; see technical-qa.json")
+    return report
 
 
 def main():
@@ -230,7 +279,9 @@ def main():
         x["status"] == "draft_needs_qa" for x in results)
     if complete:
         final = video(shots, results, output, width, height)
-        print("Draft video created:", final, flush=True)
+        qa_shots = [dict(shot, _render_width=width, _render_height=height) for shot in shots]
+        quality_report(final, qa_shots, results, output)
+        print("Draft video created with technical QA:", final, flush=True)
     else:
         pending = [x["shot"] for x in results if x["status"] != "draft_needs_qa"]
         print("Episode pending future scheduled run:", pending, flush=True)
