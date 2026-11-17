@@ -1,0 +1,14 @@
+{
+  "title": "Midnight Studio Factory Demo",
+  "width": 512,
+  "height": 288,
+  "shots": [
+    {
+      "id": "demo-001",
+      "seconds": 7,
+      "prompt": "Original hand-painted 2D animated horror scene, empty dim security corridor at night, glowing exit sign, thick dark outlines, flat muted cool colors, dramatic shadows, wide cinematic frame, no people, no text",
+      "negative": "letters, text, watermark, caption, logo",
+      "narration": "The hall was empty when the cameras checked it. But something had already opened the door."
+    }
+  ]
+}
