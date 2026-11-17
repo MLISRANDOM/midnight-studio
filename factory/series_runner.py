@@ -15,6 +15,7 @@ import time
 import urllib.request
 import urllib.parse
 from datetime import datetime, timezone
+from longform_planner import longform_manifest
 
 BEATS = [
     ("The wrong first impression", "wide establishing shot",
@@ -177,8 +178,12 @@ def main():
         manifest_path = episode_dir / "manifest.json"
         # Do not mutate an episode's prompts after the first generation.
         if not manifest_path.exists():
-            ai_lines = free_narration(plan, item)
-            manifest_path.write_text(json.dumps(scene_manifest(plan, item, ai_lines), indent=2))
+            if int(item.get("shot_count", 4)) >= 12:
+                manifest = longform_manifest(plan, item)
+            else:
+                ai_lines = free_narration(plan, item)
+                manifest = scene_manifest(plan, item, ai_lines)
+            manifest_path.write_text(json.dumps(manifest, indent=2))
         print("Processing episode:", item["id"], flush=True)
         cmd = [sys.executable, "factory/episode_factory.py",
                "--manifest", str(manifest_path), "--output", str(episode_dir),
