@@ -20,7 +20,8 @@ from PIL import Image
 
 API = os.getenv("AI_HORDE_BASE_URL", "https://stablehorde.net/api/v2")
 AGENT = "MidnightStudioEpisodeFactory:0.1:github.com/MLISRANDOM/midnight-studio"
-MAX_SHOTS = 6
+MAX_SHOTS = 120
+MAX_NEW_PER_RUN = 6
 MAX_RESPONSE_BYTES = 8 * 1024 * 1024
 
 
@@ -287,8 +288,8 @@ def main():
             pass
     results = []
     max_new = int(os.getenv("FACTORY_NEW_SHOTS_PER_RUN", "2"))
-    if not (1 <= max_new <= MAX_SHOTS):
-        raise ValueError("FACTORY_NEW_SHOTS_PER_RUN must be 1-%d" % MAX_SHOTS)
+    if not (1 <= max_new <= MAX_NEW_PER_RUN):
+        raise ValueError("FACTORY_NEW_SHOTS_PER_RUN must be 1-%d" % MAX_NEW_PER_RUN)
     new_count = 0
     for index, shot in enumerate(shots):
         image_path = assets / (shot["id"] + ".png")
