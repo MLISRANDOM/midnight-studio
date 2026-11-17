@@ -22,10 +22,18 @@ class FreeProviderTest(unittest.TestCase):
             self.assertEqual(result["provider"], "horde")
             horde.assert_called_once()
 
+    def test_lock_prevents_mixed_models(self):
+        with patch("episode_factory.generate_ovh", side_effect=RuntimeError("quota full")), \
+             patch("episode_factory.generate_horde") as horde:
+            with self.assertRaisesRegex(RuntimeError, "No allowed free image provider succeeded"):
+                generate({"id": "S007"}, None, 6, 576, 320, 5,
+                         provider_lock="ovh")
+            horde.assert_not_called()
+
     def test_both_fail_loudly(self):
         with patch("episode_factory.generate_ovh", side_effect=RuntimeError("OVH unavailable")), \
              patch("episode_factory.generate_horde", side_effect=RuntimeError("Horde unavailable")):
-            with self.assertRaisesRegex(RuntimeError, "Both free image providers failed"):
+            with self.assertRaisesRegex(RuntimeError, "No allowed free image provider succeeded"):
                 generate({"id": "S001"}, None, 0, 576, 320, 5)
 
 if __name__ == "__main__":
