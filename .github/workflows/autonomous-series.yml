@@ -57,6 +57,27 @@ jobs:
           FACTORY_NEW_SHOTS_PER_RUN: '2'
         run: |
           python factory/series_runner.py --series factory/series_plan.json --output factory-output/autonomous-series
+      - name: Summarize episode results in Actions
+        if: always()
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          path = pathlib.Path("factory-output/autonomous-series/series-status.json")
+          print("## Midnight Studio Autonomous Factory")
+          if not path.is_file():
+              print("No series status produced. Inspect the preceding step logs.")
+          else:
+              data = json.loads(path.read_text())
+              print("| Episode | Render | Technical QA | State |")
+              print("|---|---|---|---|")
+              for episode in data.get("episodes", []):
+                  print("| {id} | {render} | {qa} | {state} |".format(
+                      id=episode.get("id", "?"),
+                      render="Yes" if episode.get("draft_render_complete") else "No",
+                      qa="Pass" if episode.get("technical_qa_passed") else "Not passed",
+                      state=episode.get("state", "unknown")))
+              print("\\nTechnical completion does not mean narrative or visual approval.")
+          PY
       - name: Upload all reports, still images and finished draft MP4s
         if: always()
         uses: actions/upload-artifact@v4

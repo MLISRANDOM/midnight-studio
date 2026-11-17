@@ -157,9 +157,18 @@ def main():
         identifier = slug(item["id"])
         episode_dir = output / identifier
         complete = (episode_dir / "episode-draft.mp4").is_file()
-        status["episodes"].append({"id": identifier, "draft_render_complete": complete,
-                                   "state": "rendered_draft" if complete else "pending"})
-        if not complete and pending is None:
+        qa = episode_dir / "technical-qa.json"
+        qa_passed = False
+        if qa.is_file():
+            try:
+                qa_passed = json.loads(qa.read_text()).get("status") == "technical_checks_passed"
+            except (ValueError, OSError):
+                pass
+        status["episodes"].append({
+            "id": identifier, "draft_render_complete": complete,
+            "technical_qa_passed": qa_passed,
+            "state": "rendered_draft" if complete and qa_passed else "pending"})
+        if not (complete and qa_passed) and pending is None:
             pending = (item, episode_dir)
     if pending is not None:
         item, episode_dir = pending
@@ -180,8 +189,18 @@ def main():
         print("All planned draft episodes have been rendered. No new work.", flush=True)
     status["updated_utc"] = datetime.now(timezone.utc).isoformat()
     for entry in status["episodes"]:
-        entry["draft_render_complete"] = (output / entry["id"] / "episode-draft.mp4").is_file()
-        entry["state"] = "rendered_draft" if entry["draft_render_complete"] else "pending"
+        episode_dir = output / entry["id"]
+        entry["draft_render_complete"] = (episode_dir / "episode-draft.mp4").is_file()
+        qa_file = episode_dir / "technical-qa.json"
+        try:
+            entry["technical_qa_passed"] = (
+                qa_file.is_file() and
+                json.loads(qa_file.read_text()).get("status") == "technical_checks_passed")
+        except (ValueError, OSError):
+            entry["technical_qa_passed"] = False
+        entry["state"] = (
+            "rendered_draft" if entry["draft_render_complete"]
+            and entry["technical_qa_passed"] else "pending")
     (output / "series-status.json").write_text(json.dumps(status, indent=2))
     # Network / volunteer failure is non-fatal: next scheduled run resumes the queue.
     return 0

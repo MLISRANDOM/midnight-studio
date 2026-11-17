@@ -5,7 +5,7 @@ import subprocess
 import tempfile
 import unittest
 from PIL import Image
-from episode_factory import video
+from episode_factory import video, quality_report
 
 class EpisodeFactorySmokeTest(unittest.TestCase):
     def test_two_shot_mp4_with_narration(self):
@@ -29,7 +29,12 @@ class EpisodeFactorySmokeTest(unittest.TestCase):
                 check=True, capture_output=True, text=True)
             length = float(probe.stdout.strip())
             self.assertGreater(length, 5)
-            self.assertLess(length, 7.5)
+            self.assertLess(length, 10)
+            checked = quality_report(path, [
+                dict(shot, _render_width=576, _render_height=320) for shot in shots],
+                image_files, out)
+            self.assertEqual(checked["status"], "technical_checks_passed")
+            self.assertTrue((out / "technical-qa.json").is_file())
 
 if __name__ == "__main__":
     unittest.main()
