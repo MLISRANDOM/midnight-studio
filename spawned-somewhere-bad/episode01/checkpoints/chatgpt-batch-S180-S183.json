@@ -1,0 +1,37 @@
+{
+  "baseline_approved": 170,
+  "total": 228,
+  "new_candidates": [
+    {
+      "shot": "S180",
+      "file_id": "1d-CT3Nyu3HclOZAhgPKx4-Z0tN3X-gQT",
+      "filename": "S180_candidate_ChatGPT.png",
+      "status": "candidate_uploaded_verified",
+      "verified": true
+    },
+    {
+      "shot": "S181",
+      "file_id": "1h6eOCMJIOwx7FGoDehwyy42fThlHR6x2",
+      "filename": "S181_candidate_ChatGPT.png",
+      "status": "candidate_uploaded_verified",
+      "verified": true
+    },
+    {
+      "shot": "S182",
+      "file_id": "1Qznef-tqyl6ERpAjPeX2k97TdHeIg28V",
+      "filename": "S182_candidate_ChatGPT.png",
+      "status": "candidate_uploaded_verified",
+      "verified": true
+    },
+    {
+      "shot": "S183",
+      "file_id": "1Oup8XMNKI_dH7O5JLuaX7o-N5tUedvxu",
+      "filename": "S183_candidate_ChatGPT.png",
+      "status": "candidate_uploaded_verified",
+      "verified": true
+    }
+  ],
+  "approved_added": 0,
+  "remaining_without_new_candidate": 54,
+  "qa_notes": "Pending continuity review: S181 lever differs from round knob in S180/S182/S183; S180 bowl versus open tin in S182. Do not mark batch approved until resolved. Preserve all existing approved files."
+}
