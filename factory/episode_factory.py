@@ -77,7 +77,7 @@ def image_download(url, dest):
         im.convert("RGB").save(dest, "PNG")
 
 
-def generate(shot, outdir, index, width, height, timeout):
+def generate_horde(shot, outdir, index, width, height, timeout):
     prompt = shot["prompt"].strip()
     negative = shot.get("negative", "text, caption, watermark, logo")
     if negative:
@@ -117,6 +117,41 @@ def generate(shot, outdir, index, width, height, timeout):
                 request("DELETE", "/generate/status/" + urllib.parse.quote(job_id))
         except Exception as exc:
             print("Warning: unable to confirm job cleanup:", exc, flush=True)
+
+
+def generate_ovh(shot, outdir, index, width, height, timeout):
+    """Use OVHcloud's documented anonymous free SDXL API (subject to quotas)."""
+    from ovh_probe import generate as ovh_request
+    path = outdir / (shot["id"] + ".png")
+    prompt = shot["prompt"].strip()
+    negative = shot.get("negative", "")
+    if negative:
+        prompt += ". Avoid these artifacts: " + negative[:200]
+    info = ovh_request(prompt, path)
+    return {"shot": shot["id"], "image": str(path), "status": "draft_needs_qa",
+            "provider": "OVHcloud free SDXL", "model": info.get("model")}
+
+
+def generate(shot, outdir, index, width, height, timeout):
+    """Try verified free providers without payment credentials or silent fake images."""
+    preferred = os.getenv("FACTORY_IMAGE_PROVIDER", "ovh").lower()
+    if preferred not in {"ovh", "horde", "auto"}:
+        raise ValueError("FACTORY_IMAGE_PROVIDER must be ovh, horde, or auto")
+    providers = [("ovh", generate_ovh), ("horde", generate_horde)]
+    if preferred == "horde":
+        providers.reverse()
+    errors = []
+    for name, provider in providers:
+        try:
+            print("Trying free image provider:", name, "shot:", shot["id"], flush=True)
+            result = provider(shot, outdir, index, width, height, timeout)
+            print("Free image received:", shot["id"], "provider:", name, flush=True)
+            return result
+        except Exception as exc:
+            reason = str(exc)[:350]
+            errors.append(name + ": " + reason)
+            print("Provider unavailable:", name, reason, flush=True)
+    raise RuntimeError("Both free image providers failed. " + " | ".join(errors))
 
 
 def run(command):
