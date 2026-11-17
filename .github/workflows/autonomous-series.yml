@@ -1,7 +1,7 @@
 name: Autonomous Episode Draft Series
 on:
   schedule:
-    - cron: '43 9 * * *'
+    - cron: '43 3,9,15,21 * * *'
   push:
     branches: [main]
     paths:
@@ -56,7 +56,8 @@ jobs:
       - name: Advance one unfinished draft episode
         env:
           AI_HORDE_API_KEY: ${{ secrets.AI_HORDE_API_KEY }}
-          FACTORY_NEW_SHOTS_PER_RUN: '2'
+          FACTORY_NEW_SHOTS_PER_RUN: '4'
+          FACTORY_MIN_REQUEST_INTERVAL_SEC: '35'
         run: |
           python factory/series_runner.py --series factory/series_plan.json --output factory-output/autonomous-series
       - name: Summarize episode results in Actions

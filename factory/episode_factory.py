@@ -322,6 +322,8 @@ def main():
     if not (1 <= max_new <= MAX_NEW_PER_RUN):
         raise ValueError("FACTORY_NEW_SHOTS_PER_RUN must be 1-%d" % MAX_NEW_PER_RUN)
     new_count = 0
+    last_submitted_at = None
+    min_interval = max(0, min(120, int(os.getenv("FACTORY_MIN_REQUEST_INTERVAL_SEC", "35"))))
     for index, shot in enumerate(shots):
         image_path = assets / (shot["id"] + ".png")
         cached = previous.get(shot["id"])
@@ -344,6 +346,12 @@ def main():
             results.append({"shot": shot["id"], "status": "pending_next_run"})
             continue
         new_count += 1
+        if last_submitted_at is not None:
+            remaining = min_interval - (time.monotonic() - last_submitted_at)
+            if remaining > 0:
+                print("Respecting free-provider request pacing:", round(remaining, 1), "seconds", flush=True)
+                time.sleep(remaining)
+        last_submitted_at = time.monotonic()
         try:
             result = generate(shot, assets, index, width, height, args.generation_timeout,
                               provider_lock=locked_provider, model_lock=locked_model)
