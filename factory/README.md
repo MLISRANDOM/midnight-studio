@@ -1,6 +1,6 @@
 # Midnight Studio Episode Factory v0.1
 
-A **draft-only**, GitHub-hosted, best-effort pipeline for making an original short animated motion-comic with almost no user interaction.
+A **draft-only**, GitHub-hosted, best-effort, resumable pipeline for making an original short animated motion-comic with almost no user interaction.
 
 ## What this version actually does
 1. Read a JSON episode manifest with 1-6 shots.
@@ -11,6 +11,14 @@ A **draft-only**, GitHub-hosted, best-effort pipeline for making an original sho
 6. Upload the MP4, draft images and report as GitHub Actions artifacts.
 
 **Does not:** generate sophisticated animation, guarantee character continuity, generate human-quality narration, upload to Google Drive or YouTube, keep running independently of a workflow trigger, create a full script autonomously, or mark anything approved. It never overwrites existing shot trackers, approved image folders or old episodes.
+
+## Unattended test and checkpoint recovery
+
+The workflow runs automatically on changes to factory files and is scheduled daily at 09:17 UTC. It processes at most **two new shots per run** to bound volunteer load. It restores the latest matching GitHub Actions cache, verifies previously completed PNGs, and continues unfinished shots; it does not regenerate successful cached shots. GitHub caches are temporary and may be evicted, so recovery is best-effort, not permanent storage. You can turn off the schedule by editing the workflow.
+
+Before submitting any external generation, the workflow executes `python factory/selftest.py`: an offline two-shot test of the free espeak-ng/FFmpeg render path. Failed tests prevent an external generation request.
+
+**No user prompt is created automatically from a title.** A manifest containing specific scene prompts and narration must exist. No automatic YouTube publishing. Generated frames remain drafts, never approved assets.
 
 ## Launch
 Open GitHub > Actions > **Episode Factory (free draft test)** > Run workflow. The default manifest is `factory/demo_episode.json`. No API key is required for anonymous queue entry. The optional secret `AI_HORDE_API_KEY` gives access to an account's assigned kudos, not unlimited paid processing.

@@ -158,32 +158,69 @@ def main():
         raise ValueError("Unique safe shot IDs required")
     if not all(isinstance(s.get("prompt"), str) and 8 <= len(s["prompt"]) <= 1800 for s in shots):
         raise ValueError("Each shot must include an 8-1800 character prompt")
-    width, height = int(manifest.get("width", 512)), int(manifest.get("height", 320))
+    width, height = int(manifest.get("width", 576)), int(manifest.get("height", 320))
     if width % 64 or height % 64 or width * height > 512 * 512 or min(width, height) < 256:
         raise ValueError("Use 64-aligned dimensions of at least 256, within 512x512 pixels")
     output = pathlib.Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     assets = output / "draft-images"
     assets.mkdir(exist_ok=True)
+    # Resume previously validated draft PNGs from the restored Actions cache.
+    report_path = output / "report.json"
+    previous = {}
+    if report_path.exists():
+        try:
+            old = json.loads(report_path.read_text())
+            if old.get("manifest_fingerprint") == manifest_path.read_text():
+                previous = {item["shot"]: item for item in old.get("results", [])
+                            if item.get("status") == "draft_needs_qa"}
+        except (ValueError, KeyError, TypeError):
+            pass
     results = []
+    max_new = int(os.getenv("FACTORY_NEW_SHOTS_PER_RUN", "2"))
+    if not (1 <= max_new <= MAX_SHOTS):
+        raise ValueError("FACTORY_NEW_SHOTS_PER_RUN must be 1-%d" % MAX_SHOTS)
+    new_count = 0
     for index, shot in enumerate(shots):
+        image_path = assets / (shot["id"] + ".png")
+        cached = previous.get(shot["id"])
+        if cached and image_path.exists():
+            try:
+                with Image.open(image_path) as im:
+                    im.verify()
+                results.append({**cached, "image": str(image_path)})
+                print("Resumed", shot["id"], "from verified cached image", flush=True)
+                continue
+            except Exception:
+                print("Cached image invalid, regenerating", shot["id"], flush=True)
+        if new_count >= max_new:
+            results.append({"shot": shot["id"], "status": "pending_next_run"})
+            continue
+        new_count += 1
         try:
             results.append(generate(shot, assets, index, width, height, args.generation_timeout))
         except Exception as e:
-            results.append({"shot": shot["id"], "status": "failed", "error": str(e)})
-            print("Failed:", shot["id"], e, file=sys.stderr, flush=True)
-            break
-    (output / "report.json").write_text(json.dumps({
-        "title": manifest.get("title"), "source_manifest": str(manifest_path),
-        "results": results, "approved": False,
-        "note": "Draft only; never overwrites approved production assets"
-    }, indent=2))
-    if len(results) == len(shots) and all(x["status"] == "draft_needs_qa" for x in results):
+            results.append({"shot": shot["id"], "status": "retry_next_run", "error": str(e)})
+            print("Generation attempt failed:", shot["id"], e, file=sys.stderr, flush=True)
+            # Continue with other previously generated images but don't start another request.
+            new_count = max_new
+        finally:
+            report_path.write_text(json.dumps({
+                "title": manifest.get("title"),
+                "source_manifest": str(manifest_path),
+                "manifest_fingerprint": manifest_path.read_text(),
+                "results": results,
+                "approved": False,
+                "note": "Draft only; never overwrites approved production assets"
+            }, indent=2))
+    complete = len(results) == len(shots) and all(
+        x["status"] == "draft_needs_qa" for x in results)
+    if complete:
         final = video(shots, results, output, width, height)
         print("Draft video created:", final, flush=True)
     else:
-        print("Episode incomplete. Draft outputs preserved for troubleshooting.", file=sys.stderr)
-        sys.exit(1)
+        pending = [x["shot"] for x in results if x["status"] != "draft_needs_qa"]
+        print("Episode pending future scheduled run:", pending, flush=True)
 
 
 if __name__ == "__main__":

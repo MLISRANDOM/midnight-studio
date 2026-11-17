@@ -1,5 +1,7 @@
-name: Episode Factory (free draft test)
+name: Episode Factory (resumable free drafts)
 on:
+  schedule:
+    - cron: '17 9 * * *'
   push:
     branches: [main]
     paths:
@@ -14,6 +16,9 @@ on:
         type: string
 permissions:
   contents: read
+concurrency:
+  group: midnight-episode-factory
+  cancel-in-progress: false
 jobs:
   draft-episode:
     runs-on: ubuntu-24.04
@@ -23,15 +28,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Resume last cached draft for this manifest
+        uses: actions/cache@v4
+        with:
+          path: factory-output
+          key: episode-factory-${{ hashFiles('factory/demo_episode.json') }}-${{ github.run_id }}
+          restore-keys: |
+            episode-factory-${{ hashFiles('factory/demo_episode.json') }}-
       - name: Install rendering dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg espeak-ng
           python -m pip install "Pillow>=10,<13"
+      - name: Validate factory syntax and offline video rendering
+        run: |
+          python -m py_compile factory/episode_factory.py factory/selftest.py
+          python factory/selftest.py
       - name: Build draft episode from manifest
         env:
           AI_HORDE_API_KEY: ${{ secrets.AI_HORDE_API_KEY }}
           MANIFEST: ${{ inputs.manifest || 'factory/demo_episode.json' }}
+          FACTORY_NEW_SHOTS_PER_RUN: '2'
         run: |
           case "$MANIFEST" in
             factory/*.json) ;;
