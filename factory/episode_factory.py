@@ -18,7 +18,7 @@ import urllib.request
 
 from PIL import Image
 
-API = "https://aihorde.net/api/v2"
+API = os.getenv("AI_HORDE_BASE_URL", "https://stablehorde.net/api/v2")
 AGENT = "MidnightStudioEpisodeFactory:0.1:github.com/MLISRANDOM/midnight-studio"
 MAX_SHOTS = 6
 MAX_RESPONSE_BYTES = 8 * 1024 * 1024
@@ -29,6 +29,7 @@ def request(method, path, payload=None):
         "apikey": (os.getenv("AI_HORDE_API_KEY") or "0000000000"),
         "Client-Agent": AGENT,
         "Accept": "application/json",
+        "User-Agent": "MidnightStudioEpisodeFactory/0.3 (+https://github.com/MLISRANDOM/midnight-studio)",
     }
     data = None
     if payload is not None:
