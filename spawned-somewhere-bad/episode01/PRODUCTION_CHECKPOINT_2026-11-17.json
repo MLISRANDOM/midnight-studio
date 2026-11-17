@@ -1,9 +1,9 @@
 {
   "project": "Spawned Somewhere Bad Episode 01: 30 Days at Freddy's",
   "checkpoint": "2026-11-17",
-  "verified_approved_count": 168,
+  "verified_approved_count": 170,
   "total_storyboard_shots": 228,
-  "remaining_unapproved_count": 60,
+  "remaining_unapproved_count": 58,
   "approved_shots": [
     "S001",
     "S002",
@@ -172,6 +172,8 @@
     "S170",
     "S171",
     "S172",
+    "S177",
+    "S178",
     "S222"
   ],
   "unapproved_shots": [
@@ -184,8 +186,6 @@
     "S174",
     "S175",
     "S176",
-    "S177",
-    "S178",
     "S179",
     "S180",
     "S181",
@@ -253,7 +253,9 @@
     "S169",
     "S170",
     "S171",
-    "S172"
+    "S172",
+    "S177",
+    "S178"
   ],
   "runway_remaining_QA": [
     "S164",
@@ -338,5 +340,7 @@
   "note": "Verified 167 files by actual Google Drive listing. Supplemental checkpoint; do not overwrite original tracker. Some historical generated candidates have not been verified in Drive.",
   "generation_rate_limit": "Two S177/S178 requests rejected 429; do not claim generated.",
   "original_storyboard": "Storyboard_228_Shots.json",
-  "next_generation_queue_drive": "Spawned_E01_61_Shot_Generation_Queue.json"
+  "next_generation_queue_drive": "Spawned_E01_61_Shot_Generation_Queue.json",
+  "generation_blocker": "Higgsfield returned Out of credits on free plan in Private workspace when submitting S180. Further submissions stopped. S179 generated and captured but not approved (excess tally marks).",
+  "generation_queue_drive_file": "Spawned_E01_61_Shot_Generation_Queue.json"
 }
