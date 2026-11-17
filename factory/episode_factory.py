@@ -130,7 +130,7 @@ def video(shots, images, output, width, height):
              "-i", str(audio), "-t", str(duration),
              "-vf", "scale=%d:%d:force_original_aspect_ratio=decrease,pad=%d:%d:(ow-iw)/2:(oh-ih)/2,format=yuv420p" % (width, height, width, height),
              "-c:v", "libx264", "-preset", "veryfast", "-crf", "24", "-r", "24",
-             "-c:a", "aac", "-ar", "44100", "-ac", "1", "-shortest", str(mp4)])
+             "-af", "apad", "-c:a", "aac", "-ar", "44100", "-ac", "1", str(mp4)])
         rendered.append(mp4)
     listfile = clips / "concat.txt"
     listfile.write_text("".join("file '%s'\n" % p.name for p in rendered))
@@ -158,7 +158,7 @@ def main():
         raise ValueError("Unique safe shot IDs required")
     if not all(isinstance(s.get("prompt"), str) and 8 <= len(s["prompt"]) <= 1800 for s in shots):
         raise ValueError("Each shot must include an 8-1800 character prompt")
-    width, height = int(manifest.get("width", 512)), int(manifest.get("height", 288))
+    width, height = int(manifest.get("width", 512)), int(manifest.get("height", 320))
     if width % 64 or height % 64 or width * height > 512 * 512 or min(width, height) < 256:
         raise ValueError("Use 64-aligned dimensions of at least 256, within 512x512 pixels")
     output = pathlib.Path(args.output)
