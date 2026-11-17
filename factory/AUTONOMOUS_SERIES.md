@@ -6,16 +6,17 @@ This is the **unattended draft generation** branch of Midnight Studio.
 A one-time `factory/series_plan.json` supplies the series art direction and a list of episode ideas. The engine automatically:
 1. Finds the next unfinished episode.
 2. Constructs a four-shot story, narration, and image prompts from that episode's seed.
-3. Uses free volunteer-hosted AI Horde image generation for up to two new shots in one run.
-4. Reuses cached completed images on subsequent daily runs.
-5. Synthesizes rough offline narration and produces a stitched MP4 draft.
-6. Saves candidate images, manifests, reports, and videos in GitHub Actions artifacts.
-7. Moves to the next episode the following scheduled run.
+3. Optionally asks free AI Horde text workers for four original narration lines, falling back to the deterministic writer if no response is available.
+4. Uses free volunteer-hosted AI Horde image generation for up to two new shots in one run.
+5. Reuses cached completed images on subsequent daily runs.
+6. Synthesizes rough offline narration and produces a stitched MP4 draft.
+7. Saves candidate images, manifests, reports, and videos in GitHub Actions artifacts.
+8. Moves to the next episode the following scheduled run.
 
 It is scheduled daily at **09:43 UTC** and can also run when the plan or workflow is changed. No button press is needed for the scheduled test plan.
 
 ## What autonomous currently means
-Automated orchestration is real code, but there are **no guarantees** that volunteers will accept an anonymous AI Horde job. GitHub Actions must be enabled. GitHub-hosted runner/caching/artifact policies apply. The draft renderer uses **still frames** and **local Piper neural speech when the voice model is available, otherwise robotic eSpeak fallback**, not full animation or cinematic Foley. The deterministic outline writer is a placeholder for a real AI writer. No automatic social upload or monetization.
+Automated orchestration is real code, but there are **no guarantees** that volunteers will accept an anonymous AI Horde job. GitHub Actions must be enabled. GitHub-hosted runner/caching/artifact policies apply. The draft renderer uses **still frames** and **local Piper neural speech when the voice model is available, otherwise robotic eSpeak fallback**, not full animation or cinematic Foley. The visual story beats are still template-driven; AI Horde text workers are an optional best-effort narration writer with a deterministic fallback. Free AI outputs may be inconsistent or refused. No automatic social upload or monetization.
 
 The default series plan is an original, isolated QA series. It deliberately does not overwrite Spawned Somewhere Bad or Safe Room Rules canon.
 
@@ -29,3 +30,6 @@ GitHub > Actions > **Autonomous Episode Draft Series** > a completed run > `auto
 
 ## Neural narration (experimental)
 The workflow optionally installs Piper and downloads the MIT-licensed en_US-ryan-medium voice from the rhasspy/piper-voices repository. Neural inference runs on the GitHub runner CPU, without cloud TTS credits. If the model, package or voice is unavailable, the engine automatically falls back to eSpeak. This does not guarantee natural voice acting or tightly aligned dialogue. Review output audio before publishing.
+
+## Automated free script pass
+For each new episode, `series_runner.py` attempts one free AI Horde text-generation request to draft four narration lines. It rejects unusable outputs and falls back to the stable outline. The generated episode manifest is cached and never rewritten after image generation begins. Set `FACTORY_FREE_TEXT=0` in the workflow to disable the optional request. Both AI scripts and the prompts sent to anonymous workers may be visible under the service's sharing rules.

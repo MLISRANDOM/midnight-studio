@@ -2,7 +2,7 @@
 import json
 import pathlib
 import unittest
-from series_runner import scene_manifest, slug
+from series_runner import scene_manifest, slug, free_narration
 
 class AutoSeriesTests(unittest.TestCase):
     def test_valid_plan_and_distinct_episodes(self):
@@ -20,6 +20,17 @@ class AutoSeriesTests(unittest.TestCase):
             self.assertTrue(all(s["narration"] for s in manifest["shots"]))
             prompts.append(manifest["shots"][0]["prompt"])
         self.assertNotEqual(prompts[0], prompts[1])
+
+    def test_volunteer_writer_fallback_offline(self):
+        import os
+        from unittest.mock import patch
+        with patch.dict(os.environ, {"FACTORY_FREE_TEXT": "0"}):
+            self.assertIsNone(free_narration({}, {}))
+        plan = json.loads(pathlib.Path("factory/series_plan.json").read_text())
+        lines = ["Narration sentence %s includes a spooky detail." % i for i in range(4)]
+        manifest = scene_manifest(plan, plan["episodes"][0], lines)
+        self.assertEqual(manifest["narration_source"], "volunteer_ai_text")
+        self.assertEqual([x["narration"] for x in manifest["shots"]], lines)
 
     def test_disallow_unsafe_episode_ids(self):
         for value in ("../secrets", "", "/tmp/evil", "bad name"):
