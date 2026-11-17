@@ -1,0 +1,43 @@
+name: Episode Factory (free draft test)
+on:
+  workflow_dispatch:
+    inputs:
+      manifest:
+        description: "Repository-local manifest JSON (factory/...)"
+        required: true
+        default: "factory/demo_episode.json"
+        type: string
+permissions:
+  contents: read
+jobs:
+  draft-episode:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 95
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install rendering dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg espeak-ng
+          python -m pip install "Pillow>=10,<13"
+      - name: Build draft episode from manifest
+        env:
+          AI_HORDE_API_KEY: ${{ secrets.AI_HORDE_API_KEY }}
+          MANIFEST: ${{ inputs.manifest }}
+        run: |
+          case "$MANIFEST" in
+            factory/*.json) ;;
+            *) echo "Manifest must live under factory/ and end in .json"; exit 1;;
+          esac
+          python factory/episode_factory.py --manifest "$MANIFEST" --output factory-output
+      - name: Upload draft images, report, and video even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: episode-factory-draft
+          path: factory-output/
+          if-no-files-found: warn
+          retention-days: 7
