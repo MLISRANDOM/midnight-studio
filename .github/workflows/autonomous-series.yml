@@ -18,6 +18,8 @@ jobs:
   draft-series:
     runs-on: ubuntu-24.04
     timeout-minutes: 95
+    env:
+      PIPER_MODEL: ${{ github.workspace }}/factory/voices/en_US-ryan-medium.onnx
     steps:
       - name: Check out project
         uses: actions/checkout@v4
@@ -37,6 +39,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg espeak-ng
           python -m pip install "Pillow>=10,<13"
+      - name: Prepare optional free local neural narration
+        run: |
+          python -m pip install "piper-tts>=1,<2" || echo "Piper unavailable, eSpeak fallback enabled"
+          mkdir -p factory/voices
+          BASE="https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/medium"
+          curl --fail --location --retry 2 --max-time 120 "$BASE/en_US-ryan-medium.onnx" -o factory/voices/en_US-ryan-medium.onnx || rm -f factory/voices/en_US-ryan-medium.onnx
+          curl --fail --location --retry 2 --max-time 60 "$BASE/en_US-ryan-medium.onnx.json" -o factory/voices/en_US-ryan-medium.onnx.json || rm -f factory/voices/en_US-ryan-medium.onnx.json
       - name: Check syntax and offline render
         run: |
           python -m py_compile factory/episode_factory.py factory/series_runner.py factory/selftest.py factory/series_selftest.py
