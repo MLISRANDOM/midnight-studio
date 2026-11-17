@@ -40,6 +40,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg espeak-ng
           python -m pip install "Pillow>=10,<13"
+      - name: Validate factory syntax and offline video rendering
+        run: |
+          python -m py_compile factory/episode_factory.py factory/selftest.py
+          python factory/selftest.py
       - name: Build draft episode from manifest
         env:
           AI_HORDE_API_KEY: ${{ secrets.AI_HORDE_API_KEY }}
