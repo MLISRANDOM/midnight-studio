@@ -1,13 +1,6 @@
 name: Episode Factory (resumable free drafts)
 on:
-  schedule:
-    - cron: '17 9 * * *'
   pull_request:
-    paths:
-      - "factory/**"
-      - ".github/workflows/episode-factory.yml"
-  push:
-    branches: [main]
     paths:
       - "factory/**"
       - ".github/workflows/episode-factory.yml"
