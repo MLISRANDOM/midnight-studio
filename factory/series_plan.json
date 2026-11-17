@@ -1,0 +1,24 @@
+{
+  "name": "Midnight Studio Original Horror Lab",
+  "art_style": "Simplified thick-outlined 2D cartoon horror, flat colors, consistent anonymous protagonist with dark raincoat and obscured face, cinematic composition, muted navy and amber palette",
+  "episodes": [
+    {
+      "id": "qa-episode-01",
+      "title": "The Hallway That Counted",
+      "setting": "a deserted basement of an old hotel with numbered storage doors",
+      "threat": "a shadow that only moves between door numbers",
+      "lead": "a nameless night porter wearing a dark raincoat",
+      "hook": "the door numbers begin counting backward",
+      "twist": "the porter is listed as the next missing room"
+    },
+    {
+      "id": "qa-episode-02",
+      "title": "The Elevator Refused the Lobby",
+      "setting": "a silent elevator inside an unoccupied downtown tower",
+      "threat": "a figure that appears inside reflections but never in the elevator",
+      "lead": "the same nameless night porter wearing a dark raincoat",
+      "hook": "the elevator buttons light up before they are touched",
+      "twist": "each floor is the same room at a different hour"
+    }
+  ]
+}
