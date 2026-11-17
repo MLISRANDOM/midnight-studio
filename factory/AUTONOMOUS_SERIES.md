@@ -15,7 +15,7 @@ A one-time `factory/series_plan.json` supplies the series art direction and a li
 It is scheduled daily at **09:43 UTC** and can also run when the plan or workflow is changed. No button press is needed for the scheduled test plan.
 
 ## What autonomous currently means
-Automated orchestration is real code, but there are **no guarantees** that volunteers will accept an anonymous AI Horde job. GitHub Actions must be enabled. GitHub-hosted runner/caching/artifact policies apply. The draft renderer uses **still frames** and **robotic espeak-ng speech**, not full animation or cinematic Foley. The deterministic outline writer is a placeholder for a real AI writer. No automatic social upload or monetization.
+Automated orchestration is real code, but there are **no guarantees** that volunteers will accept an anonymous AI Horde job. GitHub Actions must be enabled. GitHub-hosted runner/caching/artifact policies apply. The draft renderer uses **still frames** and **local Piper neural speech when the voice model is available, otherwise robotic eSpeak fallback**, not full animation or cinematic Foley. The deterministic outline writer is a placeholder for a real AI writer. No automatic social upload or monetization.
 
 The default series plan is an original, isolated QA series. It deliberately does not overwrite Spawned Somewhere Bad or Safe Room Rules canon.
 
@@ -26,3 +26,6 @@ Caches and Actions artifacts can expire. Approved series assets require permanen
 
 ## Read output
 GitHub > Actions > **Autonomous Episode Draft Series** > a completed run > `autonomous-series-drafts` artifact. Within it, `series-status.json` reports which episodes were rendered. `factory/series_plan.json` can be edited to change the planned series.
+
+## Neural narration (experimental)
+The workflow optionally installs Piper and downloads the MIT-licensed en_US-ryan-medium voice from the rhasspy/piper-voices repository. Neural inference runs on the GitHub runner CPU, without cloud TTS credits. If the model, package or voice is unavailable, the engine automatically falls back to eSpeak. This does not guarantee natural voice acting or tightly aligned dialogue. Review output audio before publishing.
