@@ -371,7 +371,7 @@
     "unique_numbered_files": 228,
     "all_images_decode": true,
     "narration_duration_seconds": 669.54449,
-    "render_status": "1080p narration cut rendering; sound design and listening QA pending",
+    "render_status": "Complete 1080p and 720p review exports saved in Drive. Final listening and cross-shot continuity QA pending.",
     "timing_limit": "First 4:47 storyboard timestamps marked provisional ASR; not independently listen-verified",
     "new_corrections": [
       {
@@ -417,5 +417,13 @@
         }
       }
     ]
+  },
+  "deliverables": {
+    "youtube_review": "https://drive.google.com/file/d/1m-9S1iJ3hn8hKliaYY-DBUbrjbxFyM8m/view?usp=drivesdk",
+    "iphone_review": "https://drive.google.com/file/d/1sfXpX72RE-sYKdYnNPgx88td7cqECagy/view?usp=drivesdk",
+    "duration_seconds": 669.544,
+    "sound": "Synthesized atmospheric bed and cue-triggered Foley; not recorded realistic Foley; listening review pending",
+    "no_captions": true,
+    "no_zooms": true
   }
 }
