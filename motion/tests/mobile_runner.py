@@ -11,7 +11,7 @@ import threading
 from urllib.parse import urlsplit
 
 REPO = Path(__file__).resolve().parents[2]
-RESULTS = {"portrait.mp4", "neural.mp4", "result.json"}
+RESULTS = {"portrait.mp4", "neural.mp4", "scene.mp4", "result.json"}
 
 def simulator():
     data = json.loads(subprocess.check_output(["xcrun","simctl","list","devices","available","-j"]))
@@ -60,12 +60,15 @@ def main():
     parser.add_argument("--engine",choices=["ios","chromium","webkit"],required=True)
     parser.add_argument("--out",type=Path,required=True)
     parser.add_argument("--runtime",type=Path,required=True)
+    parser.add_argument("--public-model",action="store_true",help="Fetch the same pinned runtime and weights as the public page")
     parser.add_argument("--executable")
     args=parser.parse_args()
     args.out.mkdir(parents=True,exist_ok=True)
     done=threading.Event()
     server=serve(args.out,args.runtime,done)
-    url=f"http://127.0.0.1:{server.server_port}/motion/tests/mobile.html?runtime=local"
+    url=f"http://127.0.0.1:{server.server_port}/motion/tests/mobile.html"
+    if not args.public_model:
+        url+="?runtime=local"
     udid=None
     try:
         if args.engine=="ios":

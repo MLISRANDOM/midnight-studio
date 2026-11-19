@@ -1,5 +1,27 @@
 # Midnight Studio Motion Lab checkpoint
 
+## November 19 handoff
+
+[Open Motion Lab](https://mlisrandom.github.io/midnight-studio/motion/) · [Open the three-shot editor](https://mlisrandom.github.io/midnight-studio/motion/?scene=station) · [Watch the edited Survivor scene in Drive](https://drive.google.com/file/d/1fQgaD2rrFlU2kav_D2VDlFiHhcxuppRZ/view).
+
+The reference foundation shipped through [PR #22](https://github.com/MLISRANDOM/midnight-studio/pull/22) after its [fixed hosted test](https://github.com/MLISRANDOM/midnight-studio/actions/runs/44590949260) passed. [PR #23](https://github.com/MLISRANDOM/midnight-studio/pull/23) shipped the phone interface, articulated animation and RIFE. [Pages deployment](https://github.com/MLISRANDOM/midnight-studio/actions/runs/44592177378). A Chromium browser opened that public site, rendered both modes and loaded the real remote neural weights without intercepting any requests.
+
+[Apple simulator verification](https://github.com/MLISRANDOM/midnight-studio/actions/runs/44591311587) ran Safari 26.2 on a simulated iPhone SE (3rd generation). It passed all five original feature checks, including a 540 × 960 portrait export, whole-video local measurements and reopening, cancellation, the GitHub return link and nine RIFE in-betweens from two uploaded poses. Neural inference took 5.095 seconds on the simulator. It used a same-origin mirror of the pinned weights. Linux WPE WebKit in the local test environment reported no native MP4 encoder. Physical iPhone timings and the Drive share-sheet handoff still require a device check.
+
+### Edited scenes
+
+The scene editor has three ordered shots with independently selectable actions and framing. It maps the relative cutting frequency in the beginning, middle and end of an authorized video to original shot lengths. The reference's average brightness and within-shot pixel change control the room light and gesture amplitude. The camera stays fixed during each shot. The first version supports a robot and the approved Survivor rig. Two original posed images support a separate RIFE transition for any character. These controls do not infer dialogue, identify actions or generate arbitrary shots from text.
+
+The portrait Survivor export contains 193 decoded AVC frames at 24 fps, 540 × 960, 8.042 seconds and 2,439,384 bytes. The two cuts occur at frames 65 and 121. The motion and both cuts were checked using decoded pixel differences and visual inspection. The Drive QA folder and file size were verified. [Render settings](tests/evidence/survivor-scene.json) · [FFprobe and decoded frame statistics](tests/evidence/survivor-scene-decoded.json). Use the existing private sheet with the original [browser harness](tests/browser_probe.py) and pass the argument `--scene` to reproduce the export.
+
+The second authorized reference was Blender’s complete 596.458-second Big Buck Bunny. In the local CLI the direct YouTube download failed validation. Its checksum-matched Blender master yielded 124 estimated shots and 1,800 color samples. The app also reads any creator-authorized, browser-decodable local file from Files or Drive and can associate it with its real YouTube link. [Measured example](big-buck-bunny-technique.json) · [Credits and sources](notices.md).
+
+The six-check Chromium suite exercises the editor, applies different shot lengths, and samples actual decoded frames on both sides of the cuts. The reference import rejects incomplete or discontinuous reports. The twelve existing factory tests and the standalone normal and sparse-reference fixtures passed locally. A separate iPhone simulator check on the edited-scene pull request uses the public inference assets. See its checks for the release result.
+
+The next device proof is a physical iPhone completing its first neural export and saving it through the native Drive sheet. General YouTube delivery remains subject to the video host. Free-form prompt-driven motion, automatic recognition of reference actions, and unattended private Drive uploads are open. Existing episode ledgers and episode assets retain their independent production status.
+
+## November 18 checkpoint
+
 Paused at the owner's request on November 18, 2026 (Pacific). Resume from this branch and the current PR #22 head. This is a development build. The existing Pages deployment and episode production folders were separate from this work.
 
 ## What you can watch
@@ -37,7 +59,7 @@ Both clips are silent QA exports. Drive metadata confirmed each file's size and 
 | RIFE and ONNX Runtime Web | Practical-RIFE and the ONNX conversion provide licensed frame interpolation. The browser can synthesize transitions from the user's own posed artwork using WASM. | Implemented and exercised with the real weights. The first neural run downloads about 33 MB of runtime and weights; there is no generation service or key. [Model provenance](https://huggingface.co/edgetools/rife) · [notices](notices.md) |
 | YouTube and creator originals | The IFrame API exposes playback controls and metadata. YouTube documents an iPhone path to save an uploader's own MP4. | Display the actual acquisition route. Use the authorized master or paired local source when a public stream is unavailable. [IFrame API](https://developers.google.com/youtube/iframe_api_reference) · [iPhone export](https://support.google.com/youtube/answer/56100?co=GENIE.Platform%3DiOS) |
 
-## Exact place to resume
+## Original November 18 follow-up list
 
 1. Verify the GitHub-job return link in the browser, saved-reference reopening, cancellation, tall exports, and the two-uploaded-pose UI. Add a public regression fixture so CI can run without the private character sheet. The pinned CLI and browser runs above are the baseline.
 2. Run Linux WebKit and then physical iPhone Safari. Record a complete render, available memory behavior, first model load and Drive share-sheet file playback. Verify hosted CORS, worker and codec behavior. The public Actions workflow and Pages links in the draft need verification after a reviewed release. The job is manual and restricted to a public repo and a standard runner.

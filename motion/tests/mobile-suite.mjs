@@ -32,12 +32,19 @@ async function reportOutput(){
   assert(!el("result").hidden,el("status").textContent);
   return {blob:await getBlob("download"), receipt:await (await getBlob("saveReceipt")).text().then(JSON.parse)};
 }
-async function decoded(blob){
+async function decoded(blob, samples=[]){
   const v=document.createElement("video");v.playsInline=true;v.muted=true;v.preload="auto";
   const src=URL.createObjectURL(blob);
   try{
-    await new Promise((resolve,reject)=>{v.onloadedmetadata=resolve;v.onerror=()=>reject(Error("Exported file did not decode."));v.src=src;v.load();});
-    return {w:v.videoWidth,h:v.videoHeight,duration:v.duration};
+    await new Promise((resolve,reject)=>{v.onloadeddata=resolve;v.onerror=()=>reject(Error("Exported file did not decode."));v.src=src;v.load();});
+    const canvas=document.createElement("canvas");canvas.width=48;canvas.height=64;
+    const ctx=canvas.getContext("2d",{willReadFrequently:true}),images=[];
+    for(const time of samples){
+      await new Promise((resolve,reject)=>{v.onseeked=resolve;v.onerror=reject;v.currentTime=time;});
+      ctx.drawImage(v,0,0,48,64);images.push(ctx.getImageData(0,0,48,64).data);
+    }
+    const differences=images.slice(1).map((image,i)=>image.reduce((sum,x,k)=>sum+Math.abs(x-images[i][k]),0)/(48*64*3));
+    return {w:v.videoWidth,h:v.videoHeight,duration:v.duration,...(samples.length?{differences}:{})};
   }finally{v.removeAttribute("src");v.load();URL.revokeObjectURL(src);}
 }
 async function pose(raised){
@@ -80,6 +87,20 @@ async function suite(){
   await enter("#reference="+encoded);
   assert(!el("refResult").hidden&&el("youtube").value.endsWith(saved.youtube_id),"Missing full-video job handoff");
   checks.push("GitHub analysis return link");
+  status("Cutting a reference-paced original scene");
+  await action("example");select("ratio","tall");select("beat","sequence");
+  const actionChoice=el("shotEditor").querySelector("select");actionChoice.value="recoil";
+  actionChoice.dispatchEvent(new Event("change",{bubbles:true}));
+  await action("render");const edit=await reportOutput(), shots=edit.receipt.settings.shots;
+  assert(shots.length===3&&shots[0].beat==="recoil"&&shots[0].start_frame===0,"Edited choices were lost");
+  assert(shots[0].end_frame===shots[1].start_frame&&shots[1].end_frame===shots[2].start_frame,"Gaps in the edit");
+  assert(new Set(shots.map(s=>s.end_frame-s.start_frame)).size>1,"Changing reference tempo did not affect the edit");
+  const editSamples=[.5,Math.max(2,shots[0].end_frame*.45),shots[1].start_frame-.5,shots[1].start_frame+.5,
+    shots[2].start_frame-.5,shots[2].start_frame+.5].map(n=>n/24);
+  const decodedEdit=await decoded(edit.blob,editSamples);
+  assert(decodedEdit.differences[0]>.3&&decodedEdit.differences[2]>2&&decodedEdit.differences[4]>2,"Expected articulation and two visible cuts in the decoded movie");
+  assert(Math.abs(decodedEdit.duration-edit.receipt.planned_duration_seconds)<.55,"Wrong sequence duration");
+  await privatePost("scene.mp4",edit.blob);files.scene={...decodedEdit,shots};checks.push("editable three-shot scene, varying measured tempo, decoded in-shot motion and two visible cuts");
   status("Running RIFE on two original poses");select("art","pair");select("ratio","tall");
   upload("firstPose",await pose(false));await until(()=>el("cancel").hidden,"first pose");
   upload("lastPose",await pose(true));await until(()=>!el("neural").disabled,"second pose");

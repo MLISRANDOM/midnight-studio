@@ -34,6 +34,24 @@ function median(items) {
   return s.length % 2 ? s[i] : (s[i - 1] + s[i]) / 2;
 }
 
+// Mean uninterrupted span within each third, including the partial shots at its edges.
+export function shotSpans(duration, cuts) {
+  const third = duration / 3;
+  return [0, 1, 2].map(index => {
+    const inside = cuts.filter(t => t > third * index && t < third * (index + 1));
+    return round(third / (inside.length + 1));
+  });
+}
+
+function timingFields(raw, cuts) {
+  const spans = raw.shot_span_seconds_by_third ?? (cuts && shotSpans(raw.duration_seconds, cuts));
+  if (spans == null) return {};
+  if (!Array.isArray(spans) || spans.length !== 3 || !spans.every(t =>
+    Number.isFinite(t) && t > 0 && t <= raw.duration_seconds / 3 + .001))
+    throw Error("The reference contains invalid shot timing.");
+  return {shot_span_seconds_by_third: spans};
+}
+
 export function frameStats(bytes) {
   const hist = new Float32Array(48);
   let total = 0;
@@ -110,6 +128,7 @@ export async function analyzeVideo(source, progress, signal) {
     return {kind: "sampled-visual-technique-v1", duration_seconds: round(duration), width: video.videoWidth,
       height: video.videoHeight, sample_count: times.length, first_sample: 0, last_sample: round(times.at(-1)),
       sample_interval: round(times[1]), cut_times: cuts, shot_count_estimate: lengths.length,
+      shot_span_seconds_by_third: shotSpans(duration,cuts),
       median_shot_seconds: round(median(lengths)), average_luminance: round(light / times.length),
       within_shot_change: round(comparisons ? motion / comparisons : 0)};
   } finally {
@@ -130,7 +149,11 @@ export function readReport(raw) {
         raw.last_sample >= raw.duration_seconds - 0.05 &&
         [raw.average_luminance, raw.within_shot_change].every(v => Number.isFinite(v) && v >= 0 && v <= 1)))
       throw Error("The reference report has incomplete coverage.");
-    return {kind: raw.kind, duration_seconds: raw.duration_seconds, median_shot_seconds: raw.median_shot_seconds,
+    const cuts = raw.cut_times;
+    if (cuts !== undefined && (!Array.isArray(cuts) || cuts.length + 1 !== raw.shot_count_estimate ||
+        !cuts.every((t, i) => Number.isFinite(t) && t > (i ? cuts[i-1] : 0) && t < raw.duration_seconds)))
+      throw Error("The reference contains invalid cut times.");
+    return {kind: raw.kind, ...timingFields(raw, cuts), duration_seconds: raw.duration_seconds, median_shot_seconds: raw.median_shot_seconds,
       shot_count_estimate: raw.shot_count_estimate, sample_count: raw.sample_count, first_sample: 0,
       last_sample: raw.last_sample, average_luminance: raw.average_luminance, within_shot_change: raw.within_shot_change};
   }
@@ -138,15 +161,18 @@ export function readReport(raw) {
     if (!Number.isInteger(raw.sample_count) || raw.sample_count < 1 || raw.sample_count > 1801 ||
         ![raw.average_luminance,raw.within_shot_change].every(v=>Number.isFinite(v)&&v>=0&&v<=1))
       throw Error("Incomplete full-video measurements.");
-    return {kind:raw.kind,duration_seconds:raw.duration_seconds,median_shot_seconds:raw.median_shot_seconds,
+    return {kind:raw.kind,...timingFields(raw),duration_seconds:raw.duration_seconds,median_shot_seconds:raw.median_shot_seconds,
       shot_count_estimate:raw.shot_count_estimate,sample_count:raw.sample_count,average_luminance:raw.average_luminance,
       within_shot_change:raw.within_shot_change};
   }
   if (raw.schema_version !== 1 || raw.analysis_type !== "measured_editing_properties_not_semantic_video_understanding" ||
       !Array.isArray(raw.shots) || raw.shots.length !== raw.shot_count_estimate ||
-      raw.shots[0]?.start_seconds !== 0 || Math.abs(raw.shots.at(-1)?.end_seconds - raw.duration_seconds) > 0.025)
+      !raw.shots.every((shot,i) => Number.isFinite(shot?.start_seconds) && Number.isFinite(shot?.end_seconds) &&
+        shot.end_seconds > shot.start_seconds && shot.start_seconds === (i ? raw.shots[i-1].end_seconds : 0)) ||
+      Math.abs(raw.shots.at(-1).end_seconds - raw.duration_seconds) > 0.025)
     throw Error("This report does not cover the full reference.");
-  return {kind: "ffmpeg-scene-pass", duration_seconds: raw.duration_seconds, median_shot_seconds: raw.median_shot_seconds,
+  return {kind: "ffmpeg-scene-pass", ...timingFields(raw, raw.shots.slice(1).map(s=>s.start_seconds)),
+    duration_seconds: raw.duration_seconds, median_shot_seconds: raw.median_shot_seconds,
     shot_count_estimate: raw.shot_count_estimate};
 }
 
