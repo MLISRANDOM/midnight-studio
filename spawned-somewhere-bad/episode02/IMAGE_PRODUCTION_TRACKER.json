@@ -32,7 +32,7 @@
     "title": "Candidates - Pending QA",
     "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
   },
-  "verified_count": 67,
+  "verified_count": 76,
   "shots": [
     {
       "id": "E02-S001",
@@ -2068,8 +2068,338 @@
           "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
         }
       }
+    },
+    {
+      "id": "E02-S068",
+      "action": "Close overhead cottage crafting-table shot: hero's two charcoal-cuffed brown hands withdraw from a correctly arranged STONE PICKAXE RECIPE on dark 3x3 grid: THREE small gray COBBLESTONE chunks across TOP ROW, TWO brown sticks in CENTER COLUMN middle/bottom. No tool outcome yet. A used ALL-BROWN WOODEN pickaxe rests beside table on oak floor, clearly old tool. No iron ingots, diamond or UI. Warm torch light, 16:9 cinematic story insert, thick outlined 2D.",
+      "prompt": "Edit target IMAGE1. Replace ONLY the ordinary four-legged table/recipe support with ONE standard full solid-cube Minecraft CRAFTING TABLE matching IMAGE2: orange-brown top with DARK 3x3 grid, continuous solid wooden cube sides with painted tool motifs, NO legs. Preserve the recipe exactly THREE gray cobblestone across TOP row, TWO sticks in central middle and bottom cells. Keep hero exact face/pose/hands, wooden pickaxe aside, cottage and lighting. Remove duplicate crafting table in background so there is only ONE. No text or UI.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S068.png",
+      "qa": "Repairs/progression reviewed: correct crafting table, square furnace, reference hero and credible frightened spider defense.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1HaqAp20JNeJ7aWR8b6bnS_y0u1ZiQUrm",
+        "title": "E02-S068.png",
+        "file_name": "E02-S068.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1HaqAp20JNeJ7aWR8b6bnS_y0u1ZiQUrm/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1HaqAp20JNeJ7aWR8b6bnS_y0u1ZiQUrm",
+          "title": "E02-S068.png",
+          "file_name": "E02-S068.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1HaqAp20JNeJ7aWR8b6bnS_y0u1ZiQUrm/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      },
+      "rejected_versions": [
+        {
+          "path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S068-rejected-v1.png",
+          "drive": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "14sBbakPvJRylhwyXB1wLToyooFcSp0fW",
+            "title": "E02-S068-REJECTED-furniture-continuity.png",
+            "file_name": "E02-S068-REJECTED-furniture-continuity.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/14sBbakPvJRylhwyXB1wLToyooFcSp0fW/view?usp=drivesdk",
+            "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "14sBbakPvJRylhwyXB1wLToyooFcSp0fW",
+              "title": "E02-S068-REJECTED-furniture-continuity.png",
+              "file_name": "E02-S068-REJECTED-furniture-continuity.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/14sBbakPvJRylhwyXB1wLToyooFcSp0fW/view?usp=drivesdk",
+              "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+            }
+          },
+          "reason": "Rejected: recipe on ordinary table while prior crafting table exists behind; correct surface to established crafting-table cube."
+        }
+      ]
+    },
+    {
+      "id": "E02-S069",
+      "action": "Medium side action at a shallow cave entrance in DAYLIGHT: slim hero uses one STONE PICKAXE (MATTE GRAY rough stone head, BROWN wood handle, NO metallic shine) to mine a gray IRON ORE block with beige/rust-colored mineral flecks. A couple RAW IRON lumps lie on ground, not finished ingots. One TORCH planted in stone crack beside cave casts warm light, daylight entrance behind him LEFT. Brown backpack, exact face determined nervous. No armor yet, no deep lava or diamonds.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium side action at a shallow cave entrance in DAYLIGHT: slim hero uses one STONE PICKAXE (MATTE GRAY rough stone head, BROWN wood handle, NO metallic shine) to mine a gray IRON ORE block with beige/rust-colored mineral flecks. A couple RAW IRON lumps lie on ground, not finished ingots. One TORCH planted in stone crack beside cave casts warm light, daylight entrance behind him LEFT. Brown backpack, exact face determined nervous. No armor yet, no deep lava or diamonds.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S069.png",
+      "qa": "Mining/smelting progression accepted; gray stone tool distinct from iron, raw iron shown before smelting.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1GDyYWZVeMoFsmrzt83AKH-9mTQ3EaIi1",
+        "title": "E02-S069.png",
+        "file_name": "E02-S069.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1GDyYWZVeMoFsmrzt83AKH-9mTQ3EaIi1/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1GDyYWZVeMoFsmrzt83AKH-9mTQ3EaIi1",
+          "title": "E02-S069.png",
+          "file_name": "E02-S069.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1GDyYWZVeMoFsmrzt83AKH-9mTQ3EaIi1/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S070",
+      "action": "Medium warm cottage scene: hero kneels beside a simple square GRAY COBBLESTONE FURNACE on floor near crafting table, loading BLACK COAL into lower firebox while RAW IRON sits on a small wooden tray beside it. Orange fire glows from lower opening. Hero watches cautiously from safe distance, no touching fire, slim exact model. Cottage LEFT shutter window, RIGHT red bed, rear wooden door, backpack by wall. No modern oven or forge machinery.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium warm cottage scene: hero kneels beside a simple square GRAY COBBLESTONE FURNACE on floor near crafting table, loading BLACK COAL into lower firebox while RAW IRON sits on a small wooden tray beside it. Orange fire glows from lower opening. Hero watches cautiously from safe distance, no touching fire, slim exact model. Cottage LEFT shutter window, RIGHT red bed, rear wooden door, backpack by wall. No modern oven or forge machinery.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S070.png",
+      "qa": "Mining/smelting progression accepted; gray stone tool distinct from iron, raw iron shown before smelting.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1YAGP5YtLsawmfrgU-hI3sgbvmFIoNIAC",
+        "title": "E02-S070.png",
+        "file_name": "E02-S070.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1YAGP5YtLsawmfrgU-hI3sgbvmFIoNIAC/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1YAGP5YtLsawmfrgU-hI3sgbvmFIoNIAC",
+          "title": "E02-S070.png",
+          "file_name": "E02-S070.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1YAGP5YtLsawmfrgU-hI3sgbvmFIoNIAC/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S071",
+      "action": "Medium close proud-but-cautious discovery in same cottage: hero holds ONE newly smelted SILVERY IRON INGOT at chest height with both hands wrapped in a folded plain cloth, examining it, delighted eyebrows. Small cobblestone furnace with orange glow in lower LEFT, a few raw iron chunks and coal on low table, no armor or finished iron tools yet. Exact slim face/outfit, brown backpack on floor, no UI or text. The material upgrade has been earned.",
+      "prompt": "Edit target IMAGE1. Change ONLY rounded brick furnace on far LEFT to the square cubic GRAY COBBLESTONE MINECRAFT FURNACE shown in IMAGE2: flat square silhouette, dark upper rectangular opening and glowing orange lower firebox, no rounded brick arch. Keep its existing left position, no movement of hero, face, hands, silver ingot/cloth, table, coal, raw iron, bag, bed, door or rain. Match exact furnace material/texture reference. No extra furniture.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S071.png",
+      "qa": "Repairs/progression reviewed: correct crafting table, square furnace, reference hero and credible frightened spider defense.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "16mRR_k1ER39JwuyhUznDq842lfZDaunm",
+        "title": "E02-S071.png",
+        "file_name": "E02-S071.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/16mRR_k1ER39JwuyhUznDq842lfZDaunm/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "16mRR_k1ER39JwuyhUznDq842lfZDaunm",
+          "title": "E02-S071.png",
+          "file_name": "E02-S071.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/16mRR_k1ER39JwuyhUznDq842lfZDaunm/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      },
+      "rejected_versions": [
+        {
+          "path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S071-rejected-v1.png",
+          "drive": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1F9yn5nvAX_vbX-TIJLEuRoS9W12pMfa8",
+            "title": "E02-S071-REJECTED-furniture-continuity.png",
+            "file_name": "E02-S071-REJECTED-furniture-continuity.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/1F9yn5nvAX_vbX-TIJLEuRoS9W12pMfa8/view?usp=drivesdk",
+            "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1F9yn5nvAX_vbX-TIJLEuRoS9W12pMfa8",
+              "title": "E02-S071-REJECTED-furniture-continuity.png",
+              "file_name": "E02-S071-REJECTED-furniture-continuity.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/1F9yn5nvAX_vbX-TIJLEuRoS9W12pMfa8/view?usp=drivesdk",
+              "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+            }
+          },
+          "reason": "Rejected: rounded brick furnace differs from square gray Minecraft furnace in S070. Correct furnace only."
+        }
+      ]
+    },
+    {
+      "id": "E02-S072",
+      "action": "Medium cottage equipment milestone: exact slim protagonist stands holding one simple IRON SWORD (silver-gray blade, brown grip) carefully in right hand and a plain WOODEN SHIELD with thin iron rim in left. He looks nervous rather than heroic, testing weight. Crafting table with a few silver IRON INGOTS, wood planks and sticks beside him establishes materials, square gray Minecraft furnace against back wall. Same modest cottage red bed RIGHT/window LEFT, brown backpack by wall. No armor yet and no muscular redesign, no labels.",
+      "prompt": "Edit IMAGE1 target. Make exactly TWO corrections only: (1) REMOVE duplicate brown backpack on LOWER LEFT FLOOR, restoring plain wet oak floor; keep the ONE backpack worn on protagonist. (2) change shield he holds to the same LONG RECTANGULAR WOODEN SHIELD with iron corner/rim details as IMAGE2, flat straight sides/top/bottom, not rounded medieval shield. Preserve protagonist exact face/body/pose/clothes, sword, table ingredients, furnace, cottage layout, light and framing. No extra bags, no new props or text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S072.png",
+      "qa": "Repair accepted: single worn backpack, rectangular shield matches spider scene.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1zQ1Gqg3an9VOKrN-SAO5zh5J8_K5yQ5t",
+        "title": "E02-S072.png",
+        "file_name": "E02-S072.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1zQ1Gqg3an9VOKrN-SAO5zh5J8_K5yQ5t/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1zQ1Gqg3an9VOKrN-SAO5zh5J8_K5yQ5t",
+          "title": "E02-S072.png",
+          "file_name": "E02-S072.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1zQ1Gqg3an9VOKrN-SAO5zh5J8_K5yQ5t/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      },
+      "rejected_versions": [
+        {
+          "path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S072-rejected-v1.png",
+          "drive": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1jK7VV0KJsuQJSY6WBuhSqTChfMbKJfHx",
+            "title": "E02-S072-REJECTED-duplicate-backpack-shield.png",
+            "file_name": "E02-S072-REJECTED-duplicate-backpack-shield.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/1jK7VV0KJsuQJSY6WBuhSqTChfMbKJfHx/view?usp=drivesdk",
+            "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1jK7VV0KJsuQJSY6WBuhSqTChfMbKJfHx",
+              "title": "E02-S072-REJECTED-duplicate-backpack-shield.png",
+              "file_name": "E02-S072-REJECTED-duplicate-backpack-shield.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/1jK7VV0KJsuQJSY6WBuhSqTChfMbKJfHx/view?usp=drivesdk",
+              "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+            }
+          },
+          "reason": "Rejected: duplicate backpack (worn and on floor); shield rounded unlike rectangular shield in S073."
+        }
+      ]
+    },
+    {
+      "id": "E02-S073",
+      "action": "Night village-edge action: protagonist with same slim body and charcoal/orange outfit backs LEFT holding a simple WOODEN SHIELD in LEFT hand between himself and ONE LARGE BLACK MINECRAFT SPIDER at RIGHT. Spider has square segmented body, EIGHT legs and red eyes, lunging from low grass, no gore. Hero RIGHT hand holds IRON SWORD low ready but terrified, backpack worn. Warm torch fixed to fence post LEFT, cool dark forest RIGHT, no other monsters. Safe readable composition, no text.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Night village-edge action: protagonist with same slim body and charcoal/orange outfit backs LEFT holding a simple WOODEN SHIELD in LEFT hand between himself and ONE LARGE BLACK MINECRAFT SPIDER at RIGHT. Spider has square segmented body, EIGHT legs and red eyes, lunging from low grass, no gore. Hero RIGHT hand holds IRON SWORD low ready but terrified, backpack worn. Warm torch fixed to fence post LEFT, cool dark forest RIGHT, no other monsters. Safe readable composition, no text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S073.png",
+      "qa": "Repairs/progression reviewed: correct crafting table, square furnace, reference hero and credible frightened spider defense.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1md8JLeCoTtPzEi2D9QltrSGwcwZjo8S9",
+        "title": "E02-S073.png",
+        "file_name": "E02-S073.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1md8JLeCoTtPzEi2D9QltrSGwcwZjo8S9/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1md8JLeCoTtPzEi2D9QltrSGwcwZjo8S9",
+          "title": "E02-S073.png",
+          "file_name": "E02-S073.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1md8JLeCoTtPzEi2D9QltrSGwcwZjo8S9/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S074",
+      "action": "Night after spider fight at village fence, rain easing: slim hero stands LEFT trembling in relief, iron sword lowered in RIGHT hand, LONG RECTANGULAR WOODEN SHIELD in LEFT hand. On grass at RIGHT where spider vanished lie TWO small white coils of STRING, no spider corpse or blood. Hero looks at string incredulously, wet hoodie and backpack. Fence torch behind LEFT, dark forest RIGHT. Exactly one hero, one backpack, no extra weapons, no UI or text.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Night after spider fight at village fence, rain easing: slim hero stands LEFT trembling in relief, iron sword lowered in RIGHT hand, LONG RECTANGULAR WOODEN SHIELD in LEFT hand. On grass at RIGHT where spider vanished lie TWO small white coils of STRING, no spider corpse or blood. Hero looks at string incredulously, wet hoodie and backpack. Fence torch behind LEFT, dark forest RIGHT. Exactly one hero, one backpack, no extra weapons, no UI or text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S074.png",
+      "qa": "Spider-drop/string-to-rod progression, exact slim hero and river fishing scene accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1rSjzD54yXWTTGUHcNgEYtx2BkgXvysFF",
+        "title": "E02-S074.png",
+        "file_name": "E02-S074.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1rSjzD54yXWTTGUHcNgEYtx2BkgXvysFF/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1rSjzD54yXWTTGUHcNgEYtx2BkgXvysFF",
+          "title": "E02-S074.png",
+          "file_name": "E02-S074.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1rSjzD54yXWTTGUHcNgEYtx2BkgXvysFF/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S075",
+      "action": "Medium daylight cottage craft discovery: slim hero holds a newly made simple WOODEN FISHING ROD with thin STRING and small red-and-white bobber, staring at it hopefully. ONE coil of string and three spare brown sticks lie on standard solid cube crafting table beside him, his iron sword and LONG RECTANGULAR wooden shield resting against rear wall. Exactly ONE brown backpack on floor, not worn. Gray cubic furnace, red bed RIGHT, window LEFT. No modern reel or fiberglass equipment, no text.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium daylight cottage craft discovery: slim hero holds a newly made simple WOODEN FISHING ROD with thin STRING and small red-and-white bobber, staring at it hopefully. ONE coil of string and three spare brown sticks lie on standard solid cube crafting table beside him, his iron sword and LONG RECTANGULAR wooden shield resting against rear wall. Exactly ONE brown backpack on floor, not worn. Gray cubic furnace, red bed RIGHT, window LEFT. No modern reel or fiberglass equipment, no text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S075.png",
+      "qa": "Spider-drop/string-to-rod progression, exact slim hero and river fishing scene accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1ucFuvZZuQDf11irGyhdRDq3ekIaoEDDU",
+        "title": "E02-S075.png",
+        "file_name": "E02-S075.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1ucFuvZZuQDf11irGyhdRDq3ekIaoEDDU/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1ucFuvZZuQDf11irGyhdRDq3ekIaoEDDU",
+          "title": "E02-S075.png",
+          "file_name": "E02-S075.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1ucFuvZZuQDf11irGyhdRDq3ekIaoEDDU/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S076",
+      "action": "Wide peaceful-but-wary DAYLIGHT fishing scene by river next to same plains village: slim hero sits LEFT on a small oak plank dock, brown backpack beside him, holds a simple wooden fishing rod angled RIGHT, thin taut line reaches a small red-white bobber in river. He watches water with cautious concentration. Cottage/well/farm in far LEFT background, blocky riverbanks and oaks RIGHT. No giant fish or monster yet, no armor, no modern rod/reel. One hero and one bag.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Wide peaceful-but-wary DAYLIGHT fishing scene by river next to same plains village: slim hero sits LEFT on a small oak plank dock, brown backpack beside him, holds a simple wooden fishing rod angled RIGHT, thin taut line reaches a small red-white bobber in river. He watches water with cautious concentration. Cottage/well/farm in far LEFT background, blocky riverbanks and oaks RIGHT. No giant fish or monster yet, no armor, no modern rod/reel. One hero and one bag.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S076.png",
+      "qa": "Spider-drop/string-to-rod progression, exact slim hero and river fishing scene accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1mMrEo_9-x0FZmZJ35N7XwQairBQJ5fo_",
+        "title": "E02-S076.png",
+        "file_name": "E02-S076.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1mMrEo_9-x0FZmZJ35N7XwQairBQJ5fo_/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1mMrEo_9-x0FZmZJ35N7XwQairBQJ5fo_",
+          "title": "E02-S076.png",
+          "file_name": "E02-S076.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1mMrEo_9-x0FZmZJ35N7XwQairBQJ5fo_/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
     }
   ],
-  "next_shot": "E02-S068",
-  "qa_rejected_count": 6
+  "next_shot": "E02-S077",
+  "qa_rejected_count": 9
 }
