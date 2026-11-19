@@ -1,9 +1,9 @@
 /* A dedicated worker bounds inference to one frame at a time. Termination frees the WASM heap. */
-const runtimeBase = "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.22.0/dist/";
-const weightsUrl = "https://huggingface.co/edgetools/rife/resolve/321b593c5f36c26f5b08fa2838dcf5eece382fa0/rife49.onnx";
+const remoteRuntime = "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.22.0/dist/";
+const remoteWeights = "https://huggingface.co/edgetools/rife/resolve/321b593c5f36c26f5b08fa2838dcf5eece382fa0/rife49.onnx";
 const weightsSha = "76e4cef9ab42fa7dd4e8f6e4aba47462051e3faa969e4bca6479784fbab0ac6f";
 
-async function loadWeights() {
+async function loadWeights(weightsUrl) {
   let cache;
   try { cache = await caches.open("midnight-rife-4.9-v1"); } catch { /* Private browsing can disable caches. */ }
   let cached = await cache?.match(weightsUrl);
@@ -42,12 +42,14 @@ function pixels(data,w,h,pw,ph) {
 
 self.onmessage=async ({data})=>{
   const {w,h,a,b,count}=data;
+  const runtimeBase=data.localRuntime ? new URL("./vendor/runtime/",import.meta.url).href : remoteRuntime;
+  const weightsUrl=data.localRuntime ? runtimeBase+"rife49.onnx" : remoteWeights;
   let session,left,right;
   try {
     self.postMessage({status:"Loading the local inference engine and model…"});
     const ort=await import(runtimeBase+"ort.wasm.min.mjs");
     ort.env.wasm.numThreads=1;ort.env.wasm.proxy=false;ort.env.wasm.wasmPaths=runtimeBase;
-    const weights=await loadWeights();
+    const weights=await loadWeights(weightsUrl);
     session=await ort.InferenceSession.create(weights,{executionProviders:["wasm"],graphOptimizationLevel:"all"});
     const pw=Math.ceil(w/32)*32,ph=Math.ceil(h/32)*32;
     left=new ort.Tensor("float32",tensorData(a,w,h,pw,ph),[1,3,ph,pw]);

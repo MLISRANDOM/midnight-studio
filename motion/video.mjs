@@ -104,6 +104,7 @@ export function neuralFrames(first,last,count,progress,signal) {
       }
       if(data.done){clean();frames.push(last);resolve({frames,model:data.model,model_sha256:data.sha256,inference_ms:data.inference_ms});}
     };
-    worker.postMessage({w,h,a,b,count},[a.buffer,b.buffer]);
+    const localRuntime=new URLSearchParams(location.search).get("runtime")==="local";
+    worker.postMessage({w,h,a,b,count,localRuntime},[a.buffer,b.buffer]);
   });
 }

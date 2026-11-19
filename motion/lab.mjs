@@ -5,7 +5,7 @@ import {stored} from "./storage.mjs";
 
 const $=id=>document.getElementById(id), stage=$("stage");
 const demoId="HOfdboHvshg";
-let rig,report,reportSource="",controller,playback,position=0,result,referenceId=null;
+let rig,report,reportSource="",controller,playback,position=0,result,referenceId=null,queuedHandoff=false;
 const poses=[null,null],urls=new Map();
 const controls=Array.from(document.querySelectorAll("select,input,button")).filter(e=>e.id!=="cancel");
 const renderButtons=["render","neural"];
@@ -55,7 +55,7 @@ async function task(fn,where="status") {
   $("workProgress").value=0;$("workProgress").hidden=false;$("cancel").hidden=false;
   try{await fn(controller.signal);}
   catch(e){$(where).textContent=e.name==="AbortError"?"Canceled.":e.message||String(e);}
-  finally{controller=null;controls.forEach(el=>el.disabled=false);$("cancel").hidden=true;$("workProgress").hidden=true;syncButtons();}
+  finally{controller=null;controls.forEach(el=>el.disabled=false);$("cancel").hidden=true;$("workProgress").hidden=true;syncButtons();if(queuedHandoff){queuedHandoff=false;applyHandoff();}}
 }
 $("cancel").onclick=()=>controller?.abort();
 async function setSheet(file) {
@@ -167,7 +167,9 @@ $("share").onclick=async()=>{
 };
 const linked=new URLSearchParams(location.search).get("youtube");if(linked)$("youtube").value=linked;
 refresh();
-if(location.hash.startsWith("#reference=")){
+function applyHandoff(){
+  if(!location.hash.startsWith("#reference="))return;
+  if(controller){queuedHandoff=true;return;}
   try{
     const token=location.hash.slice(11);
     if(!/^[A-Za-z0-9_-]{1,4000}$/.test(token))throw Error("Invalid reference return link.");
@@ -178,4 +180,6 @@ if(location.hash.startsWith("#reference=")){
     stored("youtube:"+payload.id,payload.report).catch(()=>{});
   }catch(e){$("refStatus").textContent=e.message;}
 }
+window.addEventListener("hashchange",applyHandoff);
+applyHandoff();
 stored("survivor-sheet").then(async file=>{if(file&&!rig&&!controller){await setSheet(file);if(useSheet()){syncButtons();preview(0);}}}).catch(()=>{});
