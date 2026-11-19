@@ -11,30 +11,29 @@ on:
         required: true
         type: boolean
         default: false
+  pull_request:
+    branches: [main]
+    paths: ["motion/youtube_job.py", "motion/youtube-requirements.txt", ".github/workflows/motion-reference.yml"]
 permissions:
   contents: read
 jobs:
   measure:
-    if: inputs.authorized && github.event.repository.private == false
+    if: (github.event_name == 'pull_request' || inputs.authorized) && github.event.repository.private == false
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - name: Load the tested analyzer from PR 22
-        uses: actions/checkout@v4
-        with:
-          ref: 7446b0a2dc3369e850dbc7abbae732502cce61d6
-          path: analyzer-source
-          sparse-checkout: reference
       - name: Install decoding tools
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y ffmpeg
+          if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
+            sudo apt-get -o Acquire::Retries=2 update -qq
+            sudo apt-get -o Acquire::Retries=2 install -y --no-install-recommends ffmpeg
+          fi
           python -m pip install --require-hashes -r motion/youtube-requirements.txt
       - name: Measure entire reference and create return link
         env:
-          SOURCE_VIDEO: ${{ inputs.video }}
-        run: python motion/youtube_job.py "$SOURCE_VIDEO" --authorized --analyzer analyzer-source/reference --output "$RUNNER_TEMP/technique.json"
+          SOURCE_VIDEO: ${{ github.event_name == 'pull_request' && 'https://www.youtube.com/watch?v=YE7VzlLtp-4' || inputs.video }}
+        run: python motion/youtube_job.py "$SOURCE_VIDEO" --authorized --output "$RUNNER_TEMP/technique.json"
       - uses: actions/upload-artifact@v4
         with:
           name: reference-measurements

@@ -17,7 +17,8 @@
 <label>Survivor sheet<input id="sheet" type="file" accept="image/jpeg,image/png"></label><small id="sheetStatus"></small></div>
 <div id="pairPanel" hidden><p class="hint">Choose two poses from the same shot, with the same framing. RIFE creates the movement between them.</p>
 <label>Starting pose<input id="firstPose" type="file" accept="image/*"></label><label>Ending pose<input id="lastPose" type="file" accept="image/*"></label></div>
-<label id="actionRow">Action<select id="beat"><option value="signal">The platform lamp answers</option><option value="listen">A bell behind the wall</option><option value="recoil">The floor switch clicks</option></select></label>
+<label id="actionRow">Action or scene<select id="beat"><option value="signal">The platform lamp answers</option><option value="listen">A bell behind the wall</option><option value="recoil">The floor switch clicks</option><option value="sequence">Edit a three-shot scene</option></select></label>
+<div id="shotEditor" hidden></div>
 <label>Frame<select id="ratio"><option value="wide">YouTube · 16:9</option><option value="tall">Shorts / TikTok · 9:16</option></select></label></section>
 <section class="card"><h2>Reference pacing</h2><p class="hint">Measure cuts, brightness and movement across an authorized source. The original shot uses those measurements.</p>
 <label>YouTube video link <small>(optional)</small><input id="youtube" type="url" inputmode="url" placeholder="https://youtu.be/…" autocomplete="off" autocapitalize="off"></label>
