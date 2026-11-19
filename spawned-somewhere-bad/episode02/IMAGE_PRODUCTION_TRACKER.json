@@ -32,7 +32,7 @@
     "title": "Candidates - Pending QA",
     "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
   },
-  "verified_count": 23,
+  "verified_count": 41,
   "shots": [
     {
       "id": "E02-S001",
@@ -706,8 +706,590 @@
           "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
         }
       }
+    },
+    {
+      "id": "E02-S024",
+      "action": "Medium comedic close shot: hero kneels LEFT beside the SAME Minecraft crafting table from Image3, bends his face close to its top as if whispering a request to furniture. One thin wooden stick lies across the top dark 3x3 grid, no craft outcome. His face hopeful embarrassed, one raised brow, empty hands resting on table edge. Brown backpack on ground at left. Daylight forest. Match exact table texture and proportions in image3; no text or speech bubble.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium comedic close shot: hero kneels LEFT beside the SAME Minecraft crafting table from Image3, bends his face close to its top as if whispering a request to furniture. One thin wooden stick lies across the top dark 3x3 grid, no craft outcome. His face hopeful embarrassed, one raised brow, empty hands resting on table edge. Brown backpack on ground at left. Daylight forest. Match exact table texture and proportions in image3; no text or speech bubble.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S024.png",
+      "qa": "Face, slim silhouette, correct materials and crafting action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1racnwePvuA27G1Jhdfu7bsDn1g-yXj6A",
+        "title": "E02-S024.png",
+        "file_name": "E02-S024.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1racnwePvuA27G1Jhdfu7bsDn1g-yXj6A/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1racnwePvuA27G1Jhdfu7bsDn1g-yXj6A",
+          "title": "E02-S024.png",
+          "file_name": "E02-S024.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1racnwePvuA27G1Jhdfu7bsDn1g-yXj6A/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S025",
+      "action": "Overhead cinematic close insert of SAME crafting table from image3: a correctly organized wooden pickaxe recipe PHYSICALLY laid on its dark 3x3 top grid: THREE small oak planks across TOP row, TWO sticks in CENTER COLUMN middle and bottom positions. Hero's two warm brown hands with charcoal cuffs withdraw from either side. No pickaxe yet, no UI, no extra ingredients, no labels or text, daytime forest visible at edges. Clear readable recipe shapes, not a diagram or collage.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Overhead cinematic close insert of SAME crafting table from image3: a correctly organized wooden pickaxe recipe PHYSICALLY laid on its dark 3x3 top grid: THREE small oak planks across TOP row, TWO sticks in CENTER COLUMN middle and bottom positions. Hero's two warm brown hands with charcoal cuffs withdraw from either side. No pickaxe yet, no UI, no extra ingredients, no labels or text, daytime forest visible at edges. Clear readable recipe shapes, not a diagram or collage.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S025.png",
+      "qa": "Face, slim silhouette, correct materials and crafting action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "163k3MzRzwRE0pAIZE1SAS6kDTVOctvf6",
+        "title": "E02-S025.png",
+        "file_name": "E02-S025.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/163k3MzRzwRE0pAIZE1SAS6kDTVOctvf6/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "163k3MzRzwRE0pAIZE1SAS6kDTVOctvf6",
+          "title": "E02-S025.png",
+          "file_name": "E02-S025.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/163k3MzRzwRE0pAIZE1SAS6kDTVOctvf6/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S026",
+      "action": "Medium-wide comedic reaction: a SINGLE wooden pickaxe now rests on SAME crafting table top from image3, ingredients gone. Hero on LEFT recoils, shoulders raised, two empty hands pulled back from table, surprised open mouth and wide eyes, very slim arms and body. Brown backpack on grass left. Wooden pickaxe is recognizably Minecraft tool, no stone/iron/diamond. No magic beams or UI, daytime forest.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium-wide comedic reaction: a SINGLE wooden pickaxe now rests on SAME crafting table top from image3, ingredients gone. Hero on LEFT recoils, shoulders raised, two empty hands pulled back from table, surprised open mouth and wide eyes, very slim arms and body. Brown backpack on grass left. Wooden pickaxe is recognizably Minecraft tool, no stone/iron/diamond. No magic beams or UI, daytime forest.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S026.png",
+      "qa": "Face, slim silhouette, correct materials and crafting action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1sv26BfraTLjeoPOlB54rRjK8Z2MQqiBb",
+        "title": "E02-S026.png",
+        "file_name": "E02-S026.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1sv26BfraTLjeoPOlB54rRjK8Z2MQqiBb/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1sv26BfraTLjeoPOlB54rRjK8Z2MQqiBb",
+          "title": "E02-S026.png",
+          "file_name": "E02-S026.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1sv26BfraTLjeoPOlB54rRjK8Z2MQqiBb/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S027",
+      "action": "Wide comedic shot hero extremely slim crouching and trying to lift the SAME waist-high cube crafting table from image3 with both arms around its sides. Brown backpack stands open on grass beside him, obviously much too small to hold the full-size table. ONE wooden pickaxe lies on grass beside bag. His expression strained and disbelieving, correct limbs, no muscles. Standard 3x3 grid table top visible, daylight forest. No copy of table, no captions.",
+      "prompt": "Edit target image 1 only: change ONLY the loose pickaxe lying on grass near backpack. Its pick head must be entirely honey-brown OAK WOOD with visible brown grain, same brown material as its handle, absolutely no gray/white/metal/stone. This is his first WOODEN pickaxe. Preserve hero, face, pose, thin proportions, table, backpack, forest, framing and every other object exactly. The tool motifs painted on the TABLE sides remain gray painted motifs unchanged. No text. Single landscape production frame.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S027.png",
+      "qa": "Corrected loose pickaxe all-brown wood; table paint unchanged.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1s7sZyeppoURmPacVkRxENSWdYtiN436K",
+        "title": "E02-S027.png",
+        "file_name": "E02-S027.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1s7sZyeppoURmPacVkRxENSWdYtiN436K/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1s7sZyeppoURmPacVkRxENSWdYtiN436K",
+          "title": "E02-S027.png",
+          "file_name": "E02-S027.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1s7sZyeppoURmPacVkRxENSWdYtiN436K/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      },
+      "rejected_versions": [
+        {
+          "path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S027-rejected-v1.png",
+          "drive": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1GTyFS3t_XPV02GZY5zGEOgYEYduSNZ0b",
+            "title": "E02-S027-REJECTED-metal-pickaxe.png",
+            "file_name": "E02-S027-REJECTED-metal-pickaxe.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/1GTyFS3t_XPV02GZY5zGEOgYEYduSNZ0b/view?usp=drivesdk",
+            "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1GTyFS3t_XPV02GZY5zGEOgYEYduSNZ0b",
+              "title": "E02-S027-REJECTED-metal-pickaxe.png",
+              "file_name": "E02-S027-REJECTED-metal-pickaxe.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/1GTyFS3t_XPV02GZY5zGEOgYEYduSNZ0b/view?usp=drivesdk",
+              "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+            }
+          },
+          "reason": "Rejected: loose pickaxe has gray metal head; must remain wooden before stone acquired."
+        }
+      ]
+    },
+    {
+      "id": "E02-S028",
+      "action": "Medium-wide discovery shot late afternoon in same forest clearing: hero kneels beside the spot where the full-size crafting table stood, looking amazed at ONE SMALL collectible CRAFTING TABLE CUBE resting in his palm. There is NO large table now. Brown backpack open on grass beside him, one WOODEN pickaxe with all-brown head and handle lies alongside. Hero has just discovered furniture can become a small inventory block. Exact slim character. No UI or words.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified by shot. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium-wide discovery shot late afternoon in same forest clearing: hero kneels beside the spot where the full-size crafting table stood, looking amazed at ONE SMALL collectible CRAFTING TABLE CUBE resting in his palm. There is NO large table now. Brown backpack open on grass beside him, one WOODEN pickaxe with all-brown head and handle lies alongside. Hero has just discovered furniture can become a small inventory block. Exact slim character. No UI or words.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S028.png",
+      "qa": "Character, all-brown wooden pickaxe, time progression and action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1uFUSyZumNuC2N3ixlNEC3XB7rOm8COI7",
+        "title": "E02-S028.png",
+        "file_name": "E02-S028.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1uFUSyZumNuC2N3ixlNEC3XB7rOm8COI7/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1uFUSyZumNuC2N3ixlNEC3XB7rOm8COI7",
+          "title": "E02-S028.png",
+          "file_name": "E02-S028.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1uFUSyZumNuC2N3ixlNEC3XB7rOm8COI7/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S029",
+      "action": "Cinematic very wide landscape: tiny slim hero wearing brown backpack stands on LEFT grassy rise overlooking blocky river valley; low square SUN near RIGHT horizon, warm orange sunset with blue shadows, cubic oaks and grass terraces. Hero holds one all-BROWN WOODEN pickaxe down by his side, watches sun nervously. No village yet, no buildings or portals, no armor. Time is clearly running out.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified by shot. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Cinematic very wide landscape: tiny slim hero wearing brown backpack stands on LEFT grassy rise overlooking blocky river valley; low square SUN near RIGHT horizon, warm orange sunset with blue shadows, cubic oaks and grass terraces. Hero holds one all-BROWN WOODEN pickaxe down by his side, watches sun nervously. No village yet, no buildings or portals, no armor. Time is clearly running out.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S029.png",
+      "qa": "Character, all-brown wooden pickaxe, time progression and action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1sSzLrA3_uTjFUkokfbjVVJEc5Zydls9N",
+        "title": "E02-S029.png",
+        "file_name": "E02-S029.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1sSzLrA3_uTjFUkokfbjVVJEc5Zydls9N/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1sSzLrA3_uTjFUkokfbjVVJEc5Zydls9N",
+          "title": "E02-S029.png",
+          "file_name": "E02-S029.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1sSzLrA3_uTjFUkokfbjVVJEc5Zydls9N/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S030",
+      "action": "Suspense medium-wide twilight forest frame: hero LEFT foreground turns head sharply to RIGHT, wide frightened eyes. In RIGHT middle distance between oak trunks is ONE recognizably Minecraft zombie with green block head, blue shirt and purple pants, arms out. Warm last sunset at horizon and dark blue shadows. Hero slim same outfit/backpack, holding one all-BROWN wooden pickaxe low, not combat confident. Clear distance, no contact or extra monsters.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified by shot. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Suspense medium-wide twilight forest frame: hero LEFT foreground turns head sharply to RIGHT, wide frightened eyes. In RIGHT middle distance between oak trunks is ONE recognizably Minecraft zombie with green block head, blue shirt and purple pants, arms out. Warm last sunset at horizon and dark blue shadows. Hero slim same outfit/backpack, holding one all-BROWN wooden pickaxe low, not combat confident. Clear distance, no contact or extra monsters.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S030.png",
+      "qa": "Character, all-brown wooden pickaxe, time progression and action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "17xebrlTou9WWPmEItwewKi5xeZj9eSRa",
+        "title": "E02-S030.png",
+        "file_name": "E02-S030.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/17xebrlTou9WWPmEItwewKi5xeZj9eSRa/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "17xebrlTou9WWPmEItwewKi5xeZj9eSRa",
+          "title": "E02-S030.png",
+          "file_name": "E02-S030.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/17xebrlTou9WWPmEItwewKi5xeZj9eSRa/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S031",
+      "action": "Wide side establishing shot at BLUE TWILIGHT: hero on LEFT hurriedly digging with BARE HANDS into a small grass-topped dirt HILLSIDE on RIGHT. A shallow roughly square recess big enough to crouch is emerging, loose brown dirt blocks outside. His brown backpack sits immediately beside entrance and ONE all-brown wooden pickaxe lies beside it. Fearful over-shoulder glance toward forest LEFT. No torch, no furnace, no stone tools or finished house.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified; reference daylight must change to twilight/night for this shot. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Wide side establishing shot at BLUE TWILIGHT: hero on LEFT hurriedly digging with BARE HANDS into a small grass-topped dirt HILLSIDE on RIGHT. A shallow roughly square recess big enough to crouch is emerging, loose brown dirt blocks outside. His brown backpack sits immediately beside entrance and ONE all-brown wooden pickaxe lies beside it. Fearful over-shoulder glance toward forest LEFT. No torch, no furnace, no stone tools or finished house.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S031.png",
+      "qa": "Identity, twilight-to-night lighting, shelter and frightening POV accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1GluAQX0wQBx7WtgV5VotkufxxgzTq6S1",
+        "title": "E02-S031.png",
+        "file_name": "E02-S031.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1GluAQX0wQBx7WtgV5VotkufxxgzTq6S1/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1GluAQX0wQBx7WtgV5VotkufxxgzTq6S1",
+          "title": "E02-S031.png",
+          "file_name": "E02-S031.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1GluAQX0wQBx7WtgV5VotkufxxgzTq6S1/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S032",
+      "action": "Inside a tiny freshly dug DIRT shelter, camera at back looking toward entrance. Hero crouched against RIGHT wall hugs brown backpack to chest, knees pulled up, frightened white eyes. With one hand he sets the LAST DIRT BLOCK into entrance on LEFT, leaving a narrow horizontal viewing slit at eye height. Dim BLUE twilight enters slit, just enough to see him. Wooden pickaxe lies on dirt floor beside sneaker. No torch, no fire or furnishings. Cozy cramped but readable, exact slim 2D hero.",
+      "prompt": "Edit target image only: loose pickaxe on shelter floor at LOWER LEFT must be entirely BROWN WOOD, including curved pick head. Replace gray metal head with oak-brown head showing wood grain, same brown material as handle. This is protagonist's first WOODEN pickaxe. Preserve EXACTLY all other pixels/composition: hero face, slim shape, pose, bag, dirt block hand, viewing slit, blue twilight and dirt shelter. No new props, no gray metal on the tool. One 16:9 cartoon frame.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S032.png",
+      "qa": "Visual review accepted: wooden tool progression, coal gathering and torch preparation readable; exact hero.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1yIFwM6lzrCdhZHjHgviPY17f_MR5H9MH",
+        "title": "E02-S032.png",
+        "file_name": "E02-S032.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1yIFwM6lzrCdhZHjHgviPY17f_MR5H9MH/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1yIFwM6lzrCdhZHjHgviPY17f_MR5H9MH",
+          "title": "E02-S032.png",
+          "file_name": "E02-S032.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1yIFwM6lzrCdhZHjHgviPY17f_MR5H9MH/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      },
+      "rejected_versions": [
+        {
+          "path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S032-rejected-v1.png",
+          "drive": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1rJbRoj7HZPlJhfzZX1w3UPqeo0F1pa5s",
+            "title": "E02-S032-REJECTED-metal-pickaxe.png",
+            "file_name": "E02-S032-REJECTED-metal-pickaxe.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/1rJbRoj7HZPlJhfzZX1w3UPqeo0F1pa5s/view?usp=drivesdk",
+            "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1rJbRoj7HZPlJhfzZX1w3UPqeo0F1pa5s",
+              "title": "E02-S032-REJECTED-metal-pickaxe.png",
+              "file_name": "E02-S032-REJECTED-metal-pickaxe.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/1rJbRoj7HZPlJhfzZX1w3UPqeo0F1pa5s/view?usp=drivesdk",
+              "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+            }
+          },
+          "reason": "Rejected: gray metal pickaxe head before stone/iron equipment earned."
+        }
+      ]
+    },
+    {
+      "id": "E02-S033",
+      "action": "Suspense POV INSERT from inside DIRT shelter looking through one NARROW HORIZONTAL GAP between rough dirt blocks. Outside in blue moonlight, only a zombie's purple trouser legs and square feet stand on grass very close to gap, blocking part of view. No hero visible, no face, no extra creatures, no UI or text. Dark earth frames view, daylight is gone. Single cinematic 16:9 image.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified; reference daylight must change to twilight/night for this shot. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Suspense POV INSERT from inside DIRT shelter looking through one NARROW HORIZONTAL GAP between rough dirt blocks. Outside in blue moonlight, only a zombie's purple trouser legs and square feet stand on grass very close to gap, blocking part of view. No hero visible, no face, no extra creatures, no UI or text. Dark earth frames view, daylight is gone. Single cinematic 16:9 image.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S033.png",
+      "qa": "Identity, twilight-to-night lighting, shelter and frightening POV accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1wZSgPg65pLjcx1h9EwZtJzLTE39k2z7w",
+        "title": "E02-S033.png",
+        "file_name": "E02-S033.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1wZSgPg65pLjcx1h9EwZtJzLTE39k2z7w/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1wZSgPg65pLjcx1h9EwZtJzLTE39k2z7w",
+          "title": "E02-S033.png",
+          "file_name": "E02-S033.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1wZSgPg65pLjcx1h9EwZtJzLTE39k2z7w/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S034",
+      "action": "Tight portrait inside pitch-dark tiny dirt shelter with faint BLUE MOONLIGHT from viewing slit at LEFT. Slim protagonist clutches closed brown backpack against chest, holding his own breath, one hand pressed against mouth, huge white eyes tracking slit offscreen LEFT. Beads of sweat, charcoal hoodie and orange lining visible, no torch or light source besides moonlight. One hero, two hands, no monster inside. Frightened not confident.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified; reference daylight must change to twilight/night for this shot. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Tight portrait inside pitch-dark tiny dirt shelter with faint BLUE MOONLIGHT from viewing slit at LEFT. Slim protagonist clutches closed brown backpack against chest, holding his own breath, one hand pressed against mouth, huge white eyes tracking slit offscreen LEFT. Beads of sweat, charcoal hoodie and orange lining visible, no torch or light source besides moonlight. One hero, two hands, no monster inside. Frightened not confident.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S034.png",
+      "qa": "Identity, twilight-to-night lighting, shelter and frightening POV accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1xi1aE_54MGWKNIsXyK4HHjP3hZQCalRQ",
+        "title": "E02-S034.png",
+        "file_name": "E02-S034.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1xi1aE_54MGWKNIsXyK4HHjP3hZQCalRQ/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1xi1aE_54MGWKNIsXyK4HHjP3hZQCalRQ",
+          "title": "E02-S034.png",
+          "file_name": "E02-S034.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1xi1aE_54MGWKNIsXyK4HHjP3hZQCalRQ/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S035",
+      "action": "Medium-wide dawn scene: hero emerges cautiously from his tiny DIRT hillside shelter on RIGHT, pushing a loose dirt block aside at entrance. He wears brown backpack and holds his all-BROWN wooden pickaxe low. Pale sunrise from LEFT lights damp forest. In LEFT DISTANCE one zombie is burning in sunlight safely far away, small orange flames and no gore. Hero startled relief. No armor, no houses, no unexplained furnace or torch.",
+      "prompt": "Edit image 1 ONLY: replace small burning GREEN CREEPER in FAR LEFT background with ONE unmistakable Minecraft ZOMBIE: green square humanoid head with small dark eyes and plain face NOT Creeper face, torso in BLUE SHIRT, TWO arms held out, TWO legs in PURPLE PANTS. This small zombie burns in morning sunlight. Keep orange flames around zombie; no Creeper anywhere. Preserve entire foreground hero, precise face, pose, pickaxe, bag, dirt shelter, sunrise and framing exactly. No new characters. Single cinematic landscape frame.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S035.png",
+      "qa": "Dawn repair accepted: clearly humanoid zombie in blue and purple, no burning Creeper.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1P3QkOn0AEmCNHH1kfv6EOkA8IS1lxlX-",
+        "title": "E02-S035.png",
+        "file_name": "E02-S035.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1P3QkOn0AEmCNHH1kfv6EOkA8IS1lxlX-/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1P3QkOn0AEmCNHH1kfv6EOkA8IS1lxlX-",
+          "title": "E02-S035.png",
+          "file_name": "E02-S035.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1P3QkOn0AEmCNHH1kfv6EOkA8IS1lxlX-/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      },
+      "rejected_versions": [
+        {
+          "path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S035-rejected-v1.png",
+          "drive": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1TGvl3lwxnl6Zdios4pwNO2WpRdNHnGpy",
+            "title": "E02-S035-REJECTED-burning-creeper.png",
+            "file_name": "E02-S035-REJECTED-burning-creeper.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/1TGvl3lwxnl6Zdios4pwNO2WpRdNHnGpy/view?usp=drivesdk",
+            "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1TGvl3lwxnl6Zdios4pwNO2WpRdNHnGpy",
+              "title": "E02-S035-REJECTED-burning-creeper.png",
+              "file_name": "E02-S035-REJECTED-burning-creeper.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/1TGvl3lwxnl6Zdios4pwNO2WpRdNHnGpy/view?usp=drivesdk",
+              "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+            }
+          },
+          "reason": "Rejected: distant burning creature resembles Creeper, not zombie; must correct to blue shirt purple pants zombie."
+        }
+      ]
+    },
+    {
+      "id": "E02-S036",
+      "action": "Medium side scene in DAYLIGHT: hero kneels at a small exposed GRAY STONE outcrop beside hillside, using one entirely BROWN WOODEN PICKAXE to mine a coal ore block with scattered BLACK coal flecks. A couple of small black coal lumps on grass beneath, not diamonds or iron. Determined but cautious face, very slim build and exact outfit, brown backpack on shoulders. No cave depths, no torch or monsters.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified in the shot. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium side scene in DAYLIGHT: hero kneels at a small exposed GRAY STONE outcrop beside hillside, using one entirely BROWN WOODEN PICKAXE to mine a coal ore block with scattered BLACK coal flecks. A couple of small black coal lumps on grass beneath, not diamonds or iron. Determined but cautious face, very slim build and exact outfit, brown backpack on shoulders. No cave depths, no torch or monsters.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S036.png",
+      "qa": "Visual review accepted: wooden tool progression, coal gathering and torch preparation readable; exact hero.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1gEIfxsJHEelAbKzCvotUzODYk9RCkFfq",
+        "title": "E02-S036.png",
+        "file_name": "E02-S036.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1gEIfxsJHEelAbKzCvotUzODYk9RCkFfq/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1gEIfxsJHEelAbKzCvotUzODYk9RCkFfq",
+          "title": "E02-S036.png",
+          "file_name": "E02-S036.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1gEIfxsJHEelAbKzCvotUzODYk9RCkFfq/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S037",
+      "action": "Medium close delighted-disbelieving reaction in forest at LATE DUSK on a later evening. Hero holds his FIRST lit Minecraft TORCH in right hand extended at safe distance from face, left palm open with one small black coal lump and one short wooden stick showing ingredients. Brown backpack worn. Torch has simple brown stick and warm orange flame, NO flashlight or modern lighter. Orange light on face, cool blue forest background. Exact reference face and very slim torso, one hero, two arms.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified in the shot. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium close delighted-disbelieving reaction in forest at LATE DUSK on a later evening. Hero holds his FIRST lit Minecraft TORCH in right hand extended at safe distance from face, left palm open with one small black coal lump and one short wooden stick showing ingredients. Brown backpack worn. Torch has simple brown stick and warm orange flame, NO flashlight or modern lighter. Orange light on face, cool blue forest background. Exact reference face and very slim torso, one hero, two arms.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S037.png",
+      "qa": "Visual review accepted: wooden tool progression, coal gathering and torch preparation readable; exact hero.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1u01c0tgrj_LxX6Vxar5oQ_Y0q8zL3i4-",
+        "title": "E02-S037.png",
+        "file_name": "E02-S037.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1u01c0tgrj_LxX6Vxar5oQ_Y0q8zL3i4-/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1u01c0tgrj_LxX6Vxar5oQ_Y0q8zL3i4-",
+          "title": "E02-S037.png",
+          "file_name": "E02-S037.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1u01c0tgrj_LxX6Vxar5oQ_Y0q8zL3i4-/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S038",
+      "action": "Suspense forest POV at NIGHT: deep blue-black cubic oak trunks and grass, a PALE CUBOID ANIMAL BODY mostly obscured by a tree on RIGHT, two small reflected eye glints at normal SHEEP head height and tiny dark square muzzle barely suggested. It is an ordinary SHEEP hidden in shadow, not a monster, NO horns, wings or demonic features. A weak warm torch glow from unseen hero at lower LEFT reaches foreground grass only, not animal yet. Same 2D cartoon art as forest reference, cinematic mystery, no text.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified; this is night, not reference daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Suspense forest POV at NIGHT: deep blue-black cubic oak trunks and grass, a PALE CUBOID ANIMAL BODY mostly obscured by a tree on RIGHT, two small reflected eye glints at normal SHEEP head height and tiny dark square muzzle barely suggested. It is an ordinary SHEEP hidden in shadow, not a monster, NO horns, wings or demonic features. A weak warm torch glow from unseen hero at lower LEFT reaches foreground grass only, not animal yet. Same 2D cartoon art as forest reference, cinematic mystery, no text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S038.png",
+      "qa": "Sheep scare sequence reviewed: dark obscured animal, fear, harmless torch reveal, relief; hero remains slim and wooden pickaxe retained.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1iVj1Qb7iq93xW0jKgvDQMgjmjxWiXW_-",
+        "title": "E02-S038.png",
+        "file_name": "E02-S038.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1iVj1Qb7iq93xW0jKgvDQMgjmjxWiXW_-/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1iVj1Qb7iq93xW0jKgvDQMgjmjxWiXW_-",
+          "title": "E02-S038.png",
+          "file_name": "E02-S038.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1iVj1Qb7iq93xW0jKgvDQMgjmjxWiXW_-/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S039",
+      "action": "Tight terrified hero portrait at NIGHT, shoulders raised, wide eyes and clenched teeth, looking offscreen RIGHT. His RIGHT hand holds lit torch low near bottom LEFT of composition, LEFT hand clutches ONE entirely BROWN WOODEN pickaxe to chest. Backpack worn. Cool blue moonlit forest, torch orange on face. Exact reference beard, curly fade and slim neck/body, no armor or sword. He thinks something terrible is in dark ahead.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified; this is night, not reference daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Tight terrified hero portrait at NIGHT, shoulders raised, wide eyes and clenched teeth, looking offscreen RIGHT. His RIGHT hand holds lit torch low near bottom LEFT of composition, LEFT hand clutches ONE entirely BROWN WOODEN pickaxe to chest. Backpack worn. Cool blue moonlit forest, torch orange on face. Exact reference beard, curly fade and slim neck/body, no armor or sword. He thinks something terrible is in dark ahead.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S039.png",
+      "qa": "Sheep scare sequence reviewed: dark obscured animal, fear, harmless torch reveal, relief; hero remains slim and wooden pickaxe retained.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1oYGPea5DJAitht7rHJpTDn7AXUiivB-m",
+        "title": "E02-S039.png",
+        "file_name": "E02-S039.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1oYGPea5DJAitht7rHJpTDn7AXUiivB-m/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1oYGPea5DJAitht7rHJpTDn7AXUiivB-m",
+          "title": "E02-S039.png",
+          "file_name": "E02-S039.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1oYGPea5DJAitht7rHJpTDn7AXUiivB-m/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S040",
+      "action": "Warm TORCH REVEAL in night forest: camera just behind hero's LEFT shoulder in LEFT foreground, his extended RIGHT hand holds ONE lit torch toward RIGHT. Light fully reveals ONE harmless WHITE MINECRAFT SHEEP with pink square muzzle and small black eyes, standing beside the SAME oak trunk on RIGHT, chewing grass. No demon, no hostile mobs, no horns. Hero slim reference face partial profile, brown backpack; LEFT hand holds all-brown wooden pickaxe low. Orange pool of light, dark blue background.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified; this is night, not reference daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Warm TORCH REVEAL in night forest: camera just behind hero's LEFT shoulder in LEFT foreground, his extended RIGHT hand holds ONE lit torch toward RIGHT. Light fully reveals ONE harmless WHITE MINECRAFT SHEEP with pink square muzzle and small black eyes, standing beside the SAME oak trunk on RIGHT, chewing grass. No demon, no hostile mobs, no horns. Hero slim reference face partial profile, brown backpack; LEFT hand holds all-brown wooden pickaxe low. Orange pool of light, dark blue background.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S040.png",
+      "qa": "Sheep scare sequence reviewed: dark obscured animal, fear, harmless torch reveal, relief; hero remains slim and wooden pickaxe retained.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1zuWYbHxDv4TRosf0da6hz6eYRFMukabl",
+        "title": "E02-S040.png",
+        "file_name": "E02-S040.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1zuWYbHxDv4TRosf0da6hz6eYRFMukabl/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1zuWYbHxDv4TRosf0da6hz6eYRFMukabl",
+          "title": "E02-S040.png",
+          "file_name": "E02-S040.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1zuWYbHxDv4TRosf0da6hz6eYRFMukabl/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S041",
+      "action": "Medium comedic relief reaction in night forest: hero at LEFT lowers his entirely BROWN WOODEN pickaxe in LEFT hand, RIGHT holds torch away from body. He exhales in embarrassed relief, eyes half closed, crooked exhausted smile. ONE white blocky sheep with pink muzzle at RIGHT placidly chews grass. Brown backpack worn, slim exact hero, no armor, no other creatures, no danger visible. Warm torchlight and cool moonlight. Single landscape composition.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified; this is night, not reference daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium comedic relief reaction in night forest: hero at LEFT lowers his entirely BROWN WOODEN pickaxe in LEFT hand, RIGHT holds torch away from body. He exhales in embarrassed relief, eyes half closed, crooked exhausted smile. ONE white blocky sheep with pink muzzle at RIGHT placidly chews grass. Brown backpack worn, slim exact hero, no armor, no other creatures, no danger visible. Warm torchlight and cool moonlight. Single landscape composition.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S041.png",
+      "qa": "Sheep scare sequence reviewed: dark obscured animal, fear, harmless torch reveal, relief; hero remains slim and wooden pickaxe retained.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1QAFtI9dBR9ReccCFnITzLhJRBHuNAZTA",
+        "title": "E02-S041.png",
+        "file_name": "E02-S041.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1QAFtI9dBR9ReccCFnITzLhJRBHuNAZTA/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1QAFtI9dBR9ReccCFnITzLhJRBHuNAZTA",
+          "title": "E02-S041.png",
+          "file_name": "E02-S041.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1QAFtI9dBR9ReccCFnITzLhJRBHuNAZTA/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
     }
   ],
-  "next_shot": "E02-S024",
-  "qa_rejected_count": 1
+  "next_shot": "E02-S042",
+  "qa_rejected_count": 4
 }
