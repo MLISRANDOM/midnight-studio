@@ -32,7 +32,7 @@
     "title": "Candidates - Pending QA",
     "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
   },
-  "verified_count": 41,
+  "verified_count": 56,
   "shots": [
     {
       "id": "E02-S001",
@@ -1288,8 +1288,454 @@
           "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
         }
       }
+    },
+    {
+      "id": "E02-S042",
+      "action": "Night forest sudden threat shot: hero LEFT foreground holding torch in RIGHT hand and all-brown wooden pickaxe in LEFT, snaps head toward an ARROW embedded in oak bark beside his head at LEFT edge. A skeleton with a simple BOW stands several metres away in RIGHT background between trees, clearly aiming. Sheep is now near RIGHT edge but away from skeleton, ordinary white blocky sheep. No injury, arrow in tree not hero. Fear returns after relief, no text, exact slim cartoon character. Dark blue and warm torch contrast.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified by scene. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Night forest sudden threat shot: hero LEFT foreground holding torch in RIGHT hand and all-brown wooden pickaxe in LEFT, snaps head toward an ARROW embedded in oak bark beside his head at LEFT edge. A skeleton with a simple BOW stands several metres away in RIGHT background between trees, clearly aiming. Sheep is now near RIGHT edge but away from skeleton, ordinary white blocky sheep. No injury, arrow in tree not hero. Fear returns after relief, no text, exact slim cartoon character. Dark blue and warm torch contrast.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S042.png",
+      "qa": "Character/action reviewed; skeleton threat, flight, and farmer greeting accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1Xs4_ZJHxEDtqCX4150NWla2Z-SCoG7RE",
+        "title": "E02-S042.png",
+        "file_name": "E02-S042.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1Xs4_ZJHxEDtqCX4150NWla2Z-SCoG7RE/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1Xs4_ZJHxEDtqCX4150NWla2Z-SCoG7RE",
+          "title": "E02-S042.png",
+          "file_name": "E02-S042.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1Xs4_ZJHxEDtqCX4150NWla2Z-SCoG7RE/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S043",
+      "action": "Wide cinematic night action: slim hero runs toward LEFT along blocky forest slope, brown backpack bouncing, RIGHT hand holds torch well clear of hair, LEFT grips all-brown wooden pickaxe low. One skeleton archer far RIGHT background, an arrow stuck in dirt behind hero, not in his body. Safe clear anatomy, no gore, no extra hero or weapons. He is fleeing in real fear, not fighting confidently. Moonlit cubic trees, no village yet.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified by scene. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Wide cinematic night action: slim hero runs toward LEFT along blocky forest slope, brown backpack bouncing, RIGHT hand holds torch well clear of hair, LEFT grips all-brown wooden pickaxe low. One skeleton archer far RIGHT background, an arrow stuck in dirt behind hero, not in his body. Safe clear anatomy, no gore, no extra hero or weapons. He is fleeing in real fear, not fighting confidently. Moonlit cubic trees, no village yet.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S043.png",
+      "qa": "Character/action reviewed; skeleton threat, flight, and farmer greeting accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1S17tpoAH9biInX1wEDzy_StYX6BOy3wa",
+        "title": "E02-S043.png",
+        "file_name": "E02-S043.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1S17tpoAH9biInX1wEDzy_StYX6BOy3wa/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1S17tpoAH9biInX1wEDzy_StYX6BOy3wa",
+          "title": "E02-S043.png",
+          "file_name": "E02-S043.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1S17tpoAH9biInX1wEDzy_StYX6BOy3wa/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S044",
+      "action": "Big hopeful reveal at EARLY MORNING: camera behind hero at LEFT on grassy rise, brown backpack prominent, slim rounded 2D character looks toward small plains MINECRAFT VILLAGE in valley RIGHT. Establish one modest oak-and-cobblestone house at front LEFT of village, WELL at central square, larger farm patch RIGHT beside river, simple paths connecting. Oak trees and gently square hills. Hero's torch now UNLIT at side; wooden pickaxe strapped outside bag. No armor. Warm dawn, not fantasy castle.",
+      "prompt": "Edit this exact landscape target. ONLY correct TWO props on hero: (1) replace black modern FLASHLIGHT held at his side with a plain brown wooden Minecraft TORCH with blackened UNLIT tip, no flame, no glass lens; (2) make pickaxe strapped to backpack entirely oak-BROWN WOOD including the currently gray head, visible brown wood grain. Preserve all other scene details and village layout exactly, same dawn lighting, same thin hero, pose, backpack, houses, well and fields. NO flashlight remains. No new characters or text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S044.png",
+      "qa": "Repair accepted: wooden pickaxe and unlit wood torch, village unchanged.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1e8ZAFnlqIuCnka4M6_T8La2EUE2NKy-4",
+        "title": "E02-S044.png",
+        "file_name": "E02-S044.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1e8ZAFnlqIuCnka4M6_T8La2EUE2NKy-4/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1e8ZAFnlqIuCnka4M6_T8La2EUE2NKy-4",
+          "title": "E02-S044.png",
+          "file_name": "E02-S044.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1e8ZAFnlqIuCnka4M6_T8La2EUE2NKy-4/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      },
+      "rejected_versions": [
+        {
+          "path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S044-rejected-v1.png",
+          "drive": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1BA-0nher-nF4y1w0J0oq9w2RRzBXq7ec",
+            "title": "E02-S044-REJECTED-flashlight-metal-tool.png",
+            "file_name": "E02-S044-REJECTED-flashlight-metal-tool.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/1BA-0nher-nF4y1w0J0oq9w2RRzBXq7ec/view?usp=drivesdk",
+            "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1BA-0nher-nF4y1w0J0oq9w2RRzBXq7ec",
+              "title": "E02-S044-REJECTED-flashlight-metal-tool.png",
+              "file_name": "E02-S044-REJECTED-flashlight-metal-tool.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/1BA-0nher-nF4y1w0J0oq9w2RRzBXq7ec/view?usp=drivesdk",
+              "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+            }
+          },
+          "reason": "Rejected: modern flashlight and gray pickaxe head appear without acquisition. Preserve village geography and replace tools."
+        }
+      ]
+    },
+    {
+      "id": "E02-S045",
+      "action": "Medium first-contact scene DAYLIGHT at village path: slim exhausted hero on LEFT approaches ONE adult farmer villager on RIGHT wearing simple brown robe and straw hat, large blocky nose, folded arms, classic Minecraft face. Hero shyly raises one empty hand in greeting, other hand rests on hungry stomach. Brown backpack worn, no armor/weapons in hands. Behind them modest oak/cobblestone house LEFT and farm RIGHT, consistent simple plains village. No romantic pose or food handover yet, no text.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified by scene. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium first-contact scene DAYLIGHT at village path: slim exhausted hero on LEFT approaches ONE adult farmer villager on RIGHT wearing simple brown robe and straw hat, large blocky nose, folded arms, classic Minecraft face. Hero shyly raises one empty hand in greeting, other hand rests on hungry stomach. Brown backpack worn, no armor/weapons in hands. Behind them modest oak/cobblestone house LEFT and farm RIGHT, consistent simple plains village. No romantic pose or food handover yet, no text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S045.png",
+      "qa": "Character/action reviewed; skeleton threat, flight, and farmer greeting accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1GNOSH7h1EhxhIZe1aOOjjsqqlElLi7HG",
+        "title": "E02-S045.png",
+        "file_name": "E02-S045.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1GNOSH7h1EhxhIZe1aOOjjsqqlElLi7HG/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1GNOSH7h1EhxhIZe1aOOjjsqqlElLi7HG",
+          "title": "E02-S045.png",
+          "file_name": "E02-S045.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1GNOSH7h1EhxhIZe1aOOjjsqqlElLi7HG/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S046",
+      "action": "Medium-wide daylight at village FARM: slim hero carefully harvesting ripe GOLDEN WHEAT with bare hands beside narrow irrigation channel. Farmer villager in brown robe straw hat stands RIGHT watching and gesturing toward ripe row, indicating permission/help. Harvested wheat bundle at hero's side, green unripe plants left untouched. House oak/cobblestone LEFT, village well farther back, same plains village from reference3. Backpack worn. No iron tools or weapons, no text.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium-wide daylight at village FARM: slim hero carefully harvesting ripe GOLDEN WHEAT with bare hands beside narrow irrigation channel. Farmer villager in brown robe straw hat stands RIGHT watching and gesturing toward ripe row, indicating permission/help. Harvested wheat bundle at hero's side, green unripe plants left untouched. House oak/cobblestone LEFT, village well farther back, same plains village from reference3. Backpack worn. No iron tools or weapons, no text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S046.png",
+      "qa": "Character, farmer design and wheat-to-emerald-to-bread progression accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1LPUDsSO1nCZYGswy0z9-YBvXmCccvKai",
+        "title": "E02-S046.png",
+        "file_name": "E02-S046.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1LPUDsSO1nCZYGswy0z9-YBvXmCccvKai/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1LPUDsSO1nCZYGswy0z9-YBvXmCccvKai",
+          "title": "E02-S046.png",
+          "file_name": "E02-S046.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1LPUDsSO1nCZYGswy0z9-YBvXmCccvKai/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S047",
+      "action": "Medium close village trading shot: hero LEFT offers farmer RIGHT a substantial BUNDLE of golden wheat in both hands; farmer brown robe/strawhat holds ONE GREEN EMERALD out toward hero. Their exchange is clear and voluntary, skeptical surprise on hero's face. Same warm brown slim exact character. Modest oak/cobblestone house left background and wheat farm right. No UI, no numerical prices, no text, no bread yet. Daylight 2D.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium close village trading shot: hero LEFT offers farmer RIGHT a substantial BUNDLE of golden wheat in both hands; farmer brown robe/strawhat holds ONE GREEN EMERALD out toward hero. Their exchange is clear and voluntary, skeptical surprise on hero's face. Same warm brown slim exact character. Modest oak/cobblestone house left background and wheat farm right. No UI, no numerical prices, no text, no bread yet. Daylight 2D.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S047.png",
+      "qa": "Character, farmer design and wheat-to-emerald-to-bread progression accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1jGwWq_419aaMnQ7CfdpHG0Y8Kqd2drJJ",
+        "title": "E02-S047.png",
+        "file_name": "E02-S047.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1jGwWq_419aaMnQ7CfdpHG0Y8Kqd2drJJ/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1jGwWq_419aaMnQ7CfdpHG0Y8Kqd2drJJ",
+          "title": "E02-S047.png",
+          "file_name": "E02-S047.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1jGwWq_419aaMnQ7CfdpHG0Y8Kqd2drJJ/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S048",
+      "action": "Medium close second stage of village trade: hero LEFT extends ONE GREEN EMERALD with right hand toward farmer RIGHT, who offers a small stack of brown BREAD LOAVES with both hands. Hero baffled amused expression as he realizes currency. Backpack worn, exact reference face and slim proportions. Same strawhat farmer and village, no other characters, no UI, no text. Clearly bread received for emerald, not coins or money bills.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium close second stage of village trade: hero LEFT extends ONE GREEN EMERALD with right hand toward farmer RIGHT, who offers a small stack of brown BREAD LOAVES with both hands. Hero baffled amused expression as he realizes currency. Backpack worn, exact reference face and slim proportions. Same strawhat farmer and village, no other characters, no UI, no text. Clearly bread received for emerald, not coins or money bills.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S048.png",
+      "qa": "Character, farmer design and wheat-to-emerald-to-bread progression accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "13eahkClo9iiwe8aV15klwO-aAr_qldHm",
+        "title": "E02-S048.png",
+        "file_name": "E02-S048.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/13eahkClo9iiwe8aV15klwO-aAr_qldHm/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "13eahkClo9iiwe8aV15klwO-aAr_qldHm",
+          "title": "E02-S048.png",
+          "file_name": "E02-S048.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/13eahkClo9iiwe8aV15klwO-aAr_qldHm/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S049",
+      "action": "Medium quiet relief scene in village DAYLIGHT: very slim hero sits on low cobblestone step outside modest oak house at LEFT, eyes closed with relief, takes a bite from ONE brown bread loaf held in both hands. Two spare bread loaves tucked into OPEN brown backpack beside him, no empty magical inventory. In background village well center and farm RIGHT. No farmer close, no armor. Warm sunlight, emotional first earned meal.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium quiet relief scene in village DAYLIGHT: very slim hero sits on low cobblestone step outside modest oak house at LEFT, eyes closed with relief, takes a bite from ONE brown bread loaf held in both hands. Two spare bread loaves tucked into OPEN brown backpack beside him, no empty magical inventory. In background village well center and farm RIGHT. No farmer close, no armor. Warm sunlight, emotional first earned meal.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S049.png",
+      "qa": "Character and garden progression reviewed; flower packet separate from loose crop seeds, no instant growth, wooden hoe retained; first meal accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1pNEiEh4Xa-lCpeqjvrlnDPtqNHN84M9w",
+        "title": "E02-S049.png",
+        "file_name": "E02-S049.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1pNEiEh4Xa-lCpeqjvrlnDPtqNHN84M9w/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1pNEiEh4Xa-lCpeqjvrlnDPtqNHN84M9w",
+          "title": "E02-S049.png",
+          "file_name": "E02-S049.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1pNEiEh4Xa-lCpeqjvrlnDPtqNHN84M9w/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S050",
+      "action": "Medium-wide village garden scene DAYLIGHT: hero kneels by a SMALL patch of loose soil beside oak/cobblestone HOUSE wall LEFT. He carefully pours tiny dark FLOWER SEEDS from same cream paper packet with GREEN top/bottom and SUNFLOWER illustration into soil using right hand, left hand holds packet. No grown flowers yet, no wheat in this little patch. Brown backpack closed on grass. Thoughtful hopeful face, exact slim character. Behind, larger wheat farm RIGHT. Image3 is seed packet reference.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium-wide village garden scene DAYLIGHT: hero kneels by a SMALL patch of loose soil beside oak/cobblestone HOUSE wall LEFT. He carefully pours tiny dark FLOWER SEEDS from same cream paper packet with GREEN top/bottom and SUNFLOWER illustration into soil using right hand, left hand holds packet. No grown flowers yet, no wheat in this little patch. Brown backpack closed on grass. Thoughtful hopeful face, exact slim character. Behind, larger wheat farm RIGHT. Image3 is seed packet reference.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S050.png",
+      "qa": "Character and garden progression reviewed; flower packet separate from loose crop seeds, no instant growth, wooden hoe retained; first meal accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1YCiYN-oWiNVUscFppCmrqka3QCAymDEw",
+        "title": "E02-S050.png",
+        "file_name": "E02-S050.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1YCiYN-oWiNVUscFppCmrqka3QCAymDEw/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1YCiYN-oWiNVUscFppCmrqka3QCAymDEw",
+          "title": "E02-S050.png",
+          "file_name": "E02-S050.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1YCiYN-oWiNVUscFppCmrqka3QCAymDEw/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S051",
+      "action": "Medium-wide village work scene DAYLIGHT: hero very slim uses ONE entirely BROWN WOODEN HOE to till a NEW SMALL rectangular vegetable plot beside narrow water channel. House oak/cobblestone LEFT, established large village farm farther RIGHT. His own new patch has dark furrowed earth and NO grown crops yet. Brown backpack at house wall, crafting table beside it implies learned tools. Determined inexperienced posture, precise approved face, no metal tools, no armor.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium-wide village work scene DAYLIGHT: hero very slim uses ONE entirely BROWN WOODEN HOE to till a NEW SMALL rectangular vegetable plot beside narrow water channel. House oak/cobblestone LEFT, established large village farm farther RIGHT. His own new patch has dark furrowed earth and NO grown crops yet. Brown backpack at house wall, crafting table beside it implies learned tools. Determined inexperienced posture, precise approved face, no metal tools, no armor.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S051.png",
+      "qa": "Character and garden progression reviewed; flower packet separate from loose crop seeds, no instant growth, wooden hoe retained; first meal accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1ZOYw3A0hWznLNx9eQOzV0wRjqAXnO8Li",
+        "title": "E02-S051.png",
+        "file_name": "E02-S051.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1ZOYw3A0hWznLNx9eQOzV0wRjqAXnO8Li/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1ZOYw3A0hWznLNx9eQOzV0wRjqAXnO8Li",
+          "title": "E02-S051.png",
+          "file_name": "E02-S051.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1ZOYw3A0hWznLNx9eQOzV0wRjqAXnO8Li/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S052",
+      "action": "Close low garden scene: hero kneels beside NEWLY TILLED DARK SOIL rows along clear narrow irrigation channel, pinches tiny WHEAT SEEDS into earth with right fingertips, left palm holds remaining plain loose seeds. One entirely BROWN WOODEN HOE rests on grass and closed backpack by modest oak house LEFT. He concentrates, narrow torso and thin arms. No flower-seed packet in hands and NO mature plants yet, establishing crops separately from flowers. Daylight, classic 2D style.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Close low garden scene: hero kneels beside NEWLY TILLED DARK SOIL rows along clear narrow irrigation channel, pinches tiny WHEAT SEEDS into earth with right fingertips, left palm holds remaining plain loose seeds. One entirely BROWN WOODEN HOE rests on grass and closed backpack by modest oak house LEFT. He concentrates, narrow torso and thin arms. No flower-seed packet in hands and NO mature plants yet, establishing crops separately from flowers. Daylight, classic 2D style.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S052.png",
+      "qa": "Character and garden progression reviewed; flower packet separate from loose crop seeds, no instant growth, wooden hoe retained; first meal accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1L-Q6arpIcGciZbQKxy_1SLXO8ZBw_aVy",
+        "title": "E02-S052.png",
+        "file_name": "E02-S052.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1L-Q6arpIcGciZbQKxy_1SLXO8ZBw_aVy/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1L-Q6arpIcGciZbQKxy_1SLXO8ZBw_aVy",
+          "title": "E02-S052.png",
+          "file_name": "E02-S052.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1L-Q6arpIcGciZbQKxy_1SLXO8ZBw_aVy/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S053",
+      "action": "Comedic wide village-edge daylight shot: hero at LEFT walks toward an OPEN simple oak-fence pen at far LEFT, holding one BUNDLE of GOLDEN WHEAT at chest height. He looks back RIGHT in mounting alarm at TWO black-and-white blocky COWS and TWO white blocky SHEEP following closely in a line, all calm. Exactly four animals, correct four legs each. Brown backpack on hero, same slim body/clothing. Oak house and village well in distance. No monsters or hearts.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Comedic wide village-edge daylight shot: hero at LEFT walks toward an OPEN simple oak-fence pen at far LEFT, holding one BUNDLE of GOLDEN WHEAT at chest height. He looks back RIGHT in mounting alarm at TWO black-and-white blocky COWS and TWO white blocky SHEEP following closely in a line, all calm. Exactly four animals, correct four legs each. Brown backpack on hero, same slim body/clothing. Oak house and village well in distance. No monsters or hearts.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S053.png",
+      "qa": "Livestock sequence reviewed: two adult cows, two sheep; one calf only appears after feeding; reference hero remains slim and consistent.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1iujCXMZr6_HdDFKZZj9yAH0vBz3Xyjw4",
+        "title": "E02-S053.png",
+        "file_name": "E02-S053.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1iujCXMZr6_HdDFKZZj9yAH0vBz3Xyjw4/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1iujCXMZr6_HdDFKZZj9yAH0vBz3Xyjw4",
+          "title": "E02-S053.png",
+          "file_name": "E02-S053.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1iujCXMZr6_HdDFKZZj9yAH0vBz3Xyjw4/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S054",
+      "action": "Wide pen setup DAYLIGHT: hero stands OUTSIDE an OAK FENCE PEN at LEFT and closes one simple gate with right hand while holding golden wheat in left. Inside pen RIGHT are exactly TWO black-and-white Minecraft COWS and TWO white Minecraft SHEEP, standing placidly. Hero looks proud and slightly wary of animals. Small new garden with seedlings OUTSIDE fence nearby, same oak/cobblestone village house behind. Correct fence/gate geometry, no animal duplicates or extra legs.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Wide pen setup DAYLIGHT: hero stands OUTSIDE an OAK FENCE PEN at LEFT and closes one simple gate with right hand while holding golden wheat in left. Inside pen RIGHT are exactly TWO black-and-white Minecraft COWS and TWO white Minecraft SHEEP, standing placidly. Hero looks proud and slightly wary of animals. Small new garden with seedlings OUTSIDE fence nearby, same oak/cobblestone village house behind. Correct fence/gate geometry, no animal duplicates or extra legs.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S054.png",
+      "qa": "Livestock sequence reviewed: two adult cows, two sheep; one calf only appears after feeding; reference hero remains slim and consistent.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1M3HSML_LujZRbNJd8d-viaijFe5hwO46",
+        "title": "E02-S054.png",
+        "file_name": "E02-S054.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1M3HSML_LujZRbNJd8d-viaijFe5hwO46/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1M3HSML_LujZRbNJd8d-viaijFe5hwO46",
+          "title": "E02-S054.png",
+          "file_name": "E02-S054.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1M3HSML_LujZRbNJd8d-viaijFe5hwO46/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S055",
+      "action": "Medium daylight livestock scene inside oak-fence pen: very slim hero between TWO adult black-and-white blocky COWS, offering a small bundle of golden WHEAT to EACH cow with his two hands. Both cows calmly eat, no aggression. Two white sheep farther back inside fence. No hearts or UI, no baby yet, no sexual imagery. Hero unsure what he is doing, same face/outfit and backpack. Plain village surroundings, no armor/tools in hands.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium daylight livestock scene inside oak-fence pen: very slim hero between TWO adult black-and-white blocky COWS, offering a small bundle of golden WHEAT to EACH cow with his two hands. Both cows calmly eat, no aggression. Two white sheep farther back inside fence. No hearts or UI, no baby yet, no sexual imagery. Hero unsure what he is doing, same face/outfit and backpack. Plain village surroundings, no armor/tools in hands.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S055.png",
+      "qa": "Livestock sequence reviewed: two adult cows, two sheep; one calf only appears after feeding; reference hero remains slim and consistent.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1j5FE4u3xirvgFuZ8pn58NLAcmSOFZox3",
+        "title": "E02-S055.png",
+        "file_name": "E02-S055.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1j5FE4u3xirvgFuZ8pn58NLAcmSOFZox3/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1j5FE4u3xirvgFuZ8pn58NLAcmSOFZox3",
+          "title": "E02-S055.png",
+          "file_name": "E02-S055.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1j5FE4u3xirvgFuZ8pn58NLAcmSOFZox3/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S056",
+      "action": "Comedic medium-wide reveal in same oak-fence pen: TWO adult black-and-white blocky COWS stand at RIGHT and ONE small black-and-white CALF stands between them. Slim hero LEFT recoils in bewilderment at the baby, empty hands held open, eyebrows raised, mouth open. Two white sheep quietly chew grass in background. EXACTLY three bovines and two sheep. Daylight village, brown backpack, no hearts/text/UI, no graphic reproduction.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Comedic medium-wide reveal in same oak-fence pen: TWO adult black-and-white blocky COWS stand at RIGHT and ONE small black-and-white CALF stands between them. Slim hero LEFT recoils in bewilderment at the baby, empty hands held open, eyebrows raised, mouth open. Two white sheep quietly chew grass in background. EXACTLY three bovines and two sheep. Daylight village, brown backpack, no hearts/text/UI, no graphic reproduction.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S056.png",
+      "qa": "Livestock sequence reviewed: two adult cows, two sheep; one calf only appears after feeding; reference hero remains slim and consistent.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1RYkgdR-fjeyMISdVpBW2g-RAyofpSj3x",
+        "title": "E02-S056.png",
+        "file_name": "E02-S056.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1RYkgdR-fjeyMISdVpBW2g-RAyofpSj3x/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1RYkgdR-fjeyMISdVpBW2g-RAyofpSj3x",
+          "title": "E02-S056.png",
+          "file_name": "E02-S056.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1RYkgdR-fjeyMISdVpBW2g-RAyofpSj3x/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
     }
   ],
-  "next_shot": "E02-S042",
-  "qa_rejected_count": 4
+  "next_shot": "E02-S057",
+  "qa_rejected_count": 5
 }
