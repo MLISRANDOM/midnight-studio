@@ -21,21 +21,55 @@ Keep the protagonist a 2D cartoon inside the block-shaped environment. Do not co
 Use narration-led cuts and purposeful reaction shots, no automatic zoom effects.
 Captions are a separate postproduction layer. Latest Episode 01 style is a reference, not yet explicitly approved for Episode 02.
 
-## Proposed story engine
-He survived the pizzeria by learning its routines. Here he mistakes recognition for competence. The world offers resources everywhere, but every useful thing demands time, tools, or exposure.
-The flower seeds are an opening joke and a closing payoff: initially useless in a survival emergency, later planted beside the home he finally believes he can keep.
-The emotional movement is panic → false confidence → hard-earned competence → attachment → forced departure.
-Thirty days is a proposed episode structure, not a newly established universal teleportation rule. Do not state that the protagonist knows a fixed timer.
+## Revised story engine
+User direction: five additional useless items in the backpack, recurring connected problems, and suspense that rewards attention. Include one brief subscribe reminder that fits the narrator.
+The protagonist recognizes Minecraft, but recognition does not give him tools, shelter, food, or good judgment. Each attempted solution changes the next problem. He learns and improves; the world remains dangerous without secretly changing its rules.
+The backpack contains the existing flower seeds PLUS exactly five new items: one yellow squeaky rubber duck, one white plastic spoon, one small ball of red yarn, one cracked palm-sized hand mirror, and one unlit birthday candle. No matches, lighter, food, bottles, weapons, or hidden starter tools.
+These are initially useless for the immediate emergency. Some later have modest physical uses, with costs and limitations. They are not enchanted, secret crafting recipes, or automatic monster lures.
+The emotional movement is panic → false confidence → an earned win → a consequential mistake → resourceful recovery → attachment → forced departure.
+Thirty days is a proposed episode structure, not a known universal teleportation timer.
 
-## Story arc
-1. Arrival and blast: continue the Creeper encounter immediately. He retreats, snags the backpack on a branch, slips out of its strap and dives into a shallow dip. The blast destroys the tree, not the protagonist. He retrieves the scorched but intact bag. The seed packet survives.
-2. First sunset: the forest becomes hostile before he has shelter. He digs into a hillside with his bare hands and plugs the entrance with dirt. Keep the geography clear: opening on the slope, shallow room behind it, forest outside.
-3. Days 2–5, learning costs: wood, a crafting table, wooden pickaxe, stone tools, furnace, then a modest food supply. Show ingredients and tool upgrades before use. The comedy comes from effort and bad choices, not random incompetence.
-4. Days 6–10, shelter versus home: he improves the hillside room. He finds a village in daylight but must return before dark. A skeleton encounter teaches him that open ground is dangerous. No sudden unexplained combat mastery.
-5. Days 11–17, a useful discovery: he follows a cave for iron and coal, loses daylight, and must conserve torches. One brief Enderman encounter works through averted eyes and stillness. Establish the exit route before the retreat.
-6. Days 18–23, the mistake: confidence leads him to expand the shelter too aggressively. Mining opens a second dark passage beneath his home. Monsters enter through that route at night. Earlier geography makes the breach understandable.
-7. Days 24–29, recovery: he survives using the prepared exit, daylight, terrain, and earned tools. He seals the passage, repairs the home, and plants the original flowers outside. No new magical powers or instant equipment.
-8. Day 30, the cost of leaving: he eats safely beside the flowers and realizes he has stopped listening for footsteps. A familiar spatial rupture begins. He reaches for his supplies; the home is left behind. End destination remains undecided in this draft, so Episode 03 is not locked by accident.
+## Inventory: setup, failure, payoff
+| Item | First impression / failed use | Later payoff and limit |
+|---|---|---|
+| Flower seeds, retained from E01 | Cannot solve tonight's hunger; never turn into instant food. | Planted by his repaired home, making departure hurt. |
+| Yellow squeaky duck | Squeaks while he searches the bag; he freezes as a nearby groan answers. Do not assert universal sound-tracking mob AI. | Becomes a visual joke on his shelf. It must never save him through an unexplained monster-distraction rule. |
+| White plastic spoon | Snaps against stone while he tries to deepen the first shelter. | Remaining bowl scrapes loose soil away from a narrow breathing gap. Does not mine stone or replace proper tools. |
+| Red yarn | Trail through the cave seems clever until the strand catches and breaks. | He later ties a short piece across a repaired seam as a simple disturbance marker. Establish both attachment points and ordinary physical behavior. |
+| Cracked hand mirror | No way to signal anyone; crack makes his own reflection look worse. | Lets him inspect a blind bend from cover when daylight reaches it. No seeing in total darkness or reflected Enderman loophole. |
+| Birthday candle | He has nothing to light it with. A beat of silent disbelief. | Lights it later from an established flame during a quiet meal; small light, short life, no torch replacement. |
+
+## Revised story arc and reveal ladder
+1. Opening encounter: start on the Creeper's advance, not a recap. He retreats; the bag catches; he slips free and dives into an established dip. Blast, silence, surviving bag.
+2. Backpack escalation: seeds, spoon, yarn, mirror, candle. He reaches deeper for something useful and squeezes the duck. Squeak. A groan nearby. Inventory comedy ends in an immediate decision: abandon the search and find shelter. Reveal each item briefly; no six-object shopping-list speech.
+3. First night: digging the hillside costs his daylight. Spoon breaks on stone. He seals the entrance but loses ventilation. He clears a small gap with the broken spoon. Something scrapes below him. He assumes it is outside. Show loose grit falling from a floor seam without explaining it.
+4. First dawn: noise stops. He opens the entrance and finds sunlight. A brief earned relief beat and the one subscribe plug, followed by another scrape beneath the floor. Leave the source unresolved while he urgently needs food and tools.
+5. Days 2–5: he earns wood and stone tools. Food gathering delays his return. A skeleton blocks the direct route home, forcing a riverbank detour. The cave entrance seen on that route will matter later. His successful shelter is now farther away than the remaining daylight allows.
+6. Days 6–10: he makes a small temporary refuge rather than magically reaching home. On returning, the disturbance under his original shelter is stronger. He seals a visible crack and assumes the problem is fixed. The repair holds; the sound travels elsewhere. He has treated a symptom.
+7. Days 11–17: he enters the riverbank cave for coal and iron. The yarn trail breaks while he follows promising ore. He stops rushing, studies water, light and the established route, and uses the mirror at a lit blind bend. He discovers his cave and the void beneath home connect. Pay off the floor noises with clear geography, not a new mystery creature.
+8. Days 18–23: a small iron haul makes him confident. Expanding his shelter opens that void. The opening admits monsters at night. Show the excavation mistake before the breach so viewers can recognize the danger slightly before he does.
+9. Night crisis: the front escape path has a skeleton; the new passage has a zombie. He cannot fight both. He checks the prepared side exit and finds loose soil blocking it. The spoon is insufficient now; proper earned tools and preparation get him through. One earlier object can help with a small task, but do not make all six items miraculous keys.
+10. Days 24–29: he works from outside in daylight to close the actual connection. Red yarn across the repaired seam gives him a visible check. A motionless strand and a quiet room finally mean something. Let competence produce a genuine win.
+11. Quiet payoff: he plants flowers and lights the ridiculous candle beside a proper meal. The duck sits on a shelf. These objects now belong in a home.
+12. Day 30: spatial rupture interrupts the first moment he is fully comfortable. He reaches for his earned supplies. Do not decide their next-world state or the Episode 03 setting in this draft.
+
+## Suspense and pacing rules
+- Keep one immediate question active: can he get free, reach shelter, find food, get back, find the exit, or escape the breach?
+- Keep one longer question underneath: what is moving beneath his home? Answer it with the connected cave before the final crisis.
+- Establish a clue, let a plausible assumption form, then reveal the missing context. No arbitrary rule changes.
+- Let the audience sometimes notice the danger one shot before he does. Other times limit the view to his knowledge.
+- Use brief relief after substantial danger so the next problem has contrast. Relentless identical scares become predictable.
+- Vary consequences: time lost, tools broken, route blocked, supplies inaccessible, shelter compromised. Do not repeatedly reset his inventory.
+- Each major sequence must change his situation. No filler monster encounters.
+- Quiet details must be readable at normal playback on an iPhone. No vital clue hidden for one frame.
+- No fake death, dream reset, unexplained revival, or new weapon appearing at the rescue.
+- Suspense is a creative target, not a guarantee of audience retention.
+
+## Subscribe placement
+One short narrator aside after the first dawn, following the earned survival beat:
+"If you're sticking around for the next bad decision, subscribe. We're clearly going to have a few."
+Keep the hero in the scene; no pause screen, unrelated montage, or generated subscribe text. Then a scrape comes from beneath the floor and his expression changes. The reminder ends before the next danger develops.
+Do not repeat a second full subscription speech in the climax.
 
 ## Opening narration draft
 The green thing takes one step closer.
@@ -72,7 +106,33 @@ You retrieve it. Inside, the flower seeds are fine.
 
 Of course they are.
 
+You check the other pocket.
+
+A plastic spoon. A ball of red yarn. A cracked mirror.
+
+You look at your reflection.
+
+Somehow, that makes things worse.
+
+One birthday candle.
+
+Nothing to light it with.
+
+You reach to the bottom.
+
+Squeak.
+
+You pull out a yellow rubber duck.
+
+For a second, you just stare at each other.
+
+A groan comes from the trees.
+
+You put him away.
+
 The water is still gone. So is the food.
+
+Whatever packed this bag has a terrible understanding of emergencies.
 
 You look across the square hills. Trees. Stone. A river catching the last orange light.
 
@@ -105,7 +165,13 @@ These are ordered narrative units, not final timed shots. Split or extend after 
 | E02-S008 | Close hero under settling dirt, eyes squeezed shut. | Brief sound reduction after blast, then debris. |
 | E02-S009 | Over shoulder from dip: crater, damaged tree, backpack on surviving branch. | One clear aftermath layout. |
 | E02-S010 | Medium hero retrieves the bag, inspecting its intact zipper. | Bag lightly scorched, not destroyed. |
-| E02-S011 | Bag insert: flower-seed packet; no food or bottles. | Packet design must match accepted E01 S224. Do not invent carried tools. |
+| E02-S011A | Bag insert: the existing flower-seed packet; no food or bottles. | Match E01 S224 packet. |
+| E02-S011B | Hero lifts a white plastic spoon, then a small ball of red yarn. | Separate inserts in final shot breakdown; exact object count locked. |
+| E02-S011C | Hero looks into cracked hand mirror, unimpressed. | Same face, geometrically coherent reflection. |
+| E02-S011D | Single unlit birthday candle held between fingertips. | No lighter or matches. |
+| E02-S011E | Hand compresses yellow duck inside bag; hero freezes at squeak. | Duck discovered last; motivated sound cue. |
+| E02-S011F | Hero stares at the duck; groan from trees breaks the beat. | No literal talking duck or confirmed magical response. |
+| E02-S011G | Hero stuffs duck away and closes bag as he scans for shelter. | Inventory stays in backpack; no vanished objects. |
 | E02-S012 | Wide reveal: hero on grassy rise, square hills and river at sunset. | Same 2D hero; block-shaped environment, not photorealistic. |
 | E02-S013 | Medium brief confident expression as he surveys the landscape. | Comedy through expression; no literal cereal or streaming screen. |
 | E02-S014 | Low sun behind tree line; a distant zombie shape emerges in shadow. | Keep monster separate and readable; groan. |
@@ -127,9 +193,11 @@ These are ordered narrative units, not final timed shots. Split or extend after 
 |---|---|
 | Episode 01 ending and original character rules | Read and recorded |
 | Episode 02 destination | Minecraft, inferred directly from the ending |
-| Working title and story arc | Drafted |
-| Opening narration and 15 visual units | Drafted |
+| Working title and story arc | Revised for connected setbacks and earned reveals |
+| Five additional items and subscribe plug | Incorporated in development draft |
+| Opening narration and expanded visual units | Revised with five new items |
 | Full script / final storyboard | Not complete |
 | Narration / word alignment | Not started |
 | Generated / approved images | 0 / 0 |
 | Final assembly | Not started |
+
