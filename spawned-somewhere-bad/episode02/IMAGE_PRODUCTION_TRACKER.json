@@ -32,7 +32,7 @@
     "title": "Candidates - Pending QA",
     "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
   },
-  "verified_count": 56,
+  "verified_count": 67,
   "shots": [
     {
       "id": "E02-S001",
@@ -1734,8 +1734,342 @@
           "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
         }
       }
+    },
+    {
+      "id": "E02-S057",
+      "action": "Inside hero's very MODEST OAK-and-COBBLESTONE village cottage during RAIN: small wooden window/shutter LEFT wall, RED BED along RIGHT wall, crafting table BACK LEFT, door on REAR RIGHT, tiny plain table CENTER. Hero kneeling beside central table places the TINY GOLD TROPHY from Image3 underneath a single slow ceiling drip. Cup catches a few drops; amused defeated expression. Brown backpack on floor. Trophy has two handles and black base; small label reads exactly 'Most Improved' if visible, no other text. No ornate furniture, no modern gadgets. Daytime gray rain outside. Match protagonist reference slim.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified, cottage interior. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Inside hero's very MODEST OAK-and-COBBLESTONE village cottage during RAIN: small wooden window/shutter LEFT wall, RED BED along RIGHT wall, crafting table BACK LEFT, door on REAR RIGHT, tiny plain table CENTER. Hero kneeling beside central table places the TINY GOLD TROPHY from Image3 underneath a single slow ceiling drip. Cup catches a few drops; amused defeated expression. Brown backpack on floor. Trophy has two handles and black base; small label reads exactly 'Most Improved' if visible, no other text. No ornate furniture, no modern gadgets. Daytime gray rain outside. Match protagonist reference slim.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S057.png",
+      "qa": "Random-item payoff reviewed: trophy catches roof drip, remote physically wedges shutter, single slipper pads wooden pickaxe; hero consistent. Detailed cottage texture continuity remains an assembly review item.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1jUc30we8BmB_l53qRGjjy4mi4-yXspob",
+        "title": "E02-S057.png",
+        "file_name": "E02-S057.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1jUc30we8BmB_l53qRGjjy4mi4-yXspob/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1jUc30we8BmB_l53qRGjjy4mi4-yXspob",
+          "title": "E02-S057.png",
+          "file_name": "E02-S057.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1jUc30we8BmB_l53qRGjjy4mi4-yXspob/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S058",
+      "action": "Close medium in SAME modest oak/cobblestone cottage: hero holds TINY GOLD TROPHY cup carefully in both hands near lips, takes a deeply disappointing TINY sip, skeptical half-closed eyes. Cup small, not overflowing, one drip still visible from roof in background. Window LEFT, red bed RIGHT out of focus, brown backpack on floor. Exactly same two-handled gold trophy and black base from Image3, plain base angled away without text. No other drink vessel or modern gadgets.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified, cottage interior. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Close medium in SAME modest oak/cobblestone cottage: hero holds TINY GOLD TROPHY cup carefully in both hands near lips, takes a deeply disappointing TINY sip, skeptical half-closed eyes. Cup small, not overflowing, one drip still visible from roof in background. Window LEFT, red bed RIGHT out of focus, brown backpack on floor. Exactly same two-handled gold trophy and black base from Image3, plain base angled away without text. No other drink vessel or modern gadgets.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S058.png",
+      "qa": "Random-item payoff reviewed: trophy catches roof drip, remote physically wedges shutter, single slipper pads wooden pickaxe; hero consistent. Detailed cottage texture continuity remains an assembly review item.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1QLFYURi9eLFbzNSjkwhySQQV3imGWr98",
+        "title": "E02-S058.png",
+        "file_name": "E02-S058.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1QLFYURi9eLFbzNSjkwhySQQV3imGWr98/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1QLFYURi9eLFbzNSjkwhySQQV3imGWr98",
+          "title": "E02-S058.png",
+          "file_name": "E02-S058.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1QLFYURi9eLFbzNSjkwhySQQV3imGWr98/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S059",
+      "action": "Medium in SAME modest village cottage: hero stands beside window on LEFT wall, uses ONE BLACK TV REMOTE with round navigation pad and red power button from Image3 as a PHYSICAL WEDGE under rattling wooden shutter, right hand pushes remote firmly into bottom gap, left hand steadies shutter. Remote has no batteries and emits no light. Wind and rain outside; warm torch on far wall. Slim hero exact outfit, red bed in RIGHT background, closed brown backpack by wall. No TV, no electronic equipment, no text.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified, cottage interior. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium in SAME modest village cottage: hero stands beside window on LEFT wall, uses ONE BLACK TV REMOTE with round navigation pad and red power button from Image3 as a PHYSICAL WEDGE under rattling wooden shutter, right hand pushes remote firmly into bottom gap, left hand steadies shutter. Remote has no batteries and emits no light. Wind and rain outside; warm torch on far wall. Slim hero exact outfit, red bed in RIGHT background, closed brown backpack by wall. No TV, no electronic equipment, no text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S059.png",
+      "qa": "Random-item payoff reviewed: trophy catches roof drip, remote physically wedges shutter, single slipper pads wooden pickaxe; hero consistent. Detailed cottage texture continuity remains an assembly review item.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1bSDulFCayg1npkP435nQccApSPERzRb1",
+        "title": "E02-S059.png",
+        "file_name": "E02-S059.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1bSDulFCayg1npkP435nQccApSPERzRb1/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1bSDulFCayg1npkP435nQccApSPERzRb1",
+          "title": "E02-S059.png",
+          "file_name": "E02-S059.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1bSDulFCayg1npkP435nQccApSPERzRb1/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S060",
+      "action": "Overhead close insert in modest cottage: hero's two brown hands with charcoal cuffs tuck ONE SINGLE PINK FUZZY SLIPPER from Image3 around the head of ONE entirely BROWN WOODEN PICKAXE inside OPEN brown backpack, cushioning it to stop rattling. All other inventory out of crop, no pair slipper, no boots replacement, no gray metal tools. Background simple oak floor, soft warm indoor light. Correct bag and pink slipper from inventory reference. One landscape frame, no collage/text.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and lighting as specified, cottage interior. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Overhead close insert in modest cottage: hero's two brown hands with charcoal cuffs tuck ONE SINGLE PINK FUZZY SLIPPER from Image3 around the head of ONE entirely BROWN WOODEN PICKAXE inside OPEN brown backpack, cushioning it to stop rattling. All other inventory out of crop, no pair slipper, no boots replacement, no gray metal tools. Background simple oak floor, soft warm indoor light. Correct bag and pink slipper from inventory reference. One landscape frame, no collage/text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S060.png",
+      "qa": "Random-item payoff reviewed: trophy catches roof drip, remote physically wedges shutter, single slipper pads wooden pickaxe; hero consistent. Detailed cottage texture continuity remains an assembly review item.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1wtAXYcmQ6GGnQ8_SO3WIO1NEvhEqpZOw",
+        "title": "E02-S060.png",
+        "file_name": "E02-S060.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1wtAXYcmQ6GGnQ8_SO3WIO1NEvhEqpZOw/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1wtAXYcmQ6GGnQ8_SO3WIO1NEvhEqpZOw",
+          "title": "E02-S060.png",
+          "file_name": "E02-S060.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1wtAXYcmQ6GGnQ8_SO3WIO1NEvhEqpZOw/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S061",
+      "action": "Comedic medium shot during heavy DAYTIME RAIN just outside village cottage: hero wears ONLY the same PALE BLUE ELASTIC SHOWER CAP from Image3 over his curly hair, while his charcoal hoodie shoulders are thoroughly wet. He looks downward at his soaked sleeves in annoyed realization, hands spread, brown backpack worn. Do not redesign face or hair; curls still visible at cap edge. House oak/cobblestone LEFT, garden seedlings RIGHT, rain streaks, no umbrella or extra clothing. Shower cap exactly matches inventory, no text.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Comedic medium shot during heavy DAYTIME RAIN just outside village cottage: hero wears ONLY the same PALE BLUE ELASTIC SHOWER CAP from Image3 over his curly hair, while his charcoal hoodie shoulders are thoroughly wet. He looks downward at his soaked sleeves in annoyed realization, hands spread, brown backpack worn. Do not redesign face or hair; curls still visible at cap edge. House oak/cobblestone LEFT, garden seedlings RIGHT, rain streaks, no umbrella or extra clothing. Shower cap exactly matches inventory, no text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S061.png",
+      "qa": "Shower cap material/correct count, dry-tinder use and first adult villager design accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1CfImC8k3G6YOs6Jvzebon9ByMQWLQw6E",
+        "title": "E02-S061.png",
+        "file_name": "E02-S061.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1CfImC8k3G6YOs6Jvzebon9ByMQWLQw6E/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1CfImC8k3G6YOs6Jvzebon9ByMQWLQw6E",
+          "title": "E02-S061.png",
+          "file_name": "E02-S061.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1CfImC8k3G6YOs6Jvzebon9ByMQWLQw6E/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S062",
+      "action": "Close overhead INSERT on cottage oak floor: hero's two warm brown hands with charcoal cuffs put a small bundle of DRY TWIGS and a few wood shavings into the ONE PALE BLUE SHOWER CAP used as a flexible WATERPROOF POUCH, elastic edge gathered partly closed. Wet brown backpack lies open beside it, no other starter items visible. No cap on hero's head in crop, no extra cap, no modern plastic bag. Warm light, physically readable dry tinder protection, not magic.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Close overhead INSERT on cottage oak floor: hero's two warm brown hands with charcoal cuffs put a small bundle of DRY TWIGS and a few wood shavings into the ONE PALE BLUE SHOWER CAP used as a flexible WATERPROOF POUCH, elastic edge gathered partly closed. Wet brown backpack lies open beside it, no other starter items visible. No cap on hero's head in crop, no extra cap, no modern plastic bag. Warm light, physically readable dry tinder protection, not magic.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S062.png",
+      "qa": "Shower cap material/correct count, dry-tinder use and first adult villager design accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1u9fMRcLWD_hHisBpNyjOD7vE9xuvnccZ",
+        "title": "E02-S062.png",
+        "file_name": "E02-S062.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1u9fMRcLWD_hHisBpNyjOD7vE9xuvnccZ/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1u9fMRcLWD_hHisBpNyjOD7vE9xuvnccZ",
+          "title": "E02-S062.png",
+          "file_name": "E02-S062.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1u9fMRcLWD_hHisBpNyjOD7vE9xuvnccZ/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S063",
+      "action": "Medium daylight village comedy, on path beside oak/cobblestone cottage and wheat farm: slim hero LEFT holds ONE BROWN BREAD LOAF in right hand near chest. At RIGHT ONE clearly ADULT FEMALE MINECRAFT VILLAGER, fully block-shaped, mature adult proportions, large villager nose, green eyes, simple GREEN APRON over long BROWN ROBE and plain WHITE HEADSCARF, no hat, no glamour makeover. She leans slightly toward him with a friendly interested glance directed toward bread. Hero looks pleasantly surprised, straightens his hoodie collar with left hand. No hearts, no UI or text, no additional villager.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium daylight village comedy, on path beside oak/cobblestone cottage and wheat farm: slim hero LEFT holds ONE BROWN BREAD LOAF in right hand near chest. At RIGHT ONE clearly ADULT FEMALE MINECRAFT VILLAGER, fully block-shaped, mature adult proportions, large villager nose, green eyes, simple GREEN APRON over long BROWN ROBE and plain WHITE HEADSCARF, no hat, no glamour makeover. She leans slightly toward him with a friendly interested glance directed toward bread. Hero looks pleasantly surprised, straightens his hoodie collar with left hand. No hearts, no UI or text, no additional villager.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S063.png",
+      "qa": "Shower cap material/correct count, dry-tinder use and first adult villager design accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "16nW3DaLOhPddNeumI3qCww2gOtznZN7-",
+        "title": "E02-S063.png",
+        "file_name": "E02-S063.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/16nW3DaLOhPddNeumI3qCww2gOtznZN7-/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "16nW3DaLOhPddNeumI3qCww2gOtznZN7-",
+          "title": "E02-S063.png",
+          "file_name": "E02-S063.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/16nW3DaLOhPddNeumI3qCww2gOtznZN7-/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S064",
+      "action": "Same daylight village bread gag: hero LEFT has moved ONE bread loaf to LEFT hand held well out to his LEFT, watching adult female villager on RIGHT hopefully. Adult villager exactly GREEN APRON over BROWN ROBE, WHITE HEADSCARF, classic big nose, green eyes; her head and eyes turn to follow the loaf rather than hero face. Readable sightline to bread, comically obvious hungry interest. Slim hero exact charcoal/orange outfit, backpack worn. No hearts or captions. Same oak cottage and wheat farm.",
+      "prompt": "Edit IMAGE 1 target, using IMAGE 2 as authoritative adult female villager identity. Keep protagonist, his pose holding bread, background and framing unchanged. REPLACE ONLY adult woman villager in right half with the EXACT BLOCK-SHAPED VILLAGER from image2: cuboid/angular head, rectangular white eyes with green pupils, thick straight black brow, LONG RECTANGULAR VILLAGER NOSE, flat planar brown skin, angular white headscarf draped loose WITHOUT rear knot, GREEN apron and BROWN robe, gray cuboid feet. Do NOT humanize or round her face, no exaggerated eyelash glamour, no blush. She looks toward the bread loaf, not hero face, interested in bread. Maintain 2D cel shaded art. Adult mature proportions. No text.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S064.png",
+      "qa": "Bread sequence accepted: adult blocky villager identity consistent with S063, same apron/scarf/nose; loaf handover then departure and hero reaction.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "14mMPBBrKRXwfE4gPaC9AWU4EvnsWfiBM",
+        "title": "E02-S064.png",
+        "file_name": "E02-S064.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/14mMPBBrKRXwfE4gPaC9AWU4EvnsWfiBM/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "14mMPBBrKRXwfE4gPaC9AWU4EvnsWfiBM",
+          "title": "E02-S064.png",
+          "file_name": "E02-S064.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/14mMPBBrKRXwfE4gPaC9AWU4EvnsWfiBM/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      },
+      "rejected_versions": [
+        {
+          "path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S064-rejected-v1.png",
+          "drive": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "1I-myS5EWIkZilgBeluneAvjOfOLx2A8C",
+            "title": "E02-S064-REJECTED-villager-design-drift.png",
+            "file_name": "E02-S064-REJECTED-villager-design-drift.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/1I-myS5EWIkZilgBeluneAvjOfOLx2A8C/view?usp=drivesdk",
+            "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "1I-myS5EWIkZilgBeluneAvjOfOLx2A8C",
+              "title": "E02-S064-REJECTED-villager-design-drift.png",
+              "file_name": "E02-S064-REJECTED-villager-design-drift.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/1I-myS5EWIkZilgBeluneAvjOfOLx2A8C/view?usp=drivesdk",
+              "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+            }
+          },
+          "reason": "Rejected: adult female villager becomes rounded humanized compared to blocky S063, scarf also changes."
+        }
+      ]
+    },
+    {
+      "id": "E02-S065",
+      "action": "Medium daylight bread handover, exact same scene and characters as Image3. Protagonist on LEFT, slight awkward hopeful smile, extends ONE loaf of brown bread toward adult FEMALE VILLAGER on RIGHT. She reaches both blocky hands to take BREAD, looking ONLY at loaf. Copy exact angular cuboid face, long rectangular nose, rectangular green eyes, loose angular WHITE HEADSCARF without knot, GREEN apron, BROWN robe, gray block feet from Image3. No humanized redesign or hearts. Same slim hero, backpack and village path.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium daylight bread handover, exact same scene and characters as Image3. Protagonist on LEFT, slight awkward hopeful smile, extends ONE loaf of brown bread toward adult FEMALE VILLAGER on RIGHT. She reaches both blocky hands to take BREAD, looking ONLY at loaf. Copy exact angular cuboid face, long rectangular nose, rectangular green eyes, loose angular WHITE HEADSCARF without knot, GREEN apron, BROWN robe, gray block feet from Image3. No humanized redesign or hearts. Same slim hero, backpack and village path.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S065.png",
+      "qa": "Bread sequence accepted: adult blocky villager identity consistent with S063, same apron/scarf/nose; loaf handover then departure and hero reaction.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1LK3LglpUXWm6RPoCIBZVUF-LFVBrvfmo",
+        "title": "E02-S065.png",
+        "file_name": "E02-S065.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1LK3LglpUXWm6RPoCIBZVUF-LFVBrvfmo/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1LK3LglpUXWm6RPoCIBZVUF-LFVBrvfmo",
+          "title": "E02-S065.png",
+          "file_name": "E02-S065.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1LK3LglpUXWm6RPoCIBZVUF-LFVBrvfmo/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S066",
+      "action": "Wide daylight comedic reversal with same adult female villager from Image3: she walks away toward RIGHT carrying ONE BROWN BREAD LOAF in both blocky hands, gaze satisfied on bread, not looking back. Protagonist LEFT stands frozen with ONE EMPTY hand still held out after handover, other hand awkwardly at hoodie collar, dawning realization. Exact blocky villager face white draped scarf/green apron/brown robe and exact slim hero. Same cottage LEFT and wheat farm RIGHT. No text or extra character.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Wide daylight comedic reversal with same adult female villager from Image3: she walks away toward RIGHT carrying ONE BROWN BREAD LOAF in both blocky hands, gaze satisfied on bread, not looking back. Protagonist LEFT stands frozen with ONE EMPTY hand still held out after handover, other hand awkwardly at hoodie collar, dawning realization. Exact blocky villager face white draped scarf/green apron/brown robe and exact slim hero. Same cottage LEFT and wheat farm RIGHT. No text or extra character.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S066.png",
+      "qa": "Bread sequence accepted: adult blocky villager identity consistent with S063, same apron/scarf/nose; loaf handover then departure and hero reaction.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1PL9pFurwoEo_KNzSn_KLb2iehwICI21Q",
+        "title": "E02-S066.png",
+        "file_name": "E02-S066.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1PL9pFurwoEo_KNzSn_KLb2iehwICI21Q/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1PL9pFurwoEo_KNzSn_KLb2iehwICI21Q",
+          "title": "E02-S066.png",
+          "file_name": "E02-S066.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1PL9pFurwoEo_KNzSn_KLb2iehwICI21Q/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S067",
+      "action": "Close medium reaction of slim protagonist alone beside village cottage: his hand still pinches orange-lined hoodie collar while other empty palm faces upward where loaf used to be. He looks offscreen RIGHT with flat embarrassed disbelief, half-lidded eyes, mouth slightly open. Brown backpack worn, no bread remains in hands, no female villager needed in crop. Daylight wheat farm and well blur behind, exact approved reference face and slim body. No hearts, text or new props.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Close medium reaction of slim protagonist alone beside village cottage: his hand still pinches orange-lined hoodie collar while other empty palm faces upward where loaf used to be. He looks offscreen RIGHT with flat embarrassed disbelief, half-lidded eyes, mouth slightly open. Brown backpack worn, no bread remains in hands, no female villager needed in crop. Daylight wheat farm and well blur behind, exact approved reference face and slim body. No hearts, text or new props.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S067.png",
+      "qa": "Bread sequence accepted: adult blocky villager identity consistent with S063, same apron/scarf/nose; loaf handover then departure and hero reaction.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "125n0W8ApLglArUvJXDHWVHMeXTmFSShl",
+        "title": "E02-S067.png",
+        "file_name": "E02-S067.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/125n0W8ApLglArUvJXDHWVHMeXTmFSShl/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "125n0W8ApLglArUvJXDHWVHMeXTmFSShl",
+          "title": "E02-S067.png",
+          "file_name": "E02-S067.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/125n0W8ApLglArUvJXDHWVHMeXTmFSShl/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
     }
   ],
-  "next_shot": "E02-S057",
-  "qa_rejected_count": 5
+  "next_shot": "E02-S068",
+  "qa_rejected_count": 6
 }
