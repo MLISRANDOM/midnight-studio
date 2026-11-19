@@ -1,0 +1,42 @@
+name: Analyze an authorized YouTube reference
+on:
+  workflow_dispatch:
+    inputs:
+      video:
+        description: Public YouTube video link, up to 20 minutes
+        required: true
+        type: string
+      authorized:
+        description: I own this video or have permission to process it
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  measure:
+    if: inputs.authorized && github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Load the tested analyzer from PR 22
+        uses: actions/checkout@v4
+        with:
+          ref: 7446b0a2dc3369e850dbc7abbae732502cce61d6
+          path: analyzer-source
+          sparse-checkout: reference
+      - name: Install decoding tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install --require-hashes -r motion/youtube-requirements.txt
+      - name: Measure entire reference and create return link
+        env:
+          SOURCE_VIDEO: ${{ inputs.video }}
+        run: python motion/youtube_job.py "$SOURCE_VIDEO" --authorized --analyzer analyzer-source/reference --output "$RUNNER_TEMP/technique.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reference-measurements
+          path: ${{ runner.temp }}/technique.json
+          retention-days: 1
