@@ -8,7 +8,7 @@ This is an **offline, deterministic analysis component** for Midnight Studio. It
 python reference/video_analysis.py authorized_reference.mp4 --output reference-output --frames 16
 ```
 
-Outputs: `reference-output/analysis.json` and `reference-output/frames/*.jpg`.
+Each run writes `reference-output/analysis.json` and a new set of JPEGs beneath `reference-output/frames/`. Use the relative paths from the report. Each sample records the requested time and the actual display timestamp. Several samples can reference the same picture in sparse footage.
 
 Reports duration, dimensions, framerate, presence of audio, cut timestamps, shot-length distribution, first-ten-second cut count, and a time-spread frame index. Cut detection uses FFmpeg's scene-change threshold; it is heuristic, not human-level video comprehension.
 

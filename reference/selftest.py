@@ -12,7 +12,7 @@ def run(cmd):
 def main():
     with tempfile.TemporaryDirectory() as d:
         p = pathlib.Path(d)
-        # Hard cuts and a real audio track, not downloaded copyrighted video.
+        # Synthetic footage with two hard cuts and no audio.
         for idx, color in enumerate(("red", "blue", "green")):
             run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi",
                  "-i", f"color=c={color}:s=320x180:r=12:d=1",
@@ -28,6 +28,20 @@ def main():
         assert len(report["sampled_frames"]) == 4, report
         assert (p / "out" / "analysis.json").is_file()
         assert all((p / "out" / f["file"]).stat().st_size > 0 for f in report["sampled_frames"])
+        assert report["audio_present"] is False
+        # The last 1 fps picture is displayed for a second after its PTS.
+        run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i",
+             "color=yellow:size=96x64:rate=1:duration=3", "-c:v", "mpeg4", str(p / "slow.mp4")])
+        prior = list(report["sampled_frames"])
+        sparse = analyze(p / "slow.mp4", p / "out", max_frames=16)
+        assert len(sparse["sampled_frames"]) == 16
+        final = sparse["sampled_frames"][-1]
+        assert final["requested_timestamp_seconds"] > 2 and final["timestamp_seconds"] == 2, final
+        assert len({f["file"] for f in sparse["sampled_frames"]}) == 3
+        assert set(f["file"] for f in sparse["sampled_frames"]).isdisjoint(f["file"] for f in prior)
+        assert all((p / "out" / f["file"]).stat().st_size > 0 for f in prior)
+        assert json.loads((p / "out" / "analysis.json").read_text()) == sparse
+        print("PASS: sparse timestamps and safe repeat export")
         print("PASS: video measured, hard cuts detected, sampled full-duration frames")
         print(json.dumps({"duration":report["duration_seconds"],
                           "shots":report["shot_count_estimate"],"frames":len(report["sampled_frames"])}))

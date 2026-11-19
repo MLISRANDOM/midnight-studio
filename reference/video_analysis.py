@@ -5,11 +5,14 @@ Analyzes a LOCAL video file only. It does not interpret plot, identify people,
 or reproduce another creator's story. FFmpeg and ffprobe are required.
 """
 import argparse
+import bisect
 import json
 import math
 import pathlib
 import re
 import subprocess
+import shutil
+import tempfile
 
 MAX_SECONDS = 7200
 MAX_FRAMES = 32
@@ -36,7 +39,7 @@ def probe(video):
 
 def detect_cuts(video, duration, threshold):
     # showinfo timestamps come from actual decoded source frames, not filenames.
-    cmd = ["ffmpeg", "-hide_banner", "-nostdin", "-i", str(video), "-an",
+    cmd = ["ffmpeg", "-hide_banner", "-nostdin", "-i", str(video), "-map", "0:v:0", "-an",
            "-vf", f"select=gt(scene\\,{threshold}),showinfo", "-vsync", "vfr",
            "-f", "null", "-"]
     result = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
@@ -75,15 +78,37 @@ def analyze(video, out, threshold=0.27, max_frames=16):
     out = pathlib.Path(out)
     frames_dir = out / "frames"
     frames_dir.mkdir(parents=True, exist_ok=True)
-    frames = []
-    for i, sec in enumerate(sample_times):
-        path = frames_dir / f"frame_{i+1:03d}.jpg"
-        command(["ffmpeg", "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
-                 "-ss", f"{sec:.3f}", "-i", str(video),
-                 "-frames:v", "1", "-vf", "scale=640:-2", str(path)], timeout=90)
-        if not path.is_file() or path.stat().st_size == 0:
-            raise RuntimeError("Failed to extract reference frame")
-        frames.append({"timestamp_seconds": round(sec, 3), "file": str(path.relative_to(out))})
+    # A requested time can fall after the final presentation timestamp, even
+    # though the last picture remains visible until the container ends.
+    # Index actual decoded pictures and export unique picks together.
+    timing = command(["ffprobe", "-v", "error", "-select_streams", "v:0",
+                      "-show_frames", "-show_entries", "frame=best_effort_timestamp_time",
+                      "-of", "json", str(video)], timeout=900)
+    records = json.loads(timing.stdout).get("frames", [])
+    known = [(float(r["best_effort_timestamp_time"]), i) for i, r in enumerate(records)
+             if r.get("best_effort_timestamp_time") not in (None, "N/A")]
+    if not known:
+        raise ValueError("No timestamped video frames could be decoded")
+    origin = known[0][0]
+    timeline = sorted((stamp - origin, index) for stamp, index in known)
+    stamps = [stamp for stamp, _ in timeline]
+    picks = [timeline[max(0, bisect.bisect_right(stamps, t) - 1)] for t in sample_times]
+    unique = sorted({index for _, index in picks})
+    generation = pathlib.Path(tempfile.mkdtemp(prefix="set-", dir=frames_dir))
+    try:
+        select = "+".join(f"eq(n\\,{index})" for index in unique)
+        command(["ffmpeg", "-hide_banner", "-loglevel", "error", "-nostdin", "-i", str(video),
+                 "-map", "0:v:0", "-an", "-vf", "select=" + select + ",scale=640:-2",
+                 "-vsync", "0", str(generation / "frame_%03d.jpg")], timeout=900)
+        paths = {index: generation / f"frame_{i:03d}.jpg" for i, index in enumerate(unique, 1)}
+        if any(not path.is_file() or path.stat().st_size == 0 for path in paths.values()):
+            raise RuntimeError("Failed to extract selected reference frames")
+        frames = [{"timestamp_seconds": round(stamp, 3), "requested_timestamp_seconds": round(t, 3),
+                   "file": str(paths[index].relative_to(out))}
+                  for t, (stamp, index) in zip(sample_times, picks)]
+    except BaseException:
+        shutil.rmtree(generation)
+        raise
     summary = {
         "schema_version": 1,
         "analysis_type": "measured_editing_properties_not_semantic_video_understanding",
@@ -105,7 +130,11 @@ def analyze(video, out, threshold=0.27, max_frames=16):
             "Use only input footage you are authorized to access"
         ]
     }
-    (out / "analysis.json").write_text(json.dumps(summary, indent=2) + "\n")
+    # Concurrent or interrupted runs cannot replace the pictures behind an existing report.
+    with tempfile.NamedTemporaryFile(mode="w", dir=out, delete=False, encoding="utf-8") as tmp:
+        json.dump(summary, tmp, indent=2)
+        tmp.write("\n")
+    pathlib.Path(tmp.name).replace(out / "analysis.json")
     return summary
 
 def main():
