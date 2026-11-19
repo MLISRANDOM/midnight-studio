@@ -1,0 +1,35 @@
+{
+  "mode": "articulated",
+  "artwork": "survivor",
+  "action": "signal",
+  "dimensions": [
+    960,
+    540
+  ],
+  "requested_fps": 24,
+  "planned_frames": 90,
+  "planned_duration_seconds": 3.75,
+  "encoder": "WebCodecs AVC",
+  "bytes": 586222,
+  "audio": false,
+  "reference": {
+    "kind": "sampled-visual-technique-v1",
+    "duration_seconds": 52.208,
+    "median_shot_seconds": 1.249,
+    "shot_count_estimate": 14,
+    "sample_count": 210,
+    "first_sample": 0,
+    "last_sample": 52.183,
+    "average_luminance": 0.184,
+    "within_shot_change": 0.035
+  },
+  "reference_source": "Measured the selected video file on this device.",
+  "youtube_id": null,
+  "settings": {
+    "beat": "signal",
+    "duration": 3.75,
+    "beatSeconds": 1.249,
+    "light": 0.184,
+    "energy": 0.9375
+  }
+}

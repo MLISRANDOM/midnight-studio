@@ -19,8 +19,8 @@ panel.innerHTML=`
 <div class="headerline"><div><h2>Reference Lab</h2><p class="muted">Find a technique you like. Turn it into an original episode.</p></div><span class="badge">V0.7</span></div>
 <div class="rl-stage"><span class="rl-stage-num">01</span><div><strong>Start with a video</strong><p class="muted">YouTube and TikTok links supported for organizing references.</p></div></div>
 <label>Reference video link<input id="rlUrl" type="url" inputmode="url" placeholder="https://youtube.com/... or https://tiktok.com/..." autocapitalize="off" autocomplete="off"></label>
-<div class="actions"><button type="button" id="rlOpen">Watch reference</button><button type="button" id="rlCopyAnalysis">Copy analysis request for Gemini</button></div>
-<p class="studio-step-tip">Midnight Studio cannot watch or analyze a video from its URL alone. Use Gemini to analyze a supported video link, or watch it yourself. Paste the observations below. TikTok may require uploading the video file in Gemini.</p>
+<div class="actions"><a id="rlMotion" class="button" href="motion/">Open Motion Lab</a><button type="button" id="rlOpen">Watch reference</button><button type="button" id="rlCopyAnalysis">Copy analysis request for Gemini</button></div>
+<p class="studio-step-tip">Motion Lab measures an authorized original from Files or Drive and can link it to a YouTube video. You can also paste your own observations or a Gemini breakdown below.</p>
 <div class="rl-stage"><span class="rl-stage-num">02</span><div><strong>What makes it work?</strong><p class="muted">A few notes are enough. Do not copy characters, dialogue, or the original story.</p></div></div>
 <label>Your notes or Gemini breakdown<textarea id="rlNotes" rows="4" placeholder="What catches your attention? What happens in the video? Describe the hook, editing and visual style."></textarea></label>
 <details class="studio-details"><summary>More specific breakdown <span>Optional</span></summary><div class="studio-detail-body">
@@ -49,6 +49,8 @@ function safeURL(){
  }catch{return null}
 }
 $("rlOpen").onclick=()=>{const url=safeURL();if(!url)return $("rlStatus").textContent="Paste a valid YouTube or TikTok HTTPS link first.";window.open(url,"_blank","noopener,noreferrer")};
+$("rlMotion").addEventListener("click",()=>{const url=safeURL();$("rlMotion").href=url&&!new URL(url).hostname.includes("tiktok")?"motion/?youtube="+encodeURIComponent(url):"motion/";});
+if(location.hash==="#motion-ideas")setTimeout(()=>tab.click(),0);
 function analysisPrompt(){
  const u=safeURL();if(!u)throw Error("Paste a valid YouTube or TikTok video link first.");
  return `Analyze the following video, if the video content is actually accessible to you: ${u}

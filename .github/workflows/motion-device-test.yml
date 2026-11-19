@@ -1,0 +1,33 @@
+name: Motion Lab iPhone verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/iphone-motion-lab]
+    paths:
+      - "motion/*.mjs"
+      - "motion/*.html"
+      - "motion/tests/mobile*"
+      - "motion/tools/prepare_runtime.py"
+      - ".github/workflows/motion-device-test.yml"
+permissions:
+  contents: read
+jobs:
+  mobile-safari:
+    if: github.event.repository.private == false
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare pinned open-source model and runtime
+        run: python3 motion/tools/prepare_runtime.py "$RUNNER_TEMP/runtime"
+      - name: Exercise MobileSafari on an installed iPhone simulator
+        run: python3 motion/tests/mobile_runner.py --engine ios --runtime "$RUNNER_TEMP/runtime" --out "$RUNNER_TEMP/motion-result"
+      - name: Record decoded dimensions and real model timings
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/motion-result/result.json" ]; then
+            echo '## MobileSafari result' >> "$GITHUB_STEP_SUMMARY"
+            echo '~~~json' >> "$GITHUB_STEP_SUMMARY"
+            cat "$RUNNER_TEMP/motion-result/result.json" >> "$GITHUB_STEP_SUMMARY"
+            echo '~~~' >> "$GITHUB_STEP_SUMMARY"
+          fi
