@@ -1,0 +1,374 @@
+{
+  "episode": 2,
+  "working_title": "365 Days in Minecraft",
+  "target_runtime_minutes": 15,
+  "planning_shot_range": [
+    280,
+    330
+  ],
+  "final_shot_count": null,
+  "narration_status": "not_recorded",
+  "storyboard_status": "opening visual beats assigned; full script pending",
+  "native_resolution": [
+    1672,
+    941
+  ],
+  "delivery_resolution": [
+    1920,
+    1080
+  ],
+  "delivery_conform_status": "pending; native images retained",
+  "approved_folder": {
+    "success": true,
+    "id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+    "url": "https://drive.google.com/drive/folders/1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+    "title": "Approved Images",
+    "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
+  },
+  "candidate_folder": {
+    "success": true,
+    "id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+    "url": "https://drive.google.com/drive/folders/1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+    "title": "Candidates - Pending QA",
+    "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
+  },
+  "verified_count": 12,
+  "shots": [
+    {
+      "id": "E02-S001",
+      "action": "Eye-level suspense frame of one green Minecraft Creeper taking a step forward between cubic oak trunks on the RIGHT side of the clearing. Foreground LEFT has only the edge of the hero's charcoal shoulder and backpack, seen from behind, watching. Keep Creeper a few metres away, no explosion yet. Clear geography; daytime as in reference.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Eye-level suspense frame of one green Minecraft Creeper taking a step forward between cubic oak trunks on the RIGHT side of the clearing. Foreground LEFT has only the edge of the hero's charcoal shoulder and backpack, seen from behind, watching. Keep Creeper a few metres away, no explosion yet. Clear geography; daytime as in reference.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S001.png",
+      "qa": "Reviewed generated image against sheet and ending reference: face, slim proportions, clothing, single composition and action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1j5zPlEiNUjvIgjsn2e9Fk1iTB_Wv5OIi",
+        "title": "E02-S001.png",
+        "file_name": "E02-S001.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1j5zPlEiNUjvIgjsn2e9Fk1iTB_Wv5OIi/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1j5zPlEiNUjvIgjsn2e9Fk1iTB_Wv5OIi",
+          "title": "E02-S001.png",
+          "file_name": "E02-S001.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1j5zPlEiNUjvIgjsn2e9Fk1iTB_Wv5OIi/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S002",
+      "action": "Medium-wide full body shot: the protagonist on LEFT of frame cautiously backing away toward LEFT, shoulders raised, wide frightened eyes fixed on the Creeper at RIGHT background. Both hands empty held defensively at chest level. Backpack on both shoulders. Very thin legs and slim reference silhouette; feet visible on damp grass. Same daytime forest clearing.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium-wide full body shot: the protagonist on LEFT of frame cautiously backing away toward LEFT, shoulders raised, wide frightened eyes fixed on the Creeper at RIGHT background. Both hands empty held defensively at chest level. Backpack on both shoulders. Very thin legs and slim reference silhouette; feet visible on damp grass. Same daytime forest clearing.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S002.png",
+      "qa": "Reviewed generated image against sheet and ending reference: face, slim proportions, clothing, single composition and action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "11_ceGSYWO4e98Q9aPKilIrK8Vu_JfIyr",
+        "title": "E02-S002.png",
+        "file_name": "E02-S002.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/11_ceGSYWO4e98Q9aPKilIrK8Vu_JfIyr/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "11_ceGSYWO4e98Q9aPKilIrK8Vu_JfIyr",
+          "title": "E02-S002.png",
+          "file_name": "E02-S002.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/11_ceGSYWO4e98Q9aPKilIrK8Vu_JfIyr/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S003",
+      "action": "Tight cinematic portrait of protagonist looking offscreen RIGHT, terrified recognition, raised uneven brows, huge white eyes, small open mouth, slight sweat. Brown backpack strap on each shoulder, orange hood lining and white drawstrings visible. Blurred cubic green oak forest daylight behind. No monster in this closeup. Match character sheet, not adult muscular realism.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Tight cinematic portrait of protagonist looking offscreen RIGHT, terrified recognition, raised uneven brows, huge white eyes, small open mouth, slight sweat. Brown backpack strap on each shoulder, orange hood lining and white drawstrings visible. Blurred cubic green oak forest daylight behind. No monster in this closeup. Match character sheet, not adult muscular realism.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S003.png",
+      "qa": "Reviewed generated image against sheet and ending reference: face, slim proportions, clothing, single composition and action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1_s8Wgl4V-YDPK82E7pVGltwwlxwAKHRk",
+        "title": "E02-S003.png",
+        "file_name": "E02-S003.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1_s8Wgl4V-YDPK82E7pVGltwwlxwAKHRk/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1_s8Wgl4V-YDPK82E7pVGltwwlxwAKHRk",
+          "title": "E02-S003.png",
+          "file_name": "E02-S003.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1_s8Wgl4V-YDPK82E7pVGltwwlxwAKHRk/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S004",
+      "action": "Wide side view establishing escape geography: hero sprinting toward LEFT toward a shallow grassy dip at far LEFT. Brown backpack still on his shoulders but its top carry loop catches on a short broken low branch sticking RIGHTWARD from trunk at center, abruptly pulling him backward. Hero stretches forward with startled panic. Creeper remains far RIGHT several metres away. One hero, two arms, two legs, no duplication. Clear open space and readable action, daylight block forest.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Wide side view establishing escape geography: hero sprinting toward LEFT toward a shallow grassy dip at far LEFT. Brown backpack still on his shoulders but its top carry loop catches on a short broken low branch sticking RIGHTWARD from trunk at center, abruptly pulling him backward. Hero stretches forward with startled panic. Creeper remains far RIGHT several metres away. One hero, two arms, two legs, no duplication. Clear open space and readable action, daylight block forest.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S004.png",
+      "qa": "Reviewed generated image against sheet and ending reference: face, slim proportions, clothing, single composition and action accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1XwEwyjaWFkTxS8xrjCRNpqFWdtWZXtw8",
+        "title": "E02-S004.png",
+        "file_name": "E02-S004.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1XwEwyjaWFkTxS8xrjCRNpqFWdtWZXtw8/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1XwEwyjaWFkTxS8xrjCRNpqFWdtWZXtw8",
+          "title": "E02-S004.png",
+          "file_name": "E02-S004.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1XwEwyjaWFkTxS8xrjCRNpqFWdtWZXtw8/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S005",
+      "action": "Close side action shot of the hero slipping his narrow shoulders and arms OUT of BOTH backpack straps while lunging LEFT. The brown bag remains caught by its top carry loop on low branch extending right from oak trunk. His frightened face is turned slightly back RIGHT toward approaching threat, no other character needed in crop. Bag is now suspended, empty hands, no seed packet visible. Readable human anatomy and two arms.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Close side action shot of the hero slipping his narrow shoulders and arms OUT of BOTH backpack straps while lunging LEFT. The brown bag remains caught by its top carry loop on low branch extending right from oak trunk. His frightened face is turned slightly back RIGHT toward approaching threat, no other character needed in crop. Bag is now suspended, empty hands, no seed packet visible. Readable human anatomy and two arms.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S005.png",
+      "qa": "Visual review: character retained, slim proportions, escape action readable, bag stays on branch after removal; single landscape composition. Output native 1672x941, delivery resize pending.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1B3mgW8y3Rp7p4UUxymVcznZIydomLkVO",
+        "title": "E02-S005.png",
+        "file_name": "E02-S005.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1B3mgW8y3Rp7p4UUxymVcznZIydomLkVO/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1B3mgW8y3Rp7p4UUxymVcznZIydomLkVO",
+          "title": "E02-S005.png",
+          "file_name": "E02-S005.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1B3mgW8y3Rp7p4UUxymVcznZIydomLkVO/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S006",
+      "action": "Low wide cinematic view from the shallow grassy dip at LEFT. Hero WITHOUT backpack is diving LEFT down into dip, body low, arms stretched to brace landing, face panicked. On top of bank in RIGHT background, brown backpack hangs by top loop on a low branch from tree. A Creeper stands beyond tree at far RIGHT, separated from hero by bank and several metres. Daylight. Direction continues LEFT escape.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Low wide cinematic view from the shallow grassy dip at LEFT. Hero WITHOUT backpack is diving LEFT down into dip, body low, arms stretched to brace landing, face panicked. On top of bank in RIGHT background, brown backpack hangs by top loop on a low branch from tree. A Creeper stands beyond tree at far RIGHT, separated from hero by bank and several metres. Daylight. Direction continues LEFT escape.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S006.png",
+      "qa": "Visual review: character retained, slim proportions, escape action readable, bag stays on branch after removal; single landscape composition. Output native 1672x941, delivery resize pending.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1FWt1u2fbQHk6kWVqql_3SiW-blRRiBYp",
+        "title": "E02-S006.png",
+        "file_name": "E02-S006.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1FWt1u2fbQHk6kWVqql_3SiW-blRRiBYp/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1FWt1u2fbQHk6kWVqql_3SiW-blRRiBYp",
+          "title": "E02-S006.png",
+          "file_name": "E02-S006.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1FWt1u2fbQHk6kWVqql_3SiW-blRRiBYp/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S007",
+      "action": "Wide cinematic explosion viewed from inside the grassy dip: hero WITHOUT backpack crouches low in LOWER LEFT, both hands over head, protected by earthen bank. Distant orange dust-and-block-debris Creeper explosion on higher ground RIGHT behind the tree, no Creeper body visible. Brown backpack stays hanging on surviving low branch LEFT side of damaged tree, away from blast center. No gore. One coherent frame; explosion is background not touching protagonist.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Wide cinematic explosion viewed from inside the grassy dip: hero WITHOUT backpack crouches low in LOWER LEFT, both hands over head, protected by earthen bank. Distant orange dust-and-block-debris Creeper explosion on higher ground RIGHT behind the tree, no Creeper body visible. Brown backpack stays hanging on surviving low branch LEFT side of damaged tree, away from blast center. No gore. One coherent frame; explosion is background not touching protagonist.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S007.png",
+      "qa": "Visual review: character retained, slim proportions, escape action readable, bag stays on branch after removal; single landscape composition. Output native 1672x941, delivery resize pending.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "12VpQalK5Qg6-wZwUmvW6rXwRr37Hob7u",
+        "title": "E02-S007.png",
+        "file_name": "E02-S007.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/12VpQalK5Qg6-wZwUmvW6rXwRr37Hob7u/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "12VpQalK5Qg6-wZwUmvW6rXwRr37Hob7u",
+          "title": "E02-S007.png",
+          "file_name": "E02-S007.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/12VpQalK5Qg6-wZwUmvW6rXwRr37Hob7u/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S008",
+      "action": "Close low shot of protagonist WITHOUT backpack lying face-down in damp grass inside shallow dip, his head lifted slightly, eyes nervously squeezed almost closed, dirt flecks on cheek and charcoal hoodie. Both empty hands near his head. A small angular wood fragment has landed on ground beside his face, no injury or gore. Daylight after explosion, thin dust drifting, no monster.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Close low shot of protagonist WITHOUT backpack lying face-down in damp grass inside shallow dip, his head lifted slightly, eyes nervously squeezed almost closed, dirt flecks on cheek and charcoal hoodie. Both empty hands near his head. A small angular wood fragment has landed on ground beside his face, no injury or gore. Daylight after explosion, thin dust drifting, no monster.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S008.png",
+      "qa": "Visual review: character retained, slim proportions, escape action readable, bag stays on branch after removal; single landscape composition. Output native 1672x941, delivery resize pending.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1QSku8uuZDpeEG74Oab0yxjSIZiN-ljlb",
+        "title": "E02-S008.png",
+        "file_name": "E02-S008.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1QSku8uuZDpeEG74Oab0yxjSIZiN-ljlb/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1QSku8uuZDpeEG74Oab0yxjSIZiN-ljlb",
+          "title": "E02-S008.png",
+          "file_name": "E02-S008.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1QSku8uuZDpeEG74Oab0yxjSIZiN-ljlb/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S009",
+      "action": "Wide aftermath shot from beside shallow grassy dip. Protagonist WITHOUT backpack in LOWER LEFT cautiously peeks above the bank, stunned. Tree near center still stands with brown backpack hanging on its low branch toward LEFT; in far RIGHT clearing is a newly blasted dirt crater, drifting dust, a few angular wood fragments. NO Creeper remains and NO fire. Same daylight blue sky and blocky forest, reference identity exact, two arms.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Wide aftermath shot from beside shallow grassy dip. Protagonist WITHOUT backpack in LOWER LEFT cautiously peeks above the bank, stunned. Tree near center still stands with brown backpack hanging on its low branch toward LEFT; in far RIGHT clearing is a newly blasted dirt crater, drifting dust, a few angular wood fragments. NO Creeper remains and NO fire. Same daylight blue sky and blocky forest, reference identity exact, two arms.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S009.png",
+      "qa": "Character/action visually accepted; S011 inventory exactly five with one slipper; no rejected props. Native 1672x941, 1080p conform pending.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1333-x2FZheWuK7gZcRKF4GJNXXCAdUOH",
+        "title": "E02-S009.png",
+        "file_name": "E02-S009.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1333-x2FZheWuK7gZcRKF4GJNXXCAdUOH/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1333-x2FZheWuK7gZcRKF4GJNXXCAdUOH",
+          "title": "E02-S009.png",
+          "file_name": "E02-S009.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1333-x2FZheWuK7gZcRKF4GJNXXCAdUOH/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S010",
+      "action": "Medium full-body shot: very slim hero stands on tiptoe next to oak trunk, reaching up with BOTH hands to lift his brown backpack carry loop OFF its low branch. It is after the blast: light dust and debris on grass, faint dust cloud beyond trees. Face nervous, bag intact with tiny soot smudge only. No monster, no tools. Backpack is NOT being worn while retrieving. Single moment, daylight.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium full-body shot: very slim hero stands on tiptoe next to oak trunk, reaching up with BOTH hands to lift his brown backpack carry loop OFF its low branch. It is after the blast: light dust and debris on grass, faint dust cloud beyond trees. Face nervous, bag intact with tiny soot smudge only. No monster, no tools. Backpack is NOT being worn while retrieving. Single moment, daylight.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S010.png",
+      "qa": "Character/action visually accepted; S011 inventory exactly five with one slipper; no rejected props. Native 1672x941, 1080p conform pending.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "10T-WZ93vhanfi7z_s56aRSL3P_8tIrs5",
+        "title": "E02-S010.png",
+        "file_name": "E02-S010.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/10T-WZ93vhanfi7z_s56aRSL3P_8tIrs5/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "10T-WZ93vhanfi7z_s56aRSL3P_8tIrs5",
+          "title": "E02-S010.png",
+          "file_name": "E02-S010.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/10T-WZ93vhanfi7z_s56aRSL3P_8tIrs5/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S011",
+      "action": "Cinematic overhead insert of EXACTLY FIVE random items placed separately on damp grass beside an open EMPTY brown backpack: ONE cream paper flower-seed packet with green top/bottom and simple sunflower illustration matching Image 3, ONE black batteryless TV remote, ONE single pink fuzzy slipper (not pair), ONE tiny gold trophy cup on a black rectangular base, ONE pale-blue elastic shower cap. No other objects, no food/water/tools. Hero's two warm brown hands at left/right edges, charcoal cuffs. No readable text on seed packet, trophy base facing away so no lettering visible. Distinct shapes and generous separation, 16:9 landscape, not a collage. Image 3 is SEED PACKET reference only; keep it identical.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Cinematic overhead insert of EXACTLY FIVE random items placed separately on damp grass beside an open EMPTY brown backpack: ONE cream paper flower-seed packet with green top/bottom and simple sunflower illustration matching Image 3, ONE black batteryless TV remote, ONE single pink fuzzy slipper (not pair), ONE tiny gold trophy cup on a black rectangular base, ONE pale-blue elastic shower cap. No other objects, no food/water/tools. Hero's two warm brown hands at left/right edges, charcoal cuffs. No readable text on seed packet, trophy base facing away so no lettering visible. Distinct shapes and generous separation, 16:9 landscape, not a collage. Image 3 is SEED PACKET reference only; keep it identical.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S011.png",
+      "qa": "Character/action visually accepted; S011 inventory exactly five with one slipper; no rejected props. Native 1672x941, 1080p conform pending.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1STYoUm8W8nFdKB-6FgDofEeYTe7DvFS0",
+        "title": "E02-S011.png",
+        "file_name": "E02-S011.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1STYoUm8W8nFdKB-6FgDofEeYTe7DvFS0/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1STYoUm8W8nFdKB-6FgDofEeYTe7DvFS0",
+          "title": "E02-S011.png",
+          "file_name": "E02-S011.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1STYoUm8W8nFdKB-6FgDofEeYTe7DvFS0/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S012",
+      "action": "Medium comedic reaction shot in damp blocky forest clearing, hero very slim kneeling by open brown backpack on grass. Holding ONE black TV remote in right hand aimed skeptically at empty forest, thumb pressing button, left hand lifts a SINGLE pink fuzzy slipper at chest level. His expression flat disbelief after panic. Three remaining items visible beside bag: sunflower seed packet, tiny golden trophy, pale blue shower cap. Exactly five items total and no other props. No Creeper, no weapons, no magical beam, no text. The joke is a useless remote. Reference sheet face exact.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium comedic reaction shot in damp blocky forest clearing, hero very slim kneeling by open brown backpack on grass. Holding ONE black TV remote in right hand aimed skeptically at empty forest, thumb pressing button, left hand lifts a SINGLE pink fuzzy slipper at chest level. His expression flat disbelief after panic. Three remaining items visible beside bag: sunflower seed packet, tiny golden trophy, pale blue shower cap. Exactly five items total and no other props. No Creeper, no weapons, no magical beam, no text. The joke is a useless remote. Reference sheet face exact.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S012.png",
+      "qa": "Character/action visually accepted; S011 inventory exactly five with one slipper; no rejected props. Native 1672x941, 1080p conform pending.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1_HU5DlAEjNDRTvHSnAzKXlghDYw--9sc",
+        "title": "E02-S012.png",
+        "file_name": "E02-S012.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1_HU5DlAEjNDRTvHSnAzKXlghDYw--9sc/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1_HU5DlAEjNDRTvHSnAzKXlghDYw--9sc",
+          "title": "E02-S012.png",
+          "file_name": "E02-S012.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1_HU5DlAEjNDRTvHSnAzKXlghDYw--9sc/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    }
+  ]
+}
