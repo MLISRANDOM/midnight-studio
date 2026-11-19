@@ -14,8 +14,11 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Verify FFmpeg installation
-        run: ffmpeg -version
+      - name: Install and verify FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          ffmpeg -version
       - name: Syntax and end-to-end test with synthetic video
         run: |
           python -m py_compile reference/video_analysis.py reference/selftest.py
