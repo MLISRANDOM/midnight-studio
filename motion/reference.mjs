@@ -165,6 +165,10 @@ export function readReport(raw) {
       shot_count_estimate:raw.shot_count_estimate,sample_count:raw.sample_count,average_luminance:raw.average_luminance,
       within_shot_change:raw.within_shot_change};
   }
+  if (raw.kind === "portable-shot-timing-v1" && raw.shot_span_seconds_by_third) {
+    return {kind:raw.kind, ...timingFields(raw),duration_seconds:raw.duration_seconds,
+      median_shot_seconds:raw.median_shot_seconds,shot_count_estimate:raw.shot_count_estimate};
+  }
   if (raw.schema_version !== 1 || raw.analysis_type !== "measured_editing_properties_not_semantic_video_understanding" ||
       !Array.isArray(raw.shots) || raw.shots.length !== raw.shot_count_estimate ||
       !raw.shots.every((shot,i) => Number.isFinite(shot?.start_seconds) && Number.isFinite(shot?.end_seconds) &&
@@ -174,6 +178,19 @@ export function readReport(raw) {
   return {kind: "ffmpeg-scene-pass", ...timingFields(raw, raw.shots.slice(1).map(s=>s.start_seconds)),
     duration_seconds: raw.duration_seconds, median_shot_seconds: raw.median_shot_seconds,
     shot_count_estimate: raw.shot_count_estimate};
+}
+
+export function referenceLink(page, id, raw) {
+  if(!/^[A-Za-z0-9_-]{11}$/.test(id)) throw Error("A valid YouTube reference is required.");
+  const compact=readReport(raw);
+  if(compact.kind==="ffmpeg-scene-pass")compact.kind="portable-shot-timing-v1";
+  compact.youtube_id=id;
+  if(["YouTube public stream","Blender Foundation downloadable master"].includes(raw.source_route))
+    compact.source_route=raw.source_route;
+  const url=new URL(page);url.search="";
+  const text=JSON.stringify({id,report:compact});
+  url.hash="reference="+btoa(text).replaceAll("+","-").replaceAll("/","_").replace(/=+$/,"");
+  return url.href;
 }
 
 export function direction(report) {

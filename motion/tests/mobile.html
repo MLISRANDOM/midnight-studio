@@ -1,6 +1,10 @@
-<!doctype html>
-<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Motion Lab browser verification</title>
-<p id="log" role="status">Starting browser verification…</p>
-<iframe title="Motion Lab under test" style="width:100%;height:75vh;border:0"></iframe>
-<script type="module" src="mobile-suite.mjs"></script></html>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Device check · Midnight Studio</title><link rel="stylesheet" href="../lab.css"></head>
+<body><header><a href="../">Motion Lab</a><span>Device check</span></header>
+<main><section class="workspace"><h1>Check this device</h1>
+<p>Test portrait export, reference measurements and neural animation using a built-in character. The first neural render downloads about 33 MB. Keep this page visible until the check finishes.</p>
+<button class="primary" id="start">Run device check</button><p id="log" role="status" aria-live="polite">Ready.</p>
+<div id="downloads" class="buttons"></div><p id="shareStatus" role="status"></p>
+<iframe hidden title="Motion Lab under test" style="width:100%;height:72vh;border:0;margin-top:16px"></iframe>
+</section></main><script type="module" src="mobile-suite.mjs"></script></body></html>

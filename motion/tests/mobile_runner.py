@@ -66,9 +66,9 @@ def main():
     args.out.mkdir(parents=True,exist_ok=True)
     done=threading.Event()
     server=serve(args.out,args.runtime,done)
-    url=f"http://127.0.0.1:{server.server_port}/motion/tests/mobile.html"
+    url=f"http://127.0.0.1:{server.server_port}/motion/tests/mobile.html?collect=1"
     if not args.public_model:
-        url+="?runtime=local"
+        url+="&runtime=local"
     udid=None
     try:
         if args.engine=="ios":

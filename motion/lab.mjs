@@ -1,4 +1,4 @@
-import {analyzeVideo,readReport,youtubeId} from "./reference.mjs";
+import {analyzeVideo,readReport,referenceLink,youtubeId} from "./reference.mjs";
 import {beats,framings,makeSheetRig,paintScene,paintShot,scenePlan,SHEET_SHA,shotPlan,stationScene} from "./rig.mjs";
 import {canvasOf,encodeMP4,fitImage,neuralFrames,readImage} from "./video.mjs";
 import {stored} from "./storage.mjs";
@@ -109,7 +109,13 @@ function showReport(raw,source,id) {
   else rows.push(["Coverage","Full FFmpeg scene pass"]);
   $("stats").replaceChildren(...rows.flatMap(([label,v])=>{const dt=document.createElement("dt"),dd=document.createElement("dd");dt.textContent=label;dd.textContent=v;return [dt,dd];}));
   jsonFile("saveReport",raw,"reference-technique.json");
+  $("portableRef").hidden=!id;
+  if(id)$("profileLink").href=referenceLink(location.href,id,raw);
 }
+$("copyRef").onclick=async()=>{
+  try{await navigator.clipboard.writeText($("profileLink").href);$("refStatus").textContent="Measurement link copied.";}
+  catch{$("refStatus").textContent="Press and hold Open measurement link, then choose Copy Link.";}
+};
 for(const id of ["youtube","referenceFile","master","reportFile"])$(id).addEventListener(id==="youtube"||id==="master"?"input":"change",()=>{
   removeReport();$("refStatus").textContent="";
 });
@@ -215,7 +221,7 @@ function applyHandoff(){
     if(!/^[A-Za-z0-9_-]{1,4000}$/.test(token))throw Error("Invalid reference return link.");
     const payload=JSON.parse(atob(token.replace(/-/g,"+").replace(/_/g,"/")));
     if(!/^[A-Za-z0-9_-]{11}$/.test(payload.id)||payload.report?.youtube_id!==payload.id)throw Error("Invalid reference ID.");
-    showReport(payload.report,"Imported the GitHub job’s complete video measurements.",payload.id);
+    showReport(payload.report,"Imported saved whole-video measurements from this link.",payload.id);
     $("youtube").value="https://youtu.be/"+payload.id;
     stored("youtube:"+payload.id,payload.report).catch(()=>{});
   }catch(e){$("refStatus").textContent=e.message;}

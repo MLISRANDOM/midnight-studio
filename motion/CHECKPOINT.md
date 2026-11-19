@@ -20,6 +20,12 @@ The six-check Chromium suite exercises the editor, applies different shot length
 
 The next device proof is a physical iPhone completing its first neural export and saving it through the native Drive sheet. General YouTube delivery remains subject to the video host. Free-form prompt-driven motion, automatic recognition of reference actions, and unattended private Drive uploads are open. Existing episode ledgers and episode assets retain their independent production status.
 
+### Take measured references between sessions
+
+After analyzing an authorized movie with a YouTube ID, use **Copy measurement link**. Opening that link in a fresh browser restores the numeric profile. The payload includes the video ID, aggregate measurements, and an optional recognized source attribution. Source footage, private filenames, individual frames and full cut lists stay out of the link. Local regression tests used Blender’s actual 52-second master and a second clean browser.
+
+[Check this device](https://mlisrandom.github.io/midnight-studio/motion/tests/mobile.html) runs the public acceptance test with a built-in synthetic character. It saves three playable MP4s and a JSON report on the device. The report contains actual dimensions, decoder results, visible cut checks, inference time, total neural render time and native file-sharing capability. Tap the scene’s share button to exercise the native iOS destination picker. The test uses a separate database. Its page sends no test footage or reports to a server. The automated simulator version posts only to its own loopback runner.
+
 ## November 18 checkpoint
 
 Paused at the owner's request on November 18, 2026 (Pacific). Resume from this branch and the current PR #22 head. This is a development build. The existing Pages deployment and episode production folders were separate from this work.

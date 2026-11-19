@@ -2,6 +2,7 @@
 const frame=document.querySelector("iframe"), log=document.querySelector("#log");
 const browserParams=new URLSearchParams(location.search);
 const local=browserParams.get("runtime")==="local" ? "?runtime=local" : "";
+const collect=location.hostname==="127.0.0.1" && browserParams.get("collect")==="1";
 const checks=[],files={};
 const status=text=>{log.textContent=text;console.log(text);};
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -12,7 +13,7 @@ async function until(f,what,ms=60000){
 }
 const el=id=>frame.contentDocument.getElementById(id);
 async function enter(hash=""){
-  frame.src="../index.html"+(local ? local+"&" : "?")+"visit="+Date.now()+hash;
+  frame.src="../index.html"+(local ? local+"&" : "?")+"device-check=1&visit="+Date.now()+hash;
   await new Promise((resolve,reject)=>{let timer=setTimeout(()=>reject(Error("Navigation timed out")),20000);
     frame.onload=()=>{clearTimeout(timer);resolve();};});
   await until(()=>el("estimate")?.textContent.length>0,"Motion Lab startup");
@@ -32,15 +33,27 @@ async function reportOutput(){
   assert(!el("result").hidden,el("status").textContent);
   return {blob:await getBlob("download"), receipt:await (await getBlob("saveReceipt")).text().then(JSON.parse)};
 }
+function mediaEvent(video,name,work) {
+  return new Promise((resolve,reject)=>{
+    const finish=error=>{
+      clearTimeout(timer);video.removeEventListener(name,done);video.removeEventListener("error",failed);
+      if(error)reject(error);else resolve();
+    };
+    const done=()=>finish(),failed=()=>finish(Error("Exported file did not decode."));
+    const timer=setTimeout(()=>finish(Error("Timed out waiting for "+name+" during MP4 decode.")),20000);
+    video.addEventListener(name,done,{once:true});video.addEventListener("error",failed,{once:true});
+    try{work();}catch(e){finish(e);}
+  });
+}
 async function decoded(blob, samples=[]){
   const v=document.createElement("video");v.playsInline=true;v.muted=true;v.preload="auto";
   const src=URL.createObjectURL(blob);
   try{
-    await new Promise((resolve,reject)=>{v.onloadeddata=resolve;v.onerror=()=>reject(Error("Exported file did not decode."));v.src=src;v.load();});
+    await mediaEvent(v,"loadeddata",()=>{v.src=src;v.load();});
     const canvas=document.createElement("canvas");canvas.width=48;canvas.height=64;
     const ctx=canvas.getContext("2d",{willReadFrequently:true}),images=[];
     for(const time of samples){
-      await new Promise((resolve,reject)=>{v.onseeked=resolve;v.onerror=reject;v.currentTime=time;});
+      await mediaEvent(v,"seeked",()=>{v.currentTime=time;});
       ctx.drawImage(v,0,0,48,64);images.push(ctx.getImageData(0,0,48,64).data);
     }
     const differences=images.slice(1).map((image,i)=>image.reduce((sum,x,k)=>sum+Math.abs(x-images[i][k]),0)/(48*64*3));
@@ -58,10 +71,31 @@ async function pose(raised){
   return new File([await new Promise(r=>c.toBlob(r,"image/png"))],raised?"signal.png":"rest.png",{type:"image/png"});
 }
 async function privatePost(path,body){
-  const response=await fetch("/__motion_test/"+path,{method:"POST",body});
-  if(!response.ok)throw Error("Test server rejected "+path);
+  if(collect){
+    const response=await fetch("/__motion_test/"+path,{method:"POST",body});
+    if(!response.ok)throw Error("Test server rejected "+path);
+    return;
+  }
+  const blob=body instanceof Blob?body:new Blob([body],{type:"application/json"});
+  const labels={"portrait.mp4":"Portrait MP4","scene.mp4":"Edited scene MP4","neural.mp4":"Neural MP4","result.json":"Save device report"};
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="midnight-device-"+path;a.className="button";a.textContent=labels[path];
+  document.querySelector("#downloads").append(a);
+  if(path==="scene.mp4"){
+    const file=new File([blob],a.download,{type:"video/mp4"});
+    if(navigator.canShare?.({files:[file]})){
+      const button=document.createElement("button");button.textContent="Share scene to Drive";
+      button.onclick=async()=>{
+        try{await navigator.share({files:[file],title:"Midnight Studio device check"});
+          document.querySelector("#shareStatus").textContent="Share sheet closed. Check the saved file in Drive.";}
+        catch(e){if(e.name!=="AbortError")document.querySelector("#shareStatus").textContent=e.message;}
+      };
+      document.querySelector("#downloads").append(button);
+    }
+  }
 }
 async function suite(){
+  // Use a separate database and a fresh fixture on every physical-device run.
+  await new Promise((resolve,reject)=>{const req=indexedDB.deleteDatabase("midnight-motion-verification-v1");req.onsuccess=resolve;req.onerror=()=>reject(req.error);req.onblocked=()=>reject(Error("Close other device checks, then reload."));});
   await enter();
   status("Rendering portrait articulation");select("ratio","tall");select("beat","recoil");
   await action("render");const rig=await reportOutput();const decodedRig=await decoded(rig.blob);
@@ -75,8 +109,15 @@ async function suite(){
   await action("measure");assert(!el("refResult").hidden,el("refStatus").textContent);
   const measured=JSON.parse(await (await getBlob("saveReport")).text());
   assert(measured.sample_count>2&&measured.last_sample>decodedRig.duration-.08,"Reference did not cover the end");
+  const portable=new URL(el("profileLink").href);
+  const payload=JSON.parse(atob(portable.hash.slice(11).replace(/-/g,"+").replace(/_/g,"/")));
+  assert(!portable.search&&payload.report.youtube_id===id&&!JSON.stringify(payload).includes("original.mp4")&&
+    !("cut_times" in payload.report),"Portable link includes unrelated source details");
   await enter();typeValue("youtube","https://youtu.be/"+id);await action("measure");
   assert(el("refStatus").textContent.includes("Reused"),"Paired reference was not loaded from this device");checks.push("local source, whole-duration sampling, paired URL reopening");
+  await enter(portable.hash);assert(!el("refResult").hidden&&el("youtube").value.endsWith(id),"Portable link did not reopen");
+  assert(JSON.parse(await (await getBlob("saveReport")).text()).sample_count===measured.sample_count,"Portable sample count changed");
+  checks.push("portable measurements from a local file, with no source media");
   el("clearRef").click();upload("referenceFile",new File([rig.blob],"cancel-me.mp4",{type:"video/mp4"}));
   el("measure").click();el("cancel").click();await until(()=>el("cancel").hidden,"cancel");
   assert(el("refResult").hidden&&el("refStatus").textContent.includes("Canceled"),"Cancelled work published results");checks.push("reference cancellation");
@@ -104,16 +145,25 @@ async function suite(){
   status("Running RIFE on two original poses");select("art","pair");select("ratio","tall");
   upload("firstPose",await pose(false));await until(()=>el("cancel").hidden,"first pose");
   upload("lastPose",await pose(true));await until(()=>!el("neural").disabled,"second pose");
-  await action("neural",210000);const neural=await reportOutput();const decodedNeural=await decoded(neural.blob);
+  const started=performance.now();
+  await action("neural",210000);const totalMs=Math.round(performance.now()-started);
+  const neural=await reportOutput();const decodedNeural=await decoded(neural.blob);
   assert(neural.receipt.synthesized_frames===9&&decodedNeural.w===180&&decodedNeural.h===320,"Incorrect neural portrait output");
-  await privatePost("neural.mp4",neural.blob);files.neural={...decodedNeural,encoder:neural.receipt.encoder,frames:neural.receipt.synthesized_frames,inference_ms:neural.receipt.inference_ms};
+  await privatePost("neural.mp4",neural.blob);files.neural={...decodedNeural,encoder:neural.receipt.encoder,frames:neural.receipt.synthesized_frames,inference_ms:neural.receipt.inference_ms,total_render_ms:totalMs};
   checks.push("actual RIFE inference, two user poses, MP4 decode");
-  return {ok:true,checks,files,userAgent:navigator.userAgent};
+  const file=new File([edit.blob],"midnight-device-scene.mp4",{type:"video/mp4"});
+  return {ok:true,checks,files,userAgent:navigator.userAgent,checked_at:new Date().toISOString(),
+    can_share_mp4:Boolean(navigator.canShare?.({files:[file]}))};
 }
-try {
-  const result=await suite();await privatePost("result.json",JSON.stringify(result));status("Passed "+checks.length+" checks.");
-}catch(e){
-  const failure={ok:false,error:String(e?.message||e),stage:log.textContent,checks,files,userAgent:navigator.userAgent,
-    appStatus:el("status")?.textContent,refStatus:el("refStatus")?.textContent};
-  await privatePost("result.json",JSON.stringify(failure));status("Failed: "+failure.error);
+async function start(){
+  document.querySelector("#start").disabled=true;frame.hidden=false;
+  try {
+    const result=await suite();await privatePost("result.json",JSON.stringify(result,null,2));status("Passed "+checks.length+" checks.");
+  }catch(e){
+    const failure={ok:false,error:String(e?.message||e),stage:log.textContent,checks,files,userAgent:navigator.userAgent,
+      appStatus:el("status")?.textContent,refStatus:el("refStatus")?.textContent};
+    await privatePost("result.json",JSON.stringify(failure,null,2));status("Failed: "+failure.error);
+  }
 }
+document.querySelector("#start").onclick=start;
+if(collect)start();
