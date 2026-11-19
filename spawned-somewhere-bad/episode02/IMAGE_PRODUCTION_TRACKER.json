@@ -32,7 +32,7 @@
     "title": "Candidates - Pending QA",
     "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
   },
-  "verified_count": 12,
+  "verified_count": 23,
   "shots": [
     {
       "id": "E02-S001",
@@ -369,6 +369,345 @@
           "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
         }
       }
+    },
+    {
+      "id": "E02-S013",
+      "action": "Wide scene later the same day, hero very slim stands at LEFT studying a cubic oak trunk at RIGHT, holding a small ordinary rough gray stone in right hand near the bark, left hand on hip. Closed brown backpack worn. Thoughtful uncertain expression, trying real-life tool logic. No tools, no Creeper, no loose items. Daylight forest, subtle damp grass.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Wide scene later the same day, hero very slim stands at LEFT studying a cubic oak trunk at RIGHT, holding a small ordinary rough gray stone in right hand near the bark, left hand on hip. Closed brown backpack worn. Thoughtful uncertain expression, trying real-life tool logic. No tools, no Creeper, no loose items. Daylight forest, subtle damp grass.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S013.png",
+      "qa": "Identity, slim silhouette, wardrobe and ordered real-life-tool attempts accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1BrqXd8OYSlf3kS9-ugMSvB_Olpo9IhfV",
+        "title": "E02-S013.png",
+        "file_name": "E02-S013.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1BrqXd8OYSlf3kS9-ugMSvB_Olpo9IhfV/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1BrqXd8OYSlf3kS9-ugMSvB_Olpo9IhfV",
+          "title": "E02-S013.png",
+          "file_name": "E02-S013.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1BrqXd8OYSlf3kS9-ugMSvB_Olpo9IhfV/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S014",
+      "action": "Medium side view hero at LEFT using a rough gray stone in his right hand to scrape a long narrow scratch into oak bark at RIGHT, left hand steady on trunk. Eyebrows knitted frustrated, mouth compressed. Tree intact, no Minecraft crack grid yet. No wounds; rock is poor tool. Backpack worn, exact slim character.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium side view hero at LEFT using a rough gray stone in his right hand to scrape a long narrow scratch into oak bark at RIGHT, left hand steady on trunk. Eyebrows knitted frustrated, mouth compressed. Tree intact, no Minecraft crack grid yet. No wounds; rock is poor tool. Backpack worn, exact slim character.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S014.png",
+      "qa": "Identity, slim silhouette, wardrobe and ordered real-life-tool attempts accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1i-BVZr-XHmXztK9F36Wcw2XhPaiSXFV1",
+        "title": "E02-S014.png",
+        "file_name": "E02-S014.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1i-BVZr-XHmXztK9F36Wcw2XhPaiSXFV1/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1i-BVZr-XHmXztK9F36Wcw2XhPaiSXFV1",
+          "title": "E02-S014.png",
+          "file_name": "E02-S014.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1i-BVZr-XHmXztK9F36Wcw2XhPaiSXFV1/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S015",
+      "action": "Medium-wide hero very slim at LEFT gripping a LOW THIN TREE BRANCH with both hands and pulling, one black sneaker braced against oak trunk RIGHT. Branch stubborn and intact, slight flex only. Comedic desperate strain, face same as sheet, no bulky muscles. Brown backpack worn. No fallen block, no axe or weapon. Bright forest.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium-wide hero very slim at LEFT gripping a LOW THIN TREE BRANCH with both hands and pulling, one black sneaker braced against oak trunk RIGHT. Branch stubborn and intact, slight flex only. Comedic desperate strain, face same as sheet, no bulky muscles. Brown backpack worn. No fallen block, no axe or weapon. Bright forest.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S015.png",
+      "qa": "Identity, slim silhouette, wardrobe and ordered real-life-tool attempts accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1CW_zArep4CSKxile_FJ36LC0hsCLP0jU",
+        "title": "E02-S015.png",
+        "file_name": "E02-S015.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1CW_zArep4CSKxile_FJ36LC0hsCLP0jU/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1CW_zArep4CSKxile_FJ36LC0hsCLP0jU",
+          "title": "E02-S015.png",
+          "file_name": "E02-S015.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1CW_zArep4CSKxile_FJ36LC0hsCLP0jU/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S016",
+      "action": "Medium close side shot hero delivers one frustrated bare RIGHT fist punch against intact oak trunk at RIGHT, left hand clenched down by hip, eyebrows angry. Knuckles touch bark. No blood, no injury, no impact text or comic lettering. Single fist and correct arms; slim body. Backpack worn. One first punch, tree barely beginning a tiny crack.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium close side shot hero delivers one frustrated bare RIGHT fist punch against intact oak trunk at RIGHT, left hand clenched down by hip, eyebrows angry. Knuckles touch bark. No blood, no injury, no impact text or comic lettering. Single fist and correct arms; slim body. Backpack worn. One first punch, tree barely beginning a tiny crack.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S016.png",
+      "qa": "Identity, slim silhouette, wardrobe and ordered real-life-tool attempts accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1W-mCl5BHzAM25IDndDjB6w2jGP71KK59",
+        "title": "E02-S016.png",
+        "file_name": "E02-S016.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1W-mCl5BHzAM25IDndDjB6w2jGP71KK59/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1W-mCl5BHzAM25IDndDjB6w2jGP71KK59",
+          "title": "E02-S016.png",
+          "file_name": "E02-S016.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1W-mCl5BHzAM25IDndDjB6w2jGP71KK59/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S017",
+      "action": "Medium close reaction after one punch: hero looks down at his uninjured RIGHT hand held up palm inward beside his face, surprised confused expression, left hand lightly touches his right knuckles. Oak trunk on RIGHT edge with one tiny crack. Small gray stone lies on grass below. Backpack worn. No blood, no injury, no glow, no text. The discovery is that punching did not hurt. Daytime forest.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium close reaction after one punch: hero looks down at his uninjured RIGHT hand held up palm inward beside his face, surprised confused expression, left hand lightly touches his right knuckles. Oak trunk on RIGHT edge with one tiny crack. Small gray stone lies on grass below. Backpack worn. No blood, no injury, no glow, no text. The discovery is that punching did not hurt. Daytime forest.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S017.png",
+      "qa": "Character and tree-punch discovery accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1MYQWMH7ueIXxHV45qVPCe_sqGheBPWJV",
+        "title": "E02-S017.png",
+        "file_name": "E02-S017.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1MYQWMH7ueIXxHV45qVPCe_sqGheBPWJV/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1MYQWMH7ueIXxHV45qVPCe_sqGheBPWJV",
+          "title": "E02-S017.png",
+          "file_name": "E02-S017.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1MYQWMH7ueIXxHV45qVPCe_sqGheBPWJV/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S018",
+      "action": "Medium side view of hero on LEFT punching a cubic oak trunk at RIGHT with bare RIGHT fist again, delighted cautious discovery on face. A distinctly Minecraft-like black fracture web now spreads across ONE SINGLE SQUARE bottom trunk block just above ground. The rest of trunk still continuous and intact. His LEFT hand relaxed near hip, body very slim, no muscles. Backpack worn. No tools, no damage to hands.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium side view of hero on LEFT punching a cubic oak trunk at RIGHT with bare RIGHT fist again, delighted cautious discovery on face. A distinctly Minecraft-like black fracture web now spreads across ONE SINGLE SQUARE bottom trunk block just above ground. The rest of trunk still continuous and intact. His LEFT hand relaxed near hip, body very slim, no muscles. Backpack worn. No tools, no damage to hands.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S018.png",
+      "qa": "Character and tree-punch discovery accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1bC7U5T7WgkKOvIsW2B1utx6PTzQvmANc",
+        "title": "E02-S018.png",
+        "file_name": "E02-S018.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1bC7U5T7WgkKOvIsW2B1utx6PTzQvmANc/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1bC7U5T7WgkKOvIsW2B1utx6PTzQvmANc",
+          "title": "E02-S018.png",
+          "file_name": "E02-S018.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1bC7U5T7WgkKOvIsW2B1utx6PTzQvmANc/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S019",
+      "action": "Wide discovery shot: one small collectible cube of OAK LOG floats just above grass in foreground between hero and tree. Its top has concentric wood rings, side bark. The tree is MISSING its bottom one-metre trunk block so UPPER TRUNK AND CUBIC CANOPY FLOAT unsupported, a clearly visible air gap above grass. Hero stands LEFT looking down at the tiny log cube, hand tentatively reaching toward it, surprised smile. Brown backpack worn, gray stone discarded on grass. No axe, no captions, no magical particles.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Wide discovery shot: one small collectible cube of OAK LOG floats just above grass in foreground between hero and tree. Its top has concentric wood rings, side bark. The tree is MISSING its bottom one-metre trunk block so UPPER TRUNK AND CUBIC CANOPY FLOAT unsupported, a clearly visible air gap above grass. Hero stands LEFT looking down at the tiny log cube, hand tentatively reaching toward it, surprised smile. Brown backpack worn, gray stone discarded on grass. No axe, no captions, no magical particles.",
+      "status": "qa_accepted_uploaded_verified",
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S019.png",
+      "qa": "Character and tree-punch discovery accepted.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1nPuMMHS-Ar5KPnArblTv0q_iwKcxH_A9",
+        "title": "E02-S019.png",
+        "file_name": "E02-S019.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1nPuMMHS-Ar5KPnArblTv0q_iwKcxH_A9/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1nPuMMHS-Ar5KPnArblTv0q_iwKcxH_A9",
+          "title": "E02-S019.png",
+          "file_name": "E02-S019.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1nPuMMHS-Ar5KPnArblTv0q_iwKcxH_A9/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S020",
+      "action": "REPAIR continuity with Image3: keep exactly the same floating tree with NO stump at all, missing BOTTOM trunk block above grass, the whole remaining trunk/canopy unsupported. Change hero from reaching down to now holding the ONE collected small oak log cube in both hands at chest height, leaning backward and staring UP nervously at the floating tree. Same extremely slim hero, daylight, backpack worn. No extra blocks, NO bottom stump, NO middle-trunk gap. Entire air gap is from grass to bottom of remaining upper trunk. Image3 is authoritative tree geography.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. REPAIR continuity with Image3: keep exactly the same floating tree with NO stump at all, missing BOTTOM trunk block above grass, the whole remaining trunk/canopy unsupported. Change hero from reaching down to now holding the ONE collected small oak log cube in both hands at chest height, leaning backward and staring UP nervously at the floating tree. Same extremely slim hero, daylight, backpack worn. No extra blocks, NO bottom stump, NO middle-trunk gap. Entire air gap is from grass to bottom of remaining upper trunk. Image3 is authoritative tree geography.",
+      "status": "qa_accepted_uploaded_verified",
+      "rejected_versions": [
+        {
+          "path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S020-rejected-v1.png",
+          "drive": {
+            "accepted_input": "file_uri",
+            "success": true,
+            "id": "15Rw6nm8UpK3pxWqeHrCmk3Wo4vWeciY9",
+            "title": "E02-S020-REJECTED-bottom-trunk-continuity.png",
+            "file_name": "E02-S020-REJECTED-bottom-trunk-continuity.png",
+            "mime_type": "image/png",
+            "url": "https://drive.google.com/file/d/15Rw6nm8UpK3pxWqeHrCmk3Wo4vWeciY9/view?usp=drivesdk",
+            "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
+            "structuredContent": {
+              "accepted_input": "file_uri",
+              "success": true,
+              "id": "15Rw6nm8UpK3pxWqeHrCmk3Wo4vWeciY9",
+              "title": "E02-S020-REJECTED-bottom-trunk-continuity.png",
+              "file_name": "E02-S020-REJECTED-bottom-trunk-continuity.png",
+              "mime_type": "image/png",
+              "url": "https://drive.google.com/file/d/15Rw6nm8UpK3pxWqeHrCmk3Wo4vWeciY9/view?usp=drivesdk",
+              "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+            }
+          },
+          "reason": "Rejected: S020 incorrectly retains a bottom stump after S019 showed bottom trunk absent; repair required."
+        }
+      ],
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S020.png",
+      "qa": "Repair accepted: floating upper trunk, bottom absent, no stump, hero exact.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1Qbisc5xWICHPDahiwCRFOxqRdQMF2GXb",
+        "title": "E02-S020.png",
+        "file_name": "E02-S020.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1Qbisc5xWICHPDahiwCRFOxqRdQMF2GXb/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1Qbisc5xWICHPDahiwCRFOxqRdQMF2GXb",
+          "title": "E02-S020.png",
+          "file_name": "E02-S020.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1Qbisc5xWICHPDahiwCRFOxqRdQMF2GXb/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S021",
+      "action": "Close overhead cinematic insert: hero's two warm brown hands with charcoal cuffs set one small OAK LOG cube on a flat grass block, next to FOUR newly separated wooden planks neatly stacked together. Brown backpack sits closed on grass beside him. Show discovery of crafting materials physically, NO menu or UI or text, no tools, no table yet. Daylight cel-shaded block forest style. Just log, four planks and bag, not five random items.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Close overhead cinematic insert: hero's two warm brown hands with charcoal cuffs set one small OAK LOG cube on a flat grass block, next to FOUR newly separated wooden planks neatly stacked together. Brown backpack sits closed on grass beside him. Show discovery of crafting materials physically, NO menu or UI or text, no tools, no table yet. Daylight cel-shaded block forest style. Just log, four planks and bag, not five random items.",
+      "status": "qa_accepted_uploaded_verified",
+      "rejected_versions": [],
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S021.png",
+      "qa": "Character, materials/table discovery and single composition accepted; different painted table faces are visible with angle change.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1A3VSGFqs35VDTeYFeEwTy6Yhp14gpkXp",
+        "title": "E02-S021.png",
+        "file_name": "E02-S021.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1A3VSGFqs35VDTeYFeEwTy6Yhp14gpkXp/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1A3VSGFqs35VDTeYFeEwTy6Yhp14gpkXp",
+          "title": "E02-S021.png",
+          "file_name": "E02-S021.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1A3VSGFqs35VDTeYFeEwTy6Yhp14gpkXp/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S022",
+      "action": "Medium-wide comedic moment in daylight forest: FOUR oak planks have just become ONE standard Minecraft crafting table cube on grass, hero sitting backward on ground startled, both empty hands raised away from table, legs long and thin bent at knees. Table top has clearly drawn dark 3x3 grid; sides show flat painted tool motifs, NOT real attached tools. Brown backpack on grass behind him. No floating table, no UI, no words, no magical beams.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium-wide comedic moment in daylight forest: FOUR oak planks have just become ONE standard Minecraft crafting table cube on grass, hero sitting backward on ground startled, both empty hands raised away from table, legs long and thin bent at knees. Table top has clearly drawn dark 3x3 grid; sides show flat painted tool motifs, NOT real attached tools. Brown backpack on grass behind him. No floating table, no UI, no words, no magical beams.",
+      "status": "qa_accepted_uploaded_verified",
+      "rejected_versions": [],
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S022.png",
+      "qa": "Character, materials/table discovery and single composition accepted; different painted table faces are visible with angle change.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "11E_hSTUx4Gp96mhr0Ui6MUTGThIz24RY",
+        "title": "E02-S022.png",
+        "file_name": "E02-S022.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/11E_hSTUx4Gp96mhr0Ui6MUTGThIz24RY/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "11E_hSTUx4Gp96mhr0Ui6MUTGThIz24RY",
+          "title": "E02-S022.png",
+          "file_name": "E02-S022.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/11E_hSTUx4Gp96mhr0Ui6MUTGThIz24RY/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
+    },
+    {
+      "id": "E02-S023",
+      "action": "Medium close shot hero kneeling beside one standard Minecraft crafting table, skeptically poking a flat PAINTED SAW MOTIF on table's wooden side with right index finger, left hand holds table edge. Painted saw must be flush graphic, not actual pull-out tool. Top dark 3x3 grid visible. Slightly annoyed face, exact approved hero slim. Brown backpack on ground. Bright forest. No tools in hands, no text, no extra table.",
+      "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, weapons or extra characters. Medium close shot hero kneeling beside one standard Minecraft crafting table, skeptically poking a flat PAINTED SAW MOTIF on table's wooden side with right index finger, left hand holds table edge. Painted saw must be flush graphic, not actual pull-out tool. Top dark 3x3 grid visible. Slightly annoyed face, exact approved hero slim. Brown backpack on ground. Bright forest. No tools in hands, no text, no extra table.",
+      "status": "qa_accepted_uploaded_verified",
+      "rejected_versions": [],
+      "local_path": "/workspace/scratch/c0768b8a956f/episode02/images/E02-S023.png",
+      "qa": "Character, materials/table discovery and single composition accepted; different painted table faces are visible with angle change.",
+      "drive": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1r0SXxWgNdwAbQJfkfBemts9xvVgaVl49",
+        "title": "E02-S023.png",
+        "file_name": "E02-S023.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1r0SXxWgNdwAbQJfkfBemts9xvVgaVl49/view?usp=drivesdk",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf",
+        "structuredContent": {
+          "accepted_input": "file_uri",
+          "success": true,
+          "id": "1r0SXxWgNdwAbQJfkfBemts9xvVgaVl49",
+          "title": "E02-S023.png",
+          "file_name": "E02-S023.png",
+          "mime_type": "image/png",
+          "url": "https://drive.google.com/file/d/1r0SXxWgNdwAbQJfkfBemts9xvVgaVl49/view?usp=drivesdk",
+          "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+        }
+      }
     }
-  ]
+  ],
+  "next_shot": "E02-S024",
+  "qa_rejected_count": 1
 }
