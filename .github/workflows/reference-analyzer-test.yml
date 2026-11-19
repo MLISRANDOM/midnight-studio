@@ -1,0 +1,27 @@
+name: Reference Video Analyzer Test
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/reference-video-analysis-v1]
+    paths:
+      - "reference/**"
+      - ".github/workflows/reference-analyzer-test.yml"
+permissions:
+  contents: read
+jobs:
+  reference-smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install and verify FFmpeg
+        run: |
+          if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
+            sudo apt-get -o Acquire::Retries=2 update -qq
+            sudo apt-get -o Acquire::Retries=2 install -y --no-install-recommends ffmpeg
+          fi
+          ffmpeg -version
+      - name: Syntax and end-to-end test with synthetic video
+        run: |
+          python -m py_compile reference/video_analysis.py reference/selftest.py
+          python reference/selftest.py
