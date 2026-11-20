@@ -10,7 +10,7 @@
   "planned_frames": 193,
   "planned_duration_seconds": 8.041666666666666,
   "encoder": "WebCodecs AVC",
-  "bytes": 2154588,
+  "bytes": 2201512,
   "audio": false,
   "reference": {
     "kind": "ffmpeg-technique-v1",

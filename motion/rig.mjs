@@ -237,7 +237,9 @@ export function paintShot(canvas,rig,plan,fraction) {
   ctx.scale(zoom,zoom);
   station(ctx,w,h,plan.light);
   const portrait=h>w, scale=Math.min(h*(portrait ? .67 : .79)/386,w*.65/180);
-  const x=w*(portrait ? .48 : .45),y=h*(portrait ? .80 : .84);
+  // Leave room for the prop and the extended hand in the portrait crop.
+  const propShot=plan.beat==="inspect"||plan.beat==="knock";
+  const x=w*(portrait&&propShot ? .30 : portrait ? .48 : .45),y=h*(portrait ? .80 : .84);
   ctx.fillStyle="rgba(4,13,16,0.40)";ctx.beginPath();ctx.ellipse(x,y+2,scale*69,scale*9,0,0,2*Math.PI);ctx.fill();
   ctx.translate(x-205*scale,y-424*scale);ctx.scale(scale,scale);
   if(plan.beat==="knock"){
