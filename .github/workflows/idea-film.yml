@@ -1,0 +1,71 @@
+name: Make a video from one idea
+on:
+  pull_request:
+    branches: [main]
+    paths: ["factory/idea_film/**", "factory/episode_factory.py", ".github/workflows/idea-film.yml"]
+  workflow_dispatch:
+    inputs:
+      idea:
+        description: Your original video idea
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  film:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install CPU tools
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get -qq update
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.7.1
+          CMAKE_BUILD_PARALLEL_LEVEL=3 python -m pip install -r factory/idea_film/requirements.txt
+      - name: Verify narration timing and format selection
+        run: python factory/idea_film/selftest.py
+      - name: Write, illustrate, narrate and edit
+        env:
+          FILM_IDEA: ${{ github.event_name == 'pull_request' && 'On a desert planet, a lighthouse keeper sees a ship sailing through the sand.' || inputs.idea }}
+        run: python factory/idea_film/make.py --output "$RUNNER_TEMP/finished-film" --cache "$RUNNER_TEMP/film-models" -- "$FILM_IDEA"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: finished-video
+          path: ${{ runner.temp }}/finished-film/episode-draft.mp4
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 3
+
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: sample-verification
+          path: |
+            ${{ runner.temp }}/finished-film/receipt.json
+            ${{ runner.temp }}/finished-film/storyboard.json
+            ${{ runner.temp }}/finished-film/image-selection.json
+          retention-days: 3
+  iphone-playback:
+    if: github.event_name == 'pull_request' && github.event.repository.private == false
+    needs: film
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: finished-video
+          path: sample
+      - uses: actions/download-artifact@v4
+        with:
+          name: sample-verification
+          path: qa
+      - name: Play the completed film in MobileSafari
+        run: python3 factory/idea_film/iphone_playback.py sample/episode-draft.mp4 qa/receipt.json

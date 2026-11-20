@@ -6,6 +6,7 @@ Usage: python factory/episode_factory.py --manifest factory/demo_episode.json --
 """
 import argparse
 import json
+import math
 import os
 import pathlib
 import re
@@ -179,7 +180,9 @@ def audio_duration(file_path):
     return float(result.stdout.strip())
 
 
-def video(shots, images, output, width, height):
+def video(shots, images, output, width, height, narration_files=None):
+    if narration_files is not None and len(narration_files) != len(shots):
+        raise ValueError("Expected one narration file per shot")
     clips = output / "clips"
     clips.mkdir(exist_ok=True)
     rendered = []
@@ -188,7 +191,9 @@ def video(shots, images, output, width, height):
         duration = max(2, min(30, int(shot.get("seconds", 6))))
         audio = clips / ("%03d.wav" % i)
         text = shot.get("narration", "").strip()
-        if text:
+        if narration_files is not None:
+            audio = pathlib.Path(narration_files[i-1])
+        elif text:
             # Optional local neural TTS; no paid API. Fall back to eSpeak on failure.
             piper_model = os.getenv("PIPER_MODEL", "").strip()
             made_audio = False
@@ -209,18 +214,27 @@ def video(shots, images, output, width, height):
         # Respect full narration instead of cutting off the final words.
         speech_seconds = audio_duration(audio)
         duration = min(90.0, max(float(duration), speech_seconds + 0.35))
-        mp4 = clips / ("%03d.mp4" % i)
+        # A single final AAC encode avoids a new encoder-delay packet at every cut.
+        if narration_files is not None:
+            duration = math.ceil(duration * 24) / 24
+            clip = clips / ("%03d.mov" % i)
+            audio_codec = "pcm_s16le"
+        else:
+            clip = clips / ("%03d.mp4" % i)
+            audio_codec = "aac"
         run(["ffmpeg", "-nostdin", "-y", "-loop", "1", "-framerate", "24", "-i", str(image_path),
              "-i", str(audio), "-t", str(duration),
              "-vf", "scale=%d:%d:force_original_aspect_ratio=decrease,pad=%d:%d:(ow-iw)/2:(oh-ih)/2,format=yuv420p" % (width, height, width, height),
              "-c:v", "libx264", "-preset", "veryfast", "-crf", "24", "-r", "24",
-             "-af", "apad", "-c:a", "aac", "-ar", "44100", "-ac", "1", str(mp4)])
-        rendered.append(mp4)
+             "-af", "apad", "-c:a", audio_codec, "-ar", "44100", "-ac", "1", str(clip)])
+        rendered.append(clip)
     listfile = clips / "concat.txt"
     listfile.write_text("".join("file '%s'\n" % p.name for p in rendered))
     final = output / "episode-draft.mp4"
-    run(["ffmpeg", "-nostdin", "-y", "-f", "concat", "-safe", "0", "-i", str(listfile),
-         "-c", "copy", str(final)])
+    codecs = ["-c", "copy"] if narration_files is None else [
+        "-c:v", "copy", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart"
+    ]
+    run(["ffmpeg", "-nostdin", "-y", "-f", "concat", "-safe", "0", "-i", str(listfile), *codecs, str(final)])
     return final
 
 
