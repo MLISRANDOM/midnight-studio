@@ -2,7 +2,7 @@ name: Make a video from one idea
 on:
   pull_request:
     branches: [main]
-    paths: ["factory/idea_film/**", ".github/workflows/idea-film.yml"]
+    paths: ["factory/idea_film/**", "factory/episode_factory.py", ".github/workflows/idea-film.yml"]
   workflow_dispatch:
     inputs:
       idea:
@@ -29,6 +29,8 @@ jobs:
           fi
           python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.7.1
           CMAKE_BUILD_PARALLEL_LEVEL=3 python -m pip install -r factory/idea_film/requirements.txt
+      - name: Verify narration timing and format selection
+        run: python factory/idea_film/selftest.py
       - name: Write, illustrate, narrate and edit
         env:
           FILM_IDEA: ${{ github.event_name == 'pull_request' && 'On a desert planet, a lighthouse keeper sees a ship sailing through the sand.' || inputs.idea }}
@@ -39,4 +41,14 @@ jobs:
           path: ${{ runner.temp }}/finished-film/episode-draft.mp4
           if-no-files-found: error
           compression-level: 0
+          retention-days: 3
+
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: sample-verification
+          path: |
+            ${{ runner.temp }}/finished-film/receipt.json
+            ${{ runner.temp }}/finished-film/storyboard.json
+            ${{ runner.temp }}/finished-film/image-selection.json
           retention-days: 3

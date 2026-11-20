@@ -9,9 +9,17 @@ from urllib.request import urlopen
 
 ART = "SimianLuo/LCM_Dreamshaper_v7"
 ART_REV = "a85df6a8bd976cdd08b4fd8f3b73f229c9e54df5"
-TEXT = "Qwen/Qwen2.5-1.5B-Instruct-GGUF"
-TEXT_REV = "91cad51170dc346986eccefdc2dd33a9da36ead9"
-GGUF = "qwen2.5-1.5b-instruct-q4_k_m.gguf"
+TEXT = "bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF"
+TEXT_REV = "ae44f08e1392f39c0e474af10c3ff8355c8b6688"
+GGUF = "Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf"
+
+RANKER = "Xenova/clip-vit-base-patch32"
+RANKER_REV = "6b7c523703ae26e39be4b03774966f8571c7f523"
+RANKER_FILES = {
+    "onnx/model_quantized.onnx", "config.json", "preprocessor_config.json", "merges.txt",
+    "special_tokens_map.json", "tokenizer.json", "tokenizer_config.json", "vocab.json",
+}
+
 
 def install(repo, revision, wanted, folder):
     meta = json.load(urlopen(f"https://huggingface.co/api/models/{repo}/revision/{revision}?blobs=true",timeout=45))
