@@ -73,7 +73,17 @@ def main():
     try:
         if args.engine=="ios":
             udid=simulator()
-            subprocess.run(["xcrun","simctl","openurl",udid,url],check=True,timeout=60)
+            # SpringBoard can report booted while Safari is still cold. Wait for
+            # the page receipt even if simctl times out after delivering the URL.
+            for attempt in range(2):
+                try:
+                    subprocess.run(["xcrun","simctl","openurl",udid,url],check=True,timeout=150)
+                    break
+                except (subprocess.TimeoutExpired, subprocess.CalledProcessError):
+                    if done.wait(25):
+                        break
+                    if attempt:
+                        raise
             if not done.wait(350):
                 raise TimeoutError("MobileSafari did not return a test receipt")
         else:
