@@ -1,0 +1,17 @@
+{
+  "duration_seconds": 596.458,
+  "median_shot_seconds": 2.646,
+  "shot_count_estimate": 124,
+  "cuts_first_10_seconds": 0,
+  "kind": "ffmpeg-technique-v1",
+  "source_route": "Blender Foundation downloadable master",
+  "youtube_id": "YE7VzlLtp-4",
+  "shot_span_seconds_by_third": [
+    4.97,
+    3.682,
+    6.213
+  ],
+  "sample_count": 1800,
+  "average_luminance": 0.458,
+  "within_shot_change": 0.043
+}

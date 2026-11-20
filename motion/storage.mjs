@@ -1,4 +1,5 @@
-const dbName="midnight-motion-lab-v1",store="items";
+const deviceCheck=window.parent!==window && new URLSearchParams(location.search).get("device-check")==="1";
+const dbName=deviceCheck?"midnight-motion-verification-v1":"midnight-motion-lab-v1",store="items";
 export async function stored(key,value) {
   const db=await new Promise((resolve,reject)=>{
     const r=indexedDB.open(dbName,1);

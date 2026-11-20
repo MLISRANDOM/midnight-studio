@@ -2,6 +2,7 @@
 import argparse
 import base64
 import bisect
+from contextlib import ExitStack
 import hashlib
 import json
 import os
@@ -12,12 +13,16 @@ import sys
 import tempfile
 from urllib.parse import parse_qs, urlparse
 from urllib.request import urlopen
+from zipfile import ZipFile
 
 MAX_BYTES = 128 * 1024 * 1024
 MAX_SECONDS = 1200
-TRAILER = "HOfdboHvshg"
-MASTER = "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-MASTER_HASH = "b670602fa00934ca27c4351bb0efe7ea7a07fae57284e44226025eeed7c51254"
+CREATOR_MASTERS = {
+    "HOfdboHvshg": ("https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+                    None, "b670602fa00934ca27c4351bb0efe7ea7a07fae57284e44226025eeed7c51254"),
+    "YE7VzlLtp-4": ("https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4.zip",
+                    "BigBuckBunny_320x180.mp4", "f78f39603e6774907f2faafabf26a667f4a6fc31769ec304a8a8f7c62d280508"),
+}
 LAB = "https://mlisrandom.github.io/midnight-studio/motion/"
 
 def video_id(value):
@@ -48,6 +53,30 @@ def valid_youtube_media(dest, expected, probe):
         return False
     return duration > 0 and abs(duration - expected) <= min(2, max(.5, expected * .02))
 
+def copy_bounded(source, dest):
+    digest = hashlib.sha256()
+    size = 0
+    with dest.open("wb") as out:
+        while chunk := source.read(1024*1024):
+            size += len(chunk)
+            if size > MAX_BYTES:
+                raise ValueError("Creator master exceeds the job size limit.")
+            out.write(chunk)
+            digest.update(chunk)
+    return digest.hexdigest()
+
+def creator_master(video, dest):
+    url, member, expected = CREATOR_MASTERS[video]
+    with ExitStack() as stack:
+        source = stack.enter_context(urlopen(url,timeout=45))
+        if member:
+            archive = dest.with_suffix(".zip")
+            copy_bounded(source,archive)
+            package = stack.enter_context(ZipFile(archive))
+            source = stack.enter_context(package.open(member))
+        if copy_bounded(source,dest) != expected:
+            raise ValueError("The creator master no longer matches its verified checksum.")
+
 def download(video, work, probe):
     canonical = "https://www.youtube.com/watch?v=" + video
     dest = work / "input.mp4"
@@ -65,14 +94,10 @@ def download(video, work, probe):
         print("YouTube did not return a valid matching full-length video.", flush=True)
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired, OSError, ValueError):
         pass
-    if video != TRAILER:
+    if video not in CREATOR_MASTERS:
         raise RuntimeError("YouTube did not deliver a permitted MP4 within the job limits. "
                            "Open Motion Lab and select the authorized original from Files or Drive.")
-    with urlopen(MASTER, timeout=25) as src:
-        data = src.read(5 * 1024 * 1024)
-    if hashlib.sha256(data).hexdigest() != MASTER_HASH:
-        raise RuntimeError("The registered Blender master no longer matches its verified checksum.")
-    dest.write_bytes(data)
+    creator_master(video, dest)
     return dest, "Blender Foundation downloadable master"
 
 def picture_statistics(video, duration, cuts):
@@ -124,7 +149,10 @@ def main():
         measured = analyze(source, work / "analysis", max_frames=4)
         cuts = [s["start_seconds"] for s in measured["shots"][1:]]
         report = {key:measured[key] for key in ("duration_seconds","median_shot_seconds","shot_count_estimate","cuts_first_10_seconds")}
-        report.update(kind="ffmpeg-technique-v1", source_route=route, youtube_id=video)
+        third = seconds/3
+        spans = [round(third/(1+sum(third*i < t < third*(i+1) for t in cuts)),3) for i in range(3)]
+        report.update(kind="ffmpeg-technique-v1", source_route=route, youtube_id=video,
+                      shot_span_seconds_by_third=spans)
         report.update(picture_statistics(source,seconds,cuts))
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")

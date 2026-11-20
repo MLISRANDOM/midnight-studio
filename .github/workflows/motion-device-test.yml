@@ -1,8 +1,8 @@
 name: Motion Lab iPhone verification
 on:
   workflow_dispatch:
-  push:
-    branches: [feature/iphone-motion-lab]
+  pull_request:
+    branches: [main]
     paths:
       - "motion/*.mjs"
       - "motion/*.html"
@@ -18,10 +18,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare pinned open-source model and runtime
-        run: python3 motion/tools/prepare_runtime.py "$RUNNER_TEMP/runtime"
       - name: Exercise MobileSafari on an installed iPhone simulator
-        run: python3 motion/tests/mobile_runner.py --engine ios --runtime "$RUNNER_TEMP/runtime" --out "$RUNNER_TEMP/motion-result"
+        run: python3 motion/tests/mobile_runner.py --engine ios --public-model --runtime "$RUNNER_TEMP/runtime" --out "$RUNNER_TEMP/motion-result"
       - name: Record decoded dimensions and real model timings
         if: always()
         run: |

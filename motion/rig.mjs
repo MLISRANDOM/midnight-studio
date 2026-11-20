@@ -8,6 +8,12 @@ export const beats = {
   listen: "A bell behind the wall",
   recoil: "The floor switch clicks"
 };
+export const framings = {wide:"Wide", medium:"Medium", close:"Close-up"};
+export const stationScene = [
+  {beat:"listen", framing:"wide"},
+  {beat:"signal", framing:"medium"},
+  {beat:"recoil", framing:"close"}
+];
 
 const mirror = arr => arr.map(([x,y]) => [411-x,y]);
 const leftUpper = [[172,172],[185,170],[180,200],[173,228],[154,227],[159,207]];
@@ -187,10 +193,38 @@ export function shotPlan(beat,report) {
   const d=direction(report);
   return {beat:actions[beat]?beat:"signal",duration:Math.round(d.beatSeconds*3*24)/24, ...d};
 }
+
+export function scenePlan(choices, report) {
+  const d = direction(report);
+  const globalSpan = report && report.duration_seconds / report.shot_count_estimate;
+  const spans = report?.shot_span_seconds_by_third;
+  let frame = 0;
+  const shots = choices.map(({beat, framing}, index) => {
+    const relative = spans ? Math.sqrt(spans[index] / globalSpan) : 1;
+    const seconds = d.beatSeconds * Math.max(.65, Math.min(1.6, relative));
+    const start_frame = frame;
+    frame += Math.max(18, Math.round(seconds * 24));
+    return {beat, framing, start_frame, end_frame:frame};
+  });
+  return {...d, shots, frame_count:frame, duration:frame / 24};
+}
+
+export function paintScene(canvas, rig, plan, frame) {
+  const index = Math.max(0, Math.min(plan.frame_count-1, frame));
+  const shot = plan.shots.find(s => index < s.end_frame);
+  paintShot(canvas, rig, {...shot, light:plan.light, energy:plan.energy},
+    (index-shot.start_frame)/(shot.end_frame-shot.start_frame-1));
+}
+
 export function paintShot(canvas,rig,plan,fraction) {
   const ctx=canvas.getContext("2d");
   const w=canvas.width,h=canvas.height;
-  ctx.save();ctx.setTransform(1,0,0,1,0,0);station(ctx,w,h,plan.light);
+  ctx.save();ctx.setTransform(1,0,0,1,0,0);
+  const zoom = {wide:1,medium:1.40,close:2.14}[plan.framing] || 1;
+  // The camera stays locked throughout the shot. Reframe only at an edit.
+  ctx.translate((1-zoom)*w*.46,(1-zoom)*h*(h>w ? .24 : .16));
+  ctx.scale(zoom,zoom);
+  station(ctx,w,h,plan.light);
   const portrait=h>w, scale=Math.min(h*(portrait ? .67 : .79)/386,w*.65/180);
   const x=w*(portrait ? .48 : .45),y=h*(portrait ? .80 : .84);
   ctx.fillStyle="rgba(4,13,16,0.40)";ctx.beginPath();ctx.ellipse(x,y+2,scale*69,scale*9,0,0,2*Math.PI);ctx.fill();
