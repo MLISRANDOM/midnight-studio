@@ -1,0 +1,28 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "r_frame_rate": "24/1",
+      "nb_read_frames": "193"
+    }
+  ],
+  "format": {
+    "duration": "8.041667",
+    "size": "2439384"
+  },
+  "sha256": "91b685f316b6c19109bc38e323a906e0d769df2e48428eeca7ac37dd4719cd93",
+  "md5": "c7f4e574bb55d1ea860149c1ef68235a",
+  "in_shot_rgb_change": [
+    6.47,
+    8.14,
+    24.69
+  ],
+  "cut_rgb_change": [
+    14.94,
+    23.51
+  ]
+}

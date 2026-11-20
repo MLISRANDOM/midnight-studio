@@ -1,0 +1,39 @@
+{
+  "mode": "neural",
+  "artwork": "survivor",
+  "action": "signal",
+  "dimensions": [
+    320,
+    180
+  ],
+  "requested_fps": 24,
+  "planned_frames": 30,
+  "planned_duration_seconds": 1.25,
+  "encoder": "WebCodecs AVC",
+  "bytes": 19997,
+  "audio": false,
+  "reference": {
+    "kind": "sampled-visual-technique-v1",
+    "duration_seconds": 52.208,
+    "median_shot_seconds": 1.249,
+    "shot_count_estimate": 14,
+    "sample_count": 210,
+    "first_sample": 0,
+    "last_sample": 52.183,
+    "average_luminance": 0.184,
+    "within_shot_change": 0.035
+  },
+  "reference_source": "Measured the selected video file on this device.",
+  "youtube_id": null,
+  "settings": {
+    "beat": "signal",
+    "duration": 3.75,
+    "beatSeconds": 1.249,
+    "light": 0.184,
+    "energy": 0.9375
+  },
+  "model": "RIFE 4.9",
+  "model_sha256": "76e4cef9ab42fa7dd4e8f6e4aba47462051e3faa969e4bca6479784fbab0ac6f",
+  "inference_ms": 4403,
+  "synthesized_frames": 9
+}
