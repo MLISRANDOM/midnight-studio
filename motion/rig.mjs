@@ -4,6 +4,7 @@ import {direction} from "./reference.mjs";
 
 export const SHEET_SHA = "3ae49beade6013009bb6fae8a0f1394daf95461e2f40f8dc4264af001c2d510d";
 export const beats = {
+  inspect:"Examine a detail",cover:"Shield the face",knock:"Knock on the panel",
   signal: "The platform lamp answers",
   listen: "A bell behind the wall",
   recoil: "The floor switch clicks"
@@ -117,6 +118,9 @@ function drawPart(ctx,rig,name) {
 const neutral=[0,0,0,0,0,0,0,0,0,0,0];
 /* head, shoulder L, elbow L, shoulder R, elbow R, hip L, knee L, hip R, knee R, lean, drop */
 const actions={
+  inspect:[[0,neutral,"head"],[.32,[13,3,-5,-15,-46,1,3,-2,4,8,4],"curious"],[.73,[18,8,-9,-23,-60,4,1,-5,8,13,8],"alert"],[1,neutral,"curious"]],
+  cover:[[0,neutral,"head"],[.2,[-8,73,146,-75,-145,12,-14,-15,18,-5,10],"startled"],[.72,[-14,77,147,-79,-143,17,-18,-20,20,-9,14],"startled"],[1,neutral,"alert"]],
+  knock:[[0,neutral,"head"],...[.18,.30,.41,.53,.64,.76].map((t,i)=>[t,[4,2,-3,-65,i%2?-16:-72,-3,4,3,-3,4,1],"alert"]),[1,neutral,"curious"]],
   signal:[[0,neutral,"head"],[.17,[5,3,-8,-5,8,0,0,0,0,1,0],"curious"],
     [.43,[-7,12,-12,-76,-38,-7,8,4,-4,2,-2],"alert"],
     [.60,[-4,10,-14,-60,-67,-5,7,6,-5,3,-2],"alert"],
@@ -140,7 +144,7 @@ export function poseAt(beat,t,energy=1) {
   return {v:values,face:f<0.5?a[2]:b[2]};
 }
 
-function figure(ctx,rig,pose) {
+function figure(ctx,rig,pose,beat) {
   const {v,face}=pose;
   const part=name=>drawPart(ctx,rig,name);
   ctx.save();ctx.translate(0,v[10]);
@@ -151,13 +155,20 @@ function figure(ctx,rig,pose) {
     });
   }
   pivot(ctx,205,265,v[9],()=>{
+    const body=()=>{part("torso");pivot(ctx,205,155,v[0],()=>part(face));};
+    if(beat==="cover")body();
     for(const [side,angle,bend,sx,ex] of [["left",v[1],v[2],179,165],["right",v[3],v[4],232,246]]) {
       pivot(ctx,sx,178,angle,()=>{
         disc(ctx,sx,178,9.2,rig?"#302d2c":"#e8a341");part(side+"Upper");
-        pivot(ctx,ex,223,bend,()=>{disc(ctx,ex,223,8.8,rig?"#302d2c":"#596f6e");part(side+"Lower");});
+        pivot(ctx,ex,223,bend,()=>{disc(ctx,ex,223,8.8,rig?"#302d2c":"#596f6e");part(side+"Lower");
+          if(beat==="inspect"&&side==="right"){
+            rounded(ctx,244,285,33,22,3,"#c39858","#372c23");
+            for(let i=0;i<3;i++){ctx.fillStyle="#5b4631";ctx.fillRect(250+i*6,290,2,8-i);}
+          }
+        });
       });
     }
-    part("torso");pivot(ctx,205,155,v[0],()=>part(face));
+    if(beat!=="cover")body();
   });
   ctx.restore();
 }
@@ -220,7 +231,7 @@ export function paintShot(canvas,rig,plan,fraction) {
   const ctx=canvas.getContext("2d");
   const w=canvas.width,h=canvas.height;
   ctx.save();ctx.setTransform(1,0,0,1,0,0);
-  const zoom = {wide:1,medium:1.40,close:2.14}[plan.framing] || 1;
+  const zoom = {wide:1,medium:1.40,close:plan.beat==="inspect"?1.52:2.14}[plan.framing] || 1;
   // The camera stays locked throughout the shot. Reframe only at an edit.
   ctx.translate((1-zoom)*w*.46,(1-zoom)*h*(h>w ? .24 : .16));
   ctx.scale(zoom,zoom);
@@ -229,5 +240,9 @@ export function paintShot(canvas,rig,plan,fraction) {
   const x=w*(portrait ? .48 : .45),y=h*(portrait ? .80 : .84);
   ctx.fillStyle="rgba(4,13,16,0.40)";ctx.beginPath();ctx.ellipse(x,y+2,scale*69,scale*9,0,0,2*Math.PI);ctx.fill();
   ctx.translate(x-205*scale,y-424*scale);ctx.scale(scale,scale);
-  figure(ctx,rig,poseAt(plan.beat,fraction,plan.energy));ctx.restore();
+  if(plan.beat==="knock"){
+    rounded(ctx,335,112,69,200,5,"#496060","#182b2e");
+    rounded(ctx,337,164,12,29,2,"#c79958","#332d22");
+  }
+  figure(ctx,rig,poseAt(plan.beat,fraction,plan.energy),plan.beat);ctx.restore();
 }

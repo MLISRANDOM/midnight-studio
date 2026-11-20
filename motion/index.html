@@ -17,7 +17,8 @@
 <label>Survivor sheet<input id="sheet" type="file" accept="image/jpeg,image/png"></label><small id="sheetStatus"></small></div>
 <div id="pairPanel" hidden><p class="hint">Choose two poses from the same shot, with the same framing. RIFE creates the movement between them.</p>
 <label>Starting pose<input id="firstPose" type="file" accept="image/*"></label><label>Ending pose<input id="lastPose" type="file" accept="image/*"></label></div>
-<label id="actionRow">Action or scene<select id="beat"><option value="signal">The platform lamp answers</option><option value="listen">A bell behind the wall</option><option value="recoil">The floor switch clicks</option><option value="sequence">Edit a three-shot scene</option></select></label>
+<label id="actionRow">Action or scene<select id="beat"><option value="signal">The platform lamp answers</option><option value="listen">A bell behind the wall</option><option value="recoil">The floor switch clicks</option><option value="inspect">Examine a detail</option><option value="cover">Shield the face</option><option value="knock">Knock on the panel</option><option value="sequence">Edit a three-shot scene</option></select></label>
+<section id="ideaPanel"><label>Your original scene idea<textarea id="idea" maxlength="800" rows="3" placeholder="He studies the dial. He signals for help. A flash makes him flinch."></textarea></label><button id="directIdea">Turn idea into shots</button><p class="hint">The on-device model matches up to three beats to character movements. First use downloads about 36 MB.</p><p id="ideaStatus" role="status"></p></section>
 <div id="shotEditor" hidden></div>
 <label>Frame<select id="ratio"><option value="wide">YouTube · 16:9</option><option value="tall">Shorts / TikTok · 9:16</option></select></label></section>
 <section class="card"><h2>Reference pacing</h2><p class="hint">Measure cuts, brightness and movement across an authorized source. The original shot uses those measurements.</p>

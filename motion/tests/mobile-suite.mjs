@@ -142,6 +142,14 @@ async function suite(){
   assert(decodedEdit.differences[0]>.3&&decodedEdit.differences[2]>2&&decodedEdit.differences[4]>2,"Expected articulation and two visible cuts in the decoded movie");
   assert(Math.abs(decodedEdit.duration-edit.receipt.planned_duration_seconds)<.55,"Wrong sequence duration");
   await privatePost("scene.mp4",edit.blob);files.scene={...decodedEdit,shots};checks.push("editable three-shot scene, varying measured tempo, decoded in-shot motion and two visible cuts");
+  status("Directing an original idea on this device");
+  typeValue("idea","She hears a faint sound. Then she knocks on the panel. Finally she shields her face.");
+  await action("directIdea",180000);
+  const choices=Array.from(el("shotEditor").querySelectorAll("select")).filter((v,i)=>i%2===0).map(v=>v.value);
+  assert(choices.join(",")==="listen,knock,cover",el("ideaStatus").textContent);
+  await action("render");const directed=await reportOutput(),direction=await decoded(directed.blob);
+  assert(directed.receipt.story_direction.matches.length===3&&direction.w===540,"Missing directed scene");
+  files.direction={choices,...direction};checks.push("local semantic story direction and decoded export");
   status("Running RIFE on two original poses");select("art","pair");select("ratio","tall");
   upload("firstPose",await pose(false));await until(()=>el("cancel").hidden,"first pose");
   upload("lastPose",await pose(true));await until(()=>!el("neural").disabled,"second pose");

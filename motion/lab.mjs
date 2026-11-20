@@ -1,3 +1,4 @@
+import {planIdea} from "./story.mjs";
 import {analyzeVideo,readReport,referenceLink,youtubeId} from "./reference.mjs";
 import {beats,framings,makeSheetRig,paintScene,paintShot,scenePlan,SHEET_SHA,shotPlan,stationScene} from "./rig.mjs";
 import {canvasOf,encodeMP4,fitImage,neuralFrames,readImage} from "./video.mjs";
@@ -10,19 +11,28 @@ const examples = {
   "YE7VzlLtp-4": {file:"big-buck-bunny-technique.json",title:"Big Buck Bunny"}
 };
 let rig,report,reportSource="",controller,playback,position=0,result,referenceId=null,queuedHandoff=false;
+let plannedIdea=null,ideaNeedsPlan=false;
 const poses=[null,null],urls=new Map();
 function choice(name,options,value) {
   const label=document.createElement("label"),select=document.createElement("select");
   label.textContent=name;
   for(const [key,title] of Object.entries(options))select.add(new Option(title,key));
-  select.value=value; select.addEventListener("change",refresh);
+  select.value=value; select.addEventListener("change",()=>{plannedIdea=null;ideaNeedsPlan=false;refresh();});
   label.append(select);$("shotEditor").append(label);return select;
 }
 const shotChoices=stationScene.map(({beat,framing},i)=>({
   action:choice("Shot "+(i+1)+" action",beats,beat),
   framing:choice("Shot "+(i+1)+" framing",framings,framing)
 }));
-const controls=Array.from(document.querySelectorAll("select,input,button")).filter(e=>e.id!=="cancel");
+$("idea").oninput=()=>{plannedIdea=null;ideaNeedsPlan=!!$("idea").value.trim();clearResult();syncButtons();$("ideaStatus").textContent=ideaNeedsPlan?"Apply the idea to update the three shots.":"";};
+$("directIdea").onclick=()=>task(async signal=>{
+  const text=$("idea").value.trim();$("ideaStatus").textContent="Interpreting your idea on this device…";
+  const result=await planIdea(text,signal);
+  result.shots.forEach((s,i)=>{shotChoices[i].action.value=s.beat;shotChoices[i].framing.value=s.framing;});
+  ideaNeedsPlan=false;plannedIdea={text,...result};$("beat").value="sequence";refresh();
+  $("ideaStatus").textContent=result.shots.map(s=>beats[s.beat]+" ("+s.framing+")").join(" → ");
+},"ideaStatus");
+const controls=Array.from(document.querySelectorAll("select,input,textarea,button")).filter(e=>e.id!=="cancel");
 const renderButtons=["render","neural"];
 const pair=()=>$("art").value==="pair";
 const useSheet=()=>$("art").value==="survivor";
@@ -44,9 +54,9 @@ function clearResult(){
 function syncButtons(){
   const ready=pair()?poses.every(Boolean):!useSheet()||Boolean(rig);
   $("render").hidden=pair();$("actionRow").hidden=pair();
-  $("shotEditor").hidden=!sequence();$("neural").hidden=sequence();
+  $("ideaPanel").hidden=pair();$("shotEditor").hidden=!sequence();$("neural").hidden=sequence();
   $("render").textContent=sequence()?"Render edited scene MP4":"Render articulated MP4";
-  renderButtons.forEach(id=>$(id).disabled=!!controller||!ready);
+  renderButtons.forEach(id=>$(id).disabled=!!controller||!ready||(sequence()&&ideaNeedsPlan));
   $("play").disabled=!!controller||pair()||!ready;$("scrub").disabled=!!controller||pair()||!ready;
   $("sheetPanel").hidden=!useSheet();$("pairPanel").hidden=!pair();
   $("estimate").textContent=sequence()?"Three animated shots with hard cuts. Reference pacing sets their lengths.":
@@ -189,7 +199,7 @@ async function render(kind,signal) {
   const name=[useSheet()?"survivor":pair()?"original-poses":"station-robot",kind,$("ratio").value].join("-");
   const reportOut={mode:kind,artwork:$("art").value,action:pair()||edited?null:shot.beat,dimensions:[w,h],requested_fps:fps,
     planned_frames:frames,planned_duration_seconds:frames/fps,encoder,bytes:blob.size,audio:false,reference:report,
-    reference_source:reportSource||null,youtube_id:referenceId,settings:shot,...stats};
+    story_direction:edited?plannedIdea:null,reference_source:reportSource||null,youtube_id:referenceId,settings:shot,...stats};
   result={blob,name};$("movie").src=linkBlob("download",blob,name+".mp4");
   jsonFile("saveReceipt",reportOut,name+".json");$("result").hidden=false;
   $("receipt").textContent=w+" × "+h+" · "+(frames/fps).toFixed(2)+" s planned · "+(blob.size/1024).toFixed(0)+" KB"+(neural?" · 9 neural in-betweens":"");
