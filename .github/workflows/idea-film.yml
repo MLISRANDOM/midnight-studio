@@ -1,0 +1,42 @@
+name: Make a video from one idea
+on:
+  pull_request:
+    branches: [main]
+    paths: ["factory/idea_film/**", ".github/workflows/idea-film.yml"]
+  workflow_dispatch:
+    inputs:
+      idea:
+        description: Your original video idea
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  film:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install CPU tools
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get -qq update
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.7.1
+          CMAKE_BUILD_PARALLEL_LEVEL=3 python -m pip install -r factory/idea_film/requirements.txt
+      - name: Write, illustrate, narrate and edit
+        env:
+          FILM_IDEA: ${{ github.event_name == 'pull_request' && 'On a desert planet, a lighthouse keeper sees a ship sailing through the sand.' || inputs.idea }}
+        run: python factory/idea_film/make.py --output "$RUNNER_TEMP/finished-film" --cache "$RUNNER_TEMP/film-models" -- "$FILM_IDEA"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: finished-video
+          path: ${{ runner.temp }}/finished-film/episode-draft.mp4
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 3

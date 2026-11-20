@@ -179,7 +179,9 @@ def audio_duration(file_path):
     return float(result.stdout.strip())
 
 
-def video(shots, images, output, width, height):
+def video(shots, images, output, width, height, narration_files=None):
+    if narration_files is not None and len(narration_files) != len(shots):
+        raise ValueError("Expected one narration file per shot")
     clips = output / "clips"
     clips.mkdir(exist_ok=True)
     rendered = []
@@ -188,7 +190,9 @@ def video(shots, images, output, width, height):
         duration = max(2, min(30, int(shot.get("seconds", 6))))
         audio = clips / ("%03d.wav" % i)
         text = shot.get("narration", "").strip()
-        if text:
+        if narration_files is not None:
+            audio = pathlib.Path(narration_files[i-1])
+        elif text:
             # Optional local neural TTS; no paid API. Fall back to eSpeak on failure.
             piper_model = os.getenv("PIPER_MODEL", "").strip()
             made_audio = False
