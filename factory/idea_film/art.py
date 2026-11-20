@@ -42,7 +42,7 @@ def draw(cache, work):
     chosen = []
     for index, shot in enumerate(plan["shots"], 1):
         texts = [shot["picture"], plan["setting"], plan["idea"]]
-        encoded = tokenizer(texts, padding=True, truncation=True, max_length=77, return_tensors="np")
+        weights = [0.50, 0.30, 0.20]
         # Keep long ideas from using up the illustrator's entire text window.
         premise = plan["idea"] if len(plan["idea"].split()) <= 26 else plan["setting"]
         style = series["style"] if series else "Cinematic ink illustration, flat colors"
@@ -52,15 +52,17 @@ def draw(cache, work):
                 appearance for name, appearance in series["cast"].items()
                 if re.search(r"\b" + re.escape(name) + r"\b", shot["picture"], re.I)
             )
-        detail = (shot["picture"], 24)
-        setting = (plan["setting"], 15)
-        look = (design, 15)
-        subject = (premise, 10)
-        style = (style, 6)
-        prompts = [
-            illustration_prompt(pipe.tokenizer, [detail, setting, look, style, subject]),
-            illustration_prompt(pipe.tokenizer, [setting, detail, look, subject, style]),
-        ]
+        if series:
+            texts.append(f"{style} {design}".strip())
+            weights = [0.50, 0.14, 0.12, 0.24]
+            style_clause, look, detail, setting = (style, 13), (design, 17), (shot["picture"], 26), (plan["setting"], 15)
+            orders = [[style_clause, look, detail, setting], [style_clause, detail, look, setting]]
+        else:
+            detail, setting = (shot["picture"], 24), (plan["setting"], 15)
+            look, subject, style_clause = (design, 15), (premise, 10), (style, 6)
+            orders = [[detail, setting, look, style_clause, subject], [setting, detail, look, subject, style_clause]]
+        prompts = [illustration_prompt(pipe.tokenizer, clauses) for clauses in orders]
+        encoded = tokenizer(texts, padding=True, truncation=True, max_length=77, return_tensors="np")
         candidates, seeds = [], []
         for attempt in range(3):
             seed = 917 * index + attempt
@@ -83,7 +85,7 @@ def draw(cache, work):
         feed = {item.name: inputs[item.name] for item in clip.get_inputs()}
         logits, = clip.run(["logits_per_image"], feed)
         # Rank the alternatives within this shot. Scores are not approval probabilities.
-        scores = logits @ np.array([0.50, 0.30, 0.20], dtype=np.float32)
+        scores = logits @ np.array(weights, dtype=np.float32)
         best = int(np.argmax(scores))
         candidates[best].save(work / f"shot-{index}.png")
         chosen.append({"shot": index, "seeds": seeds, "scores": scores.tolist(), "selected": seeds[best]})

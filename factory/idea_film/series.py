@@ -5,28 +5,28 @@ import re
 SERIES = {
     "The Safe Room Rules": {
         "aliases": ("safe room rules",),
-        "style": "Flat muted colors, thick black outlines, atmospheric 2D cartoon horror.",
+        "style": "2D horror cartoon, thick black outlines, flat muted colors.",
         "canon": "The bunker beneath Evan's apartment has seven rules. Each night one changes.",
         "cast": {"Evan": "Brown skin, short curly black fade, full connected black beard, charcoal hoodie."},
         "vertical": True,
     },
     "The Reality Helpdesk": {
         "aliases": ("reality helpdesk", "marc jenkins"),
-        "style": "Flat-color 2D cartoon, bold outlines, green CRT lighting.",
+        "style": "2D cartoon, bold outlines, flat colors, green CRT lighting.",
         "canon": "Marc Jenkins fields strange science cases in a 1980s government helpdesk office.",
         "cast": {"Marc": "Expressive Black government helpdesk employee."},
         "vertical": True,
     },
     "Spawned Somewhere Bad": {
         "aliases": ("spawned somewhere bad", "spawnedsomewherebad"),
-        "style": "Flat cel colors, large white eyes, bold black cartoon outlines.",
+        "style": "2D cartoon, thick black outlines, large white eyes, flat cel colors.",
         "canon": "The slim human cartoon protagonist keeps his original appearance inside the game world.",
         "cast": {"hero": "Slim brown-skinned man, curly fade, shaped black beard, charcoal hoodie with orange lining and white drawstrings, black pants."},
         "vertical": False,
     },
     "OCCUPANCY": {
         "aliases": ("occupancy episode", "occupancy series", "mara ortiz", "jonah pike", "leah okafor"),
-        "style": "Flat colors, expressive white eyes, thick black outlines, cool blue night lighting.",
+        "style": "2D cartoon, thick black outlines, flat colors, white eyes, blue night lighting.",
         "canon": "At Graywell Apartments, vanished room 604 leaves smooth, uninterrupted plaster.",
         "cast": {
             "Mara": "Medium-brown skin, high braided bun, silver hoops, navy maintenance jacket, gray cargo pants.",

@@ -52,3 +52,20 @@ jobs:
             ${{ runner.temp }}/finished-film/storyboard.json
             ${{ runner.temp }}/finished-film/image-selection.json
           retention-days: 3
+  iphone-playback:
+    if: github.event_name == 'pull_request' && github.event.repository.private == false
+    needs: film
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: finished-video
+          path: sample
+      - uses: actions/download-artifact@v4
+        with:
+          name: sample-verification
+          path: qa
+      - name: Play the completed film in MobileSafari
+        run: python3 factory/idea_film/iphone_playback.py sample/episode-draft.mp4 qa/receipt.json

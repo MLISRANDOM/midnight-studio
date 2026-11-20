@@ -62,7 +62,8 @@ def write_story(idea, model_path, series=None):
         "briefly using literal visual details like terrain, materials and colors. In visual_design, describe "
         "the recurring character and art style in one short phrase. Each shot has one specific spoken sentence "
         "under 22 words and a picture description a still illustrator could draw. Vary framing and subjects. "
-        "Put the physical subject and action first in each picture. The narration is spoken out loud."
+        "Each picture is one concise sentence with its subject first. Represent sounds with visible reactions. "
+        "Keep the frame free of written words, numbers, overlays and speech bubbles. The narration is spoken."
     )
     if series:
         cast = " ".join(f"{name}: {look}" for name, look in series["cast"].items())

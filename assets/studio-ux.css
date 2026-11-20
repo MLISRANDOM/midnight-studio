@@ -86,3 +86,18 @@ body.studio-v6{background:#070b15}
 .studio-v6 .ux-shot-quick{grid-template-columns:1fr auto}
 .studio-v6 .ux-shot-info{grid-column:1/-1}
 }
+
+.top a.film-launch,
+.studio-v6 .top a.film-launch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  max-width: 12em;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+}

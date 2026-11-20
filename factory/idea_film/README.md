@@ -23,3 +23,11 @@ python factory/idea_film/make.py --output finished-film -- "Your original video 
 ```
 
 The output directory includes the finished MP4, four selected stills, storyboard, selection scores and a receipt with durations and a checksum. The full pipeline also runs on a sample idea in pull requests. GitHub publishes verification files separately from the playable film.
+
+## Project checkpoint
+
+The automatic still-film path builds on the existing FFmpeg factory. The separate reference analyzer landed in [PR 22](https://github.com/MLISRANDOM/midnight-studio/pull/22). Reference analysis is optional when starting from an idea. Production progress still lives in the [OCCUPANCY tracker](../../occupancy/episode01/EDITORIAL_STATUS_2026-11-15.md) and the [Spawned Somewhere Bad tracker](../../spawned-somewhere-bad/episode01/PRODUCTION_STATUS.md). A sample render gives neither project additional approved shots.
+
+For an eventual native edition, Apple documents model conversion, on-device Swift inference and custom Metal kernels. Draw Things publishes its GPLv3 Swift inference implementation and supports local generation on iPhone. Its developer’s Reddit posts and user reports describe real mobile workflows and device-specific failures. Qualcomm publishes a Python sampler for MobileWan. These are research options. The shipped inference path runs on a CPU outside the phone. [Apple Core AI](https://developer.apple.com/core-ai/) · [Draw Things source](https://github.com/drawthingsai/draw-things-community) · [iOS app](https://apps.apple.com/us/app/draw-things-offline-ai-art/id6444050820) · [Reddit implementation notes](https://www.reddit.com/r/StableDiffusion/comments/12e1isu/) · [MobileWan source](https://github.com/Qualcomm-AI-research/MobileWan)
+
+Current limits are four shots, one built-in voice, and written series guidance. Long episodes with verified likenesses need a separate test against the approved character sheets. The assistant delivers to private Drive using the connected account. A standalone GitHub run has no private Drive credentials.
