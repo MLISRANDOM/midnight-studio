@@ -1,0 +1,38 @@
+{
+  "kind": "sampled-visual-technique-v1",
+  "duration_seconds": 52.208,
+  "width": 854,
+  "height": 480,
+  "sample_count": 210,
+  "first_sample": 0,
+  "last_sample": 52.183,
+  "sample_interval": 0.25,
+  "cut_times": [
+    5.243,
+    16.729,
+    17.228,
+    17.727,
+    23.969,
+    25.967,
+    28.214,
+    28.713,
+    28.963,
+    31.709,
+    31.959,
+    32.459,
+    32.958
+  ],
+  "shot_count_estimate": 14,
+  "median_shot_seconds": 1.249,
+  "average_luminance": 0.184,
+  "within_shot_change": 0.035,
+  "provenance": {
+    "title": "Sintel trailer",
+    "author": "Blender Foundation / Durian Open Movie Team",
+    "license": "CC BY 3.0",
+    "youtube": "https://www.youtube.com/watch?v=HOfdboHvshg",
+    "master": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+    "sha256": "b670602fa00934ca27c4351bb0efe7ea7a07fae57284e44226025eeed7c51254",
+    "method": "Decoded in Chromium at 210 sample positions across the full creator-supplied MP4."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "mode": "sequence",
+  "artwork": "survivor",
+  "action": null,
+  "dimensions": [
+    540,
+    960
+  ],
+  "requested_fps": 24,
+  "planned_frames": 193,
+  "planned_duration_seconds": 8.041666666666666,
+  "encoder": "WebCodecs AVC",
+  "bytes": 2201512,
+  "audio": false,
+  "reference": {
+    "kind": "ffmpeg-technique-v1",
+    "shot_span_seconds_by_third": [
+      4.97,
+      3.682,
+      6.213
+    ],
+    "duration_seconds": 596.458,
+    "median_shot_seconds": 2.646,
+    "shot_count_estimate": 124,
+    "sample_count": 1800,
+    "average_luminance": 0.458,
+    "within_shot_change": 0.043
+  },
+  "story_direction": {
+    "text": "He examines the faded inscription. Then he raps his knuckles against the door. Finally he shields his face from debris.",
+    "model": "all-MiniLM-L6-v2",
+    "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+    "matches": [
+      {
+        "clause": "He examines the faded inscription",
+        "action": "inspect",
+        "similarity": 0.593
+      },
+      {
+        "clause": "he raps his knuckles against the door",
+        "action": "knock",
+        "similarity": 0.754
+      },
+      {
+        "clause": "he shields his face from debris",
+        "action": "cover",
+        "similarity": 0.919
+      }
+    ],
+    "shots": [
+      {
+        "beat": "inspect",
+        "framing": "close"
+      },
+      {
+        "beat": "knock",
+        "framing": "medium"
+      },
+      {
+        "beat": "cover",
+        "framing": "medium"
+      }
+    ]
+  },
+  "reference_source": "Reopened a complete measurement of Big Buck Bunny from Blender Foundation’s downloadable master.",
+  "youtube_id": "YE7VzlLtp-4",
+  "settings": {
+    "beatSeconds": 2.646,
+    "light": 0.458,
+    "energy": 0.9575,
+    "shots": [
+      {
+        "beat": "inspect",
+        "framing": "close",
+        "start_frame": 0,
+        "end_frame": 65
+      },
+      {
+        "beat": "knock",
+        "framing": "medium",
+        "start_frame": 65,
+        "end_frame": 121
+      },
+      {
+        "beat": "cover",
+        "framing": "medium",
+        "start_frame": 121,
+        "end_frame": 193
+      }
+    ],
+    "frame_count": 193,
+    "duration": 8.041666666666666
+  }
+}
