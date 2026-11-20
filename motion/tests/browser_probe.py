@@ -1,4 +1,5 @@
 from pathlib import Path
+import sys
 import base64, os, time
 from playwright.sync_api import sync_playwright
 # Reproduction harness used for the private Survivor proof. See CHECKPOINT.md.
@@ -28,21 +29,27 @@ with sync_playwright() as api:
     context.route('https://huggingface.co/edgetools/rife/resolve/**',local_dep)
     page.goto(f'http://127.0.0.1:{server.server_port}/motion/');page.wait_for_function("document.querySelector('#estimate').textContent.length > 0")
     print('READY',page.title(),page.evaluate("typeof VideoEncoder"),flush=True)
-    ses=page.locator('#referenceFile')
-    ses.set_input_files(str(root/'sintel-trailer.mp4'))
+    sequence="--scene" in sys.argv
+    if sequence:
+        page.locator('#youtube').fill("https://www.youtube.com/watch?v=YE7VzlLtp-4")
+    else:
+        page.locator('#referenceFile').set_input_files(str(root/'sintel-trailer.mp4'))
     page.locator('#measure').click();page.wait_for_function("!document.querySelector('#refResult').hidden || document.querySelector('#cancel').hidden",timeout=90000)
     print('REFERENCE',page.locator('#refStatus').inner_text(),page.locator('#stats').inner_text(),flush=True)
     def readlink(el,path):
         data=page.eval_on_selector(el,"async e=>{const blob=await(await fetch(e.href)).blob();return await new Promise(resolve=>{const r=new FileReader();r.onload=()=>resolve(r.result.split(',')[1]);r.readAsDataURL(blob);});}")
         path.write_bytes(base64.b64decode(data))
-    readlink('#saveReport',root/'sintel-technique.json')
+    readlink('#saveReport',root/('scene-technique.json' if sequence else 'sintel-technique.json'))
     page.select_option('#art','survivor');page.locator('#sheet').set_input_files(str(root/'hero-sheet.jpg'));page.wait_for_function("!document.querySelector('#render').disabled", timeout=20000)
     print('SHEET',page.locator('#sheetStatus').inner_text(),flush=True)
+    if sequence:
+        page.select_option('#ratio','tall');page.select_option('#beat','sequence')
     page.locator('#scrub').evaluate("(e)=>{e.value=470;e.dispatchEvent(new Event('input'));}")
-    page.locator('#stage').screenshot(path=str(root/'rig.png'))
-    for name,selector in [('survivor-articulated','#render'),('survivor-neural','#neural')]:
+    page.locator('#stage').screenshot(path=str(root/('scene-preview.png' if sequence else 'rig.png')))
+    outputs=[('survivor-scene','#render')] if sequence else [('survivor-articulated','#render'),('survivor-neural','#neural')]
+    for name,selector in outputs:
         start=time.monotonic();page.locator(selector).click();page.wait_for_function("document.querySelector('#cancel').hidden",timeout=260000)
         print('RENDER',name,time.monotonic()-start,page.locator('#status').inner_text(),flush=True)
-        if page.locator('#result').is_visible():
-            readlink('#download',root/(name+'.mp4'));readlink('#saveReceipt',root/(name+'.json'))
+        if not page.locator('#result').is_visible(): raise RuntimeError(page.locator('#status').inner_text())
+        readlink('#download',root/(name+'.mp4'));readlink('#saveReceipt',root/(name+'.json'))
     browser.close()

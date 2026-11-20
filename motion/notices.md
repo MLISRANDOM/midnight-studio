@@ -10,4 +10,8 @@
 
 The built-in reference measurements come from the **Sintel trailer**, © Blender Foundation / Durian Open Movie Team, released under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Only numeric measurements ship with the example. [Creator project](https://durian.blender.org/download/) · [YouTube trailer](https://www.youtube.com/watch?v=HOfdboHvshg) · [master MP4](https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4).
 
+The second measured example is **Big Buck Bunny** (2008), © Blender Foundation / www.bigbuckbunny.org, CC BY 3.0. The full 320 × 180 creator master was decoded into editing statistics. [Creator license](https://peach.blender.org/about/) · [official upload](https://www.youtube.com/watch?v=YE7VzlLtp-4) · [original film downloads](https://download.blender.org/peach/bigbuckbunny_movies/).
+
 The Survivor rig imports the existing approved project artwork from the owner's file. The public repository contains joint geometry and a separately authored demo robot. The licenses above cover their respective upstream components.
+
+Story direction uses the Apache-2.0 [all-MiniLM-L6-v2 ONNX conversion](https://huggingface.co/Xenova/all-MiniLM-L6-v2/tree/751bff37182d3f1213fa05d7196b954e230abad9), the [Transformers.js 3.7.3](https://github.com/huggingface/transformers.js/tree/3.7.3) BERT tokenizer, and ONNX Runtime Web. The browser verifies the quantized model's SHA-256. Inference matches an original English idea to a six-movement repertoire. Private ideas and character art remain in the browser during generation.

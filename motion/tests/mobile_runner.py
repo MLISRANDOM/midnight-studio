@@ -4,6 +4,8 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
+import platform
+import plistlib
 from pathlib import Path
 import re
 import subprocess
@@ -11,7 +13,7 @@ import threading
 from urllib.parse import urlsplit
 
 REPO = Path(__file__).resolve().parents[2]
-RESULTS = {"portrait.mp4", "neural.mp4", "result.json"}
+RESULTS = {"portrait.mp4", "neural.mp4", "scene.mp4", "result.json"}
 
 def simulator():
     data = json.loads(subprocess.check_output(["xcrun","simctl","list","devices","available","-j"]))
@@ -30,6 +32,23 @@ def simulator():
         subprocess.run(["xcrun","simctl","boot",udid],check=True,timeout=120)
     subprocess.run(["xcrun","simctl","bootstatus",udid,"-b"],check=True,timeout=360)
     return udid
+
+def open_test_host(udid, url, out):
+    bundle = out / "StudioDeviceCheck.app"
+    bundle.mkdir(exist_ok=True)
+    identifier = "studio.midnight.devicecheck"
+    info = dict(CFBundleExecutable="Check", CFBundleIdentifier=identifier, CFBundleName="Device Check",
+                CFBundleVersion="1", CFBundleShortVersionString="1.0", CFBundlePackageType="APPL",
+                LSRequiresIPhoneOS=True, MinimumOSVersion="17.0", UIDeviceFamily=[1],
+                NSAppTransportSecurity={"NSAllowsLocalNetworking":True}, UILaunchScreen={})
+    (bundle/"Info.plist").write_bytes(plistlib.dumps(info))
+    subprocess.run(["xcrun","--sdk","iphonesimulator","clang","-target",platform.machine()+"-apple-ios17.0-simulator",
+                    "-fobjc-arc","-framework","UIKit","-framework","WebKit",str(REPO/"motion/tests/DeviceCheck.m"),
+                    "-o",str(bundle/"Check")],check=True)
+    subprocess.run(["codesign","--force","--sign","-",str(bundle)],check=True)
+    subprocess.run(["xcrun","simctl","install",udid,str(bundle)],check=True,timeout=180)
+    subprocess.run(["xcrun","simctl","launch",udid,identifier],check=True,timeout=180,
+                   env={**os.environ,"SIMCTL_CHILD_MOTION_TEST_URL":url})
 
 def serve(out, runtime, done):
     class Handler(SimpleHTTPRequestHandler):
@@ -57,20 +76,38 @@ def serve(out, runtime, done):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--engine",choices=["ios","chromium","webkit"],required=True)
+    parser.add_argument("--engine",choices=["ios","ios-webkit","chromium","webkit"],required=True)
     parser.add_argument("--out",type=Path,required=True)
     parser.add_argument("--runtime",type=Path,required=True)
+    parser.add_argument("--public-model",action="store_true",help="Fetch the same pinned runtime and weights as the public page")
     parser.add_argument("--executable")
     args=parser.parse_args()
     args.out.mkdir(parents=True,exist_ok=True)
     done=threading.Event()
     server=serve(args.out,args.runtime,done)
-    url=f"http://127.0.0.1:{server.server_port}/motion/tests/mobile.html?runtime=local"
+    url=f"http://127.0.0.1:{server.server_port}/motion/tests/mobile.html?collect=1"
+    if not args.public_model:
+        url+="&runtime=local"
     udid=None
     try:
-        if args.engine=="ios":
+        if args.engine=="ios-webkit":
             udid=simulator()
-            subprocess.run(["xcrun","simctl","openurl",udid,url],check=True,timeout=60)
+            open_test_host(udid,url,args.out)
+            if not done.wait(450):
+                raise TimeoutError("The iPhone WebKit test host did not return a receipt")
+        elif args.engine=="ios":
+            udid=simulator()
+            # SpringBoard can report booted while Safari is still cold. Wait for
+            # the page receipt even if simctl times out after delivering the URL.
+            for attempt in range(2):
+                try:
+                    subprocess.run(["xcrun","simctl","openurl",udid,url],check=True,timeout=150)
+                    break
+                except (subprocess.TimeoutExpired, subprocess.CalledProcessError):
+                    if done.wait(25):
+                        break
+                    if attempt:
+                        raise
             if not done.wait(350):
                 raise TimeoutError("MobileSafari did not return a test receipt")
         else:
@@ -89,6 +126,8 @@ def main():
         result=json.loads((args.out/"result.json").read_text())
         print(json.dumps(result,indent=2))
         if not result.get("ok"): raise RuntimeError(result.get("error","Browser test failed"))
+        if args.engine=="ios-webkit" and not all(x in result["userAgent"] for x in ("iPhone","AppleWebKit","Mobile")):
+            raise RuntimeError("Receipt did not come from iPhone WebKit")
         if args.engine=="ios" and not all(x in result["userAgent"] for x in ("iPhone","Mobile","Safari")):
             raise RuntimeError("Test receipt is not from iPhone MobileSafari")
     finally:
