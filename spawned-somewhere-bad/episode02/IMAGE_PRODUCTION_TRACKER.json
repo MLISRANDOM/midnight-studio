@@ -32,7 +32,7 @@
     "title": "Candidates - Pending QA",
     "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
   },
-  "verified_count": 95,
+  "verified_count": 100,
   "shots": [
     {
       "id": "E02-S001",
@@ -2578,23 +2578,37 @@
     {
       "id": "E02-S086",
       "action": "Second archery practice attempt. Arrow has missed the intact hay target and embedded in a wooden fence rail to its right. Survivor lowers his wooden bow and scratches his head in embarrassment. No arrow loaded, no injury, same village, same original Survivor design.",
-      "status": "uploaded_verified_pending_qa",
+      "status": "qa_accepted_uploaded_verified",
       "drive": {
         "success": true,
         "id": "1Z2QwJMEVdtbG3jiK-8NrSWkrizck7lzd",
-        "title": "E02-S086_PENDING_QA.png",
-        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
-      }
+        "title": "E02-S086.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+      },
+      "qa": "2026-11-20 audit: visually inspected source against approved Survivor design and assigned scene action. Accepted and verified as a unique numbered file in Approved Images."
     },
     {
       "id": "E02-S087",
       "action": "Third archery practice attempt: Survivor draws his simple wooden bow, aiming intensely at hay target, before release. Next shot must show misfire and damage to a flowerpot as narrated.",
-      "status": "uploaded_verified_pending_qa",
+      "status": "qa_accepted_uploaded_verified",
       "drive": {
         "success": true,
         "id": "1Du-ddX_Yvh1xfF-vX7mvckUKadlJ1PNF",
-        "title": "E02-S087_PENDING_QA.png",
-        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+        "title": "E02-S087.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+      },
+      "qa": "2026-11-20 audit: visually inspected source against approved Survivor design and assigned scene action. Accepted and verified as a unique numbered file in Approved Images."
+    },
+    {
+      "id": "E02-S088",
+      "action": "Survivor's missed arrow strikes and shatters the flowerpot in the village courtyard, spraying petals, terracotta shards and soil; startled reaction, wooden bow in hand.",
+      "status": "qa_accepted_uploaded_verified",
+      "qa": "2026-11-20 audit: visually inspected source against approved Survivor design and assigned scene action. Accepted and verified as a unique numbered file in Approved Images.",
+      "drive": {
+        "success": true,
+        "id": "1I-0nlf-spingP9RktgNCjEM-2SlujPeK",
+        "title": "E02-S088.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
       }
     },
     {
@@ -2720,20 +2734,20 @@
     {
       "id": "E02-S099",
       "action": "Survivor steps over blocky rocky threshold of hillside cave, holding lit torch high, tense expression, distant daylight village visible behind him. Original slim 2D character consistent with reference.",
-      "status": "uploaded_verified_pending_qa",
-      "qa": "Candidate saved for user review; one landscape frame. Next generation failed twice with incorrect multi-panel images, rejected.",
+      "status": "qa_accepted_uploaded_verified",
+      "qa": "2026-11-20 audit: visually inspected source against approved Survivor design and assigned scene action. Accepted and verified as a unique numbered file in Approved Images.",
       "drive": {
         "success": true,
         "id": "1CGNPTYCROC-er8ZlsdF_t0jfvsTzTSKy",
-        "title": "E02-S099_PENDING_QA.png",
-        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+        "title": "E02-S099.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
       }
     },
     {
       "id": "E02-S100",
       "action": "Survivor explores cave with torch; target composition must reveal clear dark black-flecked COAL ORE on the nearby gray stone wall. No diamond, gold, redstone or lava. Preserve original character sheet.",
       "status": "rework_required",
-      "qa": "One exploratory cave candidate stored separately. Image generator introduced diamond/redstone instead of requested coal. NOT approved, regenerate accurately.",
+      "qa": "Reviewed 2026-11-20: visually strong cave scene but includes early diamond/redstone, not required black-flecked coal ore; preserve as rejected-for-this-shot candidate, regenerate coal discovery frame.",
       "drive": {
         "success": true,
         "id": "1YXGuB3kV-iEwL5VUGK3S_ujrlObYfrcL",
@@ -2744,20 +2758,20 @@
     {
       "id": "E02-S101",
       "action": "Survivor mines COAL ORE with iron pickaxe in torchlit Minecraft cave, black-flecked coal vein on wall, warm fire against cool blue cavern, original Survivor sheet proportions, no other ore.",
-      "status": "uploaded_verified_pending_qa",
-      "qa": "Visually correct coal mining candidate; pending user review.",
+      "status": "qa_accepted_uploaded_verified",
+      "qa": "2026-11-20 audit: visually inspected source against approved Survivor design and assigned scene action. Accepted and verified as a unique numbered file in Approved Images.",
       "drive": {
         "success": true,
         "id": "1_ZRjvIcc2g21QXq3i0aKiPkXzvlXNpmI",
-        "title": "E02-S101_PENDING_QA.png",
-        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+        "title": "E02-S101.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
       }
     }
   ],
-  "next_shot": "E02-S086",
+  "next_shot": "E02-S100",
   "qa_rejected_count": 9,
-  "production_status": "95 approved, S099 and S101 pending QA, S100 rework required. Repeated attempts to generate S102-S105 returned duplicate coal mining or multi-panel collages; not approved or saved.",
-  "pending_qa_count": 4,
-  "resume_instruction": "Review existing E02-S081 through E02-S084 in candidates against approved hero and scene continuity before generating anything new. Do not regenerate S001-S080. First ungenerated shot E02-S085. User paused production; no background generation authorized.",
-  "first_ungenerated_shot": "E02-S102"
+  "production_status": "2026-11-20 audited actual Drive: 100 unique S001-S101 numbered approved images, only S100 missing. S086, S087, S088, S099, S101 passed visual QA; S100 awaiting correct coal ore frame. S081-S084 stale candidate copies already approved; older rejected candidates replaced by approved files. S102 onward not generated.",
+  "pending_qa_count": 0,
+  "resume_instruction": "Generate single 16:9 S100 with BLACK SPECKLED COAL ORE on cave wall (no diamonds/redstone), original Survivor sheet identity, then S102 onward according to narration. Avoid collages. Do not count rejected or duplicate candidates.",
+  "first_ungenerated_shot": "E02-S100"
 }
