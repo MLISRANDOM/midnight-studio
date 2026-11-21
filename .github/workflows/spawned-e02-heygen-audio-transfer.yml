@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       audio_links_b64:
-        description: "Private encoded audio links supplied in ChatGPT"
+        description: "Encoded audio links supplied in ChatGPT"
         required: true
         type: string
 
@@ -35,7 +35,7 @@ jobs:
               with urllib.request.urlopen(req,timeout=120) as resp:
                   audio=resp.read(25*1024*1024+1)
               assert 10000<len(audio)<25*1024*1024, "Invalid MP3 bytes"
-              assert audio[:3]==b"ID3" or audio[:2] in (b"\\xff\\xfb",b"\\xff\\xf3",b"\\xff\\xf2"), "Audio format mismatch"
+              assert audio[:3]==b"ID3" or audio[:2] in (bytes.fromhex("fffb"), bytes.fromhex("fff3"), bytes.fromhex("fff2")), "Audio format mismatch"
               name=f"Episode02_Part_{i:02d}.mp3"
               (folder/name).write_bytes(audio)
               manifest.append({"part":i,"file":name,"bytes":len(audio)})
