@@ -2716,12 +2716,24 @@
         "title": "E02-S098.png",
         "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
       }
+    },
+    {
+      "id": "E02-S099",
+      "action": "Survivor steps over blocky rocky threshold of hillside cave, holding lit torch high, tense expression, distant daylight village visible behind him. Original slim 2D character consistent with reference.",
+      "status": "uploaded_verified_pending_qa",
+      "qa": "Candidate saved for user review; one landscape frame. Next generation failed twice with incorrect multi-panel images, rejected.",
+      "drive": {
+        "success": true,
+        "id": "1CGNPTYCROC-er8ZlsdF_t0jfvsTzTSKy",
+        "title": "E02-S099_PENDING_QA.png",
+        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+      }
     }
   ],
   "next_shot": "E02-S086",
   "qa_rejected_count": 9,
-  "production_status": "S001-S085, S089-S098 approved in Drive; S086-S087 pending QA and S088 not yet approved; S099 next ungenerated",
-  "pending_qa_count": 2,
+  "production_status": "95 approved unique images through S098 with gaps S086-S088; S099 pending QA. S100 image generator produced incorrect collage twice and was rejected.",
+  "pending_qa_count": 3,
   "resume_instruction": "Review existing E02-S081 through E02-S084 in candidates against approved hero and scene continuity before generating anything new. Do not regenerate S001-S080. First ungenerated shot E02-S085. User paused production; no background generation authorized.",
-  "first_ungenerated_shot": "E02-S099"
+  "first_ungenerated_shot": "E02-S100"
 }
