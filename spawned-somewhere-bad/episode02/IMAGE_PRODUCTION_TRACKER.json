@@ -2728,11 +2728,23 @@
         "title": "E02-S099_PENDING_QA.png",
         "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
       }
+    },
+    {
+      "id": "E02-S100",
+      "action": "Survivor explores cave with torch; target composition must reveal clear dark black-flecked COAL ORE on the nearby gray stone wall. No diamond, gold, redstone or lava. Preserve original character sheet.",
+      "status": "rework_required",
+      "qa": "One exploratory cave candidate stored separately. Image generator introduced diamond/redstone instead of requested coal. NOT approved, regenerate accurately.",
+      "drive": {
+        "success": true,
+        "id": "1YXGuB3kV-iEwL5VUGK3S_ujrlObYfrcL",
+        "title": "E02-S100_CAVE_EXPLORATION_REWORK.png",
+        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+      }
     }
   ],
   "next_shot": "E02-S086",
   "qa_rejected_count": 9,
-  "production_status": "95 approved unique images through S098 with gaps S086-S088; S099 pending QA. S100 image generator produced incorrect collage twice and was rejected.",
+  "production_status": "95 approved images; S099 QA pending; S100 rework needed because generator depicted wrong ore. No S100 approval.",
   "pending_qa_count": 3,
   "resume_instruction": "Review existing E02-S081 through E02-S084 in candidates against approved hero and scene continuity before generating anything new. Do not regenerate S001-S080. First ungenerated shot E02-S085. User paused production; no background generation authorized.",
   "first_ungenerated_shot": "E02-S100"
