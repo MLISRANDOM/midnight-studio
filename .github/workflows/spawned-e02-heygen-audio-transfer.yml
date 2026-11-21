@@ -1,0 +1,52 @@
+name: Transfer Episode 2 HeyGen narration
+
+on:
+  workflow_dispatch:
+    inputs:
+      audio_links_b64:
+        description: "Private encoded audio links supplied in ChatGPT"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  retrieve:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Collect, verify and join narration
+        env:
+          AUDIO_LINKS_B64: ${{ inputs.audio_links_b64 }}
+        run: |
+          python - <<'PY'
+          import base64, json, os, pathlib, urllib.parse, urllib.request, subprocess
+          urls = base64.b64decode(os.environ["AUDIO_LINKS_B64"], validate=True).decode().splitlines()
+          assert len(urls) == 4, "Expected four audio URLs"
+          folder = pathlib.Path("E02_HeyGen_Narration")
+          folder.mkdir(exist_ok=True)
+          manifest=[]
+          for i,url in enumerate(urls,1):
+              u=urllib.parse.urlsplit(url.strip())
+              assert u.scheme=="https" and u.hostname=="resource2.heygen.ai" and u.path.endswith(".mp3")
+              assert not u.username and not u.password and not u.port
+              req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+              with urllib.request.urlopen(req,timeout=120) as resp:
+                  audio=resp.read(25*1024*1024+1)
+              assert 10000<len(audio)<25*1024*1024, "Invalid MP3 bytes"
+              assert audio[:3]==b"ID3" or audio[:2] in (b"\\xff\\xfb",b"\\xff\\xf3",b"\\xff\\xf2"), "Audio format mismatch"
+              name=f"Episode02_Part_{i:02d}.mp3"
+              (folder/name).write_bytes(audio)
+              manifest.append({"part":i,"file":name,"bytes":len(audio)})
+              print("Downloaded and validated part",i,"size",len(audio))
+          (folder/"MANIFEST.json").write_text(json.dumps({"voice":"Spawned Somewhere Bad Narrator","parts":manifest},indent=2))
+          PY
+      - name: Upload four downloadable MP3s
+        uses: actions/upload-artifact@v4
+        with:
+          name: Spawned_E02_HeyGen_Four_MP3s
+          path: E02_HeyGen_Narration/
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 30
