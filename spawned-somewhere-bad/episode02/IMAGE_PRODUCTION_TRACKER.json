@@ -32,7 +32,7 @@
     "title": "Candidates - Pending QA",
     "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
   },
-  "verified_count": 90,
+  "verified_count": 95,
   "shots": [
     {
       "id": "E02-S001",
@@ -2656,12 +2656,72 @@
         "title": "E02-S093.png",
         "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
       }
+    },
+    {
+      "id": "E02-S094",
+      "action": "Survivor relieved after an arrow hits village hay target, clustered arrows on the target, wooden bow lowered.",
+      "status": "qa_accepted_uploaded_verified",
+      "qa": "User approved 5-image batch 2026-11-20. Single 16:9 landscape render.",
+      "drive": {
+        "success": true,
+        "id": "1JbXyDuKipa-pyxR4L3u7aL6i8gXzhuww",
+        "title": "E02-S094.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+      }
+    },
+    {
+      "id": "E02-S095",
+      "action": "Survivor retrieves or checks arrows at village target after practice; simple bow in other hand.",
+      "status": "qa_accepted_uploaded_verified",
+      "qa": "User approved 5-image batch 2026-11-20. Single 16:9 landscape render.",
+      "drive": {
+        "success": true,
+        "id": "1tqjZlhDYowbYy9w7TMcsEWbLBLPcMXe8",
+        "title": "E02-S095.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+      }
+    },
+    {
+      "id": "E02-S096",
+      "action": "Survivor kneels outside cottage and packs food and simple supplies into one brown backpack; wooden bow and arrows beside him.",
+      "status": "qa_accepted_uploaded_verified",
+      "qa": "User approved 5-image batch 2026-11-20. Single 16:9 landscape render.",
+      "drive": {
+        "success": true,
+        "id": "1x5RfZh44YGHb9ciK2N4Wd4JR1TGpU8P_",
+        "title": "E02-S096.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+      }
+    },
+    {
+      "id": "E02-S097",
+      "action": "Survivor walks away from village on blocky dirt path toward rocky cave hillside, backpack worn and bow held.",
+      "status": "qa_accepted_uploaded_verified",
+      "qa": "User approved 5-image batch 2026-11-20. Single 16:9 landscape render.",
+      "drive": {
+        "success": true,
+        "id": "1NdvHZAFWx5lB6fvKwzOZjIablZOrsosG",
+        "title": "E02-S097.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+      }
+    },
+    {
+      "id": "E02-S098",
+      "action": "Survivor at cave threshold with lit torch looking into dark stone tunnel, cautious expression.",
+      "status": "qa_accepted_uploaded_verified",
+      "qa": "User approved 5-image batch 2026-11-20. Single 16:9 landscape render.",
+      "drive": {
+        "success": true,
+        "id": "1y_vu4puZyIUzeliryuEeaEzBQf3iNIwl",
+        "title": "E02-S098.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+      }
     }
   ],
   "next_shot": "E02-S086",
   "qa_rejected_count": 9,
-  "production_status": "90 approved image files in Drive including S089-S093 newly approved; S086-S087 pending QA, S088 flowerpot strike awaits approval; S094 next ungenerated",
+  "production_status": "S001-S085, S089-S098 approved in Drive; S086-S087 pending QA and S088 not yet approved; S099 next ungenerated",
   "pending_qa_count": 2,
   "resume_instruction": "Review existing E02-S081 through E02-S084 in candidates against approved hero and scene continuity before generating anything new. Do not regenerate S001-S080. First ungenerated shot E02-S085. User paused production; no background generation authorized.",
-  "first_ungenerated_shot": "E02-S094"
+  "first_ungenerated_shot": "E02-S099"
 }
