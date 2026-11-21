@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: factory-output
-          key: episode-factory-${{ hashFiles('factory/demo_episode.json') }}-${{ github.run_id }}
+          key: episode-factory-${{ hashFiles(inputs.manifest || 'factory/demo_episode.json') }}-${{ github.run_id }}
           restore-keys: |
             episode-factory-${{ hashFiles('factory/demo_episode.json') }}-
       - name: Install rendering dependencies
