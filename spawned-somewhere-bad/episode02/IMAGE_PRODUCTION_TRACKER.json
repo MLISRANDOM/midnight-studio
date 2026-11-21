@@ -7,7 +7,7 @@
     330
   ],
   "final_shot_count": null,
-  "narration_status": "not_recorded",
+  "narration_status": "generated_4_parts_and_combined",
   "storyboard_status": "opening visual beats assigned; full script pending",
   "native_resolution": [
     1672,
@@ -32,7 +32,7 @@
     "title": "Candidates - Pending QA",
     "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
   },
-  "verified_count": 80,
+  "verified_count": 84,
   "shots": [
     {
       "id": "E02-S001",
@@ -2515,119 +2515,71 @@
       "id": "E02-S081",
       "action": "Medium quiet DAYLIGHT village courtyard scene: slim protagonist sits on low oak step looking deeply apologetic and uneasy, holding a few WHITE CHICKEN FEATHERS in one hand and a small wrapped bundle of RAW CHICKEN MEAT in other. No living chicken harmed on screen, no blood, gore, corpse, chopping or graphic action. Iron sword rests on ground safely aside and one brown backpack near feet. Other healthy blocky chickens peck safely far background. Scene suggests difficult earned food/materials, not comedy cruelty. Exact reference face.",
       "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium quiet DAYLIGHT village courtyard scene: slim protagonist sits on low oak step looking deeply apologetic and uneasy, holding a few WHITE CHICKEN FEATHERS in one hand and a small wrapped bundle of RAW CHICKEN MEAT in other. No living chicken harmed on screen, no blood, gore, corpse, chopping or graphic action. Iron sword rests on ground safely aside and one brown backpack near feet. Other healthy blocky chickens peck safely far background. Scene suggests difficult earned food/materials, not comedy cruelty. Exact reference face.",
-      "status": "uploaded_verified_pending_qa",
+      "status": "qa_accepted_uploaded_verified",
       "local_path": "/workspace/scratch/c0768b8a956f/generated_images/exec-39a8578b-6e08-425d-9ed7-350466a0cf15.png",
       "drive": {
-        "accepted_input": "file_uri",
         "success": true,
-        "id": "12mWmF3M3TLc_Ig1ZCEIl9fd9Od2p_-pt",
-        "title": "E02-S081_PENDING_QA.png",
-        "file_name": "E02-S081_PENDING_QA.png",
-        "mime_type": "image/png",
-        "url": "https://drive.google.com/file/d/12mWmF3M3TLc_Ig1ZCEIl9fd9Od2p_-pt/view?usp=drivesdk",
-        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
-        "structuredContent": {
-          "accepted_input": "file_uri",
-          "success": true,
-          "id": "12mWmF3M3TLc_Ig1ZCEIl9fd9Od2p_-pt",
-          "title": "E02-S081_PENDING_QA.png",
-          "file_name": "E02-S081_PENDING_QA.png",
-          "mime_type": "image/png",
-          "url": "https://drive.google.com/file/d/12mWmF3M3TLc_Ig1ZCEIl9fd9Od2p_-pt/view?usp=drivesdk",
-          "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
-        }
+        "title": "E02-S081.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
       },
-      "qa": "Not reviewed. Preserve for review when user resumes."
+      "qa": "Visually reviewed against current original Survivor reference and storyboard; approved 2026-11-20."
     },
     {
       "id": "E02-S082",
       "action": "Close medium DAYLIGHT riverbank gathering: protagonist kneels at a small GRAVEL PATCH beside village river, holds one newly found BLACK FLINT shard in RIGHT hand, left hand sifts small gray gravel stones. Brown backpack beside him, no duplicate bag or tools. Curious pleased expression, slim exact proportions. No diamonds, no iron ore, no modern equipment. Clear black flint and gray gravel distinction.",
       "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Close medium DAYLIGHT riverbank gathering: protagonist kneels at a small GRAVEL PATCH beside village river, holds one newly found BLACK FLINT shard in RIGHT hand, left hand sifts small gray gravel stones. Brown backpack beside him, no duplicate bag or tools. Curious pleased expression, slim exact proportions. No diamonds, no iron ore, no modern equipment. Clear black flint and gray gravel distinction.",
-      "status": "uploaded_verified_pending_qa",
+      "status": "qa_accepted_uploaded_verified",
       "local_path": "/workspace/scratch/c0768b8a956f/generated_images/exec-2a821c6b-573b-4c0e-80ac-191d829aa75d.png",
       "drive": {
-        "accepted_input": "file_uri",
         "success": true,
-        "id": "1O4eOS_uDKiBVctrWMwlwGwPfssZ6oK_x",
-        "title": "E02-S082_PENDING_QA.png",
-        "file_name": "E02-S082_PENDING_QA.png",
-        "mime_type": "image/png",
-        "url": "https://drive.google.com/file/d/1O4eOS_uDKiBVctrWMwlwGwPfssZ6oK_x/view?usp=drivesdk",
-        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
-        "structuredContent": {
-          "accepted_input": "file_uri",
-          "success": true,
-          "id": "1O4eOS_uDKiBVctrWMwlwGwPfssZ6oK_x",
-          "title": "E02-S082_PENDING_QA.png",
-          "file_name": "E02-S082_PENDING_QA.png",
-          "mime_type": "image/png",
-          "url": "https://drive.google.com/file/d/1O4eOS_uDKiBVctrWMwlwGwPfssZ6oK_x/view?usp=drivesdk",
-          "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
-        }
+        "title": "E02-S082.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
       },
-      "qa": "Not reviewed. Preserve for review when user resumes."
+      "qa": "Visually reviewed against current original Survivor reference and storyboard; approved 2026-11-20."
     },
     {
       "id": "E02-S083",
       "action": "Overhead cinematic close insert of standard solid-cube CRAFTING TABLE top with dark 3x3 grid: correct ARROW RECIPE consists of ONE BLACK FLINT in TOP CENTER cell, ONE BROWN STICK in MIDDLE CENTER, ONE WHITE FEATHER in BOTTOM CENTER. Hero's two warm brown charcoal-cuffed hands withdraw from sides. A modest bundle of finished arrows lies OFF the grid on grass beside table. No extra ingredient cells, no labels/numbers/UI, no diagrams. Daylight outside cottage, warm flat 2D style.",
       "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Overhead cinematic close insert of standard solid-cube CRAFTING TABLE top with dark 3x3 grid: correct ARROW RECIPE consists of ONE BLACK FLINT in TOP CENTER cell, ONE BROWN STICK in MIDDLE CENTER, ONE WHITE FEATHER in BOTTOM CENTER. Hero's two warm brown charcoal-cuffed hands withdraw from sides. A modest bundle of finished arrows lies OFF the grid on grass beside table. No extra ingredient cells, no labels/numbers/UI, no diagrams. Daylight outside cottage, warm flat 2D style.",
-      "status": "uploaded_verified_pending_qa",
+      "status": "qa_accepted_uploaded_verified",
       "local_path": "/workspace/scratch/c0768b8a956f/generated_images/exec-2123bc93-b74f-458e-87f7-99beb86c2cdf.png",
       "drive": {
-        "accepted_input": "file_uri",
         "success": true,
-        "id": "1c-fzcgDDMxbV9brFePepcXDmMV_Lo9uS",
-        "title": "E02-S083_PENDING_QA.png",
-        "file_name": "E02-S083_PENDING_QA.png",
-        "mime_type": "image/png",
-        "url": "https://drive.google.com/file/d/1c-fzcgDDMxbV9brFePepcXDmMV_Lo9uS/view?usp=drivesdk",
-        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
-        "structuredContent": {
-          "accepted_input": "file_uri",
-          "success": true,
-          "id": "1c-fzcgDDMxbV9brFePepcXDmMV_Lo9uS",
-          "title": "E02-S083_PENDING_QA.png",
-          "file_name": "E02-S083_PENDING_QA.png",
-          "mime_type": "image/png",
-          "url": "https://drive.google.com/file/d/1c-fzcgDDMxbV9brFePepcXDmMV_Lo9uS/view?usp=drivesdk",
-          "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
-        }
+        "title": "E02-S083.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
       },
-      "qa": "Not reviewed. Preserve for review when user resumes."
+      "qa": "Visually reviewed against current original Survivor reference and storyboard; approved 2026-11-20."
     },
     {
       "id": "E02-S084",
       "action": "Medium daylight craft result outside same village cottage: slim hero holds ONE simple newly crafted WOODEN BOW with WHITE STRING in both hands, examining its curve nervously. Three spare sticks and three short white strings on standard crafting table beside him, small arrow bundle and one brown backpack on grass. No arrow loaded yet, no modern compound bow or crossbow, no armor, same slim body and exact face. Village farm and well background, no text.",
       "prompt": "Use case: illustration-story. Production asset for Spawned Somewhere Bad Episode 02, a single cinematic 16:9 landscape frame, 1920x1080 target. Image 1 is the authoritative protagonist character sheet: copy exact face, warm brown skin, compact curly black fade, shaped beard, very slim narrow torso and long thin limbs, charcoal hoodie with rust-orange inner hood and white drawstrings, black pants, black sneakers white soles. Never bulky. Image 2 is accepted Episode01 ending: match its 2D cel-shaded thick-black-outline art, brown backpack with silver zippers, block-shaped forest, damp grass, puddles and daylight. Hero remains rounded 2D, NOT a block avatar. No captions, text, collage, UI, headlamp, flashlight, modern electric devices except explicitly specified batteryless TV remote, weapons or extra characters. Medium daylight craft result outside same village cottage: slim hero holds ONE simple newly crafted WOODEN BOW with WHITE STRING in both hands, examining its curve nervously. Three spare sticks and three short white strings on standard crafting table beside him, small arrow bundle and one brown backpack on grass. No arrow loaded yet, no modern compound bow or crossbow, no armor, same slim body and exact face. Village farm and well background, no text.",
-      "status": "uploaded_verified_pending_qa",
+      "status": "qa_accepted_uploaded_verified",
       "local_path": "/workspace/scratch/c0768b8a956f/generated_images/exec-80179102-51d6-4464-98a9-aa5d3c057148.png",
       "drive": {
-        "accepted_input": "file_uri",
         "success": true,
-        "id": "1eBn1K4G8NSOE4kAa5HnMas7PAJlfTQtZ",
-        "title": "E02-S084_PENDING_QA.png",
-        "file_name": "E02-S084_PENDING_QA.png",
-        "mime_type": "image/png",
-        "url": "https://drive.google.com/file/d/1eBn1K4G8NSOE4kAa5HnMas7PAJlfTQtZ/view?usp=drivesdk",
-        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI",
-        "structuredContent": {
-          "accepted_input": "file_uri",
-          "success": true,
-          "id": "1eBn1K4G8NSOE4kAa5HnMas7PAJlfTQtZ",
-          "title": "E02-S084_PENDING_QA.png",
-          "file_name": "E02-S084_PENDING_QA.png",
-          "mime_type": "image/png",
-          "url": "https://drive.google.com/file/d/1eBn1K4G8NSOE4kAa5HnMas7PAJlfTQtZ/view?usp=drivesdk",
-          "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
-        }
+        "title": "E02-S084.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
       },
-      "qa": "Not reviewed. Preserve for review when user resumes."
+      "qa": "Visually reviewed against current original Survivor reference and storyboard; approved 2026-11-20."
+    },
+    {
+      "id": "E02-S085",
+      "action": "First archery practice attempt outside village cottage: the hero has missed the hay-bale target entirely; a single arrow is embedded in the dirt well to its right. Hero stands left holding simple wood bow in his hand with frustrated, embarrassed shrug; no loaded arrow. Same village garden, wheat field, fencing and cottage. No animal breeding scene, no calf. Preserve exact original Survivor reference sheet and slim design.",
+      "status": "uploaded_verified_pending_qa",
+      "qa": "Candidate generated; character similarity requires user review before approval.",
+      "drive": {
+        "success": true,
+        "id": "1scy0D6u-zPqRJBoaF3SFCXUylYRoMEUp",
+        "title": "E02-S085_PENDING_QA.png",
+        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+      }
     }
   ],
-  "next_shot": "E02-S081",
+  "next_shot": "E02-S085",
   "qa_rejected_count": 9,
-  "production_status": "paused_by_user",
-  "pending_qa_count": 4,
+  "production_status": "S001-S084 approved in Drive; S085 pending character QA; narration generated as four HeyGen MP3s",
+  "pending_qa_count": 1,
   "resume_instruction": "Review existing E02-S081 through E02-S084 in candidates against approved hero and scene continuity before generating anything new. Do not regenerate S001-S080. First ungenerated shot E02-S085. User paused production; no background generation authorized.",
-  "first_ungenerated_shot": "E02-S085"
+  "first_ungenerated_shot": "E02-S086"
 }
