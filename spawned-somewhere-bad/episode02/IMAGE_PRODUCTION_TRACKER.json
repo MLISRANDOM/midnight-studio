@@ -32,7 +32,7 @@
     "title": "Candidates - Pending QA",
     "parent_id": "1wgVZ2f8TChqAB7taeqfJDquSjiWpUNdQ"
   },
-  "verified_count": 84,
+  "verified_count": 85,
   "shots": [
     {
       "id": "E02-S001",
@@ -2566,20 +2566,42 @@
     {
       "id": "E02-S085",
       "action": "First archery practice attempt outside village cottage: the hero has missed the hay-bale target entirely; a single arrow is embedded in the dirt well to its right. Hero stands left holding simple wood bow in his hand with frustrated, embarrassed shrug; no loaded arrow. Same village garden, wheat field, fencing and cottage. No animal breeding scene, no calf. Preserve exact original Survivor reference sheet and slim design.",
-      "status": "uploaded_verified_pending_qa",
-      "qa": "Candidate generated; character similarity requires user review before approval.",
+      "status": "qa_accepted_uploaded_verified",
+      "qa": "User explicitly approved S085 appearance and shot; moved to Approved Images on 2026-11-20.",
       "drive": {
         "success": true,
         "id": "1scy0D6u-zPqRJBoaF3SFCXUylYRoMEUp",
-        "title": "E02-S085_PENDING_QA.png",
+        "title": "E02-S085.png",
+        "parent_id": "1dGYSfxW7BidBGCL4Ha4nW4rc79MPjzSf"
+      }
+    },
+    {
+      "id": "E02-S086",
+      "action": "Second archery practice attempt. Arrow has missed the intact hay target and embedded in a wooden fence rail to its right. Survivor lowers his wooden bow and scratches his head in embarrassment. No arrow loaded, no injury, same village, same original Survivor design.",
+      "status": "uploaded_verified_pending_qa",
+      "drive": {
+        "success": true,
+        "id": "1Z2QwJMEVdtbG3jiK-8NrSWkrizck7lzd",
+        "title": "E02-S086_PENDING_QA.png",
+        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+      }
+    },
+    {
+      "id": "E02-S087",
+      "action": "Third archery practice attempt: Survivor draws his simple wooden bow, aiming intensely at hay target, before release. Next shot must show misfire and damage to a flowerpot as narrated.",
+      "status": "uploaded_verified_pending_qa",
+      "drive": {
+        "success": true,
+        "id": "1Du-ddX_Yvh1xfF-vX7mvckUKadlJ1PNF",
+        "title": "E02-S087_PENDING_QA.png",
         "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
       }
     }
   ],
-  "next_shot": "E02-S085",
+  "next_shot": "E02-S086",
   "qa_rejected_count": 9,
-  "production_status": "S001-S084 approved in Drive; S085 pending character QA; narration generated as four HeyGen MP3s",
-  "pending_qa_count": 1,
+  "production_status": "S001-S085 approved; S086 and S087 candidate files saved pending QA. S088 flowerpot payoff not yet generated.",
+  "pending_qa_count": 2,
   "resume_instruction": "Review existing E02-S081 through E02-S084 in candidates against approved hero and scene continuity before generating anything new. Do not regenerate S001-S080. First ungenerated shot E02-S085. User paused production; no background generation authorized.",
-  "first_ungenerated_shot": "E02-S086"
+  "first_ungenerated_shot": "E02-S088"
 }
