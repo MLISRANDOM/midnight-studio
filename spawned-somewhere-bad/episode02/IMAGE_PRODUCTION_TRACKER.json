@@ -2740,12 +2740,24 @@
         "title": "E02-S100_CAVE_EXPLORATION_REWORK.png",
         "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
       }
+    },
+    {
+      "id": "E02-S101",
+      "action": "Survivor mines COAL ORE with iron pickaxe in torchlit Minecraft cave, black-flecked coal vein on wall, warm fire against cool blue cavern, original Survivor sheet proportions, no other ore.",
+      "status": "uploaded_verified_pending_qa",
+      "qa": "Visually correct coal mining candidate; pending user review.",
+      "drive": {
+        "success": true,
+        "id": "1_ZRjvIcc2g21QXq3i0aKiPkXzvlXNpmI",
+        "title": "E02-S101_PENDING_QA.png",
+        "parent_id": "1rwZY022yF4qy4hLEegBMtbkxUk6D_XFI"
+      }
     }
   ],
   "next_shot": "E02-S086",
   "qa_rejected_count": 9,
-  "production_status": "95 approved images; S099 QA pending; S100 rework needed because generator depicted wrong ore. No S100 approval.",
-  "pending_qa_count": 3,
+  "production_status": "95 approved, S099 and S101 pending QA, S100 rework required. Repeated attempts to generate S102-S105 returned duplicate coal mining or multi-panel collages; not approved or saved.",
+  "pending_qa_count": 4,
   "resume_instruction": "Review existing E02-S081 through E02-S084 in candidates against approved hero and scene continuity before generating anything new. Do not regenerate S001-S080. First ungenerated shot E02-S085. User paused production; no background generation authorized.",
-  "first_ungenerated_shot": "E02-S100"
+  "first_ungenerated_shot": "E02-S102"
 }
